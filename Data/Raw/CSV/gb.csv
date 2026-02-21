@@ -1,0 +1,2681 @@
+city,lat,lng
+London,51.5072,-0.1275
+Birmingham,52.48,-1.9025
+Manchester,53.4794,-2.2453
+Leeds,53.7997,-1.5492
+Newcastle,55.0077,-1.6578
+Birstall,52.6736,-1.12
+Glasgow,55.8609,-4.2514
+Liverpool,53.4,-2.9833
+Portsmouth,50.8058,-1.0872
+Southampton,50.9,-1.4
+Nottingham,52.95,-1.15
+Bristol,51.45,-2.5833
+Sheffield,53.3833,-1.4667
+Kingston upon Hull,53.7444,-0.3325
+Leicester,52.6333,-1.1333
+Edinburgh,55.953,-3.189
+Caerdydd,51.4833,-3.1833
+Stoke-on-Trent,53,-2.1833
+Coventry,52.4081,-1.5106
+Reading,51.4542,-0.9731
+Belfast,54.5964,-5.93
+Derby,52.9167,-1.4667
+Plymouth,50.3714,-4.1422
+Wolverhampton,52.5833,-2.1333
+Abertawe,51.6167,-3.95
+Milton Keynes,52.04,-0.76
+Aberdeen,57.15,-2.11
+Norwich,52.63,1.297
+Luton,51.8783,-0.4147
+Islington,51.544,-0.1027
+Swindon,51.56,-1.78
+Croydon,51.3727,-0.1099
+Basildon,51.5761,0.4886
+Bournemouth,50.72,-1.88
+Worthing,50.8147,-0.3714
+Ipswich,52.0594,1.1556
+Middlesbrough,54.5767,-1.2355
+Sunderland,54.9061,-1.3811
+Ilford,51.5588,0.0855
+Warrington,53.3917,-2.5972
+Slough,51.51,-0.59
+Huddersfield,53.645,-1.7798
+Oxford,51.7519,-1.2578
+York,53.9583,-1.0803
+Poole,50.7167,-1.9833
+Harrow,51.5836,-0.3464
+Dundee,56.462,-2.9707
+Saint Albans,51.755,-0.336
+Telford,52.6766,-2.4469
+Blackpool,53.8142,-3.0503
+Brighton,50.8429,-0.1313
+Sale,53.424,-2.322
+Enfield,51.6522,-0.0808
+Tottenham,51.588,-0.072
+Bolton,53.578,-2.429
+Newport,51.5833,-3
+High Wycombe,51.6287,-0.7482
+Exeter,50.7167,-3.5333
+Solihull,52.413,-1.778
+Romford,51.5768,0.1801
+Preston,53.759,-2.699
+Gateshead,54.95,-1.6
+Blackburn,53.748,-2.482
+Cheltenham,51.9,-2.0667
+Basingstoke,51.2667,-1.0876
+Maidstone,51.272,0.529
+Colchester,51.8917,0.903
+Chelmsford,51.7361,0.4798
+Wythenshawe,53.392,-2.264
+Doncaster,53.515,-1.133
+Rotherham,53.43,-1.357
+Walthamstow,51.59,0
+Rochdale,53.6136,-2.161
+Bedford,52.135,-0.47
+Crawley,51.1092,-0.1872
+Mansfield,53.15,-1.2
+Dagenham,51.5397,0.1422
+Stockport,53.4083,-2.1494
+Darlington,54.527,-1.5526
+Fyfield,51.739,0.2722
+Gillingham,51.385,0.55
+Salford,53.483,-2.2931
+Eastbourne,50.77,0.28
+Wigan,53.5448,-2.6318
+Hounslow,51.4668,-0.375
+Wembley,51.5528,-0.2979
+Saint Helens,53.4541,-2.7461
+Worcester,52.192,-2.22
+Wakefield,53.68,-1.49
+Lincoln,53.2344,-0.5386
+Hemel Hempstead,51.7526,-0.4692
+Watford,51.655,-0.3957
+Oldham,53.5444,-2.1169
+Sutton Coldfield,52.563,-1.822
+Kettering,52.3931,-0.7229
+Hastings,50.85,0.57
+Hartlepool,54.69,-1.21
+Hove,50.8352,-0.1758
+Barnsley,53.5537,-1.4791
+Southport,53.6475,-3.0053
+Bath,51.38,-2.36
+Birkenhead,53.393,-3.014
+Grimsby,53.5595,-0.068
+Halifax,53.725,-1.863
+Bromley,51.407,0.021
+Fulham,51.4828,-0.195
+Nuneaton,52.523,-1.468
+Derry,54.9917,-7.3417
+Ealing,51.5175,-0.2988
+Stockton-on-Tees,54.57,-1.32
+Woolwich,51.488,0.063
+Bracknell,51.416,-0.749
+Hayes,51.5127,-0.4211
+Edmonton,51.6154,-0.0708
+Scunthorpe,53.5809,-0.6502
+Redditch,52.3069,-1.9492
+Chester,53.19,-2.89
+Dudley,52.508,-2.089
+Bury,53.593,-2.298
+Brixton,51.463,-0.106
+West Bromwich,52.519,-1.995
+Paisley,55.8466,-4.4236
+Guildford,51.2365,-0.5703
+Chatham,51.37,0.52
+Edgware,51.6185,-0.2729
+East Ham,51.5323,0.0554
+Weston-super-Mare,51.346,-2.977
+East Kilbride,55.7645,-4.1771
+South Shields,54.995,-1.43
+Carlisle,54.891,-2.944
+Newcastle under Lyme,53.0109,-2.2278
+Harrogate,53.9919,-1.5378
+Ashford,51.1465,0.8676
+Gravesend,51.4415,0.3685
+Burnley,53.789,-2.248
+Burton upon Trent,52.8019,-1.6367
+Crewe,53.099,-2.44
+Shrewsbury,52.708,-2.754
+Gosport,50.7948,-1.1243
+Lisburn,54.5167,-6.0333
+Lowestoft,52.48,1.75
+Rugby,52.37,-1.26
+Uxbridge,51.5404,-0.4778
+Inverness,57.4781,-4.2233
+Keighley,53.867,-1.911
+Southall,51.5121,-0.3779
+Maidenhead,51.5217,-0.7177
+Stafford,52.8066,-2.1171
+Wimbledon,51.422,-0.208
+Walsall,52.58,-1.98
+Tynemouth,55.017,-1.423
+Washington,54.9,-1.52
+Loughborough,52.7705,-1.2046
+Chingford,51.631,0.016
+Thornton Heath,51.4002,-0.1086
+Finchley,51.599,-0.187
+Wrecsam,53.046,-2.993
+Torquay,50.47,-3.53
+Farnborough,51.29,-0.75
+Kensington,51.5,-0.19
+Waterlooville,50.88,-1.03
+Hornchurch,51.5565,0.2128
+Mitcham,51.4009,-0.1517
+Feltham,51.4496,-0.4089
+Stourbridge,52.4575,-2.1479
+Rochester,51.375,0.5
+Dewsbury,53.691,-1.633
+Woking,51.3162,-0.561
+Rhondda,51.6159,-3.4175
+Sittingbourne,51.34,0.74
+Acton,51.5135,-0.2707
+Twickenham,51.449,-0.337
+Runcorn,53.341,-2.729
+Scarborough,54.2773,-0.4017
+Wandsworth,51.455,-0.192
+Widnes,53.363,-2.728
+Margate,51.385,1.3838
+Bangor,54.66,-5.67
+Morecambe,54.073,-2.87
+Taunton,51.019,-3.1
+Wallasey,53.4158,-3.0233
+Royal Tunbridge Wells,51.132,0.263
+Barking,51.54,0.08
+Aylesbury,51.8168,-0.8124
+Ruislip,51.576,-0.433
+Halesowen,52.4502,-2.0509
+Streatham,51.4279,-0.1235
+Livingston,55.8834,-3.5157
+Clacton-on-Sea,51.7918,1.1457
+Barrow in Furness,54.1108,-3.2261
+Hereford,52.0565,-2.716
+Ellesmere Port,53.279,-2.897
+Kidderminster,52.3885,-2.249
+Canterbury,51.28,1.08
+Corby,52.4914,-0.6965
+Brentwood,51.6204,0.305
+Hamilton,55.777,-4.039
+Dunfermline,56.0719,-3.4393
+Braintree,51.878,0.55
+Weymouth,50.613,-2.457
+Hendon,51.5837,-0.2252
+Altrincham,53.3838,-2.3547
+Lancaster,54.047,-2.801
+Barri,51.405,-3.27
+Macclesfield,53.2581,-2.1274
+Bootle,53.4457,-2.9891
+Stratford,51.5423,-0.0026
+Horsham,51.062,-0.325
+Cumbernauld,55.945,-3.994
+Rowley Regis,52.48,-2.06
+Kirkcaldy,56.1107,-3.1674
+Crosby,53.4872,-3.0343
+Leith,55.98,-3.17
+Royal Leamington Spa,52.292,-1.537
+Llanelli,51.684,-4.163
+Batley,53.716,-1.627
+Pen-y-Bont ar Ogwr,51.5072,-3.5784
+Wellingborough,52.2939,-0.6964
+Sutton in Ashfield,53.125,-1.261
+Paignton,50.4353,-3.5625
+Eltham,51.451,0.052
+Cwmbran,51.653,-3.021
+Christchurch,50.73,-1.78
+Morden,51.4015,-0.1949
+Durham,54.7761,-1.5733
+Barnet,51.6444,-0.1997
+West Bridgford,52.932,-1.127
+Perth,56.397,-3.437
+Stretford,53.4466,-2.3086
+Banbury,52.061,-1.336
+Beckenham,51.408,-0.022
+Greenford,51.5299,-0.3488
+Wokingham,51.41,-0.84
+Folkestone,51.081,1.166
+Welwyn Garden City,51.8062,-0.1932
+Ayr,55.458,-4.629
+Kilmarnock,55.6111,-4.4957
+Havant,50.85,-0.98
+Chippenham,51.4585,-2.1158
+Erith,51.48,0.1778
+Hinckley,52.5413,-1.3725
+Ashton,53.4897,-2.0952
+Winchester,51.0632,-1.308
+Surbiton,51.394,-0.307
+Yeovil,50.9452,-2.637
+Catford,51.4452,-0.0207
+Grantham,52.918,-0.638
+Morley,53.7492,-1.6023
+Cheshunt,51.702,-0.035
+Coatbridge,55.8625,-4.0266
+Wallsend,54.991,-1.534
+Merthyr Tudful,51.743,-3.378
+Bexhill,50.8424,0.4676
+Sidcup,51.4263,0.1024
+Kingston upon Thames,51.4103,-0.2995
+Middleton,53.555,-2.187
+King’s Lynn,52.7543,0.3976
+Fareham,50.85,-1.18
+Greenock,55.95,-4.765
+Urmston,53.4487,-2.3747
+Worksop,53.3042,-1.1244
+Sutton,51.3656,-0.1963
+Caerphilly,51.578,-3.218
+Bridgwater,51.128,-2.993
+Leigh,53.4975,-2.515
+Newbury,51.401,-1.323
+Welling,51.4594,0.1097
+Kingswood,51.46,-2.505
+Bury Saint Edmunds,52.2474,0.7183
+Kirkby,53.4826,-2.892
+Ramsgate,51.336,1.416
+Tonbridge,51.1987,0.2764
+Salisbury,51.074,-1.7936
+Castleford,53.716,-1.356
+Bishops Stortford,51.872,0.1725
+Abingdon,51.667,-1.283
+Aberdare,51.713,-3.445
+Farnham,51.215,-0.799
+Aldridge,52.606,-1.9179
+Hatfield,51.762,-0.228
+Cleethorpes,53.5533,-0.0215
+Skelmersdale,53.55,-2.776
+Tipton,52.5259,-2.0751
+Eccles,53.4824,-2.339
+Great Yarmouth,52.606,1.729
+Ilkeston,52.971,-1.309
+Herne Bay,51.37,1.13
+Andover,51.208,-1.48
+Glenrothes,56.198,-3.178
+Camberley,51.335,-0.742
+Stirling,56.1166,-3.9369
+Arnold,53.005,-1.127
+Long Eaton,52.898,-1.271
+Blyth,55.126,-1.514
+Port Talbot,51.5906,-3.7986
+Bletchley,51.994,-0.732
+Leighton Buzzard,51.9165,-0.6617
+Fleet,51.2834,-0.8456
+Beeston,52.927,-1.215
+Small Heath,52.4629,-1.8542
+Houghton le Spring,54.841,-1.468
+Whitley Bay,55.0456,-1.4443
+Airdrie,55.86,-3.98
+Grays,51.475,0.33
+Denton,53.4554,-2.1122
+Aldershot,51.248,-0.758
+Redcar,54.618,-1.069
+Walkden,53.5239,-2.3991
+Kenton,51.5878,-0.3086
+Leyland,53.692,-2.697
+Woodley,51.453,-0.902
+Accrington,53.7534,-2.3638
+Pont-y-pŵl,51.703,-3.041
+Bridlington,54.0819,-0.1923
+Falkirk,56.0011,-3.7835
+Billingham,54.61,-1.27
+Boston,52.974,-0.0214
+Dunstable,51.886,-0.521
+Ewell,51.35,-0.249
+Chorley,53.653,-2.632
+Spalding,52.7858,-0.1529
+Exmouth,50.62,-3.413
+North Shields,55.0097,-1.4448
+Colwyn Bay,53.29,-3.7
+Irvine,55.6201,-4.6614
+Hyde,53.4474,-2.082
+Wisbech,52.664,0.16
+Lichfield,52.6835,-1.8265
+Wickford,51.6114,0.5207
+Hitchin,51.947,-0.283
+Dumfries,55.07,-3.603
+Letchworth,51.978,-0.23
+Huyton,53.41,-2.843
+Strood,51.393,0.478
+Trowbridge,51.32,-2.21
+Glossop,53.443,-1.949
+Pontypridd,51.602,-3.342
+Stroud,51.744,-2.215
+Bicester,51.9,-1.15
+Winsford,53.194,-2.52
+Windsor,51.4791,-0.6095
+Motherwell,55.7839,-3.9852
+Brighouse,53.707,-1.794
+Wigston Magna,52.5812,-1.093
+Swadlincote,52.774,-1.557
+Rayleigh,51.5864,0.6049
+Whitstable,51.361,1.026
+Ecclesfield,53.4429,-1.4698
+Ryde,50.7271,-1.1618
+Earley,51.433,-0.933
+Borehamwood,51.6578,-0.2723
+Bexleyheath,51.459,0.138
+Prestwich,53.5333,-2.2833
+Darwen,53.698,-2.461
+Epsom,51.336,-0.267
+Warwick,52.28,-1.59
+Pinner,51.5932,-0.3894
+Rutherglen,55.8286,-4.2139
+Loughton,51.6494,0.0735
+Dover,51.1295,1.3089
+Pontefract,53.691,-1.312
+Saint Neots,52.228,-0.27
+Bedworth,52.475,-1.477
+Burgess Hill,50.9535,-0.1262
+Northolt,51.547,-0.362
+Farnworth,53.5452,-2.3999
+Wishaw,55.7739,-3.9189
+Harpenden,51.8175,-0.3524
+Deal,51.2226,1.4006
+Radcliffe,53.5615,-2.3268
+Carshalton,51.3652,-0.1676
+Plympton,50.386,-4.051
+Bulwell,53.001,-1.197
+Cambuslang,55.819,-4.1671
+Sevenoaks,51.2781,0.1874
+Northfleet,51.44,0.34
+Cramlington,55.082,-1.585
+Rushden,52.288,-0.601
+Bromsgrove,52.3353,-2.0579
+Nelson,53.8346,-2.218
+Beverley,53.845,-0.427
+Cannock,52.691,-2.027
+Hanwell,51.5189,-0.3376
+Stanford le Hope,51.514,0.4244
+Kendal,54.326,-2.745
+Willenhall,52.5798,-2.0605
+Wood Green,51.5981,-0.1149
+Heywood,53.59,-2.219
+Bearsden,55.9192,-4.3332
+Reddish,53.4383,-2.1613
+Billericay,51.628,0.4184
+Darlaston,52.5708,-2.0457
+Littlehampton,50.8094,-0.5409
+Ashington,55.181,-1.568
+Newton Mearns,55.7716,-4.3347
+Yate,51.5402,-2.411
+Jarrow,54.9797,-1.4804
+Witney,51.78,-1.49
+Stratford-upon-Avon,52.1928,-1.7064
+Shotley Bridge,54.87,-1.86
+Ashford,51.434,-0.464
+Ormskirk,53.5665,-2.8869
+Longton,52.9877,-2.1327
+Melton Mowbray,52.7661,-0.886
+Haverhill,52.08,0.44
+Didcot,51.606,-1.241
+Clifton,52.904,-1.177
+Chichester,50.8365,-0.7792
+Hertford,51.795,-0.078
+Highbury,51.552,-0.097
+Newton Aycliffe,54.62,-1.58
+Fern Down,50.81,-1.9
+Congleton,53.162,-2.217
+Cheadle Hulme,53.3761,-2.1897
+East Grinstead,51.129,-0.007
+Thatcham,51.405,-1.264
+Frome,51.2279,-2.3215
+Burntwood,52.6831,-1.92
+Clydebank,55.8997,-4.4006
+Fleetwood,53.923,-3.015
+Bournville,52.4299,-1.9355
+Shenley Brook End,52.009,-0.789
+Bushey,51.6429,-0.3604
+New Milton,50.76,-1.65
+Northfield,52.408,-1.963
+Coulsdon,51.3211,-0.1386
+Bilston,52.566,-2.0728
+Newton Abbot,50.529,-3.61
+Wellington,52.7001,-2.5157
+Newport,50.701,-1.2883
+Oldbury,52.505,-2.0159
+Bishop Auckland,54.6566,-1.6768
+Longbridge,52.395,-1.979
+Bloxwich,52.614,-2.004
+Upminster,51.5557,0.2512
+Witham,51.7978,0.6373
+Workington,54.6365,-3.5549
+Kingswinford,52.4981,-2.1657
+Rhyl,53.321,-3.48
+Daventry,52.26,-1.16
+Hindley,53.5355,-2.5658
+Rainham,51.36,0.61
+Portishead,51.484,-2.7626
+Pitsea,51.569,0.504
+Westhoughton,53.549,-2.529
+Broadstairs,51.3589,1.4394
+Consett,54.85,-1.83
+Thornaby on Tees,54.5556,-1.3049
+Wilmslow,53.325,-2.239
+Kings Norton,52.4072,-1.9272
+Thetford,52.41,0.74
+Elgin,57.65,-3.315
+Chester-le-Street,54.8594,-1.5699
+Farnley,53.7876,-1.6159
+Great Sankey,53.3918,-2.6383
+Golborne,53.4758,-2.5943
+Plymstock,50.3569,-4.09
+Bognor Regis,50.7824,-0.6764
+Barnstaple,51.08,-4.06
+Rugeley,52.7599,-1.9388
+Eastleigh,50.9667,-1.35
+Ashton in Makerfield,53.487,-2.641
+Whitehaven,54.548,-3.5855
+Rickmansworth,51.6383,-0.4659
+Littleover,52.906,-1.505
+Caversham,51.467,-0.973
+Oadby,52.5987,-1.0763
+Bishopbriggs,55.9046,-4.225
+Kidsgrove,53.0874,-2.2478
+Huntingdon,52.3364,-0.1717
+Stalybridge,53.4834,-2.04
+Stanmore,51.618,-0.314
+Felixstowe,51.9639,1.3515
+Marple,53.397,-2.061
+Perry Barr,52.5249,-1.9042
+Gosforth,55.007,-1.623
+Droitwich,52.267,-2.153
+Arbroath,56.561,-2.586
+Seaford,50.77,0.1
+Evesham,52.092,-1.947
+Whitefield,53.5521,-2.2992
+Penwortham,53.74,-2.72
+Harborne,52.46,-1.95
+Swinton,53.5122,-2.3412
+Market Harborough,52.4775,-0.9206
+Penistone,53.525,-1.629
+Gainsborough,53.4016,-0.7732
+Walton upon Thames,51.3868,-0.4133
+Erdington,52.5236,-1.8378
+Haywards Heath,51.0048,-0.0979
+Stratton Saint Margaret,51.586,-1.762
+Droylsden,53.4828,-2.1582
+Wednesfield,52.5998,-2.0817
+Calverley,53.8266,-1.6908
+Leigh-on-Sea,51.5425,0.6535
+Formby,53.5586,-3.0666
+Kenilworth,52.341,-1.566
+Pudsey,53.797,-1.663
+Guiseley,53.875,-1.706
+Alfreton,53.097,-1.38
+March,52.551,0.088
+Litherland,53.4727,-2.999
+Yeadon,53.869,-1.688
+Acomb,53.955,-1.126
+Buxton,53.259,-1.911
+Newton in Makerfield,53.45,-2.633
+Penarth,51.43,-3.17
+Horley,51.174,-0.172
+Northwood,51.601,-0.4176
+East Retford,53.3228,-0.9431
+Atherton,53.523,-2.495
+Rawtenstall,53.699,-2.291
+Musselburgh,55.942,-3.054
+Renfrew,55.8791,-4.3868
+Belper,53.029,-1.475
+Reigate,51.237,-0.206
+Sheldon,52.45,-1.7666
+Godalming,51.18,-0.61
+Falmouth,50.15,-5.07
+Kilwinning,55.655,-4.703
+Potters Bar,51.698,-0.183
+Camborne,50.213,-5.3
+Linslade,51.9243,-0.6774
+Chesham,51.712,-0.612
+Richmond,51.456,-0.301
+Chandlers Ford,50.984,-1.3792
+Darton,53.585,-1.5325
+Royton,53.566,-2.121
+Clevedon,51.438,-2.854
+Dronfield,53.3024,-1.4664
+Ossett,53.68,-1.58
+Penzance,50.119,-5.537
+Waltham Abbey,51.6846,0.0004
+Omagh,54.59,-7.29
+Caterham,51.2803,-0.0816
+Woodlesford,53.7567,-1.453
+Maesteg,51.61,-3.65
+Normanton,53.697,-1.416
+Wallington,51.3647,-0.1403
+Ripley,53.05,-1.407
+Sandhurst,51.349,-0.8
+Leek,53.108,-2.0234
+Alloa,56.116,-3.793
+Boscombe,50.725,-1.84
+Llandudno,53.325,-3.826
+Failsworth,53.5102,-2.1575
+Kirkstall,53.816,-1.602
+Kirkby in Ashfield,53.099,-1.245
+Bellshill,55.8165,-4.0262
+Crowborough,51.06,0.16
+Shoreham-by-Sea,50.834,-0.273
+Dumbarton,55.95,-4.5667
+Hythe,50.869,-1.399
+Hailsham,50.8647,0.2577
+Maghull,53.5174,-2.9449
+Bathgate,55.9024,-3.6431
+Rothwell,53.7485,-1.478
+Newquay,50.412,-5.0757
+Hoddesdon,51.759,-0.015
+Seaham,54.84,-1.34
+Peterlee,54.76,-1.33
+Halewood,53.3599,-2.84
+Ely,52.3981,0.2622
+Killingworth,55.0318,-1.5557
+Horwich,53.592,-2.54
+Bispham,53.852,-3.041
+Antrim,54.7173,-6.2055
+Wetherby,53.9276,-1.3839
+Saint Austell,50.3386,-4.7922
+Irlam,53.445,-2.422
+Northwich,53.259,-2.518
+Biddulph,53.12,-2.17
+Spennymoor,54.7,-1.59
+Barrhead,55.8016,-4.388
+Garforth,53.792,-1.388
+Tewkesbury,51.99,-2.16
+Stamford,52.656,-0.484
+Kirkintilloch,55.9357,-4.1547
+Davyhulme,53.4559,-2.3683
+Skegness,53.14,0.34
+Burnham-on-Sea,51.2376,-2.9935
+Abbots Langley,51.701,-0.416
+Mirfield,53.6807,-1.6888
+Tiverton,50.903,-3.488
+Goole,53.6992,-0.8692
+South Ockendon,51.5207,0.2956
+Romsey,50.989,-1.4966
+Kempston,52.114,-0.497
+Adel,53.8489,-1.5849
+Liversedge,53.7067,-1.69
+Hampton,51.422,-0.367
+Great Linford,52.068,-0.7637
+Faversham,51.3177,0.8928
+Dukinfield,53.4739,-2.0828
+Stowmarket,52.19,1
+Neath,51.66,-3.81
+Ecclesall,53.362,-1.498
+Molesey,51.401,-0.363
+Cirencester,51.719,-1.968
+Dorchester,50.7154,-2.4367
+Monkseaton,55.043,-1.459
+Linlithgow,55.9791,-3.6105
+Southbourne,50.722,-1.798
+Horsforth,53.8341,-1.6429
+Prestatyn,53.331,-3.405
+Kilbirnie,55.755,-4.686
+Lancing,50.832,-0.319
+Ware,51.8109,-0.0314
+Truro,50.26,-5.051
+Eastwood,53.018,-1.304
+East Dereham,52.681,0.94
+Ebbw Vale,51.7779,-3.2117
+Peterhead,57.5091,-1.7832
+Appley Bridge,53.579,-2.721
+Berkhampstead,51.76,-0.56
+Rawmarsh,53.4636,-1.3439
+Poulton le Fylde,53.847,-2.995
+Staines-upon-Thames,51.433,-0.517
+Bedlington,55.133,-1.583
+Mill Hill,51.62,-0.23
+Almondbury,53.6344,-1.7489
+Hadleigh,51.5535,0.6095
+Staveley,53.2694,-1.3484
+Fulwood,53.365,-1.544
+Redhill,51.2393,-0.1726
+Aberystwyth,52.414,-4.081
+Sunbury,51.423,-0.424
+Mickleover,52.901,-1.552
+Sandbach,53.146,-2.367
+Madeley,52.637,-2.448
+Grangemouth,56.012,-3.717
+Ramsbottom,53.6484,-2.3169
+Colne,53.8554,-2.1756
+Alton,51.1498,-0.9769
+Portchester,50.842,-1.12
+Guisborough,54.535,-1.0563
+Harwich,51.934,1.266
+Sleaford,52.996,-0.413
+Moreton,53.401,-3.111
+Quedgeley,51.825,-2.28
+Warminster,51.205,-2.181
+Woodhouse,53.358,-1.373
+Bramhall,53.357,-2.164
+Nantwich,53.067,-2.522
+Hednesford,52.7115,-2.0006
+Lewes,50.8756,0.0179
+Houghton Regis,51.9039,-0.5247
+Thornton,53.7898,-1.8504
+Calne,51.438,-2.005
+Heanor,53.014,-1.354
+Friern Barnet,51.6126,-0.1584
+Milton,53.05,-2.142
+Glen Parva,52.5867,-1.1617
+Cottingham,53.7822,-0.4136
+Bideford,51.016,-4.209
+Oswestry,52.8598,-3.0538
+Mosbrough,53.325,-1.362
+Heysham,54.046,-2.894
+Golcar,53.6378,-1.8457
+Westbury,51.26,-2.191
+Heckmondwike,53.708,-1.67
+Clayton,53.782,-1.8135
+Morriston,51.6647,-3.9389
+High Blantyre,55.793,-4.097
+Braunstone,52.616,-1.175
+Haslingden,53.705,-2.328
+Northallerton,54.3378,-1.4285
+Haslemere,51.09,-0.712
+Saint Andrews,56.3404,-2.7955
+Fazakerley,53.4676,-2.9408
+Hatfield,53.58,-1
+Windlesham,51.36,-0.66
+Connahs Quay,53.2179,-3.0573
+Plumstead,51.49,0.09
+Ripon,54.138,-1.524
+Brixham,50.394,-3.516
+Maltby,53.426,-1.21
+Banstead,51.322,-0.204
+Whickham,54.9456,-1.6726
+Keynsham,51.4135,-2.4968
+Johnstone,55.8346,-4.5027
+Cleckheaton,53.725,-1.719
+Newmarket,52.2459,0.4105
+The Mumbles,51.573,-3.9992
+Biggleswade,52.0855,-0.2557
+Cowley,51.733,-1.215
+Hebburn,54.9718,-1.5128
+Enfield Lock,51.6686,-0.026
+Louth,53.3669,-0.0061
+Buckhaven,56.1776,-3.0303
+Stone,52.9,-2.15
+Saint Ives,52.3344,-0.0761
+Denby Dale,53.572,-1.655
+Bangor,53.228,-4.128
+Birstall,53.7343,-1.6609
+Clitheroe,53.8711,-2.3916
+Queensbury,53.7683,-1.8453
+Stepney,51.5152,-0.0462
+Basford,52.978,-1.169
+Saltash,50.408,-4.212
+Giffnock,55.8051,-4.2946
+Tyldesley,53.5166,-2.4667
+East Barnet,51.643,-0.163
+Upton,53.385,-3.099
+Whittlesey,52.558,-0.13
+Worcester Park,51.3752,-0.239
+Porthcawl,51.48,-3.69
+East Finchley,51.5902,-0.1753
+Chertsey,51.3902,-0.5074
+Dawlish,50.581,-3.466
+Penicuik,55.826,-3.22
+Bingley,53.8509,-1.838
+Adwick le Street,53.5677,-1.1931
+Hayes,51.378,0.0192
+Addlestone,51.3695,-0.4901
+Royston,52.0471,-0.0202
+Carterton,51.76,-1.59
+Bebington,53.35,-3.003
+Lymington,50.75,-1.55
+Bonnyrigg,55.8747,-3.1031
+Buckley,53.172,-3.086
+Ince-in-Makerfield,53.5402,-2.599
+Nailsea,51.43,-2.76
+Thundersley,51.57,0.59
+Swinton,53.4877,-1.3149
+Wimborne Minster,50.804,-1.978
+West Ham,51.5347,0.0077
+Saffron Walden,52.022,0.243
+Stoke Gifford,51.517,-2.548
+Shipley,53.833,-1.777
+Todmorden,53.713,-2.096
+Weybridge,51.362,-0.453
+Knaresborough,54.0084,-1.467
+Helensburgh,56.0166,-4.7333
+Port Glasgow,55.934,-4.6906
+Seacombe,53.409,-3.029
+Baildon,53.851,-1.763
+Hemsworth,53.61,-1.35
+Perivale,51.5383,-0.3192
+Wombwell,53.516,-1.4
+Stanley,53.7145,-1.476
+Llantrisant,51.5423,-3.3785
+Broxbourne,51.7495,-0.0216
+Hazel Grove,53.375,-2.111
+Featherstone,53.7,-1.37
+Mexborough,53.4992,-1.283
+Stapleford,52.929,-1.274
+Neston,53.289,-3.074
+Bidston,53.402,-3.078
+Northenden,53.4075,-2.2583
+Penrith,54.6648,-2.7548
+Chellaston,52.8671,-1.4384
+Palmers Green,51.6178,-0.1092
+Totteridge,51.6354,-0.2
+Blaydon,54.963,-1.7187
+New Brighton,53.432,-3.049
+Teignmouth,50.5515,-3.4886
+Newport Pagnell,52.087,-0.722
+Tredegar,51.7776,-3.2407
+Swallownest,53.3623,-1.3251
+Netherton,52.4908,-2.0835
+Hessle,53.7239,-0.4319
+Winkfield,51.4318,-0.7096
+Petersfield,51.0038,-0.9345
+Larkhall,55.737,-3.972
+Sudbury,51.5537,-0.3199
+Wyke,53.7369,-1.77
+Kew Green,51.5308,-0.2248
+Bromborough,53.336,-2.978
+Chislehurst,51.412,0.075
+Ilkley,53.925,-1.822
+Baguley,53.399,-2.276
+Minster,51.421,0.809
+Balham,51.4434,-0.1525
+Prestwick,55.4956,-4.6142
+Banbridge,54.343,-6.26
+Bodmin,50.466,-4.718
+Selby,53.7818,-1.0703
+Conwy,53.28,-3.83
+Tilehurst,51.4579,-1.0406
+Troon,55.54,-4.66
+Melksham,51.371,-2.138
+Wibsey,53.7672,-1.7728
+Great Baddow,51.719,0.507
+Farnborough,51.3591,0.0741
+Skipton,53.962,-2.017
+Lowton,53.471,-2.569
+Burbage,52.5277,-1.3483
+Thorpe Saint Andrew,52.6354,1.3431
+Wellington,50.9755,-3.2243
+Moston,53.5156,-2.1848
+Hythe,51.0716,1.084
+Chelsfield,51.3582,0.1278
+Uckfield,50.97,0.1
+Deysbrook,53.429,-2.934
+Bo’ness,56.0168,-3.6089
+Armthorpe,53.5352,-1.0522
+Southgate,51.6316,-0.1265
+Dollis Hill,51.5641,-0.2341
+Wymondham,52.57,1.116
+Hetton le Hole,54.8208,-1.4488
+Amersham,51.677,-0.603
+West Derby,53.4338,-2.907
+West Drayton,51.5043,-0.4646
+Conisbrough,53.479,-1.227
+Kidbrooke,51.465,0.033
+Rock Ferry,53.373,-3.008
+Shirley,51.3813,-0.0543
+Hawick,55.422,-2.787
+Patcham,50.864,-0.15
+West Wickham,51.3765,-0.0193
+Weston,53.413,-2.798
+Poynton,53.3492,-2.1222
+Seacroft,53.8222,-1.4599
+Maldon,51.7318,0.6758
+Kearsley,53.53,-2.37
+Caerfyrddin,51.856,-4.316
+Leyton,51.5606,-0.0155
+Mackworth,52.9277,-1.5373
+Ashtead,51.31,-0.299
+Wombourn,52.5302,-2.1857
+Smethwick,52.4928,-1.9682
+Childwall,53.395,-2.881
+Cowdenbeath,56.11,-3.35
+Forfar,56.6442,-2.8884
+Redruth,50.233,-5.224
+Morpeth,55.1675,-1.6908
+Marlow,51.57,-0.78
+Pemberton,53.536,-2.6738
+Verwood,50.8815,-1.8785
+Bourne,52.7684,-0.3775
+Ringwood,50.85,-1.78
+Brierley Hill,52.4795,-2.1245
+Streetly,52.577,-1.884
+Milford Haven,51.7142,-5.0427
+Bickley,51.4003,0.0466
+North Hykeham,53.1819,-0.5849
+Rustington,50.8102,-0.5052
+Eastham,53.313,-2.962
+Cosham,50.8424,-1.066
+Kidlington,51.823,-1.291
+Knottingley,53.705,-1.249
+Otley,53.905,-1.687
+Rottingdean,50.815,-0.065
+Allestree,52.9519,-1.4856
+Middlewich,53.192,-2.443
+Bredbury,53.42,-2.113
+Bridport,50.7336,-2.7584
+Rossington,53.4759,-1.0613
+Hilsea,50.83,-1.07
+Clifton,53.9721,-1.0979
+Milngavie,55.9421,-4.3137
+Shepshed,52.7711,-1.2951
+Ystrad Mynach,51.6419,-3.2405
+Little Hulton,53.53,-2.418
+Alexandria,55.98,-4.58
+Rosyth,56.0339,-3.4323
+Chaddesden,52.9301,-1.4383
+Heswall,53.328,-3.099
+Amblecote,52.46,-2.16
+Saint Budeaux,50.4033,-4.1856
+Egg Buckland,50.4006,-4.1136
+Bacup,53.704,-2.199
+Ampthill,52.0263,-0.4906
+Shirebrook,53.2048,-1.2197
+Carluke,55.7337,-3.8343
+Standish,53.586,-2.664
+West Boldon,54.9447,-1.4409
+Dingle,53.3774,-2.9613
+Whitby,54.4858,-0.6206
+Walsall Wood,52.6277,-1.9301
+Southwick,50.836,-0.239
+Knutsford,53.3025,-2.3708
+Broughty Ferry,56.4672,-2.8699
+Hamworthy,50.7207,-2.0109
+Fraserburgh,57.693,-2.005
+Wollaston,52.4619,-2.1663
+Uttoxeter,52.898,-1.86
+Great Driffield,54.005,-0.438
+Chard,50.8728,-2.9587
+Goodmayes,51.5584,0.1119
+Pendlebury,53.5075,-2.3154
+Sudbury,52.0417,0.7282
+Milnrow,53.6101,-2.1111
+Holborn,51.5172,-0.1182
+Brackley,52.032,-1.147
+Midsomer Norton,51.2842,-2.4817
+Corsham,51.43,-2.19
+Cumnock,55.4529,-4.2638
+Gornalwood,52.523,-2.124
+Yiewsley,51.513,-0.471
+Shenley Church End,52.022,-0.788
+Flint,53.2482,-3.1358
+Woolton,53.374,-2.865
+Leagrave,51.903,-0.466
+Cliftonville,51.3881,1.4046
+Buckingham,51.995,-0.986
+Chilwell,52.916,-1.235
+Syston,52.7,-1.08
+Little Lever,53.563,-2.369
+Sanderstead,51.3358,-0.0818
+Chalfont Saint Peter,51.607,-0.556
+Ainsdale,53.6021,-3.0405
+Flitwick,52.0038,-0.4966
+Brownhills,52.647,-1.933
+Hornsey,51.587,-0.118
+Sutton on Hull,53.7806,-0.3047
+Horndean,50.9136,-0.9961
+North Walsham,52.821,1.387
+Galashiels,55.6194,-2.8033
+Selston,53.07,-1.3
+Forres,57.608,-3.62
+Wordsley,52.483,-2.15
+Tranent,55.945,-2.954
+Sidmouth,50.68,-3.239
+Croxley Green,51.647,-0.445
+Mablethorpe,53.3409,0.261
+Abergavenny,51.824,-3.0167
+Wolverton,52.0626,-0.8102
+Costessey,52.6602,1.2161
+Barton upon Irwell,53.476,-2.36
+Bickenhill,52.439,-1.725
+Tilbury,51.4606,0.3582
+Chigwell,51.6225,0.0723
+Blunsdon Saint Andrew,51.61,-1.79
+Hersham,51.3681,-0.4008
+Spondon,52.92,-1.401
+Ashby de la Zouch,52.746,-1.476
+Coseley,52.55,-2.083
+Ovenden,53.7432,-1.8779
+Chepstow,51.642,-2.675
+Lymm,53.3834,-2.475
+Lye,52.459,-2.116
+Thornbury,51.6094,-2.5249
+Dalkeith,55.8958,-3.0583
+Tonyrefail,51.584,-3.4306
+New Mills,53.367,-2.007
+Thatto Heath,53.4352,-2.7481
+Harrow on the Hill,51.5655,-0.3327
+Newhaven,50.8,0.06
+Caldicot,51.591,-2.7492
+Olton,52.4377,-1.8058
+Cheadle,52.9849,-1.9865
+Bamber Bridge,53.7281,-2.6606
+Huntington,53.9926,-1.043
+Sedgley,52.54,-2.123
+Beaconsfield,51.6009,-0.6347
+Bridgnorth,52.535,-2.4195
+Fenton,52.9977,-2.1578
+Berwick-Upon-Tweed,55.771,-2.007
+Hwlffordd,51.8,-4.97
+Wells,51.209,-2.647
+Broxburn,55.934,-3.471
+Warsop,53.2,-1.15
+Minehead,51.2038,-3.4738
+Montrose,56.708,-2.467
+Broughton Astley,52.5278,-1.2275
+Sheerness,51.441,0.76
+Halstead,51.9451,0.6411
+Bargoed,51.69,-3.24
+Rushall,52.611,-1.957
+Snaresbrook,51.587,0.0146
+Sandown,50.6551,-1.1541
+Hoyland Nether,53.4985,-1.4406
+Ivybridge,50.389,-3.921
+Torton,52.4522,-2.1606
+Trentham,52.9663,-2.1899
+Hexham,54.971,-2.101
+Honiton,50.8,-3.19
+Wath upon Dearne,53.5022,-1.3402
+Street,51.1235,-2.7381
+Oswaldtwistle,53.743,-2.393
+Alsager,53.0961,-2.3048
+Market Drayton,52.9044,-2.4848
+Gillingham,51.0375,-2.2748
+Hackney,51.5414,-0.0266
+Tring,51.7962,-0.6592
+Devizes,51.353,-1.994
+Sowerby Bridge,53.71,-1.91
+Risca,51.608,-3.091
+Leominster,52.2282,-2.7385
+Ulverston,54.193,-3.09
+Elland,53.683,-1.84
+Prudhoe,54.961,-1.849
+Bolsover,53.2304,-1.2875
+Bryn,53.499,-2.657
+Sandy,52.131,-0.297
+Henley on Thames,51.536,-0.898
+Ascot,51.4084,-0.6707
+Sunninghill,51.405,-0.656
+Stonehaven,56.964,-2.211
+Abertillery,51.73,-3.13
+Wallingford,51.599,-1.125
+Thame,51.75,-0.97
+Belgrave,52.6566,-1.1262
+Wanstead,51.5778,0.0286
+Blundellsands,53.48,-3.05
+Brislington,51.4316,-2.5439
+Gourock,55.9538,-4.8173
+Pelsall,52.631,-1.972
+Tadley,51.3506,-1.1376
+Culcheth,53.4517,-2.5218
+Sandridge,51.7808,-0.3038
+Holyhead,53.309,-4.633
+Haydock,53.4678,-2.6609
+Carnoustie,56.5005,-2.7147
+Wealdstone,51.5957,-0.3352
+Greetland,53.6869,-1.8714
+Stainland,53.6728,-1.8805
+Newport,52.7691,-2.3787
+Royal Wootton Bassett,51.533,-1.9
+Buckhurst Hill,51.632,0.036
+Harrow Weald,51.604,-0.339
+Newtown,52.5132,-3.3141
+Knowsley,53.4498,-2.8501
+Wantage,51.589,-1.427
+Leatherhead,51.295,-0.329
+Burslem,53.0426,-2.1879
+Oxted,51.257,-0.006
+Hipperholme,53.7258,-1.812
+Chorleywood,51.65,-0.51
+Stanwell,51.457,-0.4715
+Astley,53.5008,-2.4454
+Burtonwood,53.4302,-2.6614
+Maryport,54.7128,-3.4926
+Saltcoats,55.6352,-4.7896
+Holywood,54.636,-5.845
+Kingsnorth,51.1178,0.8615
+Cranleigh,51.1363,-0.4784
+Largs,55.794,-4.867
+Crayford,51.4491,0.1812
+Saint Ives,50.211,-5.48
+Castle Bromwich,52.505,-1.7856
+Dorking,51.234,-0.3318
+Prescot,53.422,-2.814
+Ilfracombe,51.208,-4.12
+Wootton,52.2007,-0.8857
+Helston,50.1,-5.27
+Shoeburyness,51.5316,0.7978
+Eckington,53.308,-1.3643
+Aylestone,52.604,-1.154
+Dorridge,52.372,-1.7554
+Evington,52.621,-1.072
+Southborough,51.1598,0.2652
+Iver,51.521,-0.507
+Barton upon Humber,53.6833,-0.45
+Timperley,53.387,-2.328
+Whitchurch,51.4064,-2.5594
+Great Wyrley,52.6593,-2.0102
+Epping,51.7004,0.1087
+Bottesford,53.5521,-0.6714
+Tavistock,50.545,-4.15
+Churchdown,51.88,-2.17
+Cudworth,53.5784,-1.4149
+Hellesdon,52.6485,1.2509
+Highgate,51.5716,-0.1448
+Ardrossan,55.6432,-4.8097
+Oakham,52.6705,-0.7333
+Ponteland,55.048,-1.747
+Mossley,53.5147,-2.0387
+Hollinwood,53.5183,-2.144
+Inverurie,57.28,-2.38
+Soham,52.3338,0.3361
+Rainhill,53.4157,-2.7625
+Stranraer,54.902,-5.027
+Earlestown,53.45,-2.65
+Great Harwood,53.786,-2.408
+Methil,56.1844,-3.0223
+Wooburn,51.581,-0.691
+Flixton,53.447,-2.391
+Parkstone,50.71,-1.95
+Barnoldswick,53.9147,-2.1895
+Stannington,53.396,-1.536
+Selsey,50.735,-0.7898
+Royston,53.61,-1.45
+Amesbury,51.17,-1.77
+Ross on Wye,51.914,-2.587
+Desborough,52.4398,-0.8172
+Hatch End,51.601,-0.3743
+Darfield,53.538,-1.3812
+Knowle,52.3881,-1.7318
+Aylesford,51.3033,0.4796
+Cookstown,54.647,-6.745
+North Tidworth,51.237,-1.664
+Longbenton,55,-1.57
+Bishops Cleeve,51.947,-2.061
+Blandford Forum,50.856,-2.1648
+Englefield Green,51.4301,-0.5699
+Felton,51.51,-2.574
+Kingsteignton,50.5458,-3.5962
+Abergele,53.28,-3.58
+Southwick,54.9193,-1.4062
+Whitburn,55.8621,-3.6872
+Monmouth,51.81,-2.72
+Ryhope,54.8679,-1.3698
+Fort William,56.8198,-5.1052
+Holbeach,52.8037,0.0154
+Chatteris,52.456,0.055
+Eccleston,53.4539,-2.7748
+Scartho,53.5399,-0.0926
+Cowes,50.7595,-1.3002
+Charlton Kings,51.8877,-2.0413
+Ickenham,51.558,-0.4484
+Shepton Mallet,51.193,-2.546
+Prestonpans,55.9597,-2.961
+Mildenhall,52.3446,0.5089
+Broadstone,50.7605,-1.995
+Spitalfields,51.5166,-0.075
+Cheam,51.36,-0.21
+Ludlow,52.368,-2.718
+Appleton,53.3508,-2.5441
+Lemington,54.972,-1.723
+Snodland,51.328,0.4467
+Castleton,53.5907,-2.1737
+Rogerstone,51.5906,-3.0537
+Hucclecote,51.85,-2.18
+Great Missenden,51.7042,-0.7078
+Corfe Mullen,50.7701,-2.0175
+Beccles,52.458,1.563
+Padiham,53.797,-2.311
+Worsley,53.5093,-2.3845
+Warfield,51.442,-0.737
+Mold,53.166,-3.133
+Chapeltown,53.462,-1.466
+Southwater,51.0238,-0.3526
+Horbury,53.6595,-1.5566
+Shevington,53.572,-2.69
+Downham Market,52.6,0.39
+Euxton,53.662,-2.674
+Marton,54.5406,-1.2124
+Shildon,54.63,-1.65
+Bishopstoke,50.9679,-1.3278
+Aberaman,51.7,-3.4333
+Birchington,51.377,1.305
+Handsworth,53.37,-1.4
+Haddington,55.958,-2.774
+Aldenham,51.6723,-0.3546
+Baldock,51.99,-0.19
+Worth,51.113,-0.147
+Stocksbridge,53.478,-1.588
+Kilsyth,55.98,-4.06
+Ellon,57.366,-2.086
+Abram,53.508,-2.588
+Caernarfon,53.14,-4.27
+Ollerton,53.2,-1.02
+Choppington,55.145,-1.601
+Kippax,53.7669,-1.3705
+Tottington,53.613,-2.339
+Whitchurch,52.969,-2.682
+Dodworth,53.5417,-1.5214
+Nairn,57.586,-3.869
+Balderton,53.0549,-0.7727
+Shepperton,51.39,-0.46
+Pembroke Dock,51.6933,-4.9458
+Felpham,50.7905,-0.6539
+Cobham,51.329,-0.409
+Raynes Park,51.4033,-0.2321
+Rhosllanerchrugog,53.011,-3.052
+Lambeth,51.4903,-0.1193
+Bradwell,52.05,-0.787
+Glenfield,52.6491,-1.2062
+Immingham,53.6139,-0.2183
+Hockley,51.6014,0.6363
+Swanage,50.608,-1.96
+Boxley,51.3024,0.5429
+Matlock,53.14,-1.55
+Newburn,54.983,-1.743
+Skelton,54.5619,-0.9874
+Sherborne,50.9469,-2.5171
+Tadworth,51.294,-0.242
+Worsborough,53.52,-1.47
+London Colney,51.726,-0.3
+Emsworth,50.849,-0.938
+Llantwit Major,51.4062,-3.475
+Bewdley,52.3752,-2.3162
+Killamarsh,53.3205,-1.3116
+South Normanton,53.107,-1.343
+Bradford-on-Avon,51.347,-2.251
+Horsell,51.3286,-0.5617
+Broadwater,50.8282,-0.3742
+Wilnecote,52.6081,-1.6677
+Kirkwall,58.981,-2.96
+Ledbury,52.0339,-2.4235
+Crigglestone,53.644,-1.5226
+Towcester,52.13,-0.99
+Bowdon,53.376,-2.366
+Bude,50.824,-4.542
+Clay Cross,53.1637,-1.4128
+Launceston,50.635,-4.354
+Cullercoats,55.033,-1.433
+Cupar,56.32,-3.01
+Aberbargoed,51.6968,-3.224
+Tiptree,51.81,0.75
+Burscough,53.596,-2.843
+Yaxley,52.52,-0.26
+Pencoed,51.5228,-3.5047
+Brandon,52.4474,0.6242
+Larbert,56.0229,-3.826
+Bingham,52.952,-0.953
+Stevenston,55.645,-4.758
+Whitnash,52.268,-1.524
+Usworth,54.94,-1.55
+Portlethen,57.061,-2.13
+Dinnington,53.3667,-1.2
+Frodsham,53.295,-2.725
+Shanklin,50.631,-1.1734
+Armadale,55.8978,-3.7047
+Bonhill,55.983,-4.567
+Eaton Socon,52.22,-0.29
+Rye,50.95,0.73
+Queensferry,55.99,-3.398
+Barwell,52.5682,-1.3462
+Blairgowrie,56.5916,-3.3405
+Bovingdon,51.7231,-0.5367
+Dunblane,56.1838,-3.9674
+Ferryhill,54.69,-1.55
+Hayle,50.183,-5.416
+Glastonbury,51.1485,-2.714
+Felling,54.95,-1.564
+Great Cornard,52.0245,0.7497
+Caister-on-Sea,52.651,1.733
+Irthlingborough,52.324,-0.614
+Sandiacre,52.923,-1.291
+Holywell,53.274,-3.223
+Partick,55.8699,-4.3125
+Ifield,51.1234,-0.2073
+Leven,56.195,-2.9942
+Rhymney,51.759,-3.283
+Kirk of Shotts,55.823,-3.804
+Great Dunmow,51.873,0.3617
+Brimington,53.258,-1.3905
+Cherry Hinton,52.1849,0.176
+Cowley,51.528,-0.481
+Lydney,51.7286,-2.5285
+Cockermouth,54.6613,-3.362
+Littleport,52.4568,0.3046
+Atherstone,52.5787,-1.5462
+Raunds,52.345,-0.537
+Chapel en le Frith,53.322,-1.917
+Canford Cliffs,50.7,-1.93
+Whitwick,52.7403,-1.3556
+Polegate,50.8216,0.2442
+Oban,56.412,-5.472
+Sompting,50.8303,-0.3395
+Meltham,53.592,-1.85
+Worplesdon,51.272,-0.612
+Penkridge,52.7252,-2.1164
+Clayton le Moors,53.775,-2.384
+Oakengates,52.695,-2.451
+Bedwas,51.5926,-3.2061
+West Auckland,54.6318,-1.721
+Hughenden,51.6558,-0.749
+Carlton Colville,52.454,1.691
+Skewen,51.6609,-3.8399
+Cullompton,50.855,-3.393
+Blackwood,51.67,-3.19
+Bersted,50.797,-0.689
+Cinderford,51.8225,-2.4989
+Liphook,51.076,-0.803
+Dunbar,56.0027,-2.5169
+Ramsey,52.45,-0.12
+Rochford,51.5821,0.7065
+Sawbridgeworth,51.814,0.15
+Great Billing,52.2577,-0.8222
+Narborough,52.5727,-1.2023
+Audley,53.053,-2.304
+Hornsea,53.9108,-0.1676
+Haxby,54.016,-1.075
+Welwyn,51.831,-0.215
+Polesworth,52.6152,-1.6174
+Richmond,54.403,-1.737
+Seaton,50.705,-3.078
+Woodchurch,53.375,-3.084
+Marlborough,51.42,-1.73
+Annan,54.983,-3.266
+Yarm,54.505,-1.348
+Aveley,51.5018,0.2534
+Peebles,55.65,-3.18
+Birtley,54.9,-1.577
+Torpoint,50.376,-4.205
+Coleford,51.791,-2.6162
+Windermere,54.376,-2.907
+Glascote,52.6245,-1.668
+Aughton,53.542,-2.912
+Pocklington,53.9309,-0.7781
+Harlington,53.481,-1.182
+Buckie,57.676,-2.965
+Tanfield,54.897,-1.703
+Silsden,53.914,-1.937
+Paddock Wood,51.1756,0.3955
+Hadleigh,52.044,0.961
+Lanark,55.6749,-3.777
+Brecon,51.948,-3.391
+Toton,52.907,-1.254
+Billingshurst,51.0226,-0.4508
+Mountsorrel,52.7167,-1.15
+Radcliffe on Trent,52.947,-1.04
+Bramley,53.4253,-1.2648
+Egremont,54.484,-3.5306
+Brierfield,53.824,-2.235
+Gowerton,51.648,-4.043
+Walmer,51.2043,1.3985
+Heybridge,51.7417,0.6897
+Goffs Oak,51.7109,-0.0825
+Cam,51.7,-2.3667
+Highworth,51.631,-1.712
+Shinfield,51.408,-0.947
+Bucksburn,57.177,-2.175
+Witley,51.15,-0.646
+Dalton in Furness,54.1544,-3.1814
+Merstham,51.264,-0.153
+Wistaston,53.0821,-2.4747
+Alnwick,55.4134,-1.7069
+Old Colwyn,53.291,-3.704
+Monifieth,56.481,-2.82
+Ystradgynlais,51.781,-3.7511
+Horden,54.764,-1.315
+Brightlingsea,51.81,1.03
+Totnes,50.432,-3.684
+Caerleon,51.615,-2.959
+Stornoway,58.209,-6.387
+Warlingham,51.3095,-0.0574
+Merrow,51.2463,-0.5279
+Trumpington,52.174,0.109
+Wroughton,51.525,-1.792
+Radlett,51.685,-0.318
+Bearsted,51.2738,0.5789
+Exhall,52.47,-1.48
+Hawkinge,51.117,1.1638
+Goring by Sea,50.8122,-0.4244
+Loftus,54.5569,-0.8919
+Princes Risborough,51.724,-0.8344
+Seasalter,51.3456,0.9981
+Newbold,53.2519,-1.4461
+Coppull,53.62,-2.661
+Harworth,53.417,-1.075
+Willerby,53.7633,-0.4504
+Denny,56.018,-3.907
+Thurso,58.596,-3.521
+Newport-On-Tay,56.4402,-2.941
+Wadebridge,50.517,-4.835
+Bollington,53.298,-2.093
+Binfield,51.432,-0.792
+Kinmel,53.31,-3.519
+Latchford,53.3796,-2.5645
+Sileby,52.731,-1.106
+Crediton,50.791,-3.656
+Millom,54.2096,-3.2702
+Rainworth,53.1197,-1.1235
+Edenbridge,51.197,0.065
+Willesborough,51.1386,0.8957
+West Thurrock,51.4836,0.282
+Rainford,53.503,-2.783
+Annfield Plain,54.857,-1.737
+Cross Gates,53.8063,-1.4506
+Hook,51.2773,-0.9633
+Stopsley,51.899,-0.396
+Woodbridge,52.094,1.318
+Stony Stratford,52.0567,-0.8526
+Tenterden,51.0696,0.6898
+Stonehouse,51.7478,-2.2838
+Byfleet,51.34,-0.47
+Longridge,53.831,-2.597
+Rothwell,52.4254,-0.8029
+Cromer,52.931,1.302
+Treorchy,51.6594,-3.5055
+Hassocks,50.9233,-0.1509
+Kingsbury,52.5614,-1.6917
+Wivenhoe,51.8667,0.9625
+Fakenham,52.8356,0.851
+Angmering,50.8288,-0.4846
+Rhôs-on-Sea,53.309,-3.738
+Sundon,51.92,-0.47
+Codsall,52.6267,-2.1924
+Diss,52.3812,1.1079
+Saint Agnes,50.312,-5.204
+Banchory,57.055,-2.49
+Pembroke,51.676,-4.9158
+Yatton,51.3855,-2.8256
+Clydach,51.69,-3.91
+Cramond,55.9797,-3.3007
+Hucknall under Huthwaite,53.125,-1.301
+Whitworth,53.663,-2.177
+Stonehouse,55.6968,-3.9824
+Currie,55.896,-3.3074
+Dinas Powys,51.4331,-3.2134
+Northam,51.0393,-4.2104
+Strathaven,55.677,-4.065
+Norton Canes,52.6833,-1.9666
+Littleborough,53.644,-2.098
+Boultham,53.214,-0.5561
+Chobham,51.348,-0.604
+Burton Latimer,52.365,-0.678
+Clowne,53.276,-1.263
+Ripponden,53.672,-1.946
+Waltham Cross,51.686,-0.0331
+Pyle,51.5291,-3.6953
+Wendover,51.768,-0.7463
+Harefield,51.6034,-0.478
+Wickersley,53.4199,-1.2792
+Brockworth,51.85,-2.15
+Durrington,51.199,-1.775
+Upholland,53.541,-2.728
+Mountain Ash,51.6814,-3.3792
+Crieff,56.3757,-3.8426
+Sheringham,52.94,1.213
+Shenstone,52.637,-1.841
+Braunton,51.11,-4.162
+Bannockburn,56.09,-3.91
+Greenhill,51.36,1.103
+Wick,58.454,-3.089
+Brewood,52.6769,-2.1738
+Partington,53.42,-2.43
+Herne,51.3492,1.1331
+Shaftesbury,51.0059,-2.1969
+Southwell,53.078,-0.955
+Titchfield,50.8491,-1.2344
+Bramcote,52.934,-1.242
+Swaffham,52.6529,0.6843
+Roby,53.413,-2.852
+Basing,51.2704,-1.0473
+Kinvere,52.4488,-2.228
+Peterculter,57.097,-2.2657
+Ruddington,52.893,-1.15
+Cotgrave,52.914,-1.042
+Watton,52.5713,0.8259
+Brechin,56.7299,-2.6553
+Whitchurch,51.23,-1.34
+Kirkham,53.782,-2.87
+Warsash,50.8532,-1.301
+West Mersea,51.7784,0.9168
+Wilmington,51.4309,0.1876
+Grove,51.612,-1.421
+Claygate,51.36,-0.342
+Sawston,52.1247,0.1731
+Higham Ferrers,52.3057,-0.5844
+Denham,51.563,-0.499
+Coundon,54.6637,-1.6341
+Pershore,52.114,-2.08
+Faringdon,51.657,-1.586
+Ashbourne,53.016,-1.731
+Allington,51.2903,0.5019
+Hedon,53.7395,-0.1948
+Wardle,53.647,-2.132
+Calverton,53.037,-1.083
+Abersychan,51.7239,-3.0587
+High Ackworth,53.6408,-1.3364
+Quarrington,52.987,-0.4304
+Kirkleatham,54.5833,-1.0833
+Saint Peters,51.3651,1.4191
+Burley in Wharfedale,53.9137,-1.748
+Coxhoe,54.714,-1.503
+East Cowes,50.757,-1.2865
+Shifnal,52.665,-2.373
+Eston,54.56,-1.144
+Crewkerne,50.8803,-2.7939
+Westgate on Sea,51.3814,1.3381
+New Romney,50.985,0.941
+Warrenpoint,54.0991,-6.249
+Filey,54.2101,-0.2893
+Lerwick,60.155,-1.145
+Cleator Moor,54.5211,-3.5119
+Dowlais,51.7585,-3.3416
+Deeping Saint James,52.6717,-0.2995
+Kingswood,51.2931,-0.2086
+Church Gresley,52.76,-1.566
+Carlton,52.967,-1.088
+Thornhill,53.6622,-1.6124
+Bonnybridge,55.999,-3.887
+Duntocher,55.924,-4.417
+Fishtoft,52.9617,0.0259
+Lochgelly,56.1282,-3.3111
+Pontardawe,51.722,-3.851
+Pickering,54.2439,-0.776
+Sturry,51.3036,1.1211
+Gedling,52.975,-1.081
+Horncastle,53.208,-0.114
+Penryn,50.169,-5.107
+Lossiemouth,57.7189,-3.2875
+Great Chart,51.1409,0.8372
+Saint Blazey,50.361,-4.716
+Park Street,51.722,-0.339
+Bridge of Allan,56.155,-3.942
+Torrisholme,54.066,-2.83
+Branston,52.787,-1.659
+Bolton upon Dearne,53.5197,-1.3148
+Esher,51.3691,-0.365
+Stepps,55.8908,-4.1522
+North Petherton,51.091,-3.013
+Sandycroft,53.195,-2.999
+Bishops Waltham,50.9536,-1.2118
+Llandudno Junction,53.284,-3.809
+Meopham,51.364,0.36
+Cranbrook,51.0967,0.5356
+Godmanchester,52.3176,-0.1725
+Crowthorne,51.37,-0.792
+Uddingston,55.8183,-4.0827
+Dursley,51.6811,-2.3543
+Aintree,53.4793,-2.9373
+Farington,53.703,-2.685
+Battle,50.92,0.48
+Kimberley,52.997,-1.255
+Sherburn in Elmet,53.7973,-1.2331
+Sawley,52.882,-1.299
+Rishton,53.7701,-2.4187
+Twyford,51.477,-0.867
+North Berwick,56.058,-2.717
+Stewarton,55.68,-4.515
+Budleigh Salterton,50.6284,-3.3205
+Southam,52.252,-1.39
+Lydd,50.9509,0.9064
+Downside,51.3117,-0.4095
+Alvechurch,52.3506,-1.9647
+Pakefield,52.451,1.728
+Chapelhall,55.845,-3.9472
+Muxton,52.72,-2.421
+Whetstone,52.5724,-1.1799
+Billinge,53.4932,-2.7129
+Cove,51.2965,-0.7939
+Dingwall,57.597,-4.428
+Cwmafan,51.6155,-3.7717
+Sawtry,52.44,-0.28
+Wingerworth,53.2033,-1.4347
+Kelty,56.133,-3.38
+Anstey,52.6715,-1.1955
+Frampton Cotterell,51.54,-2.48
+South Elmsall,53.5959,-1.2726
+Newbridge,51.67,-3.136
+Danbury,51.715,0.582
+Coleshill,52.499,-1.708
+Olney,52.1529,-0.7015
+Houston,55.867,-4.5521
+Bothwell,55.8023,-4.0662
+Whaley Bridge,53.3304,-1.9838
+Pinhoe,50.7407,-3.4672
+Girvan,55.2382,-4.8561
+Peasedown Saint John,51.315,-2.424
+Loanhead,55.878,-3.148
+Market Weighton,53.8642,-0.6624
+Castle Donnington,52.8444,-1.3377
+Waltham,53.5165,-0.1021
+Wheathampstead,51.812,-0.293
+Weaverham,53.262,-2.577
+Abercynon,51.6445,-3.3267
+Egham,51.429,-0.548
+Haworth,53.83,-1.96
+Countesthorpe,52.555,-1.14
+Treharris,51.6689,-3.31
+Beith,55.7533,-4.6319
+Long Ditton,51.385,-0.321
+East Leake,52.832,-1.177
+Chipping Norton,51.94,-1.55
+Enderby,52.5881,-1.2092
+Cheddleton,53.064,-2.043
+Sauchie,56.1296,-3.7767
+Burwell,52.275,0.327
+Newbiggin-by-the-Sea,55.183,-1.515
+Lydiate,53.536,-2.959
+Thames Ditton,51.389,-0.331
+Hadfield,53.46,-1.97
+Swanscombe,51.4491,0.2993
+Liss,51.0429,-0.8918
+Stainforth,53.5958,-1.0253
+Pontardulais,51.71,-4.04
+Newarthill,55.81,-3.9333
+Alcester,52.215,-1.876
+Marshfield,51.5439,-3.0469
+Burntisland,56.06,-3.231
+Handforth,53.35,-2.216
+Southbourne,50.845,-0.9081
+Calstock,50.497,-4.21
+Thrapston,52.397,-0.538
+Chalford,51.7238,-2.1491
+Altofts,53.697,-1.416
+Blaby,52.5724,-1.1678
+Stotfold,52.018,-0.228
+Bursledon,50.8847,-1.3117
+Garswood,53.488,-2.67
+Frimley,51.3143,-0.7387
+Bilton,52.3594,-1.29
+Barrowford,53.851,-2.221
+Landore,51.64,-3.94
+Rhoose,51.3906,-3.3524
+Withernsea,53.7285,0.0382
+Colnbrook,51.4835,-0.5221
+Malvern Link,52.1255,-2.3161
+Bulkington,52.4769,-1.425
+Magor,51.5798,-2.8312
+Pembury,51.1456,0.3224
+Waddington,53.1664,-0.5389
+Kingsbridge,50.2833,-3.7765
+Orsett,51.51,0.37
+Wem,52.8536,-2.7267
+Stonewood,51.445,0.256
+Llantwit Fardre,51.5578,-3.3341
+Hollington,50.875,0.548
+Rowlands Gill,54.9209,-1.7441
+Cottenham,52.2865,0.1244
+Chipping Ongar,51.703,0.244
+Kirriemuir,56.6692,-3.0051
+Blaenavon,51.7736,-3.0828
+Balloch,56.002,-4.58
+Strensall,54.0401,-1.0344
+Long Ashton,51.43,-2.65
+Amble,55.3306,-1.5783
+Freckleton,53.753,-2.867
+Seaton Carew,54.6628,-1.1888
+Stansted Mountfitchet,51.898,0.198
+Adlington,53.6165,-2.5986
+Market Deeping,52.6776,-0.3173
+Tadcaster,53.8852,-1.262
+Staplehurst,51.164,0.553
+Fordingbridge,50.9275,-1.7901
+Highbridge,51.2189,-2.973
+New Inn,51.691,-3.009
+Ventnor,50.5976,-1.2084
+Broughton,53.169,-2.985
+Great Warley Street,51.607,0.3
+Farnham Royal,51.5386,-0.6164
+Porth,51.6138,-3.4095
+Great Burstead,51.604,0.445
+Colney Heath,51.7353,-0.2564
+Lea Town,53.774,-2.795
+Saltburn-by-the-Sea,54.5828,-0.9732
+Burghfield,51.411,-1.042
+Godstone,51.248,-0.064
+Welshpool,52.6597,-3.1473
+Crumlin,51.6798,-3.1368
+Ormesby,54.5492,-1.1817
+Pagham,50.7708,-0.7448
+East Preston,50.8104,-0.4819
+Blythebridge,52.9704,-2.0709
+Chalfont Saint Giles,51.632,-0.576
+Chinnor,51.702,-0.911
+Okehampton,50.7388,-4.0041
+Briton Ferry,51.64,-3.83
+Tillicoultry,56.153,-3.742
+Honley,53.6027,-1.7921
+Studley,52.2696,-1.8915
+Bramley,51.329,-1.0613
+Govan,55.8615,-4.3083
+Barrow upon Soar,52.7517,-1.15
+Wellesbourne Hastings,52.1943,-1.5947
+Wigton,54.823,-3.159
+Locharbriggs,55.1,-3.5833
+Stoke Mandeville,51.7861,-0.7914
+Steyning,50.8868,-0.3279
+Dyce,57.2031,-2.192
+Ilminster,50.9262,-2.9114
+Helmshore,53.687,-2.329
+Gildersome,53.759,-1.6322
+Nailsworth,51.6954,-2.2234
+East Calder,55.896,-3.462
+Callington,50.503,-4.316
+Selkirk,55.55,-2.84
+Crofton,53.657,-1.427
+Gorebridge,55.8436,-3.05
+Hungerford,51.414,-1.515
+Axminster,50.781,-3
+Ibstock,52.687,-1.401
+Cheddar,51.279,-2.778
+Cumnor,51.735,-1.332
+Ballingry,56.15,-3.3333
+Galleywood,51.697,0.474
+Oundle,52.48,-0.472
+Treherbert,51.6722,-3.5306
+Broughton,53.5638,-0.5465
+Sidley,50.86,0.47
+Hoylake,53.39,-3.18
+Pinxton,53.0905,-1.3237
+Cheadle,53.3933,-2.2113
+Preesall,53.917,-2.967
+Hethersett,52.5983,1.1833
+Ash Vale,51.27,-0.72
+Markfield,52.6878,-1.2775
+Hordle,50.7603,-1.6212
+Tarleton,53.678,-2.841
+Littlemore,51.72,-1.227
+Kelso,55.5985,-2.4336
+Elderslie,55.8306,-4.4842
+Humberston,53.5281,-0.0249
+Wadsley,53.41,-1.52
+Wotton-under-Edge,51.638,-2.349
+West Byfleet,51.338,-0.5033
+Brigg,53.5529,-0.485
+Radstock,51.293,-2.448
+Headley,51.1192,-0.8271
+Leavesden Green,51.6967,-0.3991
+Holmes Chapel,53.204,-2.353
+Great Bookham,51.278,-0.373
+Bagshot,51.3607,-0.6982
+Blean,51.307,1.043
+Great Wakering,51.5516,0.8165
+Marchwood,50.89,-1.454
+Arlesey,52.007,-0.2654
+Askern,53.6167,-1.15
+Pannal,53.9609,-1.5362
+Carnforth,54.123,-2.766
+Lexden,51.8833,0.8667
+Gorleston-on-Sea,52.5757,1.7235
+Hengoed,51.65,-3.23
+Brynmawr,51.796,-3.183
+Drighlington,53.7568,-1.6616
+Chickerell,50.624,-2.5047
+Hartford,53.245,-2.549
+Leiston,52.206,1.579
+Aylsham,52.79,1.256
+Utley,53.88,-1.91
+Longton,53.729,-2.797
+Bowling,55.932,-4.494
+Dore,53.3268,-1.5345
+Wareham,50.686,-2.1099
+Barnard Castle,54.55,-1.92
+Drayton,52.675,1.225
+Balerno,55.8852,-3.3375
+Tidenham,51.6605,-2.6435
+Martlesham,52.0733,1.2818
+Tetbury,51.636,-2.158
+Cockenzie,55.969,-2.962
+Thorpe,51.4069,-0.5354
+Rhuthun,53.115,-3.312
+Wyke Regis,50.592,-2.475
+Barton on Sea,50.7428,-1.6552
+Griffithstown,51.6853,-3.0284
+Shenfield,51.6297,0.3192
+New Alresford,51.0907,-1.1612
+Cardenden,56.133,-3.25
+Ammanford,51.8,-3.993
+Bilton,54.0099,-1.5359
+Fishguard,51.9982,-4.9804
+Perranzabuloe,50.326,-5.133
+Illogan,50.25,-5.268
+Dalry,55.711,-4.723
+Brotton,54.568,-0.937
+Lindfield,51.0135,-0.0833
+Earls Barton,52.263,-0.746
+Writtle,51.729,0.427
+Malmesbury,51.584,-2.098
+Kirton,52.9278,-0.0598
+Freshwater,50.6826,-1.5249
+Hartley,51.3868,0.3037
+Abercarn,51.649,-3.135
+Bidford-on-Avon,52.1644,-1.8567
+Sollom,53.662,-2.825
+Redbourn,51.8002,-0.3965
+Newton Grange,55.868,-3.067
+Cuddington,53.24,-2.6
+Newmains,55.7832,-3.8771
+Polmont,55.9908,-3.7064
+Bourne End,51.5817,-0.7134
+Neilston,55.7847,-4.4234
+Wool,50.6789,-2.2189
+Alness,57.695,-4.258
+Paulton,51.3069,-2.5027
+Murston,51.341,0.7524
+Brayton,53.7682,-1.0907
+Roundway,51.368,-1.981
+Glyncorrwg,51.6776,-3.6292
+Wincanton,51.0559,-2.4102
+Keswick,54.5999,-3.1293
+Tickhill,53.4305,-1.1135
+Tettenhall,52.5983,-2.168
+Sedgefield,54.65,-1.45
+Measham,52.7061,-1.508
+Newent,51.9302,-2.4048
+Hunters Quay,55.9707,-4.9116
+Ore,50.8721,0.6085
+Edwinstowe,53.16,-1.07
+Church,53.755,-2.386
+Holytown,55.8229,-3.9701
+Quorndon,52.7428,-1.17
+Holmfirth,53.57,-1.787
+Ruskington,53.0444,-0.3875
+Waterbeach,52.2664,0.1908
+Brixworth,52.329,-0.904
+Woodville,52.769,-1.533
+Pinchbeck,52.8147,-0.1605
+Nursling,50.9449,-1.4727
+Bungay,52.4496,1.4477
+Kinross,56.205,-3.423
+Cwmbach,51.7072,-3.4128
+Llangefni,53.256,-4.314
+Looe,50.354,-4.454
+Great Meols,53.4014,-3.1553
+Elstree,51.64,-0.3
+South Molton,51.02,-3.83
+Botley,50.9144,-1.27
+Grangetown,54.58,-1.144
+Oakley,51.251,-1.1764
+Swanwick,53.075,-1.398
+Baystonhill,52.6727,-2.7654
+Middleton-on-Sea,50.7949,-0.6197
+Kings Langley,51.7156,-0.4569
+Harleston,52.4024,1.2996
+Dartmouth,50.351,-3.579
+Harlescott,52.7365,-2.7226
+Turriff,57.539,-2.4611
+Sheriff Hill,54.939,-1.586
+Treforest,51.5878,-3.3222
+Earlswood,51.228,-0.171
+Duffield,52.989,-1.489
+Chipping Sodbury,51.538,-2.394
+Whiston,53.4,-1.32
+Wirksworth,53.082,-1.574
+Shipston on Stour,52.06,-1.623
+Pyrford,51.3146,-0.5064
+Heage,53.05,-1.447
+Henfield,50.933,-0.277
+Gresford,53.087,-2.966
+Blackrod,53.5898,-2.5809
+Marston Green,52.465,-1.74
+Barton-le-Clay,51.9669,-0.4241
+Galston,55.6004,-4.3798
+Sacriston,54.817,-1.626
+Thirsk,54.2327,-1.342
+Loughor,51.6626,-4.0646
+Hirwaun,51.7386,-3.4989
+Sandwich,51.2747,1.3389
+Speldhurst,51.1516,0.2219
+Helsby,53.273,-2.77
+Hurlford,55.5985,-4.452
+Hilperton,51.33,-2.184
+New Tredegar,51.7217,-3.2403
+Llangennech,51.693,-4.092
+Alva,56.153,-3.7996
+Silverdale,53.0159,-2.2675
+Bromham,52.1454,-0.5298
+Hildenborough,51.214,0.242
+Forest Row,51.0982,0.0334
+Buntingford,51.9445,-0.016
+Lyneham,51.507,-1.966
+Sturminster Newton,50.9261,-2.3051
+Broseley,52.612,-2.481
+Shefford,52.037,-0.332
+Oxshott,51.332,-0.356
+Longfield,51.3962,0.3046
+Midhurst,50.985,-0.74
+Datchet,51.4841,-0.5762
+Willaston,53.292,-3.005
+Hawkhurst,51.0471,0.5173
+Cranfield,52.0699,-0.6081
+Winterton,53.6549,-0.5979
+Ottery Saint Mary,50.752,-3.279
+Inverkeithing,55.9667,-3.2139
+Malton,54.139,-0.792
+Wadhurst,51.066,0.33
+Sunningdale,51.398,-0.626
+Ffestiniog,52.99,-3.93
+Potton,52.1271,-0.2152
+Nunthorpe,54.5287,-1.177
+Brampton,52.3194,-0.2335
+Campbeltown,55.423,-5.608
+Darenth,51.4199,0.2567
+Rothesay,55.836,-5.0558
+Garlinge,51.3781,1.3566
+Earls Colne,51.928,0.702
+Melbourne,52.823,-1.429
+Brymbo,53.076,-3.05
+West Hallam,52.97,-1.36
+Easton-in-Gordano,51.476,-2.7
+Crowle,53.6073,-0.8321
+South Cave,53.769,-0.598
+Long Sutton,52.7856,0.12
+Old Kilpatrick,55.925,-4.4593
+Wickham,50.9,-1.19
+Blaina,51.7667,-3.1667
+Wilsden,53.8167,-1.8667
+Shirland,53.121,-1.412
+Milton Regis,51.35,0.75
+Stokenchurch,51.659,-0.896
+Taibach,51.584,-3.769
+Four Marks,51.1116,-1.0443
+Heslington,53.9448,-1.0434
+Shiremoor,55.0366,-1.5048
+Laleham,51.407,-0.488
+Alderley Edge,53.303,-2.236
+Old Windsor,51.46,-0.586
+Llanbradach,51.6032,-3.2296
+Cilybebyll,51.719,-3.83
+Martock,50.9704,-2.7653
+Blackburn,55.872,-3.621
+Maybole,55.3551,-4.68
+Stokesley,54.4712,-1.1905
+Benson,51.621,-1.111
+Stoke Poges,51.546,-0.584
+Heacham,52.9069,0.49
+Irchester,52.2783,-0.6555
+Uppingham,52.59,-0.7222
+Gnosall,52.785,-2.2528
+Bethesda,53.179,-4.06
+Keith,57.543,-2.952
+Fauldhouse,55.8272,-3.7091
+Bovey Tracey,50.593,-3.672
+Halesworth,52.342,1.506
+Roose,54.096,-3.182
+Kelvedon,51.833,0.699
+Almondsbury,51.5567,-2.5725
+Coedpoeth,53.054,-3.074
+Greenhithe,51.4504,0.2823
+Somerton,51.0535,-2.7361
+Lakenheath,52.4136,0.5226
+Pulborough,50.96,-0.51
+Milton,52.2435,0.1615
+Fulbourn,52.184,0.2272
+Church Stretton,52.539,-2.808
+Kirby Muxloe,52.6351,-1.2341
+Milford on Sea,50.726,-1.589
+East Wittering,50.7694,-0.8738
+Eccleshall,52.859,-2.251
+Eynsham,51.781,-1.375
+Ringmer,50.89,0.05
+Nelson,51.651,-3.283
+Bray,51.507,-0.7
+Dersingham,52.8447,0.502
+Bishopton,55.9086,-4.5045
+Sandgate,51.074,1.1454
+Clanfield,50.947,-1.0081
+Nantyglo,51.7828,-3.1698
+Bridge of Weir,55.8565,-4.5777
+Great Ayton,54.4957,-1.1292
+Brampton,54.9409,-2.7329
+Easingwold,54.1198,-1.1897
+Norton,53.633,-1.175
+Mytchett,51.2943,-0.7268
+Kennoway,56.2,-3.05
+Toddington,51.9496,-0.5323
+Saint Columb Major,50.432,-4.94
+Haxey,53.4868,-0.8462
+Portree,57.412,-6.192
+Girton,52.233,0.083
+Stoke Prior,52.3025,-2.0849
+Marston Moretaine,52.0627,-0.5478
+Borough Green,51.2913,0.3062
+Siston,51.4746,-2.4501
+Skelmanthorpe,53.591,-1.649
+Sully,51.41,-3.21
+Wetheral,54.88,-2.83
+Winchcomb,51.955,-1.965
+Earby,53.914,-2.144
+Huntington,52.715,-2.042
+Burnopfield,54.907,-1.736
+Colwich,52.7875,-1.9806
+Linton,52.0991,0.277
+Ingatestone,51.67,0.38
+Haddenham,51.771,-0.928
+Lees,53.538,-2.069
+Bromyard,52.1908,-2.5068
+Menston,53.8912,-1.7344
+Knebworth,51.866,-0.184
+Saint Athan,51.402,-3.416
+Coalville,52.724,-1.369
+Dunoon,55.9509,-4.9262
+Ferring,50.8128,-0.4481
+Kingsthorpe,52.2625,-0.9
+Kintore,57.2332,-2.3461
+Westerham,51.2713,0.0701
+Shenley,51.692,-0.282
+Chirk,52.93,-3.05
+Lingfield,51.175,-0.0171
+Cowpen,55.127,-1.539
+Huntly,57.446,-2.788
+Blidworth,53.098,-1.1165
+Sutton Bridge,52.771,0.1874
+Swynnerton,52.917,-2.217
+Newlyn,50.101,-5.553
+New Scone,56.418,-3.404
+Wilford,52.926,-1.16
+Ludgershall,51.256,-1.622
+Long Stratton,52.488,1.234
+Huncoat,53.77,-2.34
+Melbourn,52.082,0.0205
+Odiham,51.2541,-0.9396
+West Kilbride,55.6966,-4.8576
+Blackwell,53.12,-1.354
+Fazeley,52.6154,-1.706
+Hatfield Peverel,51.7691,0.5928
+Steeton,53.896,-1.948
+Seaton Delaval,55.0826,-1.4778
+Thringstone,52.7557,-1.3657
+Winwick,53.4306,-2.5976
+Penmaenmawr,53.27,-3.928
+Llanasa,53.322,-3.344
+Seamer,54.2383,-0.441
+Bransgore,50.78,-1.733
+Burstow,51.1685,-0.1105
+Kessingland,52.419,1.723
+Welton,53.3029,-0.4759
+Albrighton,52.6344,-2.277
+North Hinksey,51.749,-1.292
+Overton,51.2439,-1.2615
+Carcroft,53.58,-1.17
+Fremington,51.07,-4.12
+Finedon,52.34,-0.649
+Lawford,51.94,1.045
+Kirkburton,53.61,-1.703
+Cwm,51.7409,-3.1812
+Cuffley,51.7109,-0.1134
+Disley,53.357,-2.043
+Horsehay,52.656,-2.49
+East Horsley,51.261,-0.433
+Hagley,52.43,-2.12
+Glynneath,51.747,-3.617
+Saint Osyth,51.799,1.08
+Ruabon,52.986,-3.039
+Southminster,51.6598,0.831
+Garstang,53.903,-2.767
+Nazeing,51.7367,0.0587
+Eccleston,53.647,-2.726
+Chartham,51.2645,1.041
+South Wootton,52.7794,0.4426
+Send,51.2878,-0.5263
+Newhouse,55.8317,-3.928
+Shelford,52.1503,0.1357
+Hunstanton,52.93,0.48
+Dalbeattie,54.932,-3.822
+Cricklade,51.641,-1.856
+Barton under Needwood,52.763,-1.727
+Hope,53.1077,-3.0366
+Madeley,53.001,-2.341
+Crowland,52.6768,-0.1688
+Bulford,51.19,-1.761
+Hugglescote,52.711,-1.371
+Porthmadog,52.927,-4.132
+Cardigan,52.0842,-4.6579
+Whittington,53.26,-1.43
+Ferndale,51.661,-3.448
+Grenoside,53.441,-1.502
+Castle Douglas,54.941,-3.929
+Copmanthorpe,53.916,-1.133
+Loudwater,51.606,-0.6923
+Ashburton,50.517,-3.751
+Wingate,54.7349,-1.3801
+Bagillt,53.268,-3.168
+Bugle,50.396,-4.793
+Horsford,52.7007,1.2412
+Oystermouth,51.5758,-4.0072
+Beddau,51.556,-3.3577
+Milford,51.17,-0.65
+Wootton,52.0987,-0.5319
+Shalford,51.211,-0.568
+Howden,53.7441,-0.8634
+Standon,51.8827,0.0292
+Llanllyfni,53.045,-4.282
+Keele,53.0044,-2.2871
+Bolton le Sands,54.104,-2.791
+Llantarnam,51.636,-3.0056
+Terrington Saint Clement,52.7546,0.2947
+Mauchline,55.516,-4.379
+Skellow,53.58,-1.19
+Lambourn,51.509,-1.531
+Lennoxtown,55.974,-4.206
+Newton Stewart,54.958,-4.492
+Jedburgh,55.477,-2.546
+Boston Spa,53.904,-1.35
+Pwllheli,52.887,-4.418
+Invergordon,57.6879,-4.157
+Saltford,51.4015,-2.4592
+Bare,54.076,-2.837
+Cowbridge,51.4605,-3.448
+Cold Ash,51.424,-1.264
+Theydon Bois,51.6713,0.1034
+Thrybergh,53.45,-1.3
+Easington,54.806,-1.4323
+Baxenden,53.734,-2.341
+Hesketh Bank,53.708,-2.849
+Altarnun,50.603,-4.511
+Bar Hill,52.2539,0.0228
+Brundall,52.6244,1.4337
+Branston,53.1944,-0.4717
+Willingham,52.32,0.07
+Kemsing,51.3071,0.2252
+Wraysbury,51.458,-0.552
+Chudleigh,50.604,-3.605
+Lockerbie,55.12,-3.357
+Woodhall Spa,53.1515,-0.2183
+Kings Worthy,51.0878,-1.2953
+Blaenau-Ffestiniog,52.994,-3.939
+Kilmacolm,55.8941,-4.6271
+Sible Hedingham,51.9667,0.5833
+Warboys,52.4,-0.07
+Saxilby,53.2714,-0.656
+Banff,57.667,-2.524
+Hadlow,51.2303,0.3404
+Ormesby Saint Margaret,52.6746,1.6975
+Broomfield,51.765,0.471
+Bisley,51.33,-0.64
+Higham,51.415,0.463
+Elm,52.63,0.18
+Penn,51.633,-0.681
+Elmswell,52.2372,0.9113
+Mytholmroyd,53.73,-1.981
+Bakewell,53.213,-1.6759
+Ynysddu,51.6267,-3.1861
+Auchterarder,56.2932,-3.7061
+Ushaw Moor,54.778,-1.6457
+Deganwy,53.298,-3.831
+Tayport,56.4467,-2.8796
+Coggeshall,51.8717,0.6913
+Long Melford,52.077,0.718
+Shedfield,50.915,-1.2091
+Long Buckby,52.303,-1.081
+Edwalton,52.912,-1.112
+Wheatley,51.747,-1.139
+Market Rasen,53.3871,-0.3355
+Hardwicke,51.8139,-2.2847
+Whyteleafe,51.3088,-0.0833
+Whitwell,53.285,-1.209
+Purton,51.588,-1.867
+Rothley,52.709,-1.136
+North Ferriby,53.72,-0.5078
+Hartshorne,52.789,-1.526
+Warmsworth,53.5,-1.18
+Chasetown,52.67,-1.92
+River,51.1447,1.2797
+Hindhead,51.1172,-0.7348
+North Elmsall,53.609,-1.282
+Ticehurst,51.05,0.41
+Kemnay,57.2339,-2.4489
+Beaufort,51.797,-3.206
+Coningsby,53.1051,-0.1752
+Mayland,51.687,0.754
+Pengam,51.6663,-3.2189
+Wrockwardine,52.703,-2.556
+Linthwaite,53.6264,-1.8461
+Ellesmere,52.9082,-2.8944
+Capel,51.154,-0.321
+Brynna,51.5388,-3.4632
+Deanshanger,52.0473,-0.8928
+Bowness-on-Windermere,54.3644,-2.9181
+Holt,52.9,1.09
+Stratfield Mortimer,51.373,-1.037
+Somersham,52.3823,0.0006
+Swanland,53.7399,-0.4905
+Poringland,52.5655,1.3503
+Belhelvie,57.249,-2.088
+Upper Beeding,50.8823,-0.3051
+Stoney Stanton,52.548,-1.2788
+Walton le Dale,53.746,-2.665
+Banks,53.683,-2.917
+Haltwhistle,54.97,-2.458
+Amlwch,53.406,-4.341
+Tibshelf,53.143,-1.345
+Watchet,51.1795,-3.3242
+Gullane,56.037,-2.827
+Tenbury,52.31,-2.59
+Macduff,57.671,-2.497
+Dymchurch,51.027,1
+Tonypandy,51.6223,-3.4512
+Wyberton,52.954,-0.0412
+Worlingham,52.452,1.595
+Auckley,53.502,-1.018
+Lamesley,54.916,-1.608
+Melton,52.1058,1.3317
+Epworth,53.525,-0.82
+Harewood,53.9,-1.51
+Topsham,50.686,-3.4651
+Addingham,53.9333,-1.8833
+Marden,51.174,0.494
+Messingham,53.5273,-0.6535
+Spixworth,52.6895,1.3268
+Sutton-in-Craven,53.892,-1.993
+Rhuddlan,53.294,-3.464
+Feock,50.206,-5.05
+Caddington,51.8631,-0.4568
+Garelochhead,56.081,-4.83
+Holton le Clay,53.5055,-0.0585
+Pirbright,51.286,-0.639
+Bembridge,50.6897,-1.0889
+Lesmahagow,55.638,-3.887
+Aston Clinton,51.799,-0.721
+Desford,52.625,-1.295
+Old Brampton,53.2432,-1.4994
+Highcliffe,50.7414,-1.6959
+Taff’s Well,51.5454,-3.2702
+Corbridge,54.975,-2.017
+Lyme Regis,50.725,-2.94
+Dobwalls,50.4577,-4.5158
+Llangollen,52.97,-3.17
+Maresfield,51,0.09
+Pilning,51.564,-2.6417
+Saxmundham,52.215,1.487
+Clapham,52.1649,-0.502
+Llanharry,51.513,-3.43
+Llanfairfechan,53.253,-3.973
+Stoneleigh,52.3514,-1.5147
+Penclawdd,51.641,-4.0977
+Pewsey,51.339,-1.765
+Whalley,53.824,-2.404
+Kilbarchan,55.8362,-4.5537
+Kilburn,53.0056,-1.4254
+Aviemore,57.194,-3.823
+Wembdon,51.132,-3.023
+Haven Street,50.7092,-1.2089
+Wigginton,54.0187,-1.0936
+Newton,51.484,-3.679
+Frizington,54.556,-3.471
+Highley,52.448,-2.382
+Metheringham,53.1391,-0.4034
+Kegworth,52.8369,-1.2836
+Anstruther,56.2234,-2.7027
+Carfin,55.8009,-3.9648
+Boreham,51.7599,0.542
+Parkgate,53.296,-3.085
+Tain,57.8118,-4.0567
+Bottesford,52.9375,-0.802
+Elton,53.2766,-2.8168
+Shawforth,53.683,-2.166
+West Parley,50.786,-1.886
+Oughtibridge,53.436,-1.539
+Wilton,51.08,-1.864
+Harthill,55.8603,-3.7493
+Bawtry,53.4278,-1.0167
+Yapton,50.82,-0.6112
+Martham,52.7084,1.6328
+Limpsfield,51.2606,0.0119
+Bramley,51.193,-0.558
+Wisbech Saint Mary,52.63,0.1
+Scarisbrick,53.61,-2.934
+Brockenhurst,50.82,-1.58
+Carisbrooke,50.6917,-1.3172
+Upton,53.62,-1.29
+Dreghorn,55.6072,-4.6169
+Marham,52.6608,0.5255
+Stamford Bridge,53.989,-0.9125
+Box,51.415,-2.252
+Kidwelly,51.736,-4.307
+Mulbarton,52.5872,1.2253
+Auchinleck,55.4733,-4.2985
+Barkham,51.402,-0.876
+Bitton,51.4248,-2.46
+Cosby,52.5517,-1.1933
+Whaplode,52.8002,-0.037
+Moulton,52.798,-0.0629
+Moulton Chapel,52.7463,-0.0841
+Cults,57.1187,-2.1739
+Marsden,53.6011,-1.9267
+Withnell,53.69,-2.555
+Congresbury,51.3677,-2.8109
+Melling,53.495,-2.927
+Moreton in Marsh,51.988,-1.701
+Yelverton,50.492,-4.086
+Wollaston,52.2564,-0.6694
+Inverkip,55.907,-4.8703
+Denholme,53.802,-1.894
+Pilsley,53.155,-1.366
+Pentyrch,51.5288,-3.2973
+Arundel,50.8544,-0.5539
+Prestbury,53.2928,-2.1452
+Clipstone,53.17,-1.1073
+Llanharan,51.53,-3.43
+Skellingthorpe,53.2364,-0.6165
+Otford,51.3097,0.1866
+Neyland,51.7113,-4.9452
+South Cerney,51.671,-1.932
+Alford,53.26,0.18
+Cholsey,51.574,-1.151
+Moulton,52.2892,-0.8491
+Redlynch,50.988,-1.712
+Sway,50.783,-1.6
+Wootton,50.7263,-1.2321
+Water Orton,52.517,-1.736
+Burton Joyce,52.988,-1.036
+Nettleham,53.2662,-0.4877
+Gilfach Goch,51.5921,-3.4728
+Gilberdike,53.752,-0.7361
+Lytchett Matravers,50.7582,-2.0791
+Wonersh,51.1983,-0.5468
+Queenborough,51.4183,0.745
+Boroughbridge,54.095,-1.398
+Avonmouth,51.501,-2.699
+Bramhope,53.8829,-1.6095
+Westerleigh,51.51,-2.43
+Marston,51.777,-1.236
+Thorngumbald,53.7208,-0.1715
+Pen-y-cae,52.999,-3.073
+Kirkliston,55.956,-3.403
+Chapel Saint Leonards,53.223,0.3365
+Glemsford,52.1,0.669
+Benllech,53.3216,-4.2257
+Swillington,53.768,-1.4201
+New Buildings,54.958,-7.355
+Llanbadarn-fawr,52.408,-4.06
+Menai Bridge,53.23,-4.16
+Bilsthorpe,53.1333,-1.0333
+Bloxham,52.018,-1.375
+Lenham,51.238,0.716
+South Petherton,50.949,-2.809
+Takeley,51.868,0.266
+Saundersfoot,51.711,-4.7
+Darvel,55.61,-4.2809
+Washingborough,53.2233,-0.4744
+Saint Asaph,53.258,-3.442
+Heckington,52.982,-0.304
+Kirkcudbright,54.832,-4.048
+Clackmannan,56.107,-3.749
+Codicote,51.85,-0.236
+Haddenham,52.358,0.149
+West Bergholt,51.91,0.85
+Buxted,50.99,0.13
+Framlingham,52.2221,1.3434
+Leverington,52.6822,0.1359
+Lowdham,53.009,-1.001
+Buckfastleigh,50.48,-3.78
+Llanrwst,53.137,-3.795
+Wedmore,51.226,-2.81
+Blofield,52.635,1.448
+West Chiltington,50.9556,-0.449
+Boughton Monchelsea,51.2293,0.5312
+Burghill,52.1,-2.7666
+West Wellow,50.975,-1.578
+East Peckham,51.22,0.38
+Bourton on the Water,51.886,-1.759
+Nottage,51.491,-3.7116
+Ashfordby,52.76,-0.96
+Newtonhill,57.032,-2.15
+Pegswood,55.1798,-1.6442
+Hemsby,52.6976,1.6911
+Gobowen,52.896,-3.038
+Wilstead,52.0666,-0.4333
+Cuckfield,51.0096,-0.1407
+Crosskeys,51.6169,-3.1207
+Towyn,52.582,-4.089
+Barlborough,53.287,-1.287
+Laceby,53.541,-0.168
+Preston,53.7566,-0.1969
+Bishopston,51.575,-4.051
+Gamlingay,52.1579,-0.1946
+Little Paxton,52.25,-0.25
+Headcorn,51.1695,0.6203
+Bishopthorpe,53.9187,-1.1008
+Fairford,51.708,-1.785
+Thurston,52.2499,0.8259
+Rossett,53.109,-2.945
+Mid Calder,55.8918,-3.481
+Pontesbury,52.649,-2.888
+Hendy,51.713,-4.057
+Cambusbarron,56.109,-3.968
+Law,55.7501,-3.8826
+Endon,53.0788,-2.1112
+Chestfield,51.355,1.064
+Rotherfield,51.046,0.2192
+Goudhurst,51.1112,0.4636
+Swalwell,54.954,-1.684
+Malvern Wells,52.0785,-2.3324
+Alyth,56.6231,-3.232
+Treeton,53.3845,-1.3513
+Long Lawford,52.3841,-1.302
+Knighton,52.344,-3.049
+Holme upon Spalding Moor,53.8365,-0.7782
+Bream,51.7498,-2.574
+Alderholt,50.9133,-1.8317
+Harrington,54.612,-3.565
+Kingsclere,51.326,-1.2442
+Maerdy,51.6727,-3.4833
+Bedale,54.288,-1.591
+Catterick,54.377,-1.63
+Silkstone,53.5489,-1.5634
+Pevensey,50.8203,0.3383
+Stalham,52.77,1.511
+Berkswell,52.409,-1.642
+Chipstead,51.315,-0.163
+Markyate,51.836,-0.455
+Little Plumstead,52.649,1.4128
+Maulden,52.03,-0.47
+Hunmanby,54.1818,-0.3175
+Weston Turville,51.7916,-0.7577
+Ogmore Vale,51.603,-3.5467
+Eaglesham,55.7394,-4.2733
+Eastergate,50.8417,-0.6579
+Willaston,53.082,-2.479
+Llangendeirne,51.7985,-4.2071
+Eriswell,52.367,0.533
+Woodstock,51.845,-1.354
+Beaminster,50.809,-2.7391
+Laurencekirk,56.83,-2.46
+Leslie,56.202,-3.2115
+Langford,52.0529,-0.2741
+Draycott,52.8944,-1.3415
+Chailey,50.96,-0.01
+Iwade,51.376,0.728
+Kenton,50.64,-3.47
+Wrecclesham,51.199,-0.818
+Tutbury,52.854,-1.686
+Downton,50.993,-1.743
+West Calder,55.852,-3.5685
+Scotter,53.499,-0.6663
+Perranporth,50.3437,-5.1546
+Porthleven,50.084,-5.315
+Drybrook,51.8542,-2.5496
+Felsted,51.856,0.436
+Northop,53.204,-3.13
+Norton Fitzwarren,51.0232,-3.1491
+Spilsby,53.1727,0.0931
+Tardebigge,52.322,-2.007
+Kirkby Moorside,54.269,-0.93
+Cleobury Mortimer,52.3785,-2.4821
+Kincardine,56.069,-3.719
+South Hetton,54.8,-1.41
+Gwithian,50.2214,-5.3865
+Llangynwyd,51.5869,-3.6379
+Petworth,50.986,-0.609
+High Bentham,54.118,-2.51
+Painswick,51.786,-2.194
+Barrow upon Humber,53.675,-0.3818
+Eastchurch,51.4,0.8667
+Ystalyfera,51.764,-3.786
+Margam,51.5744,-3.7528
+Rendlesham,52.1301,1.4127
+Newbold Verdon,52.6296,-1.3421
+Saughall,53.2234,-2.9593
+West Melton,53.5035,-1.3618
+Cleland,55.8023,-3.9143
+Steynton,51.7295,-5.0174
+Longtown,55.0084,-2.9687
+Breage,50.108,-5.332
+Llanfairpwllgwyngyll,53.2232,-4.2008
+Sealand,53.212,-2.97
+Saint Clears,51.8204,-4.5042
+Padstow,50.538,-4.938
+Collingham,53.904,-1.4139
+Normandy,51.2576,-0.6556
+Pangbourne,51.4839,-1.0869
+Lyndhurst,50.87,-1.58
+Bletchingley,51.241,-0.099
+Colerne,51.439,-2.262
+Hopton on Sea,52.534,1.738
+Lampeter,52.1202,-4.0821
+Belton,53.553,-0.8166
+Cringleford,52.6056,1.2433
+Mere,51.09,-2.266
+Llanwern,51.572,-2.9133
+Chiddingfold,51.1113,-0.6282
+Trimdon,54.7017,-1.4284
+Gosberton,52.85,-0.15
+Alveston,51.589,-2.533
+Heath,53.1982,-1.3353
+Pitstone,51.8256,-0.6302
+Camelford,50.617,-4.683
+Fernhurst,51.049,-0.723
+Charminster,50.7327,-2.4546
+Healing,53.5739,-0.164
+Dunchurch,52.3368,-1.2896
+Brodsworth,53.5596,-1.237
+West Grinstead,50.9741,-0.3331
+Cullingworth,53.8247,-1.9027
+Kinghorn,56.07,-3.17
+Great Totham,51.7792,0.7011
+Llanidloes,52.449,-3.5402
+Totland,50.6849,-1.5366
+Croft,53.437,-2.552
+Banwell,51.327,-2.864
+Heighington,53.212,-0.4574
+Croston,53.662,-2.777
+East Woodhay,51.3511,-1.4183
+Llanrug,53.147,-4.193
+Holmewood,53.1893,-1.3549
+Bruton,51.1134,-2.4528
+Etwall,52.884,-1.602
+Silloth,54.869,-3.381
+Pucklechurch,51.487,-2.4353
+Teynham,51.331,0.802
+Chryston,55.906,-4.11
+Bosham,50.8289,-0.8595
+Prees,52.897,-2.666
+Ryhill,53.6168,-1.4021
+Wiveliscombe,51.0431,-3.3137
+Stainton,54.5211,-1.2595
+Chieveley,51.461,-1.319
+New Cumnock,55.3968,-4.1839
+Upton upon Severn,52.063,-2.215
+Papworth Everard,52.2547,-0.1189
+Halkyn,53.233,-3.183
+Harton,54.881,-1.534
+Clifton,52.0398,-0.3017
+Much Wenlock,52.5966,-2.558
+Capel Saint Mary,52.002,1.046
+Dollar,56.162,-3.674
+Minchinhampton,51.7058,-2.186
+Shawbury,52.786,-2.655
+Swanmore,50.9423,-1.1794
+Fen Stanton,52.3,-0.07
+Bookham,51.233,-0.286
+Over,52.314,0.016
+Much Hadham,51.854,0.072
+Barlaston,52.9457,-2.1583
+Ottershaw,51.368,-0.53
+Alrewas,52.732,-1.749
+Lechlade,51.699,-1.692
+White Waltham,51.49,-0.769
+Thaxted,51.954,0.346
+Bishops Lydeard,51.0615,-3.1872
+Sheering,51.8043,0.1845
+Theale,51.437,-1.077
+Usk,51.704,-2.902
+Tattershall,53.104,-0.1906
+Aspatria,54.7633,-3.3281
+Charlbury,51.872,-1.482
+Chalgrove,51.665,-1.077
+West Horsley,51.261,-0.454
+West Coker,50.9189,-2.6913
+Cranwell,53.0367,-0.4619
+Feltwell,52.4864,0.5194
+Cymmer,51.65,-3.65
+Acle,52.638,1.555
+South Brent,50.4281,-3.8358
+Halling,51.3514,0.4413
+Crich,53.084,-1.479
+Glenboig,55.8933,-4.0449
+Adderbury,52.016,-1.313
+Cantley,53.51,-1.06
+Lostwithiel,50.4074,-4.6696
+Appledore,51.0525,-4.1945
+Northchurch,51.783,-0.613
+Donington,52.904,-0.1982
+Buckden,52.28,-0.25
+Milborne Port,50.9666,-2.461
+Newmilns,55.608,-4.329
+Clydach Vale,51.6268,-3.4719
+Chinley,53.339,-1.941
+Rudgwick,51.093,-0.446
+West Monkton,51.051,-3.045
+Saint Dennis,50.383,-4.883
+Fulford,53.938,-1.073
+Smalley,52.998,-1.394
+Mitcheldean,51.8646,-2.4904
+Milltimber,57.1052,-2.2311
+Ellington,55.2209,-1.5621
+Pitlochry,56.705,-3.733
+Kilnhurst,53.4703,-1.3057
+Radley,51.689,-1.24
+Bugbrooke,52.2105,-1.0106
+Rowlands Castle,50.8912,-0.9601
+Pontyberem,51.779,-4.174
+Charing,51.2107,0.7949
+Sedbergh,54.322,-2.526
+East Bergholt,51.978,1.017
+Lickey End,52.3522,-2.0448
+Mundesley,52.876,1.438
+Locking,51.3309,-2.9108
+Callander,56.244,-4.2145
+Burton upon Stather,53.6494,-0.6848
+Icklesham,50.92,0.67
+Upwell,52.5956,0.2134
+Davenham,53.2358,-2.5111
+Wing,51.898,-0.717
+Hambleton,53.875,-2.952
+Llysfaen,53.279,-3.668
+Wendron,50.134,-5.248
+Greenfield,53.289,-3.21
+Wembury,50.3169,-4.083
+North Collingham,53.1478,-0.7592
+New Earswick,53.992,-1.0724
+Batheaston,51.4065,-2.3112
+Farnsfield,53.1028,-1.0361
+Tarvin,53.1949,-2.7668
+Watlington,51.645,-1.008
+Mintlaw,57.525,-2.001
+Crosshouse,55.6122,-4.5528
+Wolsingham,54.731,-1.882
+Lingwood,52.6222,1.4901
+Meriden,52.4379,-1.6496
+Lyminge,51.127,1.0876
+Brenchley,51.1486,0.3941
+Burwash,51,0.39
+Cowie,56.0805,-3.867
+Fordham,52.32,0.38
+Effingham,51.2718,-0.4002
+Presteign,52.2744,-3.0054
+Hayfield,53.38,-1.94
+Wootton,51.707,-1.313
+Reepham,52.762,1.112
+Repton,52.838,-1.549
+Weedon Beck,52.231,-1.0804
+Gretna,54.994,-3.062
+Elstow,52.1069,-0.4648
+West Wittering,50.7806,-0.8956
+Stalbridge,50.9594,-2.3784
+Kirton in Lindsey,53.4759,-0.5887
+Muir of Ord,57.52,-4.46
+Dolgellau,52.743,-3.885
+Combe Martin,51.2,-4.025
+Mistley,51.944,1.081
+Nutfield,51.238,-0.133
+Hardwick,52.2133,0.0119
+Dundonald,55.578,-4.594
+Chisledon,51.516,-1.731
+Teversham,52.2,0.19
+Long Stanton,52.279,0.0478
+Badsey,52.08,-1.89
+Harbledown,51.283,1.054
+Withyham,51.1,0.132
+Grimsargh,53.805,-2.631
+Tuxford,53.231,-0.898
+Loddon,52.533,1.483
+Llandow,51.449,-3.523
+Horam,50.93,0.24
+Holsworthy,50.8167,-4.35
+Robertsbridge,50.99,0.47
+Speen,51.4098,-1.3417
+Wrington,51.361,-2.763
+Mattishall,52.6585,1.0347
+South Hanningfield,51.6504,0.5183
+Lochwinnoch,55.7925,-4.6286
+Cuxton,51.375,0.45
+Kington,52.2035,-3.03
+Oxenhope,53.812,-1.952
+Tangmere,50.851,-0.716
+Timsbury,51.3268,-2.4757
+Tollesbury,51.76,0.84
+Biddenham,52.1406,-0.5051
+Emneth,52.6426,0.2091
+Stocksfield,54.948,-1.914
+Tarporley,53.1602,-2.6694
+Herstmonceux,50.89,0.32
+Kelsall,53.207,-2.712
+Kempsey,52.1391,-2.2177
+Brynamman,51.8151,-3.8714
+Williton,51.1648,-3.3087
+Willington,52.854,-1.565
+Whittington,52.67,-1.76
+Nefyn,52.935,-4.524
+Kilmaurs,55.6394,-4.5303
+Caistor,53.494,-0.322
+Bushbury,52.62,-2.113
+Ambleside,54.4251,-2.9626
+Clent,52.4152,-2.114
+Duns,55.7784,-2.3426
+Eythorne,51.1971,1.2662
+Whittington,52.874,-3.003
+West Malling,51.2917,0.4152
+Dalston,54.8432,-2.9835
+Fishburn,54.6831,-1.4364
+Eyemouth,55.871,-2.093
+Stone,51.8044,-0.8649
+Innerleithen,55.6184,-3.059
+Sherborne Saint John,51.2944,-1.1098
+Westfield,50.91,0.58
+Wilpshire,53.778,-2.479
+Ironbridge,52.6277,-2.485
+Hutton,51.3219,-2.927
+Reydon,52.3376,1.6695
+Parbold,53.593,-2.764
+Crowan,50.163,-5.294
+Biddenden,51.1139,0.6441
+Snettisham,52.8771,0.5024
+Dornoch,57.88,-4.03
+Builth Wells,52.149,-3.405
+Carron,56.0238,-3.7896
+Brookwood,51.3038,-0.6367
+Settle,54.0721,-2.2819
+Bampton,51.727,-1.544
+Wolston,52.37,-1.39
+Kelvedon Hatch,51.6633,0.2783
+Elstead,51.184,-0.698
+Newington,51.352,0.6679
+Marks Tey,51.876,0.772
+Hartlebury,52.33,-2.23
+Luddenden Foot,53.7178,-1.9381
+Mobberley,53.3134,-2.3263
+Yarnton,51.811,-1.31
+Bredon,52.03,-2.117
+Trimsaran,51.7178,-4.2379
+Broadway,52.04,-1.86
+Llandwrog,53.079,-4.314
+Charfield,51.6261,-2.4058
+Kintbury,51.399,-1.449
+Hemingford Grey,52.318,-0.104
+Barmouth,52.722,-4.055
+Holywell,52.319,-0.034
+Lower Kingswood,51.294,-0.2115
+Moffat,55.332,-3.442
+Stanton,52.324,0.885
+Rainow,53.2802,-2.0727
+Baschurch,52.791,-2.854
+Delabole,50.622,-4.733
+Elsecar,53.496,-1.412
+Newmacher,57.267,-2.192
+Pontycymer,51.6116,-3.5842
+Saint Margaret’s at Cliffe,51.1536,1.3714
+Broughton,52.05,-0.694

@@ -1,0 +1,829 @@
+guy,total,name,county,firstName,lastName,place
+Ralph Babthorp,300.0,St Clement's Priory,"YORKSHIRE, EAST RIDING",Ralph,Babthorp,
+John Elys,480.0,St Clement's Priory,"YORKSHIRE, EAST RIDING",John,Elys,
+William Stapleton,240.0,Healaugh Park Priory,"YORKSHIRE, EAST RIDING",William,Stapleton,
+___ Tankerd Steward,80.0,Syningthwaite Priory,"YORKSHIRE, EAST RIDING",___,Tankerd,
+John Carbott,80.0,Syningthwaite Priory,"YORKSHIRE, EAST RIDING",John,Carbott,
+John Lord Hussey,480.0,"St Mary's Abbey, York","YORKSHIRE, NORTH RIDING",John,Lord,
+Augustin' Port',240.0,"St Mary's Abbey, York","YORKSHIRE, NORTH RIDING",Augustin',Port',
+Thomas Chitteslay,240.0,"St Mary's Abbey, York","YORKSHIRE, NORTH RIDING",Thomas,Chitteslay,
+John Crake,240.0,"St Mary's Abbey, York","YORKSHIRE, NORTH RIDING",John,Crake,
+Christopher lord Conyers,15936.0,"St Mary's Abbey, York","YORKSHIRE, NORTH RIDING",Christopher,lord,
+Thomas Wray,480.0,"St Mary's Abbey, York","YORKSHIRE, NORTH RIDING",Thomas,Wray,
+Richard Chace,240.0,"St Mary's Abbey, York","YORKSHIRE, NORTH RIDING",Richard,Chace,
+Christopher Perkinson,240.0,"St Mary's Abbey, York","YORKSHIRE, NORTH RIDING",Christopher,Perkinson,
+Christopher Hargill,240.0,"St Mary's Abbey, York","YORKSHIRE, NORTH RIDING",Christopher,Hargill,
+Robert Sutton,120.0,"St Mary's Abbey, York","YORKSHIRE, NORTH RIDING",Robert,Sutton,
+Richard Vincent,320.0,"St Mary's Abbey, York","YORKSHIRE, NORTH RIDING",Richard,Vincent,
+Richard Dent,240.0,"St Mary's Abbey, York","YORKSHIRE, NORTH RIDING",Richard,Dent,
+William Clerk,240.0,"St Mary's Abbey, York","YORKSHIRE, NORTH RIDING",William,Clerk,
+Edward Berye,240.0,"St Mary's Abbey, York","YORKSHIRE, NORTH RIDING",Edward,Berye,
+Thomas Wray,240.0,"St Mary's Abbey, York","YORKSHIRE, NORTH RIDING",Thomas,Wray,
+Thomas Darcy,1440.0,"St Mary's Abbey, York","YORKSHIRE, NORTH RIDING",Thomas,Darcy,
+George Darcy,960.0,"St Mary's Abbey, York","YORKSHIRE, NORTH RIDING",George,Darcy,
+William Constable,480.0,"St Mary's Abbey, York","YORKSHIRE, NORTH RIDING",William,Constable,
+Roger Cholmelay,730.0,"St Mary's Abbey, York","YORKSHIRE, NORTH RIDING",Roger,Cholmelay,
+George Lawson,1640.0,"St Mary's Abbey, York","YORKSHIRE, NORTH RIDING",George,Lawson,
+William Maunsell,1200.0,"St Mary's Abbey, York","YORKSHIRE, NORTH RIDING",William,Maunsell,
+George Lawson,320.0,"St Mary's Abbey, York","YORKSHIRE, NORTH RIDING",George,Lawson,
+Richard Whalley,1440.0,"St Mary's Abbey, York","YORKSHIRE, NORTH RIDING",Richard,Whalley,
+Roger Curwen,480.0,"St Mary's Abbey, York","YORKSHIRE, NORTH RIDING",Roger,Curwen,
+Thomas Gerveys,182.0,"St Mary's Abbey, York","YORKSHIRE, NORTH RIDING",Thomas,Gerveys,
+Christopher Esington,240.0,"St Mary's Abbey, York","YORKSHIRE, NORTH RIDING",Christopher,Esington,
+Jacob Tyndall,300.0,"St Mary's Abbey, York","YORKSHIRE, NORTH RIDING",Jacob,Tyndall,
+John Ward,240.0,"St Mary's Abbey, York","YORKSHIRE, NORTH RIDING",John,Ward,
+Laurence Robinson,1200.0,"St Mary's Abbey, York","YORKSHIRE, NORTH RIDING",Laurence,Robinson,
+John Houseman,320.0,"St Mary's Abbey, York","YORKSHIRE, NORTH RIDING",John,Houseman,
+Carl Pennington,970.0,"St Mary's Abbey, York","YORKSHIRE, NORTH RIDING",Carl,Pennington,
+Thomas Williamson,240.0,"St Mary's Abbey, York","YORKSHIRE, NORTH RIDING",Thomas,Williamson,
+Robert Lethley,240.0,"St Mary's Abbey, York","YORKSHIRE, NORTH RIDING",Robert,Lethley,
+Robert Fedderstan,240.0,"St Mary's Abbey, York","YORKSHIRE, NORTH RIDING",Robert,Fedderstan,
+Jacob Eustach,320.0,"St Mary's Abbey, York","YORKSHIRE, NORTH RIDING",Jacob,Eustach,
+John Roger,1680.0,"St Mary's Abbey, York","YORKSHIRE, NORTH RIDING",John,Roger,
+vic' Ebor',720.0,"St Mary's Abbey, York","YORKSHIRE, NORTH RIDING",vic',Ebor',
+Thomas Fairfax,480.0,"St Mary's Abbey, York","YORKSHIRE, NORTH RIDING",Thomas,Fairfax,
+Robert Chalon,480.0,"St Mary's Abbey, York","YORKSHIRE, NORTH RIDING",Robert,Chalon,
+Thomas Clerke,240.0,"St Mary's Abbey, York","YORKSHIRE, NORTH RIDING",Thomas,Clerke,
+Richard Farley,1200.0,"St Mary's Abbey, York","YORKSHIRE, NORTH RIDING",Richard,Farley,
+Thomas Gilloye,240.0,"St Mary's Abbey, York","YORKSHIRE, NORTH RIDING",Thomas,Gilloye,
+Robert Constable,480.0,"St Mary's Abbey, York","YORKSHIRE, NORTH RIDING",Robert,Constable,
+Dionisio Metcalffe,480.0,"St Mary's Abbey, York","YORKSHIRE, NORTH RIDING",Dionisio,Metcalffe,
+John Hyde,480.0,"St Mary's Abbey, York","YORKSHIRE, NORTH RIDING",John,Hyde,
+William Maunsell,320.0,"St Mary's Abbey, York","YORKSHIRE, NORTH RIDING",William,Maunsell,
+William Dickinson,480.0,"St Mary's Abbey, York","YORKSHIRE, NORTH RIDING",William,Dickinson,
+Anthony Saltmarch,120.0,"St Mary's Abbey, York","YORKSHIRE, NORTH RIDING",Anthony,Saltmarch,
+Thomas Walles,504.0,"St Mary's Abbey, York","YORKSHIRE, NORTH RIDING",Thomas,Walles,
+John Coltman,480.0,"St Mary's Abbey, York","YORKSHIRE, NORTH RIDING",John,Coltman,
+Henry Wilson,40.0,"St Mary's Abbey, York","YORKSHIRE, NORTH RIDING",Henry,Wilson,
+William Dacre,480.0,Wetheral,CUMBERLAND,William,Dacre,
+George Mires,320.0,Wetheral,CUMBERLAND,George,Mires,
+Edward Walles,640.0,Wetheral,CUMBERLAND,Edward,Walles,
+Robert Watson,320.0,Wetheral,CUMBERLAND,Robert,Watson,
+Thomas See,320.0,St Mary Magdalene's Priory,LINCOLNSHIRE,Thomas,See,
+Robert Levitt,240.0,St Mary Magdalene's Priory,LINCOLNSHIRE,Robert,Levitt,
+Thomas Wray,320.0,"St Martin's Priory, Richmond","YORKSHIRE, NORTH RIDING",Thomas,Wray,
+John Wilkinson,320.0,"St Martin's Priory, Richmond","YORKSHIRE, NORTH RIDING",John,Wilkinson,
+John Lamplough,320.0,St Bees Priory,CUMBERLAND,John,Lamplough,
+Christopher Culwen,240.0,St Bees Priory,CUMBERLAND,Christopher,Culwen,
+Richard Orfer,240.0,St Bees Priory,CUMBERLAND,Richard,Orfer,
+John Nicholson,240.0,St Bees Priory,CUMBERLAND,John,Nicholson,
+William Poule,320.0,St Bees Priory,CUMBERLAND,William,Poule,
+John Ponsonby,40.0,St Bees Priory,CUMBERLAND,John,Ponsonby,
+Anthony Patrickson,40.0,St Bees Priory,CUMBERLAND,Anthony,Patrickson,
+Thomas Tobson,40.0,St Bees Priory,CUMBERLAND,Thomas,Tobson,
+Bernard Lambert,320.0,Selby Abbey,"YORKSHIRE, WEST RIDING",Bernard,Lambert,
+Lord Darcy,720.0,Selby Abbey,"YORKSHIRE, WEST RIDING",Lord,Darcy,
+Lord Burgh,480.0,Selby Abbey,"YORKSHIRE, WEST RIDING",Lord,Burgh,
+William Askew,320.0,Selby Abbey,"YORKSHIRE, WEST RIDING",William,Askew,
+Thomas Grice,240.0,Selby Abbey,"YORKSHIRE, WEST RIDING",Thomas,Grice,
+William Balthorp,240.0,Selby Abbey,"YORKSHIRE, WEST RIDING",William,Balthorp,
+Leonardo Bekwyth,240.0,Selby Abbey,"YORKSHIRE, WEST RIDING",Leonardo,Bekwyth,
+Thomas Cawe,320.0,Selby Abbey,"YORKSHIRE, WEST RIDING",Thomas,Cawe,
+Richard Cawe,240.0,Selby Abbey,"YORKSHIRE, WEST RIDING",Richard,Cawe,
+Edward Montague,240.0,Selby Abbey,"YORKSHIRE, WEST RIDING",Edward,Montague,
+Robert Walker,2880.0,Selby Abbey,"YORKSHIRE, WEST RIDING",Robert,Walker,
+Earl of Huntington,160.0,Selby Abbey,"YORKSHIRE, WEST RIDING",Earl,of,Huntington
+William Thorpe,320.0,Selby Abbey,"YORKSHIRE, WEST RIDING",William,Thorpe,
+Simon Pynd',640.0,Selby Abbey,"YORKSHIRE, WEST RIDING",Simon,Pynd',
+Richard Taillior,320.0,Selby Abbey,"YORKSHIRE, WEST RIDING",Richard,Taillior,
+George Belton,-0.0,Selby Abbey,"YORKSHIRE, WEST RIDING",George,Belton,
+Richard Beilby,320.0,Selby Abbey,"YORKSHIRE, WEST RIDING",Richard,Beilby,
+Thomas Potter,480.0,Selby Abbey,"YORKSHIRE, WEST RIDING",Thomas,Potter,
+William Nelson,320.0,Selby Abbey,"YORKSHIRE, WEST RIDING",William,Nelson,
+William Skelton,320.0,Selby Abbey,"YORKSHIRE, WEST RIDING",William,Skelton,
+Christopher Hartfurth,320.0,Selby Abbey,"YORKSHIRE, WEST RIDING",Christopher,Hartfurth,
+William Androwe,40.0,Selby Abbey,"YORKSHIRE, WEST RIDING",William,Androwe,
+Thomas Midleton,320.0,Selby Abbey,"YORKSHIRE, WEST RIDING",Thomas,Midleton,
+John Wright,480.0,Selby Abbey,"YORKSHIRE, WEST RIDING",John,Wright,
+John Elys,320.0,Selby Abbey,"YORKSHIRE, WEST RIDING",John,Elys,
+John Wigglesworth,120.0,Arthington Priory,"YORKSHIRE, WEST RIDING",John,Wigglesworth,
+Robert Mennell,240.0,Esholt Priory,"YORKSHIRE, WEST RIDING",Robert,Mennell,
+John Colier,160.0,Esholt Priory,"YORKSHIRE, WEST RIDING",John,Colier,
+William Fitzwilliam,480.0,Roche Abbey,"YORKSHIRE, WEST RIDING",William,Fitzwilliam,
+Milonis Wyn,240.0,Roche Abbey,"YORKSHIRE, WEST RIDING",Milonis,Wyn,
+John Green,120.0,Roche Abbey,"YORKSHIRE, WEST RIDING",John,Green,
+Thomas Green,240.0,Roche Abbey,"YORKSHIRE, WEST RIDING",Thomas,Green,
+Henry Gillott,240.0,Roche Abbey,"YORKSHIRE, WEST RIDING",Henry,Gillott,
+Henry Whitehead,240.0,Roche Abbey,"YORKSHIRE, WEST RIDING",Henry,Whitehead,
+Thomas lord Burgh,320.0,Roche Abbey,"YORKSHIRE, WEST RIDING",Thomas,lord,
+Robert Thornabye,240.0,Roche Abbey,"YORKSHIRE, WEST RIDING",Robert,Thornabye,
+Robert Burton,120.0,Roche Abbey,"YORKSHIRE, WEST RIDING",Robert,Burton,
+Henry Savell,800.0,Monk Bretton Priory,"YORKSHIRE, WEST RIDING",Henry,Savell,
+Carl Jackson,240.0,Monk Bretton Priory,"YORKSHIRE, WEST RIDING",Carl,Jackson,
+John Bean,320.0,Monk Bretton Priory,"YORKSHIRE, WEST RIDING",John,Bean,
+William Cawthorpe,320.0,Monk Bretton Priory,"YORKSHIRE, WEST RIDING",William,Cawthorpe,
+Thomas Green,240.0,Monk Bretton Priory,"YORKSHIRE, WEST RIDING",Thomas,Green,
+Edmund Dewis,240.0,Monk Bretton Priory,"YORKSHIRE, WEST RIDING",Edmund,Dewis,
+William Wilson,240.0,Monk Bretton Priory,"YORKSHIRE, WEST RIDING",William,Wilson,
+William Percy,240.0,Hampole Priory,"YORKSHIRE, WEST RIDING",William,Percy,
+William Arthington,160.0,Hampole Priory,"YORKSHIRE, WEST RIDING",William,Arthington,
+Chrisopher Huscroft,480.0,Hampole Priory,"YORKSHIRE, WEST RIDING",Chrisopher,Huscroft,
+Thome Grene,320.0,Nostell Priory,"YORKSHIRE, WEST RIDING",Thome,Grene,
+Thome Rigaill,240.0,Nostell Priory,"YORKSHIRE, WEST RIDING",Thome,Rigaill,
+Caroli Hopkinson,320.0,Nostell Priory,"YORKSHIRE, WEST RIDING",Caroli,Hopkinson,
+Thome Rawson,240.0,Nostell Priory,"YORKSHIRE, WEST RIDING",Thome,Rawson,
+Johannis Fretwell,160.0,Nostell Priory,"YORKSHIRE, WEST RIDING",Johannis,Fretwell,
+Jacobo Grene,240.0,Nostell Priory,"YORKSHIRE, WEST RIDING",Jacobo,Grene,
+Willemo Amyas,160.0,Nostell Priory,"YORKSHIRE, WEST RIDING",Willemo,Amyas,
+John Bednell,380.0,Bamburgh Priory,NORTHUMBERLAND,John,Bednell,
+Edmund Bradford,240.0,Bamburgh Priory,NORTHUMBERLAND,Edmund,Bradford,
+Thome Grice,320.0,Woodkirk Priory,"YORKSHIRE, WEST RIDING",Thome,Grice,
+Thome Beamond,80.0,Woodkirk Priory,"YORKSHIRE, WEST RIDING",Thome,Beamond,
+Willelmo Dalison,240.0,Hirst,LINCOLNSHIRE,Willelmo,Dalison,
+Willelmo Dacres,160.0,Hirst,LINCOLNSHIRE,Willelmo,Dacres,
+Thomas lord of Darcy,1200.0,Pontefract Priory,"YORKSHIRE, WEST RIDING",Thomas,lord,Darcy
+John Midley Bailiff of Burton Salmon,320.0,Pontefract Priory,"YORKSHIRE, WEST RIDING",John,Midley,Burton
+William Shelit bailiff of Whitwood,320.0,Pontefract Priory,"YORKSHIRE, WEST RIDING",William,Shelit,Whitwood
+Thomas Essheley bailiff of Kellingley,320.0,Pontefract Priory,"YORKSHIRE, WEST RIDING",Thomas,Essheley,Kellingley
+George Darcy steward of Barnsley,240.0,Pontefract Priory,"YORKSHIRE, WEST RIDING",George,Darcy,Barnsley
+Thomas Beamond steward of Barnsley,240.0,Pontefract Priory,"YORKSHIRE, WEST RIDING",Thomas,Beamond,Barnsley
+William Twhait rec' priorat' ibidem,1200.0,Pontefract Priory,"YORKSHIRE, WEST RIDING",William,Twhait,
+Thomas Hegley bailiff of Barnsley,320.0,Pontefract Priory,"YORKSHIRE, WEST RIDING",Thomas,Hegley,Barnsley
+John Craggs bailiff of Pontefract,320.0,Pontefract Priory,"YORKSHIRE, WEST RIDING",John,Craggs,Pontefract
+Robert Webster bailiff of Ledston,480.0,Pontefract Priory,"YORKSHIRE, WEST RIDING",Robert,Webster,Ledston
+Edward Cracy bailiff of Dodworth,160.0,Pontefract Priory,"YORKSHIRE, WEST RIDING",Edward,Cracy,Dodworth
+Laurence Townley bailiff of Barnside,160.0,Pontefract Priory,"YORKSHIRE, WEST RIDING",Laurence,Townley,Barnside
+Carl Jackson steward of Ledston,240.0,Pontefract Priory,"YORKSHIRE, WEST RIDING",Carl,Jackson,Ledston
+Thomas Larborne bailiff of Camsall and Afterfeld,402.0,Newland Preceptory,"YORKSHIRE, WEST RIDING",Thomas,Larborne,Camsall
+William Thornburro bailiff of Kendall and Cartmell,240.0,Newland Preceptory,"YORKSHIRE, WEST RIDING",William,Thornburro,Kendall
+John Talbott bailiff of Stede,360.0,Newland Preceptory,"YORKSHIRE, WEST RIDING",John,Talbott,Stede
+John Pennyngton bailiff of Copland ,380.0,Newland Preceptory,"YORKSHIRE, WEST RIDING",John,Pennyngton,Copland
+Thomas Awinisworth bailiff of Chipping,403.0,Newland Preceptory,"YORKSHIRE, WEST RIDING",Thomas,Awinisworth,Chipping
+Thomas Skarbroughe bailiff of Lonesdall and Kendall,398.0,Newland Preceptory,"YORKSHIRE, WEST RIDING",Thomas,Skarbroughe,Lonesdall
+Robert Morehowse bailiff of Kildwike,140.0,Newland Preceptory,"YORKSHIRE, WEST RIDING",Robert,Morehowse,Kildwike
+John Manemounde bailiff of Bengill and Egardall,320.0,Newland Preceptory,"YORKSHIRE, WEST RIDING",John,Manemounde,Bengill
+Robert Rufford bailiff of Crossele,80.0,Newland Preceptory,"YORKSHIRE, WEST RIDING",Robert,Rufford,Crossele
+Henry Croun' bailiff of Swinton and Wardershipp,420.0,Newland Preceptory,"YORKSHIRE, WEST RIDING",Henry,Croun',Swinton
+John Smith bailiff of Pudse,128.0,Newland Preceptory,"YORKSHIRE, WEST RIDING",John,Smith,Pudse
+Thomas Simkinson bailiff of Heton and Batt,278.0,Newland Preceptory,"YORKSHIRE, WEST RIDING",Thomas,Simkinson,Heton
+Roger Rogerson bailiff of Osington and Winkeborne,640.0,Newland Preceptory,"YORKSHIRE, WEST RIDING",Roger,Rogerson,Osington
+William Coldcole bailiff of Newland ,320.0,Newland Preceptory,"YORKSHIRE, WEST RIDING",William,Coldcole,Newland
+William Mering,480.0,Newland Preceptory,"YORKSHIRE, WEST RIDING",William,Mering,
+Alexander Osbalston,480.0,Newland Preceptory,"YORKSHIRE, WEST RIDING",Alexander,Osbalston,
+William More,1440.0,Newland Preceptory,"YORKSHIRE, WEST RIDING",William,More,
+William Asby,640.0,Newland Preceptory,"YORKSHIRE, WEST RIDING",William,Asby,
+Thomas Wilbroo,674.0,Newland Preceptory,"YORKSHIRE, WEST RIDING",Thomas,Wilbroo,
+Thomas Tempest,240.0,Gisborough Priory,"YORKSHIRE, NORTH RIDING",Thomas,Tempest,
+William Rukeby,240.0,Gisborough Priory,"YORKSHIRE, NORTH RIDING",William,Rukeby,
+Peter Midleton,320.0,Gisborough Priory,"YORKSHIRE, NORTH RIDING",Peter,Midleton,
+Robert Tristam,800.0,Gisborough Priory,"YORKSHIRE, NORTH RIDING",Robert,Tristam,
+Henry Gray,480.0,Gisborough Priory,"YORKSHIRE, NORTH RIDING",Henry,Gray,
+William Whitby,160.0,Gisborough Priory,"YORKSHIRE, NORTH RIDING",William,Whitby,
+Christopher Emerson,240.0,Gisborough Priory,"YORKSHIRE, NORTH RIDING",Christopher,Emerson,
+Dennis Willes,800.0,Gisborough Priory,"YORKSHIRE, NORTH RIDING",Dennis,Willes,
+William Peirson,160.0,Gisborough Priory,"YORKSHIRE, NORTH RIDING",William,Peirson,
+Simon Welbury,160.0,Gisborough Priory,"YORKSHIRE, NORTH RIDING",Simon,Welbury,
+William Clifton,800.0,Gisborough Priory,"YORKSHIRE, NORTH RIDING",William,Clifton,
+Robert Sulwood,240.0,Gisborough Priory,"YORKSHIRE, NORTH RIDING",Robert,Sulwood,
+Cuthbert Shorter,160.0,Gisborough Priory,"YORKSHIRE, NORTH RIDING",Cuthbert,Shorter,
+Richard Knagg,240.0,Gisborough Priory,"YORKSHIRE, NORTH RIDING",Richard,Knagg,
+Nicholas Cokrell,120.0,Gisborough Priory,"YORKSHIRE, NORTH RIDING",Nicholas,Cokrell,
+Richard Thwyng,160.0,Gisborough Priory,"YORKSHIRE, NORTH RIDING",Richard,Thwyng,
+Henry count of Northumbria and his heirs,480.0,Whitby Abbey,"YORKSHIRE, NORTH RIDING",Henry,count,Northumbria
+Jacob Conyers bailiff of Whitby,1600.0,Whitby Abbey,"YORKSHIRE, NORTH RIDING",Jacob,Conyers,Whitby
+John Leythley,240.0,Whitby Abbey,"YORKSHIRE, NORTH RIDING",John,Leythley,
+John Appleby and Richard Kildale,640.0,Whitby Abbey,"YORKSHIRE, NORTH RIDING",John,Appleby,
+William Jackson and Percival Cokerell bailiffs of Fylyng and Gasdale,480.0,Whitby Abbey,"YORKSHIRE, NORTH RIDING",William,Jackson,Fylyng
+William Pereson bailiff of Dymflay,240.0,Whitby Abbey,"YORKSHIRE, NORTH RIDING",William,Pereson,Dymflay
+William Danby and Reginald Lee stewards of the court of the said monastery,640.0,Whitby Abbey,"YORKSHIRE, NORTH RIDING",William,Danby,
+John Markeham for the court of Hog',320.0,Mount Grace Priory,"YORKSHIRE, NORTH RIDING",John,Markeham,Hog
+William Thorald,240.0,Mount Grace Priory,"YORKSHIRE, NORTH RIDING",William,Thorald,
+William Wilson bailiff of Hog,800.0,Mount Grace Priory,"YORKSHIRE, NORTH RIDING",William,Wilson,Hog
+John Litlebery for court of Myntyng,160.0,Mount Grace Priory,"YORKSHIRE, NORTH RIDING",John,Litlebery,Myntyng
+John Bee bailiff of Myntyng,480.0,Mount Grace Priory,"YORKSHIRE, NORTH RIDING",John,Bee,Myntyng
+John Pulleyn steward of the court for all territory of the said priory in county of York,480.0,Mount Grace Priory,"YORKSHIRE, NORTH RIDING",John,Pulleyn,York
+John Jenyson rector of Southholme,160.0,Mount Grace Priory,"YORKSHIRE, NORTH RIDING",John,Jenyson,Southholme
+steward of Hynkeley,160.0,Mount Grace Priory,"YORKSHIRE, NORTH RIDING",steward,of,Hynkeley
+Henry Porter bailiff of Hynkeley,160.0,Mount Grace Priory,"YORKSHIRE, NORTH RIDING",Henry,Porter,Hynkeley
+Lord Marcus of Addreston,320.0,Mount Grace Priory,"YORKSHIRE, NORTH RIDING",Lord,Marcus,Addreston
+Ralph Purfray,160.0,Mount Grace Priory,"YORKSHIRE, NORTH RIDING",Ralph,Purfray,
+Robert Green,720.0,Mount Grace Priory,"YORKSHIRE, NORTH RIDING",Robert,Green,
+William Danby,160.0,Arden Priory,"YORKSHIRE, NORTH RIDING",William,Danby,
+Robert Bower,240.0,Baysdale Priory,"YORKSHIRE, NORTH RIDING",Robert,Bower,
+Nicholas Williamson,120.0,Baysdale Priory,"YORKSHIRE, NORTH RIDING",Nicholas,Williamson,
+William Percy,160.0,Handale Priory,"YORKSHIRE, NORTH RIDING",William,Percy,
+Thomas Lutton,80.0,Handale Priory,"YORKSHIRE, NORTH RIDING",Thomas,Lutton,
+George Lauson military steward of the aforesaid priory,800.0,Newburgh Priory,"YORKSHIRE, NORTH RIDING",George,Lauson,
+William Mawnsell bailiff of Hovyngame,80.0,Newburgh Priory,"YORKSHIRE, NORTH RIDING",William,Mawnsell,Hovyngame
+Christopher Symond bailiff of Newburgh,320.0,Newburgh Priory,"YORKSHIRE, NORTH RIDING",Christopher,Symond,Newburgh
+John Bone bailiff of Ulvestone,320.0,Newburgh Priory,"YORKSHIRE, NORTH RIDING",John,Bone,Ulvestone
+Adam Fethersonehaughe bailiff of Kylborne,320.0,Newburgh Priory,"YORKSHIRE, NORTH RIDING",Adam,Fethersonehaughe,Kylborne
+Thomas Aldburght bailiff of Thirsk,320.0,Newburgh Priory,"YORKSHIRE, NORTH RIDING",Thomas,Aldburght,Thirsk
+William Mennell bailiff of Wembleton,320.0,Newburgh Priory,"YORKSHIRE, NORTH RIDING",William,Mennell,Wembleton
+George Metkalffe bailiff of Aystaneby,240.0,Newburgh Priory,"YORKSHIRE, NORTH RIDING",George,Metkalffe,Aystaneby
+Nicholas Boc bailiff of Soureby,240.0,Newburgh Priory,"YORKSHIRE, NORTH RIDING",Nicholas,Boc,Soureby
+Robert Horner bailiff of Micklehall,240.0,Newburgh Priory,"YORKSHIRE, NORTH RIDING",Robert,Horner,Micklehall
+Francis Otterborne bailiff of Langthrop,240.0,Newburgh Priory,"YORKSHIRE, NORTH RIDING",Francis,Otterborne,Langthrop
+Nicholas Boe rector (general?) in the county of York and Nottinghamshire,1920.0,Newburgh Priory,"YORKSHIRE, NORTH RIDING",Nicholas,Boe,York
+Milon Metkalffe rector in the county of Lincoln,1200.0,Newburgh Priory,"YORKSHIRE, NORTH RIDING",Milon,Metkalffe,Lincoln
+John Dallyson steward of the court,240.0,Newburgh Priory,"YORKSHIRE, NORTH RIDING",John,Dallyson,
+Roger Chamley military steward,240.0,Marton Priory,"YORKSHIRE, WEST RIDING",Roger,Chamley,
+Robert Todd bailiff,240.0,Marton Priory,"YORKSHIRE, WEST RIDING",Robert,Todd,
+Robert Reddhede bailiff of Shireshoton,240.0,Marton Priory,"YORKSHIRE, WEST RIDING",Robert,Reddhede,Shireshoton
+John Burton bailiff of Threpeland in Craven,240.0,Marton Priory,"YORKSHIRE, WEST RIDING",John,Burton,Threpeland
+John Norton steward there,160.0,Marton Priory,"YORKSHIRE, WEST RIDING",John,Norton,
+William Percy military steward there,240.0,Thicket Priory,"YORKSHIRE, EAST RIDING",William,Percy,
+Thomas Doune rector? There,80.0,Thicket Priory,"YORKSHIRE, EAST RIDING",Thomas,Doune,
+John Aske,320.0,Thicket Priory,"YORKSHIRE, EAST RIDING",John,Aske,
+Roger Chamley military steward,480.0,Moxby Priory,"YORKSHIRE, NORTH RIDING",Roger,Chamley,
+Robert Hunter,240.0,Moxby Priory,"YORKSHIRE, NORTH RIDING",Robert,Hunter,
+Christopher Neudyk steward of the court,120.0,Moxby Priory,"YORKSHIRE, NORTH RIDING",Christopher,Neudyk,
+Thomas Count of Rutland steward of the monastery,1200.0,Kirkham Priory,"YORKSHIRE, EAST RIDING",Thomas,Count,Rutland
+Marmaduke Constable military steward of Whitwell,240.0,Kirkham Priory,"YORKSHIRE, EAST RIDING",Marmaduke,Constable,Whitwell
+Thomas Gowe steward of the court in Whitwell,240.0,Kirkham Priory,"YORKSHIRE, EAST RIDING",Thomas,Gowe,Whitwell
+William Colanwodde bailiff of Titlyngton,240.0,Kirkham Priory,"YORKSHIRE, EAST RIDING",William,Colanwodde,Titlyngton
+Peter Manby bailiff of Kyrkeham,480.0,Kirkham Priory,"YORKSHIRE, EAST RIDING",Peter,Manby,Kyrkeham
+Jacob Aslaby bailiff of Kirkby in Grendale,240.0,Kirkham Priory,"YORKSHIRE, EAST RIDING",Jacob,Aslaby,Kirkby
+Rad'I Bawde bailiff of Hemeslay,160.0,Kirkham Priory,"YORKSHIRE, EAST RIDING",Rad'I,Bawde,Hemeslay
+Thomas Holteby bailiff of Sexendale,80.0,Kirkham Priory,"YORKSHIRE, EAST RIDING",Thomas,Holteby,Sexendale
+Carleton auditor of the monastery,240.0,Kirkham Priory,"YORKSHIRE, EAST RIDING",Carleton,auditor,
+John Presteman bailiff of Billesdale,240.0,Kirkham Priory,"YORKSHIRE, EAST RIDING",John,Presteman,Billesdale
+Jacob Muthforth receiver of the office of cellarer of the monastery,240.0,Kirkham Priory,"YORKSHIRE, EAST RIDING",Jacob,Muthforth,
+George Hussey,84.0,Meaux Abbey,"YORKSHIRE, EAST RIDING",George,Hussey,
+Robert Turwhitt,9.0,Meaux Abbey,"YORKSHIRE, EAST RIDING",Robert,Turwhitt,
+Christopher Hilyard,4.0,Meaux Abbey,"YORKSHIRE, EAST RIDING",Christopher,Hilyard,
+William Constable fees for aforesaid lands,320.0,Meaux Abbey,"YORKSHIRE, EAST RIDING",William,Constable,
+Richard Smethlay steward of letters? There,320.0,Meaux Abbey,"YORKSHIRE, EAST RIDING",Richard,Smethlay,
+Robert Hogeson steward of the court there,240.0,Meaux Abbey,"YORKSHIRE, EAST RIDING",Robert,Hogeson,
+Richard Kynney rector? Of Wellowe,240.0,Meaux Abbey,"YORKSHIRE, EAST RIDING",Richard,Kynney,
+Thomas Wallas bailiff of Ottringham,240.0,Meaux Abbey,"YORKSHIRE, EAST RIDING",Thomas,Wallas,Ottringham
+John Large bailiff of Skerne,240.0,Meaux Abbey,"YORKSHIRE, EAST RIDING",John,Large,Skerne
+Matthew Morwyn bailiff of Wharrom,320.0,Meaux Abbey,"YORKSHIRE, EAST RIDING",Matthew,Morwyn,Wharrom
+John Bell bailiff of Waghen,240.0,Meaux Abbey,"YORKSHIRE, EAST RIDING",John,Bell,Waghen
+Thomas Darcy,160.0,Swine Priory,"YORKSHIRE, EAST RIDING",Thomas,Darcy,
+William Babthorp,160.0,Swine Priory,"YORKSHIRE, EAST RIDING",William,Babthorp,
+Robert Hogeson auditor,320.0,Swine Priory,"YORKSHIRE, EAST RIDING",Robert,Hogeson,
+John Hogeson bailiff ,,Swine Priory,"YORKSHIRE, EAST RIDING",John,Hogeson,
+Rad'o Babthorp,960.0,Swine Priory,"YORKSHIRE, EAST RIDING",Rad'o,Babthorp,
+John Constable military steward of the house,160.0,Nunkeeling Priory,"YORKSHIRE, EAST RIDING",John,Constable,
+William Waldby gentleman auditor of the house,240.0,Nunkeeling Priory,"YORKSHIRE, EAST RIDING",William,Waldby,
+William Waldby steward of the court,120.0,Nunkeeling Priory,"YORKSHIRE, EAST RIDING",William,Waldby,
+William Acclom,1200.0,Nunkeeling Priory,"YORKSHIRE, EAST RIDING",William,Acclom,
+John Scrop lord Scrop of Bolton,480.0,Bridlington Priory,"YORKSHIRE, EAST RIDING",John,Scrop,Bolton
+Robert Constable military steward of all manors lands and tenants in Estr',480.0,Bridlington Priory,"YORKSHIRE, EAST RIDING",Robert,Constable,Estr
+William Constable military steward in Hold'nes,480.0,Bridlington Priory,"YORKSHIRE, EAST RIDING",William,Constable,Hold
+Rad'o Pulleyn in Knaresburgh,320.0,Bridlington Priory,"YORKSHIRE, EAST RIDING",Rad'o,Pulleyn,Knaresburgh
+John Lacye,240.0,Bridlington Priory,"YORKSHIRE, EAST RIDING",John,Lacye,
+Thomas Gergh in Estr',560.0,Bridlington Priory,"YORKSHIRE, EAST RIDING",Thomas,Gergh,Estr
+Humphrey Channer bailiff of Bridlington,480.0,Bridlington Priory,"YORKSHIRE, EAST RIDING",Humphrey,Channer,Bridlington
+Thomas Pulley bailiff of Burton Flemmyng,240.0,Bridlington Priory,"YORKSHIRE, EAST RIDING",Thomas,Pulley,Burton
+George Burton bailiff of Wilerdbye,240.0,Bridlington Priory,"YORKSHIRE, EAST RIDING",George,Burton,Wilerdbye
+Jacob Bladis receiver of all firms in Swadell,480.0,Bridlington Priory,"YORKSHIRE, EAST RIDING",Jacob,Bladis,Swadell
+John Cowton,720.0,Bridlington Priory,"YORKSHIRE, EAST RIDING",John,Cowton,
+Anthony Metcalf bailiff of Grenton,240.0,Bridlington Priory,"YORKSHIRE, EAST RIDING",Anthony,Metcalf,Grenton
+Henry count of Northumbria,480.0,Haltemprice Priory,"YORKSHIRE, EAST RIDING",Henry,count,Northumbria
+Cornell ___ bailiff of the monastery,720.0,Haltemprice Priory,"YORKSHIRE, EAST RIDING",Cornell,___,
+Christopher ___ bailiff of Barkston,480.0,Haltemprice Priory,"YORKSHIRE, EAST RIDING",Christopher,___,Barkston
+Henry auditor of the monastery,480.0,Haltemprice Priory,"YORKSHIRE, EAST RIDING",Henry,auditor,
+Marmaduke Constable military steward of aforesaid lands,320.0,Ellerton Priory,"YORKSHIRE, EAST RIDING",Marmaduke,Constable,
+William Lorance bailiff of Ellerton,480.0,Ellerton Priory,"YORKSHIRE, EAST RIDING",William,Lorance,Ellerton
+Henry count of Cumberland,480.0,North Ferriby Priory,"YORKSHIRE, EAST RIDING",Henry,count,Cumberland
+Robert Wilberforce steward of the court,160.0,North Ferriby Priory,"YORKSHIRE, EAST RIDING",Robert,Wilberforce,
+Richard Hardy bailiff,480.0,North Ferriby Priory,"YORKSHIRE, EAST RIDING",Richard,Hardy,
+William Cheydok bailiff of Childwall,480.0,Upholland Priory,LANCASHIRE,William,Cheydok,Childwall
+Arnulph Lathum bailiff of Markeland in Garston,160.0,Upholland Priory,LANCASHIRE,Arnulph,Lathum,Markeland
+Jacob Stanley military steward of the monastery,1200.0,Burscough Priory,LANCASHIRE,Jacob,Stanley,
+Richard Morecroft bailiff of Ormyskyrke,320.0,Burscough Priory,LANCASHIRE,Richard,Morecroft,Ormyskyrke
+Robert Suche bailiff of Burscogh and Merton,480.0,Burscough Priory,LANCASHIRE,Robert,Suche,Burscogh
+Henry Stokeley bailiff of Hyton,320.0,Burscough Priory,LANCASHIRE,Henry,Stokeley,Hyton
+Edward Stanley count of Derbyshire,1280.0,Whalley Abbey,LANCASHIRE,Edward,Stanley,Derbyshire
+Alexander Nowell and Richard Cromboke understewards of the monastery,1200.0,Whalley Abbey,LANCASHIRE,Alexander,Nowell,
+Laurence Forest receiver of Whalley rectory,1520.0,Whalley Abbey,LANCASHIRE,Laurence,Forest,Whalley
+Ralph Lynney receiver of Blakebourne,1200.0,Whalley Abbey,LANCASHIRE,Ralph,Lynney,Blakebourne
+Robery Parrysshe receiver of rectory of Eccles,960.0,Whalley Abbey,LANCASHIRE,Robery,Parrysshe,Eccles
+William Heydok receiver of Rachedale rectory,800.0,Whalley Abbey,LANCASHIRE,William,Heydok,Rachedale
+Lionel Fulle receiver of lord of Croynton Garston and Akeberth,640.0,Whalley Abbey,LANCASHIRE,Lionel,Fulle,Croynton
+William Whithowe bailiff of Stanney,240.0,Whalley Abbey,LANCASHIRE,William,Whithowe,Stanney
+Henry Dunbabyn bailiff of Acton,240.0,Whalley Abbey,LANCASHIRE,Henry,Dunbabyn,Acton
+Christopher Smyth bailirr of Aston,240.0,Whalley Abbey,LANCASHIRE,Christopher,Smyth,Aston
+Robert Fulle bailiff of Byllyngton,480.0,Whalley Abbey,LANCASHIRE,Robert,Fulle,Byllyngton
+Otonis Hollond bailiff of Maunton and of Swynton,480.0,Whalley Abbey,LANCASHIRE,Otonis,Hollond,Maunton
+Robert Borman bailiff of Wolden,240.0,Whalley Abbey,LANCASHIRE,Robert,Borman,Wolden
+Jacob Gartfide bailiff of M'land Castleton and Spotlande,720.0,Whalley Abbey,LANCASHIRE,Jacob,Gartfide,
+Ralph Holland bailiff of Whytworthe,120.0,Whalley Abbey,LANCASHIRE,Ralph,Holland,Whytworthe
+John Crombroke bailiff of Roclyff and Brendwood per year,240.0,Whalley Abbey,LANCASHIRE,John,Crombroke,Roclyff
+Egidius Parkar bailiff of Clyderowe,480.0,Whalley Abbey,LANCASHIRE,Egidius,Parkar,Clyderowe
+Ralph Morton bailiff of Stanyngs,480.0,Whalley Abbey,LANCASHIRE,Ralph,Morton,Stanyngs
+Edward count of Derbyshire,800.0,Penwortham Priory,LANCASHIRE,Edward,count,Derbyshire
+Ralph Coke bailiff of Penwortham,720.0,Penwortham Priory,LANCASHIRE,Ralph,Coke,Penwortham
+John Gryme bailiff of Leylonde,720.0,Penwortham Priory,LANCASHIRE,John,Gryme,Leylonde
+Henry Gaston steward of Richmondshire,240.0,Easby Abbey,"YORKSHIRE, NORTH RIDING",Henry,Gaston,Richmondshire
+Jacob Rokebi steward of the court,160.0,Easby Abbey,"YORKSHIRE, NORTH RIDING",Jacob,Rokebi,
+Richard Foster bailiff of Barton,160.0,Easby Abbey,"YORKSHIRE, NORTH RIDING",Richard,Foster,Barton
+Galfridi Middleton steward of Garsedale,480.0,Easby Abbey,"YORKSHIRE, NORTH RIDING",Galfridi,Middleton,Garsedale
+Thomas Atkynson bailiff of Garsedale,120.0,Easby Abbey,"YORKSHIRE, NORTH RIDING",Thomas,Atkynson,Garsedale
+Richard Hudson bailiff of Thorpe,120.0,Easby Abbey,"YORKSHIRE, NORTH RIDING",Richard,Hudson,Thorpe
+William Bampton bailiff of Huddeswell,240.0,Easby Abbey,"YORKSHIRE, NORTH RIDING",William,Bampton,Huddeswell
+George Warcop bailiff of Manfeld,240.0,Easby Abbey,"YORKSHIRE, NORTH RIDING",George,Warcop,Manfeld
+Robert Bellamy bailiff of Stapleton,120.0,Easby Abbey,"YORKSHIRE, NORTH RIDING",Robert,Bellamy,Stapleton
+Jacob Grysewhait bailiff of Skeithby,120.0,Easby Abbey,"YORKSHIRE, NORTH RIDING",Jacob,Grysewhait,Skeithby
+Thomas Bolleron bailiff of Brompton,120.0,Easby Abbey,"YORKSHIRE, NORTH RIDING",Thomas,Bolleron,Brompton
+John Wayt bailiff of aforesaid abbey,240.0,Easby Abbey,"YORKSHIRE, NORTH RIDING",John,Wayt,
+Lord Dacre steward of the abbey,480.0,Egglestone Abbey,"YORKSHIRE, NORTH RIDING",Lord,Dacre,
+Ambrose Middelton steward of the court,240.0,Egglestone Abbey,"YORKSHIRE, NORTH RIDING",Ambrose,Middelton,
+William Shipertt bailiff and receiver of Kylvyngton and Stratford,240.0,Egglestone Abbey,"YORKSHIRE, NORTH RIDING",William,Shipertt,Kylvyngton
+Lord conyers,880.0,Jervaulx Abbey,"YORKSHIRE, NORTH RIDING",Lord,conyers,
+Jacob Metcalffe steward in Wensla'dall,640.0,Jervaulx Abbey,"YORKSHIRE, NORTH RIDING",Jacob,Metcalffe,Wensla
+Richard Norton steward of Horton,360.0,Jervaulx Abbey,"YORKSHIRE, NORTH RIDING",Richard,Norton,Horton
+Richard Bolde steward of Knerdley,480.0,Jervaulx Abbey,"YORKSHIRE, NORTH RIDING",Richard,Bolde,Knerdley
+William Catherd steward of Est Witton,1280.0,Jervaulx Abbey,"YORKSHIRE, NORTH RIDING",William,Catherd,Est
+Matthew Twaith bailiff of the monastery,560.0,Jervaulx Abbey,"YORKSHIRE, NORTH RIDING",Matthew,Twaith,
+John Metcalffe bailiff of Wenseladalle,480.0,Jervaulx Abbey,"YORKSHIRE, NORTH RIDING",John,Metcalffe,Wenseladalle
+Simon Jacson bailiff of Knerdley,480.0,Jervaulx Abbey,"YORKSHIRE, NORTH RIDING",Simon,Jacson,Knerdley
+Leonard Tailior bailiff of Horton,240.0,Jervaulx Abbey,"YORKSHIRE, NORTH RIDING",Leonard,Tailior,Horton
+William Hawe bailiff of Fyngall,240.0,Jervaulx Abbey,"YORKSHIRE, NORTH RIDING",William,Hawe,Fyngall
+Henry Askewth receiver and bailiff of Newsted,240.0,Jervaulx Abbey,"YORKSHIRE, NORTH RIDING",Henry,Askewth,Newsted
+Peter Messe bailiff of Dalton Ellyngton and Ellingstrings,160.0,Jervaulx Abbey,"YORKSHIRE, NORTH RIDING",Peter,Messe,Dalton
+Jacob Nelson bailiff of Som'cotts and Boston,240.0,Jervaulx Abbey,"YORKSHIRE, NORTH RIDING",Jacob,Nelson,Som
+Jacob Dent bailiff of Tunstall and Riswick,160.0,Jervaulx Abbey,"YORKSHIRE, NORTH RIDING",Jacob,Dent,Tunstall
+William Barker bailiff of the barony of Est Witton,240.0,Jervaulx Abbey,"YORKSHIRE, NORTH RIDING",William,Barker,Est
+Jacob Twayth receiver of Aykcarth,560.0,Jervaulx Abbey,"YORKSHIRE, NORTH RIDING",Jacob,Twayth,Aykcarth
+Roger Mangy receiver of Aynderby,480.0,Jervaulx Abbey,"YORKSHIRE, NORTH RIDING",Roger,Mangy,Aynderby
+John Dixson receiver of West Witton,120.0,Jervaulx Abbey,"YORKSHIRE, NORTH RIDING",John,Dixson,West
+Jacob Dente receiver of church of Est Whitton,240.0,Jervaulx Abbey,"YORKSHIRE, NORTH RIDING",Jacob,Dente,Est
+Christopher Conyers,960.0,Coverham Abbey,"YORKSHIRE, NORTH RIDING",Christopher,Conyers,
+Thomas Wray steward of the court,160.0,Coverham Abbey,"YORKSHIRE, NORTH RIDING",Thomas,Wray,
+Goodfride Metkalfe bailiff of Coverham,240.0,Coverham Abbey,"YORKSHIRE, NORTH RIDING",Goodfride,Metkalfe,Coverham
+Robery Kay bailiff of Thexton,160.0,Coverham Abbey,"YORKSHIRE, NORTH RIDING",Robery,Kay,Thexton
+John Curdake bailiff of Menythorppe,160.0,Coverham Abbey,"YORKSHIRE, NORTH RIDING",John,Curdake,Menythorppe
+Ralph Symonson bailiff of Crakehall,160.0,Coverham Abbey,"YORKSHIRE, NORTH RIDING",Ralph,Symonson,Crakehall
+Edward Lofthouse bailiff of Swynsyde,160.0,Coverham Abbey,"YORKSHIRE, NORTH RIDING",Edward,Lofthouse,Swynsyde
+John Tysen bailiff of Caudberght,160.0,Coverham Abbey,"YORKSHIRE, NORTH RIDING",John,Tysen,Caudberght
+Lord Darcy,800.0,Fountains Abbey,"YORKSHIRE, WEST RIDING",Lord,Darcy,
+Ralph Pulleyn steward of the court,800.0,Fountains Abbey,"YORKSHIRE, WEST RIDING",Ralph,Pulleyn,
+Thomas Bradfurth receiver,800.0,Fountains Abbey,"YORKSHIRE, WEST RIDING",Thomas,Bradfurth,
+John Melsynby auditor,1600.0,Fountains Abbey,"YORKSHIRE, WEST RIDING",John,Melsynby,
+Sheriff of York,360.0,Fountains Abbey,"YORKSHIRE, WEST RIDING",Sheriff,of,York
+Abr'ie Combland bailiff of Slemyngfurth and Galhay,480.0,Fountains Abbey,"YORKSHIRE, WEST RIDING",Abr'ie,Combland,Slemyngfurth
+Richard Banester bailiff of Craven,240.0,Fountains Abbey,"YORKSHIRE, WEST RIDING",Richard,Banester,Craven
+Marmaduke Bayn bailiff of Nederdalle,480.0,Fountains Abbey,"YORKSHIRE, WEST RIDING",Marmaduke,Bayn,Nederdalle
+Ralph Lealome bailiff of Stanburn,400.0,Fountains Abbey,"YORKSHIRE, WEST RIDING",Ralph,Lealome,Stanburn
+Thomas Kylnesey,368.0,Fountains Abbey,"YORKSHIRE, WEST RIDING",Thomas,Kylnesey,
+William Haxby bailiff of Wheldrake,400.0,Fountains Abbey,"YORKSHIRE, WEST RIDING",William,Haxby,Wheldrake
+Richard Haxby bailiff of Hartwith,240.0,Fountains Abbey,"YORKSHIRE, WEST RIDING",Richard,Haxby,Hartwith
+Marmaduke Abbott bailiff of Granteley and Dalaghy,240.0,Fountains Abbey,"YORKSHIRE, WEST RIDING",Marmaduke,Abbott,Granteley
+John Wrok bailiff of the monastery,320.0,Fountains Abbey,"YORKSHIRE, WEST RIDING",John,Wrok,
+Richard Bekweth bailiff of Aldburgh,240.0,Fountains Abbey,"YORKSHIRE, WEST RIDING",Richard,Bekweth,Aldburgh
+Thomas Smythson receiver of Couton and Greynbury,120.0,Fountains Abbey,"YORKSHIRE, WEST RIDING",Thomas,Smythson,Couton
+Peter Man' receiver of lord of Thorponderwod,800.0,Fountains Abbey,"YORKSHIRE, WEST RIDING",Peter,Man',Thorponderwod
+John Bowell receiver of Wheldrak,240.0,Fountains Abbey,"YORKSHIRE, WEST RIDING",John,Bowell,Wheldrak
+John Danke steward of the court in Craven,160.0,Fountains Abbey,"YORKSHIRE, WEST RIDING",John,Danke,Craven
+Richard Hobson bailiff of Knapton,80.0,Fountains Abbey,"YORKSHIRE, WEST RIDING",Richard,Hobson,Knapton
+John Wilson bailiff of Marton,480.0,Fountains Abbey,"YORKSHIRE, WEST RIDING",John,Wilson,Marton
+Simon Waytt bailiff of Balderby,80.0,Fountains Abbey,"YORKSHIRE, WEST RIDING",Simon,Waytt,Balderby
+Anthony Huckerby receiver in Ripon,480.0,Fountains Abbey,"YORKSHIRE, WEST RIDING",Anthony,Huckerby,Ripon
+John Fowler bailiff of Righto',240.0,Fountains Abbey,"YORKSHIRE, WEST RIDING",John,Fowler,Righto
+Chrisopher Bekwath receiver of rent and farms in Seweton and other villages attached,120.0,Fountains Abbey,"YORKSHIRE, WEST RIDING",Chrisopher,Bekwath,Seweton
+Gavin Ratclyff receiver of farms in Croswaitt and Borowdayll,480.0,Fountains Abbey,"YORKSHIRE, WEST RIDING",Gavin,Ratclyff,Ratclyff
+Marmaduke Yowdayll bailiff there,320.0,Fountains Abbey,"YORKSHIRE, WEST RIDING",Marmaduke,Yowdayll,
+Christopher Stranger steward of the court there,160.0,Fountains Abbey,"YORKSHIRE, WEST RIDING",Christopher,Stranger,
+Milo Hardcastell bailiff of Wyndesley Brynebem and Warshall,320.0,Fountains Abbey,"YORKSHIRE, WEST RIDING",Milo,Hardcastell,Wyndesley
+Lawrence Smyth receiver of farms of Brymben,480.0,Fountains Abbey,"YORKSHIRE, WEST RIDING",Lawrence,Smyth,Brymben
+William Smyth bailiff of Boston,80.0,Fountains Abbey,"YORKSHIRE, WEST RIDING",William,Smyth,Boston
+Robert Percey steward of the court,160.0,Knaresborough Priory,"YORKSHIRE, WEST RIDING",Robert,Percey,
+Anthony Aldburght bailiff of Knareburght,160.0,Knaresborough Priory,"YORKSHIRE, WEST RIDING",Anthony,Aldburght,Knareburght
+Bailiff of Pannall,160.0,Knaresborough Priory,"YORKSHIRE, WEST RIDING",Bailiff,of,Pannall
+Peter Cure bailiff of Hampstwhart,160.0,Knaresborough Priory,"YORKSHIRE, WEST RIDING",Peter,Cure,Hampstwhart
+William Gaston steward there,320.0,Nunmonkton,"YORKSHIRE, WEST RIDING",William,Gaston,
+William Marshall steward of the court and auditor there,320.0,Nunmonkton,"YORKSHIRE, WEST RIDING",William,Marshall,
+Robert Broune bailiff of Monketon,160.0,Nunmonkton,"YORKSHIRE, WEST RIDING",Robert,Broune,Monketon
+Bailiff of Walton,160.0,Nunmonkton,"YORKSHIRE, WEST RIDING",Bailiff,of,Walton
+Bailiff of Ham'ton,160.0,Nunmonkton,"YORKSHIRE, WEST RIDING",Bailiff,of,Ham
+Henry Goodryk,4800.0,Ribstone Preceptory,"YORKSHIRE, WEST RIDING",Henry,Goodryk,
+William marshall steward of the court,480.0,Ribstone Preceptory,"YORKSHIRE, WEST RIDING",William,marshall,
+Jacob Palm' bailiff of Wetherby,720.0,Ribstone Preceptory,"YORKSHIRE, WEST RIDING",Jacob,Palm',Wetherby
+Robert Thomson bailiff of Hunsyngor,720.0,Ribstone Preceptory,"YORKSHIRE, WEST RIDING",Robert,Thomson,Hunsyngor
+George Pullan bailiff of Copgrave,240.0,Ribstone Preceptory,"YORKSHIRE, WEST RIDING",George,Pullan,Copgrave
+Thomas Watson bailiff of Copmanthrope,240.0,Ribstone Preceptory,"YORKSHIRE, WEST RIDING",Thomas,Watson,Copmanthrope
+John Goudlayk auditor,480.0,Ribstone Preceptory,"YORKSHIRE, WEST RIDING",John,Goudlayk,
+Westhaghton bailiff,160.0,Cockersand Abbey,LANCASHIRE,Westhaghton,bailiff,
+Ade Hilton steward of Westhaghton,240.0,Cockersand Abbey,LANCASHIRE,Ade,Hilton,Westhaghton
+Thorstan Knollys bailiff of Susthow,320.0,Cockersand Abbey,LANCASHIRE,Thorstan,Knollys,Susthow
+John Yatts bailiff of Singleton,320.0,Cockersand Abbey,LANCASHIRE,John,Yatts,Singleton
+John Harryson bailiff of P'sall Staynoll,240.0,Cockersand Abbey,LANCASHIRE,John,Harryson,
+Richard Grene bailiff of Grastayng,240.0,Cockersand Abbey,LANCASHIRE,Richard,Grene,Grastayng
+Robert Holme bailiff of Forton,400.0,Cockersand Abbey,LANCASHIRE,Robert,Holme,Forton
+Richard Farryngton bailiff of Hoton,320.0,Cockersand Abbey,LANCASHIRE,Richard,Farryngton,Hoton
+Henry Ferryngton steward of Hoton,320.0,Cockersand Abbey,LANCASHIRE,Henry,Ferryngton,Hoton
+Thomas Thorneton bailiff of Asshton and Preston,240.0,Cockersand Abbey,LANCASHIRE,Thomas,Thorneton,Asshton
+Richard Tho'son bailiff of Catton,240.0,Cockersand Abbey,LANCASHIRE,Richard,Tho'son,Catton
+Richard Hochousson bailiff of Bentham,320.0,Cockersand Abbey,LANCASHIRE,Richard,Hochousson,Bentham
+Robert Phillypson bailiff of land and tenants in Westmorland,240.0,Cockersand Abbey,LANCASHIRE,Robert,Phillypson,Westmorland
+Thomas Stanley steward of Mount Agell Abbey,1200.0,Cockersand Abbey,LANCASHIRE,Thomas,Stanley,Mount
+Robert Plesyngton receiver there,1200.0,Cockersand Abbey,LANCASHIRE,Robert,Plesyngton,
+Bartholomew Heskett steward of the court,480.0,Cockersand Abbey,LANCASHIRE,Bartholomew,Heskett,
+Thomas Lamplew steward of the land,320.0,Calder Abbey,CUMBERLAND,Thomas,Lamplew,
+Thomas Dachaund steward of the court,160.0,Calder Abbey,CUMBERLAND,Thomas,Dachaund,
+William Ponsonby bailiff of the monastery,800.0,Calder Abbey,CUMBERLAND,William,Ponsonby,
+John Dawson bailiff of Deram,240.0,Calder Abbey,CUMBERLAND,John,Dawson,Deram
+John Adamson bailiff of Gyelcrowse,240.0,Calder Abbey,CUMBERLAND,John,Adamson,Gyelcrowse
+Count of Derbyshire steward in Yorkshire and Lancashire,2400.0,Furness Abbey,LANCASHIRE,Count,of,Derbyshire
+Count of Cumberland steward of Wynt'burne,1440.0,Furness Abbey,LANCASHIRE,Count,of,Cumberland
+Alex Richardson bailiff of Fornas,1920.0,Furness Abbey,LANCASHIRE,Alex,Richardson,Fornas
+Alex Richardson bailiff of Dalton,240.0,Furness Abbey,LANCASHIRE,Alex,Richardson,Dalton
+Thomas Port Bailiff of Wynt'burne,640.0,Furness Abbey,LANCASHIRE,Thomas,Port,Wynt
+George Hogeson bailiff of Beaumonte and Bolton,240.0,Furness Abbey,LANCASHIRE,George,Hogeson,Beaumonte
+Nicholas Flasshby bailiff of Lownesdale,640.0,Furness Abbey,LANCASHIRE,Nicholas,Flasshby,Lownesdale
+John Corcar bailiff of Ulverton,240.0,Furness Abbey,LANCASHIRE,John,Corcar,Ulverton
+Roland Dacherd bailiff of Egton and Newland,60.0,Furness Abbey,LANCASHIRE,Roland,Dacherd,Egton
+William Rollandson bailiff of Colton,192.0,Furness Abbey,LANCASHIRE,William,Rollandson,Colton
+Christopher Taillior bailiff of Fencewith,192.0,Furness Abbey,LANCASHIRE,Christopher,Taillior,Fencewith
+Rolland' Dochand bailiff of Nebwatth,192.0,Furness Abbey,LANCASHIRE,Rolland',Dochand,Nebwatth
+George Brathvayte bailiff of Claiff,192.0,Furness Abbey,LANCASHIRE,George,Brathvayte,Claiff
+William Sander bailiff of Graythvayte,192.0,Furness Abbey,LANCASHIRE,William,Sander,Graythvayte
+Jacob Banke bailiff of Hawkeshede and Brathvait,320.0,Furness Abbey,LANCASHIRE,Jacob,Banke,Hawkeshede
+John Tomlynson bailiff of Grisedale,192.0,Furness Abbey,LANCASHIRE,John,Tomlynson,Grisedale
+John Fyssher of Borowdale,480.0,Furness Abbey,LANCASHIRE,John,Fyssher,Borowdale
+William Stakho' bailiff of Cowpeland,360.0,Furness Abbey,LANCASHIRE,William,Stakho',Cowpeland
+Leonard Fawcett receiver general,4800.0,Furness Abbey,LANCASHIRE,Leonard,Fawcett,
+Andrew B'ton for counsel,960.0,Furness Abbey,LANCASHIRE,Andrew,B'ton,
+Hugh Flemyng steward of the priory,640.0,Conishead Priory,LANCASHIRE,Hugh,Flemyng,
+John Towers bailiff of Blawithe,80.0,Conishead Priory,LANCASHIRE,John,Towers,Blawithe
+William Jakeson bailiff of Blasbrorme,160.0,Conishead Priory,LANCASHIRE,William,Jakeson,Blasbrorme
+Henry Moure bailiff of Whetbeke,80.0,Conishead Priory,LANCASHIRE,Henry,Moure,Whetbeke
+John Dyconson bailiff oc Haverbreke,80.0,Conishead Priory,LANCASHIRE,John,Dyconson,
+William Torner bailiff of land in Lancashire,48.0,Conishead Priory,LANCASHIRE,William,Torner,Lancashire
+Count Darby chief steward of the land,480.0,Cartmel Priory,LANCASHIRE,Count,Darby,
+John Standisly steward of the court,400.0,Cartmel Priory,LANCASHIRE,John,Standisly,
+William Nelson auditor,960.0,Cartmel Priory,LANCASHIRE,William,Nelson,
+Roland Jakeson bailiff of Sylverdale,240.0,Cartmel Priory,LANCASHIRE,Roland,Jakeson,Sylverdale
+Peter Byrkhed rector of the priory,320.0,Cartmel Priory,LANCASHIRE,Peter,Byrkhed,
+John Hadryngton and Matthew Stevynson bailiffs  of the priory,240.0,Lanercost Priory,CUMBERLAND,John,Hadryngton,
+Constable? Of the rectory of Caldbeck,40.0,Holmcultram Abbey,CUMBERLAND,Constable?,Of,Caldbeck
+Henry count of Cumberland steward of the monastery,480.0,Holmcultram Abbey,CUMBERLAND,Henry,count,Cumberland
+Richard Banwys steward of the court of the monastery,320.0,Holmcultram Abbey,CUMBERLAND,Richard,Banwys,
+Gilbert Fisher bailiff of Flemyngbye,400.0,Holmcultram Abbey,CUMBERLAND,Gilbert,Fisher,Flemyngbye
+Richard Salkeld deputy of Henry count of Cumberland chief steward,480.0,Shap Abbey,WESTMORLAND,Richard,Salkeld,Henry
+Galfrid Middelton steward in Preston,240.0,Shap Abbey,WESTMORLAND,Galfrid,Middelton,Preston
+Six bailiffs of aforesaid lands,480.0,Shap Abbey,WESTMORLAND,Six,bailiffs,
+Thomas Nevill chief steward of the monastery,2400.0,Durham Priory,DURHAM,Thomas,Nevill,
+Thomas Tempest steward of the court,1600.0,Durham Priory,DURHAM,Thomas,Tempest,
+Robert Tempest steward of the court of the old city of Durham and Elwet,720.0,Durham Priory,DURHAM,Robert,Tempest,Durham
+Thomas Forster bailiff of Elwett and Shinckley,800.0,Durham Priory,DURHAM,Thomas,Forster,Elwett
+Richard Moley bailiff of old city Durham,240.0,Durham Priory,DURHAM,Richard,Moley,
+George Davyson bailiff of Byllyngham,800.0,Durham Priory,DURHAM,George,Davyson,Byllyngham
+William Barnard for Byllynghamshire and Durham (combined),800.0,Durham Priory,DURHAM,William,Barnard,
+Gavin Trotter bailiff of Acley,640.0,Durham Priory,DURHAM,Gavin,Trotter,Trotter
+Henry Fetherstanehaugh receiver in Estm'ynton Westm'yngton and Midm'yngton,320.0,Durham Priory,DURHAM,Henry,Fetherstanehaugh,Estm
+Richard Wylley bailiff of Heworth,400.0,Durham Priory,DURHAM,Richard,Wylley,Heworth
+Thomas Horsley bailiff of Shellez,640.0,Durham Priory,DURHAM,Thomas,Horsley,Shellez
+Jasper Horsley receiver in Werelshierd,320.0,Durham Priory,DURHAM,Jasper,Horsley,Werelshierd
+Christopher Morland receiver in Estranton Westranton Southpittyngton and Northpittyngton,240.0,Durham Priory,DURHAM,Christopher,Morland,Estranton
+Thomas Whitfeld bailiff of Mogleswyk,160.0,Durham Priory,DURHAM,Thomas,Whitfeld,Mogleswyk
+Edmund Stote steward of the court of Mogleswyk,160.0,Durham Priory,DURHAM,Edmund,Stote,Mogleswyk
+Edmund Stote steward of the court of Hett',80.0,Durham Priory,DURHAM,Edmund,Stote,Hett
+Edward Sivalwell receiver in Broptoft Braydley and Werdall,480.0,Durham Priory,DURHAM,Edward,Sivalwell,Broptoft
+John Brymeley instructor of poor lay boys,1600.0,Durham Priory,DURHAM,John,Brymeley,
+Robert Mennell steward of the court of Shoreswod,480.0,Durham Priory,DURHAM,Robert,Mennell,Shoreswod
+Robert Sanderson bailiff of Shoreswod,640.0,Durham Priory,DURHAM,Robert,Sanderson,Shoreswod
+John Clerk bailiff of Wyllyngton and Walleshend,240.0,Durham Priory,DURHAM,John,Clerk,Wyllyngton
+Robert Porter receiver there,160.0,Durham Priory,DURHAM,Robert,Porter,
+William Peirce steward of the court of Hemmyngburgh,800.0,Durham Priory,DURHAM,William,Peirce,Hemmyngburgh
+John Emerson bailiff of Hemmyngburgh,320.0,Durham Priory,DURHAM,John,Emerson,Hemmyngburgh
+Thomas Fayrfax steward of Holtby,480.0,Durham Priory,DURHAM,Thomas,Fayrfax,Holtby
+Richard Crosby receiver of Holtby,320.0,Durham Priory,DURHAM,Richard,Crosby,Holtby
+William Androw receiver in Hemmyngburgh,480.0,Durham Priory,DURHAM,William,Androw,Hemmyngburgh
+William Percy steward of Youkeflett,640.0,Finchale Abbey,DURHAM,William,Percy,Youkeflett
+William Monketon receiver in Youkeflett,320.0,Finchale Abbey,DURHAM,William,Monketon,Youkeflett
+Robert Bowes steward of the court of Fynckall,480.0,Finchale Abbey,DURHAM,Robert,Bowes,Fynckall
+William Duckett bailiff of Softeley,320.0,Finchale Abbey,DURHAM,William,Duckett,Softeley
+Anthony Rakett receiver in Wyngat Hessewell and Softeley,360.0,Finchale Abbey,DURHAM,Anthony,Rakett,Wyngat
+Robert Sharparow receiver in Jarrow,240.0,Jarrow Priory,DURHAM,Robert,Sharparow,Jarrow
+George Rede bailiff of Wermoth,240.0,Monkwearmouth Abbey,DURHAM,George,Rede,Wermoth
+John Bednell steward of the court of the cell,240.0,Lindisfarne Priory,DURHAM,John,Bednell,
+John Hyndmars bailiff of Lindisfarne,80.0,Lindisfarne Priory,DURHAM,John,Hyndmars,Lindisfarne
+Henry Oglee receiver of Lindisfarne,320.0,Lindisfarne Priory,DURHAM,Henry,Oglee,Lindisfarne
+William Steille bailiff and receiver for Fenham,240.0,Lindisfarne Priory,DURHAM,William,Steille,
+Count of Derbyshire steward of the cell,480.0,Lytham Priory,LANCASHIRE,Count,of,Derbyshire
+Bartholomew Eskett steward of the court there,80.0,Lytham Priory,LANCASHIRE,Bartholomew,Eskett,
+Thomas Gartham bailiff of Lethum,160.0,Lytham Priory,LANCASHIRE,Thomas,Gartham,Lethum
+Roland Hudspeth receiver of the cell,240.0,Lytham Priory,LANCASHIRE,Roland,Hudspeth,
+Bailiff of the lord King in Andrenes,40.0,Lytham Priory,LANCASHIRE,Bailiff,of,Andrenes
+Henry Laic' steward of court of Stampford,280.0,"St Leonard's Priory, Stamford",LINCOLNSHIRE,Henry,Laic',Stampford
+Richard Cawarde bailiff of the cell,160.0,"St Leonard's Priory, Stamford",LINCOLNSHIRE,Richard,Cawarde,
+Henry Gardyner steward of court of Blyburgh and Cleteham,160.0,"St Leonard's Priory, Stamford",LINCOLNSHIRE,Henry,Gardyner,Blyburgh
+Robert Hasselrig steward of Normanton,160.0,"St Leonard's Priory, Stamford",LINCOLNSHIRE,Robert,Hasselrig,Normanton
+John Wryght bailiff of Normanton,120.0,"St Leonard's Priory, Stamford",LINCOLNSHIRE,John,Wryght,Normanton
+William Midlebrugh receiver of Thissilton' Barrow,40.0,"St Leonard's Priory, Stamford",LINCOLNSHIRE,William,Midlebrugh,Thissilton
+Robert Bowes steward of priory,320.0,Neasham Priory,DURHAM,Robert,Bowes,
+Nicholas Clybborne bailiff and receiver of the priory,240.0,Neasham Priory,DURHAM,Nicholas,Clybborne,
+Robert Waren bailiff there,160.0,St Catherine's Priory,LINCOLNSHIRE,Robert,Waren,
+John Netilton bailiff in Lincoln,240.0,St Catherine's Priory,LINCOLNSHIRE,John,Netilton,Lincoln
+Lord Huse steward of the house,480.0,St Catherine's Priory,LINCOLNSHIRE,Lord,Huse,
+Antonii Missenden steward in parts of Lindsey,240.0,St Catherine's Priory,LINCOLNSHIRE,Antonii,Missenden,Lindsey
+Robert Waren bailiff in many places,960.0,St Catherine's Priory,LINCOLNSHIRE,Robert,Waren,
+Ade Lincoln' bailiff and collector,480.0,St Catherine's Priory,LINCOLNSHIRE,Ade,Lincoln',
+Robert Couper auditor of the house,320.0,St Catherine's Priory,LINCOLNSHIRE,Robert,Couper,
+Lord of Som'ton for service,48.0,Kirkstead Abbey,LINCOLNSHIRE,Lord,of,Som
+George Taylboys chief steward,640.0,Kirkstead Abbey,LINCOLNSHIRE,George,Taylboys,
+John Hussey care of the court of Harmtree,320.0,Kirkstead Abbey,LINCOLNSHIRE,John,Hussey,Harmtree
+Robert Hussey steward of court at Scampton and Dunham,240.0,Kirkstead Abbey,LINCOLNSHIRE,Robert,Hussey,Scampton
+Thomas Hussey steward of Marton court,240.0,Kirkstead Abbey,LINCOLNSHIRE,Thomas,Hussey,Marton
+John Rudde steward of Gayton Covenham and Ulesby court,240.0,Kirkstead Abbey,LINCOLNSHIRE,John,Rudde,Gayton
+Thomas Stephynson steward of court of Thymelby Wodhall Roughtton Kerkby upon Bayn and Kerksted,480.0,Kirkstead Abbey,LINCOLNSHIRE,Thomas,Stephynson,Thymelby
+John Hylle auditor,320.0,Kirkstead Abbey,LINCOLNSHIRE,John,Hylle,
+Thomas Dymoke bailiff of Scampton,720.0,Kirkstead Abbey,LINCOLNSHIRE,Thomas,Dymoke,Scampton
+Hamon Sutton bailiff of Branston Schepwaysche Canwyke Lincoln and Newark,240.0,Kirkstead Abbey,LINCOLNSHIRE,Hamon,Sutton,Branston
+Jacom Savege bailiff of Senecliff,160.0,Kirkstead Abbey,LINCOLNSHIRE,Jacom,Savege,Senecliff
+Henry Flemmynge bailiff of Covenham,400.0,Kirkstead Abbey,LINCOLNSHIRE,Henry,Flemmynge,Covenham
+Henry Flemmynge bailiff of Roughtton Kerkby upon Bayne and Haltham,240.0,Kirkstead Abbey,LINCOLNSHIRE,Henry,Flemmynge,Roughtton
+Edward Wylkynson bailiff of Thymelby Wodhall Horncastle Langton near Horncastle and Marton near Horncastle,320.0,Kirkstead Abbey,LINCOLNSHIRE,Edward,Wylkynson,Thymelby
+John Parker bailiff of Harmetree and Wildmore,400.0,Kirkstead Abbey,LINCOLNSHIRE,John,Parker,Harmetree
+Richard Dytton bailiff of Boston,80.0,Kirkstead Abbey,LINCOLNSHIRE,Richard,Dytton,Boston
+Richard Burton bailiff of Kerksted and Marisco in le3 Fenne3,480.0,Kirkstead Abbey,LINCOLNSHIRE,Richard,Burton,Kerksted
+John Wylkynson bailiff of Ulseby Langton Dawby Swayby and Hoggestrop,40.0,Kirkstead Abbey,LINCOLNSHIRE,John,Wylkynson,Ulseby
+John Johnson bailiff of Marton and Tymberland,40.0,Kirkstead Abbey,LINCOLNSHIRE,John,Johnson,Marton
+John Walker bailiff of Dunham Snelland Westlaby Reesby and Langton near Wragby,240.0,Kirkstead Abbey,LINCOLNSHIRE,John,Walker,Dunham
+George Tailbos chief steward of Tupholme,480.0,Tupholme Abbey,LINCOLNSHIRE,George,Tailbos,Tupholme
+Nicholas Westowe bailiff of Randby,40.0,Tupholme Abbey,LINCOLNSHIRE,Nicholas,Westowe,Randby
+John Ingram bailiff of Aschby,80.0,Tupholme Abbey,LINCOLNSHIRE,John,Ingram,Aschby
+John Walker bailiff of Media Rasyn,40.0,Tupholme Abbey,LINCOLNSHIRE,John,Walker,Media
+Robert Dymoke chief steward of the moanstery,320.0,Stixwould Priory Cistercians,LINCOLNSHIRE,Robert,Dymoke,
+Edward Villars bailiff of Hun'gton,240.0,Stixwould Priory Cistercians,LINCOLNSHIRE,Edward,Villars,Hun
+John Hennege steward of the court in parts of Lyndsey,160.0,Stixwould Priory Cistercians,LINCOLNSHIRE,John,Hennege,Lyndsey
+Robert Hussey steward of court in Kesten,240.0,Stixwould Priory Cistercians,LINCOLNSHIRE,Robert,Hussey,Kesten
+Doctor Hall steward of the court in Hun'gton,160.0,Stixwould Priory Cistercians,LINCOLNSHIRE,Doctor,Hall,Hun
+John Hyll auditor of the monastery,280.0,Stixwould Priory Cistercians,LINCOLNSHIRE,John,Hyll,
+John Boseworth receiver of the monastery,1600.0,Stixwould Priory Cistercians,LINCOLNSHIRE,John,Boseworth,
+Thomas Elys bailiff of Baswynthorpe,280.0,Stixwould Priory Cistercians,LINCOLNSHIRE,Thomas,Elys,Baswynthorpe
+John Brian bailiff of Hundylby Halton and Enderby,120.0,Stixwould Priory Cistercians,LINCOLNSHIRE,John,Brian,Hundylby
+Thomas Robynson bailiff of Stixwold Horssyngton and Bukanall,320.0,Stixwould Priory Cistercians,LINCOLNSHIRE,Thomas,Robynson,Stixwold
+Robert Leasynge bailiff of Fereby and Media Rasyn,120.0,Stixwould Priory Cistercians,LINCOLNSHIRE,Robert,Leasynge,Fereby
+William Wryghtt bailiff of Hemyngby Golceby and Asturby,120.0,Stixwould Priory Cistercians,LINCOLNSHIRE,William,Wryghtt,Hemyngby
+Thomas Ketloke bailiff of Wanflett,240.0,Stixwould Priory Cistercians,LINCOLNSHIRE,Thomas,Ketloke,Wanflett
+Thome Jacson bailiff in Marum,320.0,Revesby Abbey,LINCOLNSHIRE,Thome,Jacson,Marum
+Richard Hardy bailiff in Beisby and others,320.0,Revesby Abbey,LINCOLNSHIRE,Richard,Hardy,Beisby
+Richard Smyth bailiff of Sybsey,320.0,Revesby Abbey,LINCOLNSHIRE,Richard,Smyth,Sybsey
+John lord Husee chief steward of the monastery,320.0,Revesby Abbey,LINCOLNSHIRE,John,lord,
+M' John Hennage steward of the court at Thoresway,240.0,Revesby Abbey,LINCOLNSHIRE,M',John,Thoresway
+Thomas Gildon and John Brigge stewards of court at Marum,320.0,Revesby Abbey,LINCOLNSHIRE,Thomas,Gildon,Marum
+John Litelbury court steward at Sibsey,276.0,Revesby Abbey,LINCOLNSHIRE,John,Litelbury,Sibsey
+John Randall bailiff of Hotofte Anderby and Comb'worthe,480.0,Markby Priory,LINCOLNSHIRE,John,Randall,Hotofte
+Philip Elwold bailiff of Markeby Maltby Beysby and Wodethorp,320.0,Markby Priory,LINCOLNSHIRE,Philip,Elwold,Markeby
+John Lytylbury court steward,240.0,Markby Priory,LINCOLNSHIRE,John,Lytylbury,
+Richard Curson of Louthe steward of court at Thedylthorp and Towes,80.0,Markby Priory,LINCOLNSHIRE,Richard,Curson,Louthe
+William Cawode auditor there,160.0,Markby Priory,LINCOLNSHIRE,William,Cawode,
+John Hennage court steward at Hotoft,120.0,Markby Priory,LINCOLNSHIRE,John,Hennage,Hotoft
+Thomas Elwold bailiff,480.0,Hagneby Abbey,LINCOLNSHIRE,Thomas,Elwold,
+John Lytylburye steward of court,160.0,Hagneby Abbey,LINCOLNSHIRE,John,Lytylburye,
+Richard Rawlynson bailiff and rent collector,560.0,Legbourne Priory,LINCOLNSHIRE,Richard,Rawlynson,
+John Hennage court steward,120.0,Legbourne Priory,LINCOLNSHIRE,John,Hennage,
+William Cawode auditor,60.0,Legbourne Priory,LINCOLNSHIRE,William,Cawode,
+Richard Clerke bailiff of Raysen and elsewhere,240.0,Greenfield Priory,LINCOLNSHIRE,Richard,Clerke,Raysen
+Richard Vertyman bailiff of Moreby and elsewhere,240.0,Greenfield Priory,LINCOLNSHIRE,Richard,Vertyman,Moreby
+John Offeray receiver there,320.0,Greenfield Priory,LINCOLNSHIRE,John,Offeray,
+John Goderyke court steward there,320.0,Greenfield Priory,LINCOLNSHIRE,John,Goderyke,
+John Hyll auditor there,160.0,Greenfield Priory,LINCOLNSHIRE,John,Hyll,
+John Walker bailiff of Howtofte,319.0,Louth Park Abbey,LINCOLNSHIRE,John,Walker,Howtofte
+William Burne bailiff of Kedyngton,320.0,Louth Park Abbey,LINCOLNSHIRE,William,Burne,Kedyngton
+William Burne bailiff of Fullestowe,320.0,Louth Park Abbey,LINCOLNSHIRE,William,Burne,Fullestowe
+Jacob Walker bailiff of Gry'molby,240.0,Louth Park Abbey,LINCOLNSHIRE,Jacob,Walker,Gry
+Richard Hall bailiff of Lamcrofte Kelstorne and Callesthorpe,320.0,Louth Park Abbey,LINCOLNSHIRE,Richard,Hall,Lamcrofte
+"Thome Tompson bailiff of Stowe Kekestby Messyngham and ""alabi""?",160.0,Louth Park Abbey,LINCOLNSHIRE,Thome,Tompson,Stowe
+Andrew Byllesby steward of the court,480.0,Louth Park Abbey,LINCOLNSHIRE,Andrew,Byllesby,
+William Cawoode auditor,160.0,Louth Park Abbey,LINCOLNSHIRE,William,Cawoode,
+Henry Forma' bailiff of Cokryngton and Alvyngham,320.0,Alvingham Priory,LINCOLNSHIRE,Henry,Forma',Cokryngton
+Robert Hanson bailiff of Garnethorpe Yerburgh Kenyngton and others,488.0,Alvingham Priory,LINCOLNSHIRE,Robert,Hanson,Garnethorpe
+Carl Yerburgh chief steward of the court,480.0,Alvingham Priory,LINCOLNSHIRE,Carl,Yerburgh,
+Henry Mawer court steward Cokryngton and Alvyngham,160.0,Alvingham Priory,LINCOLNSHIRE,Henry,Mawer,
+Richard Hasande bailiff,312.0,North Ormsby Priory,LINCOLNSHIRE,Richard,Hasande,
+John Vyllers steward,480.0,North Ormsby Priory,LINCOLNSHIRE,John,Vyllers,
+Christopher Yerburghe court steward of Garnethorpe,160.0,North Ormsby Priory,LINCOLNSHIRE,Christopher,Yerburghe,Garnethorpe
+Anthony Messenden chief steward,480.0,Wellow Abbey,LINCOLNSHIRE,Anthony,Messenden,
+Thomas Moyne steward of Weleesby,160.0,Wellow Abbey,LINCOLNSHIRE,Thomas,Moyne,Weleesby
+Hugh Grantham auditor,240.0,Wellow Abbey,LINCOLNSHIRE,Hugh,Grantham,
+William Dyxson bailiff of Humb'ston,240.0,Wellow Abbey,LINCOLNSHIRE,William,Dyxson,Humb
+John Blacke bailiff of Grymmesby Thorganby Waltham and others,480.0,Wellow Abbey,LINCOLNSHIRE,John,Blacke,Grymmesby
+John Hennege steward of the monastery,160.0,Humberston Abbey,LINCOLNSHIRE,John,Hennege,
+Carl Constable bailiff of Humberston,240.0,Humberston Abbey,LINCOLNSHIRE,Carl,Constable,Humberston
+Thomas More bailiff of Tetney Howton and others,120.0,Humberston Abbey,LINCOLNSHIRE,Thomas,More,Tetney
+William Turwytt steward,240.0,Newstead-on-Ancholme Priory,LINCOLNSHIRE,William,Turwytt,
+Thomas Hochkynson bailiff of the monastery,160.0,Newstead-on-Ancholme Priory,LINCOLNSHIRE,Thomas,Hochkynson,
+Robert Tyrwytt steward,360.0,Elsham Priory,LINCOLNSHIRE,Robert,Tyrwytt,
+William Dalyson substeward,160.0,Elsham Priory,LINCOLNSHIRE,William,Dalyson,
+Richard S'iaunte,320.0,Elsham Priory,LINCOLNSHIRE,Richard,S'iaunte,
+Thomas Mounson rent collector,160.0,Elsham Priory,LINCOLNSHIRE,Thomas,Mounson,
+Robert Turwyt,480.0,Thornton Abbey,LINCOLNSHIRE,Robert,Turwyt,
+John Huse,240.0,Thornton Abbey,LINCOLNSHIRE,John,Huse,
+William Askew,480.0,Thornton Abbey,LINCOLNSHIRE,William,Askew,
+William Turwytt,240.0,Thornton Abbey,LINCOLNSHIRE,William,Turwytt,
+John Constable,240.0,Thornton Abbey,LINCOLNSHIRE,John,Constable,
+Ralph Glikare,240.0,Thornton Abbey,LINCOLNSHIRE,Ralph,Glikare,
+William Constable,240.0,Thornton Abbey,LINCOLNSHIRE,William,Constable,
+Thomas Hatclyff,240.0,Thornton Abbey,LINCOLNSHIRE,Thomas,Hatclyff,
+Edward Skypwythe,240.0,Thornton Abbey,LINCOLNSHIRE,Edward,Skypwythe,
+John Henege,240.0,Thornton Abbey,LINCOLNSHIRE,John,Henege,
+John Wentworthe,480.0,Thornton Abbey,LINCOLNSHIRE,John,Wentworthe,
+Thomas Moygne,160.0,Thornton Abbey,LINCOLNSHIRE,Thomas,Moygne,
+Anthony Messendyn,160.0,Thornton Abbey,LINCOLNSHIRE,Anthony,Messendyn,
+George Flynton,160.0,Thornton Abbey,LINCOLNSHIRE,George,Flynton,
+George Seintpole,160.0,Thornton Abbey,LINCOLNSHIRE,George,Seintpole,
+John Rudde,160.0,Thornton Abbey,LINCOLNSHIRE,John,Rudde,
+Leonard Leythorpe,320.0,Thornton Abbey,LINCOLNSHIRE,Leonard,Leythorpe,
+Henry Woode,240.0,Thornton Abbey,LINCOLNSHIRE,Henry,Woode,
+Peter Dowghty,120.0,Thornton Abbey,LINCOLNSHIRE,Peter,Dowghty,
+Thomas Regall,160.0,Thornton Abbey,LINCOLNSHIRE,Thomas,Regall,
+John Cooke ,80.0,Thornton Abbey,LINCOLNSHIRE,John,Cooke,
+Thomas Dune auditor,480.0,Thornton Abbey,LINCOLNSHIRE,Thomas,Dune,
+John Rawnson bailiff,480.0,Thornton Abbey,LINCOLNSHIRE,John,Rawnson,
+Nicholas Appleyarde,640.0,Thornton Abbey,LINCOLNSHIRE,Nicholas,Appleyarde,
+Henry Baynton,320.0,Newsham Abbey,LINCOLNSHIRE,Henry,Baynton,
+Robert Smythe,160.0,Newsham Abbey,LINCOLNSHIRE,Robert,Smythe,
+Thomas Garthen,160.0,Newsham Abbey,LINCOLNSHIRE,Thomas,Garthen,
+William Ascough chief steward,480.0,Newsham Abbey,LINCOLNSHIRE,William,Ascough,
+George Seinpole substeward,240.0,Newsham Abbey,LINCOLNSHIRE,George,Seinpole,
+Hugh Grantham auditor,240.0,Newsham Abbey,LINCOLNSHIRE,Hugh,Grantham,
+William Ascough chief steward,240.0,Nun Cotham Priory,LINCOLNSHIRE,William,Ascough,
+William Anderson auditor,240.0,Nun Cotham Priory,LINCOLNSHIRE,William,Anderson,
+John Brygg bailiff,160.0,Nun Cotham Priory,LINCOLNSHIRE,John,Brygg,
+Ralph Tugyll bailiff of Keleby,320.0,Nun Cotham Priory,LINCOLNSHIRE,Ralph,Tugyll,Keleby
+Edmund Wallys bailiff,320.0,Bardney Abbey,LINCOLNSHIRE,Edmund,Wallys,
+William Lusday bailiff,320.0,Bardney Abbey,LINCOLNSHIRE,William,Lusday,
+William Wryghte bailiff,320.0,Bardney Abbey,LINCOLNSHIRE,William,Wryghte,
+Robert Palfrayma' bailiff,320.0,Bardney Abbey,LINCOLNSHIRE,Robert,Palfrayma',
+Robert Broune bailiff,320.0,Bardney Abbey,LINCOLNSHIRE,Robert,Broune,
+Richard Salmon bailiff,120.0,Bardney Abbey,LINCOLNSHIRE,Richard,Salmon,
+John Hennege steward,160.0,Bardney Abbey,LINCOLNSHIRE,John,Hennege,
+Thomas Moygne steward,160.0,Bardney Abbey,LINCOLNSHIRE,Thomas,Moygne,
+Anthony Messendyn steward,160.0,Bardney Abbey,LINCOLNSHIRE,Anthony,Messendyn,
+John Littlebury steward,160.0,Bardney Abbey,LINCOLNSHIRE,John,Littlebury,
+John Husey chief steward,640.0,Bardney Abbey,LINCOLNSHIRE,John,Husey,
+William Cawood auditor,480.0,Bardney Abbey,LINCOLNSHIRE,William,Cawood,
+William Clerk receiver,480.0,Bardney Abbey,LINCOLNSHIRE,William,Clerk,
+John Hennage steward,400.0,Sixhills Priory,LINCOLNSHIRE,John,Hennage,
+Thomas Langlay bailiff,640.0,Sixhills Priory,LINCOLNSHIRE,Thomas,Langlay,
+Lincoln sheriff,104.0,Sixhills Priory,LINCOLNSHIRE,Lincoln,sheriff,
+Thomas Moyne steward of Thakthorn,240.0,Bullington Priory,LINCOLNSHIRE,Thomas,Moyne,Thakthorn
+John Hennage steward of Westeryngton,160.0,Bullington Priory,LINCOLNSHIRE,John,Hennage,Westeryngton
+John Littlebury steward of Burg in Marisco,160.0,Bullington Priory,LINCOLNSHIRE,John,Littlebury,Burg
+Andrew Byllesby steward of Hotofte,240.0,Bullington Priory,LINCOLNSHIRE,Andrew,Byllesby,Hotofte
+George Seintpoule steward of Ingham,160.0,Bullington Priory,LINCOLNSHIRE,George,Seintpoule,Ingham
+John Rudde steward of Redburne,160.0,Bullington Priory,LINCOLNSHIRE,John,Rudde,Redburne
+Hugh Grantham auditor,240.0,Bullington Priory,LINCOLNSHIRE,Hugh,Grantham,
+Arnold Langdall receiver,480.0,Bullington Priory,LINCOLNSHIRE,Arnold,Langdall,
+John Bucke bailiff of Hackthorn Inham Sotherey and Hanworth,320.0,Bullington Priory,LINCOLNSHIRE,John,Bucke,Hackthorn
+Henry Dawson bailiff of Owldefeld Redeburn Holton and others,320.0,Bullington Priory,LINCOLNSHIRE,Henry,Dawson,Owldefeld
+Richard Pekoke bailiff of Croylond,640.0,Croyland Abbey,LINCOLNSHIRE,Richard,Pekoke,Croylond
+Simon Clerk bailiff of Gedney,480.0,Croyland Abbey,LINCOLNSHIRE,Simon,Clerk,Gedney
+William Bryggis and Robert Michelson bailiffs of Whaplod,960.0,Croyland Abbey,LINCOLNSHIRE,William,Bryggis,Whaplod
+Thomas Rondis bailiff of Aswyke,320.0,Croyland Abbey,LINCOLNSHIRE,Thomas,Rondis,Aswyke
+Robert Thakker bailiff of Holbeche,480.0,Croyland Abbey,LINCOLNSHIRE,Robert,Thakker,Holbeche
+Robert Kechine bailiff of Spaldinge,640.0,Croyland Abbey,LINCOLNSHIRE,Robert,Kechine,Spaldinge
+William Bogge bailiff of Dowedike,480.0,Croyland Abbey,LINCOLNSHIRE,William,Bogge,Dowedike
+Robert Litilbury bailiff of Langtoft,640.0,Croyland Abbey,LINCOLNSHIRE,Robert,Litilbury,Langtoft
+George Foster bailiff of Baston,640.0,Croyland Abbey,LINCOLNSHIRE,George,Foster,Baston
+Simon Bevell bailiff of Manthorpe,40.0,Croyland Abbey,LINCOLNSHIRE,Simon,Bevell,Manthorpe
+Richard Alkenson bailiff of Bukkenhall,200.0,Croyland Abbey,LINCOLNSHIRE,Richard,Alkenson,Bukkenhall
+Thomas Gedney bailiff of Stamford,30.0,Croyland Abbey,LINCOLNSHIRE,Thomas,Gedney,Stamford
+Richard Todd bailiff of Dowsdale and others,320.0,Croyland Abbey,LINCOLNSHIRE,Richard,Todd,Dowsdale
+Henry Malteson bailiff of Morton and Ingoldesby,120.0,Croyland Abbey,LINCOLNSHIRE,Henry,Malteson,Morton
+Robert Collier bailiff of Weylond,40.0,Croyland Abbey,LINCOLNSHIRE,Robert,Collier,Weylond
+Thomas Mychell bailiff of Legbroughe and Alington,120.0,Croyland Abbey,LINCOLNSHIRE,Thomas,Mychell,Legbroughe
+John Put' bailiff of Kyrkby and Dowsby,320.0,Croyland Abbey,LINCOLNSHIRE,John,Put',Kyrkby
+William Wadde bailiff of Freston,320.0,Croyland Abbey,LINCOLNSHIRE,William,Wadde,Freston
+William Moyne bailiff of Claxby,320.0,Croyland Abbey,LINCOLNSHIRE,William,Moyne,Claxby
+Thomas Clerke bailiff of Elmyngton in Northamptonshire,40.0,Croyland Abbey,LINCOLNSHIRE,Thomas,Clerke,Elmyngton
+John Curtis bailiff of Addington,80.0,Croyland Abbey,LINCOLNSHIRE,John,Curtis,Addington
+John Peke bailiff of Wedlingbroughe,640.0,Croyland Abbey,LINCOLNSHIRE,John,Peke,Wedlingbroughe
+William Pep's bailiff of Hokington in Cambs,640.0,Croyland Abbey,LINCOLNSHIRE,William,Pep's,Hokington
+John Barker bailiff of Elme,80.0,Croyland Abbey,LINCOLNSHIRE,John,Barker,Elme
+John Dalby bailiff of Therninge and Morborne in Hunts,320.0,Croyland Abbey,LINCOLNSHIRE,John,Dalby,Therninge
+Richard Ogle Jun' bailiff of Standen in Hertf,40.0,Croyland Abbey,LINCOLNSHIRE,Richard,Ogle,Standen
+Richard Ogle bailiff of Southwarborn in Southt',120.0,Croyland Abbey,LINCOLNSHIRE,Richard,Ogle,Southwarborn
+Lord Rose count of Rutland chief steward for Lincs,1200.0,Croyland Abbey,LINCOLNSHIRE,Lord,Rose,Rutland
+John Husye steward in Kesteven,480.0,Croyland Abbey,LINCOLNSHIRE,John,Husye,Kesteven
+John Litilbury in Parts of Lindsey,480.0,Croyland Abbey,LINCOLNSHIRE,John,Litilbury,Parts
+Richard Ogle in Parts of Holland,1120.0,Croyland Abbey,LINCOLNSHIRE,Richard,Ogle,Parts
+_______ receiver,1200.0,Croyland Abbey,LINCOLNSHIRE,_______,receiver,
+Thomas Webster steward of spiritual court,120.0,Croyland Abbey,LINCOLNSHIRE,Thomas,Webster,
+John Littilbury steward in Claxby,120.0,Croyland Abbey,LINCOLNSHIRE,John,Littilbury,Claxby
+Richard Ogle steward in Freston,120.0,Croyland Abbey,LINCOLNSHIRE,Richard,Ogle,Freston
+William Parr steward in Northampt,480.0,Croyland Abbey,LINCOLNSHIRE,William,Parr,Northampt
+John Warner court steward in Wedlingbrughe,320.0,Croyland Abbey,LINCOLNSHIRE,John,Warner,Wedlingbrughe
+Thomas Hutton steward in Cotingham in Cambs,280.0,Croyland Abbey,LINCOLNSHIRE,Thomas,Hutton,Cotingham
+William Assheley steward in Leics,160.0,Croyland Abbey,LINCOLNSHIRE,William,Assheley,Leics
+Richard Atkynson bailiff of Swyneshed,320.0,Swineshead Abbey,LINCOLNSHIRE,Richard,Atkynson,Swyneshed
+Richard Townrow bailiff in Gob'ston Suflete and Quadryng,80.0,Swineshead Abbey,LINCOLNSHIRE,Richard,Townrow,Gob
+John Bothe bailiff in Kesteven,240.0,Swineshead Abbey,LINCOLNSHIRE,John,Bothe,Kesteven
+John Archer bailiff in Nottingham,320.0,Swineshead Abbey,LINCOLNSHIRE,John,Archer,Nottingham
+John Husee chief steward in Swyneshed,160.0,Swineshead Abbey,LINCOLNSHIRE,John,Husee,Swyneshed
+Thomas Hollond substeward there,160.0,Swineshead Abbey,LINCOLNSHIRE,Thomas,Hollond,
+Jervis? Ingoldesby substeward in parts of Kesteven,80.0,Swineshead Abbey,LINCOLNSHIRE,Jervis?,Ingoldesby,Kesteven
+Luke Longley bailiff in Spaldyng,760.0,Spalding Priory,LINCOLNSHIRE,Luke,Longley,Spaldyng
+William Resby bailiff in Spaldyng,120.0,Spalding Priory,LINCOLNSHIRE,William,Resby,Spaldyng
+William Willesby bailiff in Halm',440.0,Spalding Priory,LINCOLNSHIRE,William,Willesby,Halm
+John Beson bailiff of Ambrylaythes,120.0,Spalding Priory,LINCOLNSHIRE,John,Beson,Ambrylaythes
+Richard Chaunter bailiff in Sutton,200.0,Spalding Priory,LINCOLNSHIRE,Richard,Chaunter,Sutton
+John Isake in Gannok,320.0,Spalding Priory,LINCOLNSHIRE,John,Isake,Gannok
+John Haryson in Pynchebek,640.0,Spalding Priory,LINCOLNSHIRE,John,Haryson,Pynchebek
+John Haryson in Pynchebeklaythe Graves,440.0,Spalding Priory,LINCOLNSHIRE,John,Haryson,Pynchebeklaythe
+Gilbert Otys in Molton,760.0,Spalding Priory,LINCOLNSHIRE,Gilbert,Otys,Molton
+Gilbert Otys in Goswell,160.0,Spalding Priory,LINCOLNSHIRE,Gilbert,Otys,Goswell
+William Reysby in Weston,600.0,Spalding Priory,LINCOLNSHIRE,William,Reysby,Weston
+Nicholas Wolryche in Weston Greves (com),720.0,Spalding Priory,LINCOLNSHIRE,Nicholas,Wolryche,Weston
+Robert Walpoll in Wykeham ,880.0,Spalding Priory,LINCOLNSHIRE,Robert,Walpoll,Wykeham
+Nicholas Wolrych in Wykeham,640.0,Spalding Priory,LINCOLNSHIRE,Nicholas,Wolrych,Wykeham
+John Beson in Awkborow,240.0,Spalding Priory,LINCOLNSHIRE,John,Beson,Awkborow
+Hugh Kensall in Burn with others,96.0,Spalding Priory,LINCOLNSHIRE,Hugh,Kensall,Burn
+John Husey chief steward,1200.0,Spalding Priory,LINCOLNSHIRE,John,Husey,
+Anthony Irby substeward,480.0,Spalding Priory,LINCOLNSHIRE,Anthony,Irby,
+George Seinpoll steward of Awkborow,240.0,Spalding Priory,LINCOLNSHIRE,George,Seinpoll,Awkborow
+Gervase Ingoldesby steward of Kyrkeby,80.0,Spalding Priory,LINCOLNSHIRE,Gervase,Ingoldesby,Kyrkeby
+Gilbert Otys steward of Sutton,120.0,Spalding Priory,LINCOLNSHIRE,Gilbert,Otys,Sutton
+John Haryson steward of Spaldyng,192.0,Spalding Priory,LINCOLNSHIRE,John,Haryson,Spaldyng
+Anthony Irby auditor there,650.0,Spalding Priory,LINCOLNSHIRE,Anthony,Irby,
+John Bolles receiver,800.0,Spalding Priory,LINCOLNSHIRE,John,Bolles,
+Nicholas Wolryche bailiff of pensions and portions,240.0,Spalding Priory,LINCOLNSHIRE,Nicholas,Wolryche,
+Alex Elyot bailiff there,240.0,Vaudey Abbey,LINCOLNSHIRE,Alex,Elyot,
+Henry Lacy steward there,80.0,Vaudey Abbey,LINCOLNSHIRE,Henry,Lacy,
+Richard Michilson bailiff there,160.0,Vaudey Abbey,LINCOLNSHIRE,Richard,Michilson,
+William Wynell bailiff there,240.0,Vaudey Abbey,LINCOLNSHIRE,William,Wynell,
+Simon Burne bailiff there,240.0,Vaudey Abbey,LINCOLNSHIRE,Simon,Burne,
+Henry Lacy steward there,80.0,Vaudey Abbey,LINCOLNSHIRE,Henry,Lacy,
+Peter Simon bailiff there,320.0,Vaudey Abbey,LINCOLNSHIRE,Peter,Simon,
+Henry Lacy steward there,80.0,Vaudey Abbey,LINCOLNSHIRE,Henry,Lacy,
+John Todde bailiff there,240.0,Vaudey Abbey,LINCOLNSHIRE,John,Todde,
+Henry Lacy steward there,80.0,Vaudey Abbey,LINCOLNSHIRE,Henry,Lacy,
+John Hykson bailiff there,240.0,Vaudey Abbey,LINCOLNSHIRE,John,Hykson,
+Henry Lacy steward there,80.0,Vaudey Abbey,LINCOLNSHIRE,Henry,Lacy,
+Henry Clay bailiff there,480.0,Vaudey Abbey,LINCOLNSHIRE,Henry,Clay,
+John Russell chief steward ,960.0,Vaudey Abbey,LINCOLNSHIRE,John,Russell,
+Thomas Jakson steward of the hall there,320.0,Vaudey Abbey,LINCOLNSHIRE,Thomas,Jakson,
+Lord Husey steward of Haubeke,240.0,Vaudey Abbey,LINCOLNSHIRE,Lord,Husey,Haubeke
+Richard Ogle steward of Pynchbeke,240.0,Vaudey Abbey,LINCOLNSHIRE,Richard,Ogle,Pynchbeke
+Anthony Myssenden steward of court in Rutland,240.0,Vaudey Abbey,LINCOLNSHIRE,Anthony,Myssenden,Rutland
+Henry Lacy auditor,480.0,Vaudey Abbey,LINCOLNSHIRE,Henry,Lacy,
+John Husey chief steward,720.0,Sempringham Priory,LINCOLNSHIRE,John,Husey,
+John Comb'worthy bailiff,480.0,Sempringham Priory,LINCOLNSHIRE,John,Comb'worthy,
+Robert Roberts bailiff of Woodgrange and Kyrkby,320.0,Sempringham Priory,LINCOLNSHIRE,Robert,Roberts,Woodgrange
+Richard Roberts bailiff of Repyngale,40.0,Sempringham Priory,LINCOLNSHIRE,Richard,Roberts,Repyngale
+Thomas Gee bailiff of Brodertofte,240.0,Sempringham Priory,LINCOLNSHIRE,Thomas,Gee,Brodertofte
+Thomas Hodgen bailiff of Ketton,80.0,Sempringham Priory,LINCOLNSHIRE,Thomas,Hodgen,Ketton
+Bartholomew Storer bailiff of Thurmastone,80.0,Sempringham Priory,LINCOLNSHIRE,Bartholomew,Storer,Thurmastone
+Robert Butterworthe bailiff of Brancot Corewell and Chynwell,160.0,Sempringham Priory,LINCOLNSHIRE,Robert,Butterworthe,Brancot
+Gervase Yngoldesby steward at Billesfeld,80.0,Sempringham Priory,LINCOLNSHIRE,Gervase,Yngoldesby,Billesfeld
+John Comb'worthe bailiff there,320.0,Sempringham Priory,LINCOLNSHIRE,John,Comb'worthe,
+John Husy steward,320.0,Bourne Abbey,LINCOLNSHIRE,John,Husy,
+Reginald Reyns bailiff of Burne,480.0,Bourne Abbey,LINCOLNSHIRE,Reginald,Reyns,Burne
+John Frankysshe steward of Kyrkby,160.0,Bourne Abbey,LINCOLNSHIRE,John,Frankysshe,Kyrkby
+Thomas Dobulday bailiff of Willesford,240.0,Bourne Abbey,LINCOLNSHIRE,Thomas,Dobulday,Willesford
+Henry Lacy steward,240.0,"Newstead Priory, Lincolnshire",LINCOLNSHIRE,Henry,Lacy,
+Robert Clerke bailiff,160.0,"Newstead Priory, Lincolnshire",LINCOLNSHIRE,Robert,Clerke,
+William Walt' bailiff of Gaunthame Braunston and others,320.0,"Newstead Priory, Lincolnshire",LINCOLNSHIRE,William,Walt',Gaunthame
+Count of Rutland steward of the monastery,480.0,Newbo Abbey,LINCOLNSHIRE,Count,of,Rutland
+Robert Turner bailiff of Lincoln and Fillynghame,40.0,Newbo Abbey,LINCOLNSHIRE,Robert,Turner,Lincoln
+Richard Blake bailiff of Donyngton Quadrige Roppesley Dunsby Brauncewell Gaunthame Belton Somerby Barroby Dodyngton Westburghe and other,320.0,Newbo Abbey,LINCOLNSHIRE,Richard,Blake,Donyngton
+Nicholas Lowson bailiff of Denton Alyngton Segbroke Kneton etc,240.0,Newbo Abbey,LINCOLNSHIRE,Nicholas,Lowson,Denton
+Robert Turwhyt steward,320.0,Kyme Priory,LINCOLNSHIRE,Robert,Turwhyt,
+Richard Alenby bailiff of Inmynghame,160.0,Kyme Priory,LINCOLNSHIRE,Richard,Alenby,Inmynghame
+Peter Newsame bailiff of Kyme,320.0,Kyme Priory,LINCOLNSHIRE,Peter,Newsame,Kyme
+William Vawsor bailiff of Waynflet,160.0,Kyme Priory,LINCOLNSHIRE,William,Vawsor,Waynflet
+Lord Husy chief steward,360.0,Haverholme Priory,LINCOLNSHIRE,Lord,Husy,
+Robert Gotte bailiff in Lincoln,320.0,Haverholme Priory,LINCOLNSHIRE,Robert,Gotte,Lincoln
+John Makhame steward in Notts,320.0,Haverholme Priory,LINCOLNSHIRE,John,Makhame,Notts
+Richard Wyndbanke bailiff in Notts,320.0,Haverholme Priory,LINCOLNSHIRE,Richard,Wyndbanke,Notts
+John Beron steward and bailiff in Leics,320.0,Haverholme Priory,LINCOLNSHIRE,John,Beron,Leics
+Robert Husy chief steward,320.0,Catley Priory,LINCOLNSHIRE,Robert,Husy,
+Robert Thurlebeke bailiff,320.0,Catley Priory,LINCOLNSHIRE,Robert,Thurlebeke,
+Humphrey Walcot steward ,276.0,Nocton Priory,LINCOLNSHIRE,Humphrey,Walcot,
+Simon Stagge bailiff,160.0,Nocton Priory,LINCOLNSHIRE,Simon,Stagge,
+John Husy chief steward,480.0,Barlings Abbey,LINCOLNSHIRE,John,Husy,
+Richard Ogle steward in Swayton,240.0,Barlings Abbey,LINCOLNSHIRE,Richard,Ogle,Swayton
+Anthony Eyrby auditor,240.0,Barlings Abbey,LINCOLNSHIRE,Anthony,Eyrby,
+John Makarell receiver,480.0,Barlings Abbey,LINCOLNSHIRE,John,Makarell,
+William Midylton bailiff of Swayton,480.0,Barlings Abbey,LINCOLNSHIRE,William,Midylton,Swayton
+Thomas Padley bailiff of Caynby and Glentham,240.0,Barlings Abbey,LINCOLNSHIRE,Thomas,Padley,Caynby
+Thomas Dymoke bailiff of Northcarlton,240.0,Barlings Abbey,LINCOLNSHIRE,Thomas,Dymoke,Northcarlton
+Thomas Kyrton bailiff of Scothorn,240.0,Barlings Abbey,LINCOLNSHIRE,Thomas,Kyrton,Scothorn
+Thomas Smythe bailiff of Walmesgar and Carleton in the marsh,120.0,Barlings Abbey,LINCOLNSHIRE,Thomas,Smythe,Walmesgar
+George Skynn' bailiff of Lincoln,80.0,Barlings Abbey,LINCOLNSHIRE,George,Skynn',Lincoln
+John Hannew bailiff of Repham and Rysome,120.0,Barlings Abbey,LINCOLNSHIRE,John,Hannew,Repham
+Jacob Letten bailiff of Sutton Scapwyk Medringham Armeston Boythby and Coysby,120.0,Barlings Abbey,LINCOLNSHIRE,Jacob,Letten,Sutton
+Thomas Mydylton bailiff of Barlyngs Upton Yngham Manton Manflet and Snelland,240.0,Barlings Abbey,LINCOLNSHIRE,Thomas,Mydylton,Barlyngs
+Mathew Ydyle bailiff of Newbell and Langwathe,60.0,Barlings Abbey,LINCOLNSHIRE,Mathew,Ydyle,Newbell
+Henry Lamkyn bailiff,120.0,Fosse Priory,LINCOLNSHIRE,Henry,Lamkyn,
+William Dalyson chief steward,240.0,Heynings Priory,LINCOLNSHIRE,William,Dalyson,
+Robert Dobeggyng bailiff in Styrton Stowe etc,320.0,Heynings Priory,LINCOLNSHIRE,Robert,Dobeggyng,Styrton
+John Woddos bailiff of Wylm'sley in York,160.0,Heynings Priory,LINCOLNSHIRE,John,Woddos,Wylm
+John Porte chief steward,480.0,Axholme Charterhouse,LINCOLNSHIRE,John,Porte,
+Thomas Porter receiver and bailiff,1280.0,Axholme Charterhouse,LINCOLNSHIRE,Thomas,Porter,
+Henry Aynesworth auditor,320.0,Axholme Charterhouse,LINCOLNSHIRE,Henry,Aynesworth,
+John Beamonde receiver,240.0,Axholme Charterhouse,LINCOLNSHIRE,John,Beamonde,
+William Dalyson steward there,160.0,Axholme Charterhouse,LINCOLNSHIRE,William,Dalyson,
+John Sheirs bailiff there,320.0,Axholme Charterhouse,LINCOLNSHIRE,John,Sheirs,
+Lord Burgh chief steward,480.0,Willoughton Preceptory,LINCOLNSHIRE,Lord,Burgh,
+Hugh Grantham auditor,480.0,Willoughton Preceptory,LINCOLNSHIRE,Hugh,Grantham,
+Nicholas Sutton receiver,1440.0,Willoughton Preceptory,LINCOLNSHIRE,Nicholas,Sutton,
+Robert Robynson bailiff of Willoughton Thorp in the Fallows Bottisford and Horkestowe,800.0,Willoughton Preceptory,LINCOLNSHIRE,Robert,Robynson,Willoughton
+George Thomson bailiff of Lymber,240.0,Willoughton Preceptory,LINCOLNSHIRE,George,Thomson,Lymber
+John Clerke bailiff of Theilby,240.0,Willoughton Preceptory,LINCOLNSHIRE,John,Clerke,Theilby
+John Sont bailiff of Golsby,240.0,Willoughton Preceptory,LINCOLNSHIRE,John,Sont,Golsby
+John Smith bailiff of Harby,320.0,Willoughton Preceptory,LINCOLNSHIRE,John,Smith,Harby
+William Dalyson auditor,240.0,Thornholme Priory,LINCOLNSHIRE,William,Dalyson,
+Richard Freston chief steward,480.0,Thornholme Priory,LINCOLNSHIRE,Richard,Freston,
+William Anderson receiver,240.0,Thornholme Priory,LINCOLNSHIRE,William,Anderson,
+William Thorp bailiff in Fereby etc,320.0,Thornholme Priory,LINCOLNSHIRE,William,Thorp,Fereby
+Edward Lee bailiff of Appulby Sancton Rysby Messyngham etc,640.0,Thornholme Priory,LINCOLNSHIRE,Edward,Lee,Appulby
+Thomas Hurre bailiff of Scalby Hyboldstowe Cletham etc,80.0,Thornholme Priory,LINCOLNSHIRE,Thomas,Hurre,Scalby
+William Tyrwith chief steward,240.0,Gokewell Priory,LINCOLNSHIRE,William,Tyrwith,
+John Smythe bailiff,240.0,Gokewell Priory,LINCOLNSHIRE,John,Smythe,
