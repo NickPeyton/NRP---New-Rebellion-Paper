@@ -1,0 +1,15 @@
+matplotlib
+statsmodels
+shapely
+pandas
+geopandas
+numpy
+networkx
+pyogrio
+rasterio
+scikit-image
+tqdm
+ipykernel
+phonetics
+unidecode
+spacy

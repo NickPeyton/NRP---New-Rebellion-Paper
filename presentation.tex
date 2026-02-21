@@ -1,0 +1,358 @@
+\documentclass{beamer}
+
+\usepackage{tabularx}
+\usepackage{dcolumn}
+
+\usetheme{Frankfurt}
+\usecolortheme{beaver}
+\useinnertheme{circles}
+
+\setbeamercolor{itemize item}{fg=darkred}
+\setbeamercolor{itemize subitem}{fg=darkred}
+\setbeamercolor{itemize subsubitem}{fg=darkred}
+\setbeamercolor{local structure}{fg=darkred}
+
+\title{The Dissolution of the Monasteries and the Pilgrimage of Grace}
+\author{Nick Peyton}
+%\institute{London School of Economics}
+\date{20 March, 2024}
+\logo{\includegraphics[height=1cm]{Output/Images/LSE Logo.png}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+    \frame{\titlepage}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \section{Background}
+    \begin{frame}
+        \frametitle{Historical Background: The Dissolution of the Monasteries}
+        \begin{columns}
+            \column{.4\linewidth}
+            \includegraphics[height=.99\textwidth, angle=270, origin=c]{Output/Images/dogFountains.jpg}
+            \tiny Dirty animals now roam the halls of the once-mighty Fountains Abbey
+            \column{.6\linewidth}
+        \begin{itemize}
+            \item Largest transfer of property in English history since 1066
+            \item Began in 1536 with the dissolution of all religious houses with an annual income below \pounds200
+            \item Large houses dissolved under pressure through 1540
+            \item Immediately preceded by \emph{Valor Ecclesiasticus} of 1535, a full survey of all Church land in England
+            \item Monasteries destroyed, land rapidly sold to raise money for war
+        \end{itemize}
+        \end{columns}
+    \end{frame}
+
+    
+    \begin{frame}
+        \frametitle{Historical Background: The Pilgrimage of Grace}
+        \begin{columns}
+            \column{.6\textwidth}
+                \begin{itemize}
+                    \item Largest rebellion between 1381 Peasants' Revolt and English Civil War
+                    \item Rebellion sparked on October 1 by Dissolution Commissioners dissolving Louth Park Abbey in Lincolnshire
+                    \item Spread rapidly throughout northern England and gathered an army of 30,000 rebels between October and December 1536
+                    \item Confronted heavily outnumbered royal force near Doncaster, dispersed by false promises
+                \end{itemize}
+                
+            \column{.4\textwidth}
+            \includegraphics[width=.99\linewidth]{Output/Images/pogBanner.png}
+            \tiny Banner of the Pilgrims, depicting the Five Wounds of Christ
+        \end{columns}
+    \end{frame}
+
+    \begin{frame}
+        \frametitle{Historical Background: The Pilgrimage of Grace}
+    \begin{columns}
+            \column{.6\textwidth}
+            \begin{itemize}
+                \item Wide-ranging list of demands:
+                \begin{itemize}
+                    \item Inheritance law
+                    \item Taxation
+                    \item Liturgy
+                    \item Monasteries
+                    \item Commoners on royal council
+                \end{itemize}
+                \item Historians generally agree that the Pilgrimage was driven by the commons
+                \item Parish was the fundamental unit in raising and sustaining rebellion
+                \item Most gentlemen involved claimed they were coerced, unclear how true this was
+            \end{itemize}
+            \column{.4\textwidth}
+            \includegraphics[width=.99\linewidth]{Output/Images/pogBanner.png}
+            \tiny Banner of the Pilgrims, depicting the Five Wounds of Christ
+        \end{columns}
+    \end{frame}
+    
+    \begin{frame}
+        \frametitle{Literature}
+        Three different literatures related to this topic:
+        \begin{enumerate}
+            \item Historical debate on causes of Pilgrimage
+            \begin{itemize}
+                \item Taxes and rumors (Hoyle 2001)
+                \item Economic effects of Dissolution (Bush 1996)
+                \item Broad sense of overturned divine order (Fletcher + MacCulloch 2008)
+            \end{itemize}
+
+            \item Literature on English rebellions
+            \begin{itemize}
+                \item "Village revolts" overwhelmingly motivated by agrarian issues (Manning 1988)
+                \item Religion was the language of all popular revolt (Wood 2002)
+            \end{itemize}
+            
+            \item Political science literature on causes of modern rebellions
+            \begin{itemize}
+                \item Game-theoretical models of revolt (Goldstone 1994, Granovetter 1978)
+                \item Modernization and frustrated-desires view of revolt (Feierabend 1966)
+                \item Deprivation theory of revolt (Kurer et al 2019)
+            \end{itemize}
+            
+        \end{enumerate}
+        
+        
+        
+    \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \section{Data}
+    \begin{frame}
+        \frametitle{Core Data: The \emph{Valor Ecclesiasticus}}
+        \begin{columns}
+            \column{.55\textwidth}
+            Survey of all Church property in England conducted in 1535, listed with annual income/expenditure value, typed up by Public Records Office in 19th century
+                \begin{enumerate}
+                    \item Source/destination, amount, and type of each entry
+                    \item Georeference location using GENUKI, GBPN, KEPN, BHO
+                    \item Join to spreadsheet of monasteries, then spatial join to parishes
+                \end{enumerate}
+            Final dataset contains roughly 12,000 entries for Northern counties
+            \column{.45\textwidth}
+            
+            \includegraphics[width=.99\linewidth]{Output/Images/Healaugh Entry.png}
+            \includegraphics[width=.99\linewidth]{Output/Images/Maps/HealaughStar.png}
+            
+        \end{columns}
+    \end{frame}
+    
+    \begin{frame}
+        \frametitle{Data: Land and Tithes}
+        \begin{columns}
+            \column{.5\textwidth}
+            Land Owned by Monasteries
+                \includegraphics[width=.9\linewidth]{Output/Images/Maps/llandOwned.png}
+            \column{.5\textwidth}
+            Tithes Collected by Monasteries
+                \includegraphics[width=.9\linewidth]{Output/Images/Maps/lTitheOutT.png}
+                
+        \end{columns}
+        \centering
+        \hyperlink{limits}{\beamerskipbutton{Gap in Northeast}}
+    \end{frame}
+
+
+    
+    \begin{frame}
+        \frametitle{Rebellion Data}
+        \begin{columns}
+        
+            \column{.55\linewidth}
+            Drawn from \emph{The Pilgrimage of Grace: A Study of the Rebel Armies of October 1536} by ML Bush
+            \begin{enumerate}
+            \item Georeferenced by hand based on printed maps
+            \item Pinpointed based on locations of nearby towns and rivers
+            \item Spatially joined to parish shapefile
+            \end{enumerate}
+
+            \column{.45\linewidth}
+                \includegraphics[width=.9\linewidth]{Output/Images/Maps/rebellion.png}
+        \end{columns}
+        
+    \end{frame}
+        \begin{frame}
+        \frametitle{Rebellion Data Explained}
+        \begin{columns}
+        
+            \column{.55\linewidth}
+
+            \begin{itemize}
+            \item \textbf{``Musters''} -- gatherings of rebels, initially repeated daily with rebels going home at night
+            \item \textbf{``Primary''} musters -- subset of musters where people definitely gathered for the first time -- this is the \textbf{best indicator} of rebel sentiment
+            \item \textbf{``Seats''} are the country seats of gentlemen voluntarily or involuntarily involved in the rebellion
+            \end{itemize}
+
+
+            \column{.45\linewidth}
+                \includegraphics[width=.9\linewidth]{Output/Images/Maps/rebellion.png}
+        \end{columns}
+    \end{frame}
+    \begin{frame}
+        \frametitle{Supplementary Data}
+        \begin{itemize}
+            \item Monastery orders, locations, and dissolution dates from National Archives
+            \item Lay Subsidy values digitized from maps in Sheail (1971)
+            \item Terrain types from Atlas of Rural Settlement of England
+            \item Slope and some lay subsidy variables from Heldring, Vollmer, and Robinson (2021)
+        \end{itemize}
+    \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \section{Methods and Results}
+    \begin{frame}
+        \frametitle{Methods: Parish-Level Regressions}
+        \begin{math}
+                    Rebellion_i = \beta_0 + \beta_1ln(Monastic Land_i) + \beta_2ln(Tithe_i) + \beta_3ln(Alms_i) + \beta_4Monastery_i + \beta_5ln(Taxes_i) + \beta_6TaxChangePct + \boldsymbol{Controls_i} + \epsilon
+        \end{math}
+
+        \bigskip
+        \bigskip
+        \begin{itemize}
+            \item Rebellion = one of 3 rebellion variables: primary muster dummy, muster dummy, or number of seats of rebel gentlemen
+            \item Monastery = presence of monastery or ln(monastic net income)
+            \item Logistic regression used for musters, Poisson regression for rebel gentlemen
+        \end{itemize}
+    \end{frame}
+
+    \begin{frame}
+        \frametitle{Results: Parish Primary Muster Regression}
+        \input{Output/Tables/primary_all.tex}
+        \centering
+        \hyperlink{conley}{\beamerskipbutton{Conley}}
+        \hyperlink{kelly}{\beamerskipbutton{Kelly}}
+    \end{frame}
+    
+    \begin{frame}
+        \frametitle{Results: Parish Muster Regression}
+        \input{Output/Tables/muster_all.tex}
+    \end{frame}
+
+    \begin{frame}
+        \frametitle{Results: Parish Rebellious Gentlemen Regression}
+        \input{Output/Tables/seat_all.tex}
+    \end{frame}
+
+   
+    
+    \begin{frame}
+        \frametitle{Methods: Grid Regressions}
+        \begin{columns}
+            \column{.5\linewidth}
+                \begin{itemize}
+                    \item Same variables as ordinary parish regressions
+                    \item Poisson regressions on 2, 5, 10, and 20-km square grid cells show similar effects to parishes
+                    \item Results are robust to changes in parish boundaries
+                    \item Results scale to larger areas
+                \end{itemize}
+            \column{.5\linewidth}
+            \includegraphics[width=.8\textwidth]{Output/Images/Maps/grid10.png}
+            \newline
+            \tiny Monastic land, 10x10km grid cells
+        \end{columns}
+    \end{frame}
+
+    \begin{frame}
+        \frametitle{Results: Grid Regressions}
+        \include{Output/Tables/grid_muster.tex}
+    \end{frame}
+
+    \begin{frame}
+        \frametitle{Results: Grid Regressions}
+        \include{Output/Tables/grid_seats.tex}
+    \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \section{Discussion}
+    \begin{frame}
+        \frametitle{Discussion: Land}
+        Why does monastic land predict rebellion?
+        \begin{enumerate}
+            \item Fear of changes in tenancy: inflation and rise of entry fines during 16th century
+            \item Monastic recruiting shifted toward tenants and their neighbors in the century before 1536, monks did favors for family and friends
+            \item Monasteries were a large and reliable source of demand for their tenants' agricultural products
+            \item Median pound of land income for Northern monasteries came from less than 8km away
+            \item Limited reports of monks pushing their tenants to rebel, arming them, etc.
+        \end{enumerate}
+        Could also be capturing some very rural population density not found in town and village population dataset
+    \end{frame}
+
+    \begin{frame}
+        \frametitle{Discussion: Musters vs. Rebel Gentlemen}
+        Results may indicate a difference in motivations between gentlemen and commons:
+        \begin{itemize}
+            \item Taxation level predicts rebel gentlemen in final specification
+            \item Level of taxation does not provide information about the \emph{rate} of taxation
+            \item Monastic land very weakly predicts rebel gentlemen, likely trades off directly with presence of \emph{any} gentleman's seat
+            \item No map of non-rebel gentlemen, so high taxation per taxpayer may just reflect the presence of \emph{any} gentleman
+        \end{itemize}
+        
+    \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \section{Future Plans}
+    \begin{frame}
+        \frametitle{Future Plans}
+        \begin{itemize}
+            \item \textbf{Taxation:} Get estimates for total tax assessment of each hundred in 1334, valuation used until Tudor subsidies beginning in 1512
+            \item \textbf{Names:} \emph{Valor} data contains names of monastic officials, initial results indicate $\sim$ 1/2 of rebel gentlemen were monastic officials
+            \item \textbf{Case Study:} Find sample of monasteries with good cartulary records, analyze rebellion based on tenancy turnover
+            \item \textbf{Heads of Houses:} The heads of many religious houses had been replaced by the Crown in the 10 years leading up to the Dissolution; may have affected tenants' propensity to rebel
+            \item \textbf{Placebo:} Find another rebellion with granular data and not too much demand for more \emph{Valor} digitization
+            
+        \end{itemize}
+    \end{frame}
+
+    \begin{frame}{}
+        \centering
+        \Huge
+        \textbf{Thank You!}
+    \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \appendix
+    \section{Appendix: Robustness Checks}
+    \begin{frame}[label=conley]
+        \frametitle{Conley Standard Errors: Primary Muster Regression}
+        \include{Output/Tables/conleyTable.tex}
+    \end{frame}
+
+    \begin{frame}[label=kelly]
+        \frametitle{Kelly-esque Spatial Noise Test}
+        Share of results of regressions on randomly-generated, spatially-autocorrelated primary muster patterns with p-values lower than main regression:
+            \begin{itemize}
+                \item Land: 13.6\%
+                \item Tithe: 29.8\%
+                \item Alms: 37.9\%
+                \item Friary: 68.8\%
+                \item Lay Subsidy: 68.5\%
+            \end{itemize}
+    \end{frame}
+
+     \begin{frame}
+        \frametitle{Methods: Inverse-Distance-Weighted Muster Regression}
+        \begin{math}
+                    Rebellion_i = \beta_0 + \beta_1ln(W_iMonastic Land_i) + \beta_2ln(W_iTithe_i) + \beta_3ln(W_iAlms_i) + \beta_4W_iMonastery_i + \beta_5ln(Taxes_i) + \beta_6TaxChangePct + \boldsymbol{Controls_i} + \epsilon
+        \end{math}
+        
+        \bigskip
+        \bigskip
+        
+        W is an inverse-distance-weighted spatial weights matrix with a maximum distance of 20km and a minimum distance of 1km (to avoid near-infinite values and divide-by-zeroes)
+    \end{frame}
+    \begin{frame}
+        \frametitle{Results: Inverse-Distance-Weighted Parish Regression}
+        \include{Output/Tables/idwMuster}
+    \end{frame}
+
+    \begin{frame}[label=limits]
+    \frametitle{Limitations of the \emph{Valor}}
+    \begin{columns}
+        \column{.5\textwidth}
+            \begin{itemize}
+                \item Damage to original \emph{Valor} manuscript
+                \item Daughter houses' property recorded with mother house
+                \item Land often undervalued, rarely omitted
+                \item Only perpetual alms from named benefactors listed, underestimating alms by at least 70\%
+                \item ``Manors, land, tenants, and rent'' grouped together
+            \end{itemize}
+        \column{.5\textwidth}
+        \includegraphics[width=.9\linewidth]{Output/Images/Maps/incomplete.png}
+    \end{columns}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Accounting for Damage to the \emph{Valor}}
+    \include{Output/Tables/regionSummary.tex}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}

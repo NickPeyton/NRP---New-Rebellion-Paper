@@ -1,0 +1,927 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{cms/global//global/global/global}
+    \entry{Broadberry2015}{book}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=8553c45f4e5227ca91bf1f0730c9b056}{%
+           family={Broadberry},
+           familyi={B\bibinitperiod},
+           given={S\bibnamedelima N},
+           giveni={S\bibinitperiod\bibinitdelim N\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge : Cambridge University Press}%
+      }
+      \strng{namehash}{8553c45f4e5227ca91bf1f0730c9b056}
+      \strng{fullhash}{8553c45f4e5227ca91bf1f0730c9b056}
+      \strng{fullhashraw}{8553c45f4e5227ca91bf1f0730c9b056}
+      \strng{bibnamehash}{8553c45f4e5227ca91bf1f0730c9b056}
+      \strng{authorbibnamehash}{8553c45f4e5227ca91bf1f0730c9b056}
+      \strng{authornamehash}{8553c45f4e5227ca91bf1f0730c9b056}
+      \strng{authorfullhash}{8553c45f4e5227ca91bf1f0730c9b056}
+      \strng{authorfullhashraw}{8553c45f4e5227ca91bf1f0730c9b056}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{British economic growth, 1270-1870}
+      \field{year}{2015}
+      \keyw{Economic history Great Britain – Economic conditions}
+    \endentry
+    \entry{Bush1996}{book}{}{}
+      \name{author}{1}{}{%
+        {{un=2,uniquepart=given,hash=0ba4ab135069c45afc05470dd9e63084}{%
+           family={Bush},
+           familyi={B\bibinitperiod},
+           given={M.\bibnamedelimi L.},
+           giveni={M\bibinitperiod\bibinitdelim L\bibinitperiod},
+           givenun=2}}%
+      }
+      \list{publisher}{1}{%
+        {Manchester University Press}%
+      }
+      \strng{namehash}{0ba4ab135069c45afc05470dd9e63084}
+      \strng{fullhash}{0ba4ab135069c45afc05470dd9e63084}
+      \strng{fullhashraw}{0ba4ab135069c45afc05470dd9e63084}
+      \strng{bibnamehash}{0ba4ab135069c45afc05470dd9e63084}
+      \strng{authorbibnamehash}{0ba4ab135069c45afc05470dd9e63084}
+      \strng{authornamehash}{0ba4ab135069c45afc05470dd9e63084}
+      \strng{authorfullhash}{0ba4ab135069c45afc05470dd9e63084}
+      \strng{authorfullhashraw}{0ba4ab135069c45afc05470dd9e63084}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{The Pilgrimage of Grace: A Study of the Rebel Armies of October 1536}
+      \field{year}{1996}
+    \endentry
+    \entry{Bush1991a}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=2,uniquepart=given,hash=71f8574dcdc9550a59c7a0e66e443a21}{%
+           family={Bush},
+           familyi={B\bibinitperiod},
+           given={Michael\bibnamedelima L},
+           giveni={M\bibinitperiod\bibinitdelim L\bibinitperiod},
+           givenun=2}}%
+      }
+      \strng{namehash}{71f8574dcdc9550a59c7a0e66e443a21}
+      \strng{fullhash}{71f8574dcdc9550a59c7a0e66e443a21}
+      \strng{fullhashraw}{71f8574dcdc9550a59c7a0e66e443a21}
+      \strng{bibnamehash}{71f8574dcdc9550a59c7a0e66e443a21}
+      \strng{authorbibnamehash}{71f8574dcdc9550a59c7a0e66e443a21}
+      \strng{authornamehash}{71f8574dcdc9550a59c7a0e66e443a21}
+      \strng{authorfullhash}{71f8574dcdc9550a59c7a0e66e443a21}
+      \strng{authorfullhashraw}{71f8574dcdc9550a59c7a0e66e443a21}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0013-8266}
+      \field{issue}{419}
+      \field{journaltitle}{The English historical review}
+      \field{title}{'Up for the Commonweal': The Significance of Tax Grievances in the English Rebellions of 1536}
+      \field{volume}{106}
+      \field{year}{1991}
+      \field{pages}{299\bibrangedash 318}
+      \range{pages}{20}
+      \keyw{Citizen grievances Rebellion Taxes Pilgrimages Direct taxes Churches Statutory law Tax subsidies Subsidies Taxation United Kingdom Tax and expenditure limitations History Revolutions}
+    \endentry
+    \entry{Carter2015}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=8c731328aeaa5ec4ac855f9dbb658e41}{%
+           family={Carter},
+           familyi={C\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{8c731328aeaa5ec4ac855f9dbb658e41}
+      \strng{fullhash}{8c731328aeaa5ec4ac855f9dbb658e41}
+      \strng{fullhashraw}{8c731328aeaa5ec4ac855f9dbb658e41}
+      \strng{bibnamehash}{8c731328aeaa5ec4ac855f9dbb658e41}
+      \strng{authorbibnamehash}{8c731328aeaa5ec4ac855f9dbb658e41}
+      \strng{authornamehash}{8c731328aeaa5ec4ac855f9dbb658e41}
+      \strng{authorfullhash}{8c731328aeaa5ec4ac855f9dbb658e41}
+      \strng{authorfullhashraw}{8c731328aeaa5ec4ac855f9dbb658e41}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0068-1288}
+      \field{issue}{1}
+      \field{journaltitle}{Journal of the British Archaeological Association}
+      \field{title}{It would have pitied any heart to see: Destruction and Survival at Cistercian Monasteries in Northern England at the Dissolution}
+      \field{volume}{168}
+      \field{year}{2015}
+      \field{pages}{77\bibrangedash 110}
+      \range{pages}{34}
+      \verb{doi}
+      \verb 10.1179/0068128815Z.00000000040
+      \endverb
+      \keyw{Dissolution of the Monasteries Catholicism Reformation Cistercian monasticism}
+    \endentry
+    \entry{Clark2021}{book}{}{}
+      \name{author}{1}{}{%
+        {{un=1,uniquepart=given,hash=d26f284b85f7f758bdab659718367a6b}{%
+           family={Clark},
+           familyi={C\bibinitperiod},
+           given={James},
+           giveni={J\bibinitperiod},
+           givenun=1}}%
+      }
+      \list{publisher}{1}{%
+        {Yale University Press}%
+      }
+      \strng{namehash}{d26f284b85f7f758bdab659718367a6b}
+      \strng{fullhash}{d26f284b85f7f758bdab659718367a6b}
+      \strng{fullhashraw}{d26f284b85f7f758bdab659718367a6b}
+      \strng{bibnamehash}{d26f284b85f7f758bdab659718367a6b}
+      \strng{authorbibnamehash}{d26f284b85f7f758bdab659718367a6b}
+      \strng{authornamehash}{d26f284b85f7f758bdab659718367a6b}
+      \strng{authorfullhash}{d26f284b85f7f758bdab659718367a6b}
+      \strng{authorfullhashraw}{d26f284b85f7f758bdab659718367a6b}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{The Dissolution of the Monasteries: A New History}
+      \field{year}{2021}
+    \endentry
+    \entry{Clark2009}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=1,uniquepart=given,hash=98b0cdfc0b78df5968f3bc5aa009a143}{%
+           family={Clark},
+           familyi={C\bibinitperiod},
+           given={James\bibnamedelima G},
+           giveni={J\bibinitperiod\bibinitdelim G\bibinitperiod},
+           givenun=1}}%
+      }
+      \list{publisher}{1}{%
+        {Taylor \& Francis}%
+      }
+      \strng{namehash}{98b0cdfc0b78df5968f3bc5aa009a143}
+      \strng{fullhash}{98b0cdfc0b78df5968f3bc5aa009a143}
+      \strng{fullhashraw}{98b0cdfc0b78df5968f3bc5aa009a143}
+      \strng{bibnamehash}{98b0cdfc0b78df5968f3bc5aa009a143}
+      \strng{authorbibnamehash}{98b0cdfc0b78df5968f3bc5aa009a143}
+      \strng{authornamehash}{98b0cdfc0b78df5968f3bc5aa009a143}
+      \strng{authorfullhash}{98b0cdfc0b78df5968f3bc5aa009a143}
+      \strng{authorfullhashraw}{98b0cdfc0b78df5968f3bc5aa009a143}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Cultural and Social History}
+      \field{number}{3}
+      \field{title}{Religion and politics in English monastic towns}
+      \field{volume}{6}
+      \field{year}{2009}
+      \field{pages}{277\bibrangedash 296}
+      \range{pages}{20}
+    \endentry
+    \entry{Davies1968}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=cd6965f7dfb21471098cc8abb153627b}{%
+           family={Davies},
+           familyi={D\bibinitperiod},
+           given={C.\bibnamedelimi S.\bibnamedelimi L},
+           giveni={C\bibinitperiod\bibinitdelim S\bibinitperiod\bibinitdelim L\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Oxford}%
+      }
+      \list{publisher}{2}{%
+        {Past}%
+        {Present Society}%
+      }
+      \strng{namehash}{cd6965f7dfb21471098cc8abb153627b}
+      \strng{fullhash}{cd6965f7dfb21471098cc8abb153627b}
+      \strng{fullhashraw}{cd6965f7dfb21471098cc8abb153627b}
+      \strng{bibnamehash}{cd6965f7dfb21471098cc8abb153627b}
+      \strng{authorbibnamehash}{cd6965f7dfb21471098cc8abb153627b}
+      \strng{authornamehash}{cd6965f7dfb21471098cc8abb153627b}
+      \strng{authorfullhash}{cd6965f7dfb21471098cc8abb153627b}
+      \strng{authorfullhashraw}{cd6965f7dfb21471098cc8abb153627b}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0031-2746}
+      \field{journaltitle}{Past and present}
+      \field{number}{41}
+      \field{title}{The Pilgrimage of Grace Reconsidered}
+      \field{year}{1968}
+      \field{pages}{54\bibrangedash 76}
+      \range{pages}{23}
+      \keyw{Arithmetic mean ; Churches ; Clergy ; Monasteries ; Pilgrimages ; Priests ; Rebellion ; Riots ; Rumors ; Tenants}
+    \endentry
+    \entry{Fletcher2008}{book}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=65aa61a22ef21853eab5f735a524bda2}{%
+           family={Fletcher},
+           familyi={F\bibinitperiod},
+           given={Anthony},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e2a78f6a268abc99edd9a8c222900287}{%
+           family={MacCulloch},
+           familyi={M\bibinitperiod},
+           given={Diarmaid},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Harlow, England}%
+      }
+      \strng{namehash}{8abba9b25ed22544cc35041c3add589b}
+      \strng{fullhash}{8abba9b25ed22544cc35041c3add589b}
+      \strng{fullhashraw}{8abba9b25ed22544cc35041c3add589b}
+      \strng{bibnamehash}{8abba9b25ed22544cc35041c3add589b}
+      \strng{authorbibnamehash}{8abba9b25ed22544cc35041c3add589b}
+      \strng{authornamehash}{8abba9b25ed22544cc35041c3add589b}
+      \strng{authorfullhash}{8abba9b25ed22544cc35041c3add589b}
+      \strng{authorfullhashraw}{8abba9b25ed22544cc35041c3add589b}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{Rev. 5th ed.}
+      \field{title}{Tudor rebellions}
+      \field{year}{2008}
+      \keyw{Great Britain -- History -- Tudors,1485-1603,Insurgency -- Great Britain -- History -- 16th century,Peasant uprisings -- Great Britain -- History -- 16th century}
+    \endentry
+    \entry{Hadwin1983}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=ef46f7730214ddc4201420199cc9f9f8}{%
+           family={Hadwin},
+           familyi={H\bibinitperiod},
+           given={J\bibnamedelima F},
+           giveni={J\bibinitperiod\bibinitdelim F\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Economic History Society, Wiley}%
+      }
+      \strng{namehash}{ef46f7730214ddc4201420199cc9f9f8}
+      \strng{fullhash}{ef46f7730214ddc4201420199cc9f9f8}
+      \strng{fullhashraw}{ef46f7730214ddc4201420199cc9f9f8}
+      \strng{bibnamehash}{ef46f7730214ddc4201420199cc9f9f8}
+      \strng{authorbibnamehash}{ef46f7730214ddc4201420199cc9f9f8}
+      \strng{authornamehash}{ef46f7730214ddc4201420199cc9f9f8}
+      \strng{authorfullhash}{ef46f7730214ddc4201420199cc9f9f8}
+      \strng{authorfullhashraw}{ef46f7730214ddc4201420199cc9f9f8}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{00130117, 14680289}
+      \field{issue}{2}
+      \field{journaltitle}{The Economic History Review}
+      \field{title}{The Medieval Lay Subsidies and Economic History}
+      \field{volume}{36}
+      \field{year}{1983}
+      \field{pages}{200\bibrangedash 217}
+      \range{pages}{18}
+      \verb{doi}
+      \verb 10.2307/2595920
+      \endverb
+      \verb{urlraw}
+      \verb http://www.jstor.org/stable/2595920
+      \endverb
+      \verb{url}
+      \verb http://www.jstor.org/stable/2595920
+      \endverb
+    \endentry
+    \entry{Harrison1981}{book}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=881ff72a1f620d29994539422340a92a}{%
+           family={Harrison},
+           familyi={H\bibinitperiod},
+           given={Scott\bibnamedelima Michael},
+           giveni={S\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Royal Historical Society}%
+      }
+      \strng{namehash}{881ff72a1f620d29994539422340a92a}
+      \strng{fullhash}{881ff72a1f620d29994539422340a92a}
+      \strng{fullhashraw}{881ff72a1f620d29994539422340a92a}
+      \strng{bibnamehash}{881ff72a1f620d29994539422340a92a}
+      \strng{authorbibnamehash}{881ff72a1f620d29994539422340a92a}
+      \strng{authornamehash}{881ff72a1f620d29994539422340a92a}
+      \strng{authorfullhash}{881ff72a1f620d29994539422340a92a}
+      \strng{authorfullhashraw}{881ff72a1f620d29994539422340a92a}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{The Pilgrimage of Grace in the Lake Counties, 1536-7}
+      \field{year}{1981}
+    \endentry
+    \entry{Harvey1993}{book}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=92e0125dca29dfb4350ff1eae5f9607b}{%
+           family={Harvey},
+           familyi={H\bibinitperiod},
+           given={Barbara},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Clarendon Press}%
+      }
+      \strng{namehash}{92e0125dca29dfb4350ff1eae5f9607b}
+      \strng{fullhash}{92e0125dca29dfb4350ff1eae5f9607b}
+      \strng{fullhashraw}{92e0125dca29dfb4350ff1eae5f9607b}
+      \strng{bibnamehash}{92e0125dca29dfb4350ff1eae5f9607b}
+      \strng{authorbibnamehash}{92e0125dca29dfb4350ff1eae5f9607b}
+      \strng{authornamehash}{92e0125dca29dfb4350ff1eae5f9607b}
+      \strng{authorfullhash}{92e0125dca29dfb4350ff1eae5f9607b}
+      \strng{authorfullhashraw}{92e0125dca29dfb4350ff1eae5f9607b}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Living and Dying in England 1100-1540: The Monastic Experience: The Monastic Experience}
+      \field{year}{1993}
+    \endentry
+    \entry{Heale2007}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=04cf5fe2bf2c8d0d7a04bafdf681175d}{%
+           family={Heale},
+           familyi={H\bibinitperiod},
+           given={Martin},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{04cf5fe2bf2c8d0d7a04bafdf681175d}
+      \strng{fullhash}{04cf5fe2bf2c8d0d7a04bafdf681175d}
+      \strng{fullhashraw}{04cf5fe2bf2c8d0d7a04bafdf681175d}
+      \strng{bibnamehash}{04cf5fe2bf2c8d0d7a04bafdf681175d}
+      \strng{authorbibnamehash}{04cf5fe2bf2c8d0d7a04bafdf681175d}
+      \strng{authornamehash}{04cf5fe2bf2c8d0d7a04bafdf681175d}
+      \strng{authorfullhash}{04cf5fe2bf2c8d0d7a04bafdf681175d}
+      \strng{authorfullhashraw}{04cf5fe2bf2c8d0d7a04bafdf681175d}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{2007/07/30}
+      \field{issn}{0022-0469}
+      \field{issue}{3}
+      \field{journaltitle}{The Journal of Ecclesiastical History}
+      \field{title}{Training in Superstition? Monasteries and Popular Religion in Late Medieval and Reformation England}
+      \field{volume}{58}
+      \field{year}{2007}
+      \field{pages}{417\bibrangedash 439}
+      \range{pages}{23}
+      \verb{doi}
+      \verb DOI: 10.1017/S0022046906008955
+      \endverb
+      \verb{urlraw}
+      \verb https://www.cambridge.org/core/article/training-in-superstition-monasteries-and-popular-religion-in-late-medieval-and-reformation-england/ED7B6AC65339DB6BA24F6F832491A541
+      \endverb
+      \verb{url}
+      \verb https://www.cambridge.org/core/article/training-in-superstition-monasteries-and-popular-religion-in-late-medieval-and-reformation-england/ED7B6AC65339DB6BA24F6F832491A541
+      \endverb
+    \endentry
+    \entry{Heldring2021}{article}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=4a735478ec89043bd53a6a3e28ed7000}{%
+           family={Heldring},
+           familyi={H\bibinitperiod},
+           given={Leander},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=974873287a7760126350afac970c1e81}{%
+           family={Robinson},
+           familyi={R\bibinitperiod},
+           given={James\bibnamedelima A},
+           giveni={J\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1958a4e6bffdf3655347ce9942d0e844}{%
+           family={Vollmer},
+           familyi={V\bibinitperiod},
+           given={Sebastian},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{8bf8b7f00f8ee9ff285f859ee78c073e}
+      \strng{fullhash}{8bf8b7f00f8ee9ff285f859ee78c073e}
+      \strng{fullhashraw}{8bf8b7f00f8ee9ff285f859ee78c073e}
+      \strng{bibnamehash}{8bf8b7f00f8ee9ff285f859ee78c073e}
+      \strng{authorbibnamehash}{8bf8b7f00f8ee9ff285f859ee78c073e}
+      \strng{authornamehash}{8bf8b7f00f8ee9ff285f859ee78c073e}
+      \strng{authorfullhash}{8bf8b7f00f8ee9ff285f859ee78c073e}
+      \strng{authorfullhashraw}{8bf8b7f00f8ee9ff285f859ee78c073e}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0033-5533}
+      \field{issue}{4}
+      \field{journaltitle}{The Quarterly journal of economics}
+      \field{title}{The Long-Run Impact of the Dissolution of the English Monasteries}
+      \field{volume}{136}
+      \field{year}{2021}
+      \field{pages}{2093\bibrangedash 2145}
+      \range{pages}{53}
+      \verb{doi}
+      \verb 10.1093/qje/qjab030
+      \endverb
+    \endentry
+    \entry{Horrox2006}{book}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=50f3aaf24962d8ffd964bdb77ded8a37}{%
+           family={Horrox},
+           familyi={H\bibinitperiod},
+           given={Rosemary},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e6fbe6d156c19abee27cdb1c93cd5d85}{%
+           family={Ormrod},
+           familyi={O\bibinitperiod},
+           given={W\bibnamedelima Mark},
+           giveni={W\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{e4e757398cd80f7c31989971b31b0b8f}
+      \strng{fullhash}{e4e757398cd80f7c31989971b31b0b8f}
+      \strng{fullhashraw}{e4e757398cd80f7c31989971b31b0b8f}
+      \strng{bibnamehash}{e4e757398cd80f7c31989971b31b0b8f}
+      \strng{authorbibnamehash}{e4e757398cd80f7c31989971b31b0b8f}
+      \strng{authornamehash}{e4e757398cd80f7c31989971b31b0b8f}
+      \strng{authorfullhash}{e4e757398cd80f7c31989971b31b0b8f}
+      \strng{authorfullhashraw}{e4e757398cd80f7c31989971b31b0b8f}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{A Social History of England, 1200--1500}
+      \field{year}{2006}
+    \endentry
+    \entry{Hoyle1998}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=2,uniquepart=given,hash=99cf42c60b468a157fcb3f8082b46d16}{%
+           family={Hoyle},
+           familyi={H\bibinitperiod},
+           given={R\bibnamedelima W},
+           giveni={R\bibinitperiod\bibinitdelim W\bibinitperiod},
+           givenun=2}}%
+      }
+      \list{publisher}{1}{%
+        {Economic History Society, Wiley}%
+      }
+      \strng{namehash}{99cf42c60b468a157fcb3f8082b46d16}
+      \strng{fullhash}{99cf42c60b468a157fcb3f8082b46d16}
+      \strng{fullhashraw}{99cf42c60b468a157fcb3f8082b46d16}
+      \strng{bibnamehash}{99cf42c60b468a157fcb3f8082b46d16}
+      \strng{authorbibnamehash}{99cf42c60b468a157fcb3f8082b46d16}
+      \strng{authornamehash}{99cf42c60b468a157fcb3f8082b46d16}
+      \strng{authorfullhash}{99cf42c60b468a157fcb3f8082b46d16}
+      \strng{authorfullhashraw}{99cf42c60b468a157fcb3f8082b46d16}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{00130117, 14680289}
+      \field{issue}{4}
+      \field{journaltitle}{The Economic History Review}
+      \field{title}{Taxation and the Mid-Tudor Crisis}
+      \field{volume}{51}
+      \field{year}{1998}
+      \field{pages}{649\bibrangedash 675}
+      \range{pages}{27}
+      \verb{urlraw}
+      \verb http://www.jstor.org/stable/2599567
+      \endverb
+      \verb{url}
+      \verb http://www.jstor.org/stable/2599567
+      \endverb
+    \endentry
+    \entry{Hoyle2001}{book}{}{}
+      \name{author}{1}{}{%
+        {{un=1,uniquepart=given,hash=e30a4cb411b6a16622dc2cc288521c51}{%
+           family={Hoyle},
+           familyi={H\bibinitperiod},
+           given={R.\bibnamedelimi W.\bibnamedelimi (Richard\bibnamedelima W.)},
+           giveni={R\bibinitperiod\bibinitdelim W\bibinitperiod\bibinitdelim (\bibinitperiod\bibinitdelim W\bibinitperiod},
+           givenun=1}}%
+      }
+      \list{location}{1}{%
+        {Oxford}%
+      }
+      \list{publisher}{1}{%
+        {Oxford University Press}%
+      }
+      \strng{namehash}{e30a4cb411b6a16622dc2cc288521c51}
+      \strng{fullhash}{e30a4cb411b6a16622dc2cc288521c51}
+      \strng{fullhashraw}{e30a4cb411b6a16622dc2cc288521c51}
+      \strng{bibnamehash}{e30a4cb411b6a16622dc2cc288521c51}
+      \strng{authorbibnamehash}{e30a4cb411b6a16622dc2cc288521c51}
+      \strng{authornamehash}{e30a4cb411b6a16622dc2cc288521c51}
+      \strng{authorfullhash}{e30a4cb411b6a16622dc2cc288521c51}
+      \strng{authorfullhashraw}{e30a4cb411b6a16622dc2cc288521c51}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{This is the first full account of the Pilgrimage of Grace since 1915. In the autumn and winter of 1536, Henry VIII faced risings first in Lincolnshire, then throughout Northern England.}
+      \field{booktitle}{The pilgrimage of grace and the politics of the 1530s}
+      \field{isbn}{0-19-925906-2}
+      \field{title}{The pilgrimage of grace and the politics of the 1530s}
+      \field{year}{2001}
+      \keyw{Henry VIII,King of England,1491-1547}
+    \endentry
+    \entry{Hoyle1993}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=1,uniquepart=given,hash=99cf42c60b468a157fcb3f8082b46d16}{%
+           family={Hoyle},
+           familyi={H\bibinitperiod},
+           given={RW},
+           giveni={R\bibinitperiod},
+           givenun=1}}%
+      }
+      \list{publisher}{1}{%
+        {British Records Association.}%
+      }
+      \strng{namehash}{99cf42c60b468a157fcb3f8082b46d16}
+      \strng{fullhash}{99cf42c60b468a157fcb3f8082b46d16}
+      \strng{fullhashraw}{99cf42c60b468a157fcb3f8082b46d16}
+      \strng{bibnamehash}{99cf42c60b468a157fcb3f8082b46d16}
+      \strng{authorbibnamehash}{99cf42c60b468a157fcb3f8082b46d16}
+      \strng{authornamehash}{99cf42c60b468a157fcb3f8082b46d16}
+      \strng{authorfullhash}{99cf42c60b468a157fcb3f8082b46d16}
+      \strng{authorfullhashraw}{99cf42c60b468a157fcb3f8082b46d16}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Archives}
+      \field{number}{90}
+      \field{title}{Resistance and manipulation in early Tudor taxation: some evidence from the North}
+      \field{volume}{20}
+      \field{year}{1993}
+      \field{pages}{158\bibrangedash 176}
+      \range{pages}{19}
+    \endentry
+    \entry{ValorIntro}{book}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=4e828aef4afe6478edc1df923ff3f721}{%
+           family={Hunter},
+           familyi={H\bibinitperiod},
+           given={Joseph.},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {London}%
+      }
+      \list{publisher}{1}{%
+        {[s.n.]}%
+      }
+      \strng{namehash}{4e828aef4afe6478edc1df923ff3f721}
+      \strng{fullhash}{4e828aef4afe6478edc1df923ff3f721}
+      \strng{fullhashraw}{4e828aef4afe6478edc1df923ff3f721}
+      \strng{bibnamehash}{4e828aef4afe6478edc1df923ff3f721}
+      \strng{authorbibnamehash}{4e828aef4afe6478edc1df923ff3f721}
+      \strng{authornamehash}{4e828aef4afe6478edc1df923ff3f721}
+      \strng{authorfullhash}{4e828aef4afe6478edc1df923ff3f721}
+      \strng{authorfullhashraw}{4e828aef4afe6478edc1df923ff3f721}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{An introduction to the Valor Ecclesiasticus of King Henry VIII : with a map of England and Wales showing the distribution in dioceses}
+      \field{title}{An introduction to the Valor Ecclesiasticus of King Henry VIII : with a map of England and Wales showing the distribution in dioceses}
+      \field{year}{1834}
+    \endentry
+    \entry{Knowles1955}{book}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=1027c213523f50fd2fdbc0d04a688dc5}{%
+           family={Knowles},
+           familyi={K\bibinitperiod},
+           given={Dom\bibnamedelima David.},
+           giveni={D\bibinitperiod\bibinitdelim D\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Cambridge}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{1027c213523f50fd2fdbc0d04a688dc5}
+      \strng{fullhash}{1027c213523f50fd2fdbc0d04a688dc5}
+      \strng{fullhashraw}{1027c213523f50fd2fdbc0d04a688dc5}
+      \strng{bibnamehash}{1027c213523f50fd2fdbc0d04a688dc5}
+      \strng{authorbibnamehash}{1027c213523f50fd2fdbc0d04a688dc5}
+      \strng{authornamehash}{1027c213523f50fd2fdbc0d04a688dc5}
+      \strng{authorfullhash}{1027c213523f50fd2fdbc0d04a688dc5}
+      \strng{authorfullhashraw}{1027c213523f50fd2fdbc0d04a688dc5}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9780521054829}
+      \field{series}{Religious orders in England ; v. 3}
+      \field{title}{The tudor age}
+      \field{year}{1955}
+      \keyw{Monasticism and religious orders -- England}
+    \endentry
+    \entry{McRee2004}{incollection}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=7eb3eb95fd5f55d2f9b2a8f6c38341ca}{%
+           family={McRee},
+           familyi={M\bibinitperiod},
+           given={Ben\bibnamedelima R.},
+           giveni={B\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {John Wiley \& Sons, Ltd}%
+      }
+      \strng{namehash}{7eb3eb95fd5f55d2f9b2a8f6c38341ca}
+      \strng{fullhash}{7eb3eb95fd5f55d2f9b2a8f6c38341ca}
+      \strng{fullhashraw}{7eb3eb95fd5f55d2f9b2a8f6c38341ca}
+      \strng{bibnamehash}{7eb3eb95fd5f55d2f9b2a8f6c38341ca}
+      \strng{authorbibnamehash}{7eb3eb95fd5f55d2f9b2a8f6c38341ca}
+      \strng{authornamehash}{7eb3eb95fd5f55d2f9b2a8f6c38341ca}
+      \strng{authorfullhash}{7eb3eb95fd5f55d2f9b2a8f6c38341ca}
+      \strng{authorfullhashraw}{7eb3eb95fd5f55d2f9b2a8f6c38341ca}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{A Companion to Tudor Britain}
+      \field{isbn}{9780470997109}
+      \field{title}{Traditional Religion}
+      \field{year}{2004}
+      \field{pages}{207\bibrangedash 220}
+      \range{pages}{14}
+      \verb{doi}
+      \verb https://doi.org/10.1002/9780470997109.ch13
+      \endverb
+      \verb{eprint}
+      \verb https://onlinelibrary.wiley.com/doi/pdf/10.1002/9780470997109.ch13
+      \endverb
+      \verb{urlraw}
+      \verb https://onlinelibrary.wiley.com/doi/abs/10.1002/9780470997109.ch13
+      \endverb
+      \verb{url}
+      \verb https://onlinelibrary.wiley.com/doi/abs/10.1002/9780470997109.ch13
+      \endverb
+      \keyw{traditional religion,religious landscape,parish clergy,orthodoxy,holy trinity}
+    \endentry
+    \entry{Savine1909}{book}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=b5d86dffe609b1b29c3657a9d9ef1e3c}{%
+           family={Savine},
+           familyi={S\bibinitperiod},
+           given={Alexander},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Oxford}%
+      }
+      \strng{namehash}{b5d86dffe609b1b29c3657a9d9ef1e3c}
+      \strng{fullhash}{b5d86dffe609b1b29c3657a9d9ef1e3c}
+      \strng{fullhashraw}{b5d86dffe609b1b29c3657a9d9ef1e3c}
+      \strng{bibnamehash}{b5d86dffe609b1b29c3657a9d9ef1e3c}
+      \strng{authorbibnamehash}{b5d86dffe609b1b29c3657a9d9ef1e3c}
+      \strng{authornamehash}{b5d86dffe609b1b29c3657a9d9ef1e3c}
+      \strng{authorfullhash}{b5d86dffe609b1b29c3657a9d9ef1e3c}
+      \strng{authorfullhashraw}{b5d86dffe609b1b29c3657a9d9ef1e3c}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Oxford studies in social and legal history. Vol. 1, English monasteries on the eve of the dissolution}
+      \field{title}{Oxford studies in social and legal history. Vol. 1, English monasteries on the eve of the dissolution}
+      \field{year}{1909}
+    \endentry
+    \entry{Sheail1972}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=559b3b40560977addb421299c7861a45}{%
+           family={Sheail},
+           familyi={S\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Royal Geographical Society (with the Institute of British Geographers), Wiley}%
+      }
+      \strng{namehash}{559b3b40560977addb421299c7861a45}
+      \strng{fullhash}{559b3b40560977addb421299c7861a45}
+      \strng{fullhashraw}{559b3b40560977addb421299c7861a45}
+      \strng{bibnamehash}{559b3b40560977addb421299c7861a45}
+      \strng{authorbibnamehash}{559b3b40560977addb421299c7861a45}
+      \strng{authornamehash}{559b3b40560977addb421299c7861a45}
+      \strng{authorfullhash}{559b3b40560977addb421299c7861a45}
+      \strng{authorfullhashraw}{559b3b40560977addb421299c7861a45}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{00202754, 14755661}
+      \field{issue}{55}
+      \field{journaltitle}{Transactions of the Institute of British Geographers}
+      \field{title}{The Distribution of Taxable Population and Wealth in England during the Early Sixteenth Century}
+      \field{year}{1972}
+      \field{pages}{111\bibrangedash 126}
+      \range{pages}{16}
+      \verb{doi}
+      \verb 10.2307/621725
+      \endverb
+      \verb{urlraw}
+      \verb http://www.jstor.org/stable/621725
+      \endverb
+      \verb{url}
+      \verb http://www.jstor.org/stable/621725
+      \endverb
+    \endentry
+    \entry{Threlfall-Holmes2005}{book}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=7fe8b6bd6a57e68bdfe19a6ed72c48b3}{%
+           family={Threlfall-Holmes},
+           familyi={T\bibinithyphendelim H\bibinitperiod},
+           given={Miranda},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Oxford : Oxford University Press}%
+      }
+      \strng{namehash}{7fe8b6bd6a57e68bdfe19a6ed72c48b3}
+      \strng{fullhash}{7fe8b6bd6a57e68bdfe19a6ed72c48b3}
+      \strng{fullhashraw}{7fe8b6bd6a57e68bdfe19a6ed72c48b3}
+      \strng{bibnamehash}{7fe8b6bd6a57e68bdfe19a6ed72c48b3}
+      \strng{authorbibnamehash}{7fe8b6bd6a57e68bdfe19a6ed72c48b3}
+      \strng{authornamehash}{7fe8b6bd6a57e68bdfe19a6ed72c48b3}
+      \strng{authorfullhash}{7fe8b6bd6a57e68bdfe19a6ed72c48b3}
+      \strng{authorfullhashraw}{7fe8b6bd6a57e68bdfe19a6ed72c48b3}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Monks and Markets : Durham Cathedral Priory 1460-1520.}
+      \field{year}{2005}
+      \keyw{Durham Cathedral. -- Priory.,Electronic books,Monasteries -- England -- Durham -- History.,Purchasing -- England -- Durham -- History}
+    \endentry
+    \entry{Bernard2011}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=9aa707b74fe6159baeb32ddc2d328d1e}{%
+           family={W},
+           familyi={W\bibinitperiod},
+           given={Bernard\bibnamedelima G.},
+           giveni={B\bibinitperiod\bibinitdelim G\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{9aa707b74fe6159baeb32ddc2d328d1e}
+      \strng{fullhash}{9aa707b74fe6159baeb32ddc2d328d1e}
+      \strng{fullhashraw}{9aa707b74fe6159baeb32ddc2d328d1e}
+      \strng{bibnamehash}{9aa707b74fe6159baeb32ddc2d328d1e}
+      \strng{authorbibnamehash}{9aa707b74fe6159baeb32ddc2d328d1e}
+      \strng{authornamehash}{9aa707b74fe6159baeb32ddc2d328d1e}
+      \strng{authorfullhash}{9aa707b74fe6159baeb32ddc2d328d1e}
+      \strng{authorfullhashraw}{9aa707b74fe6159baeb32ddc2d328d1e}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0018-2648}
+      \field{issue}{4 (324)}
+      \field{journaltitle}{History (London)}
+      \field{title}{The Dissolution of the Monasteries}
+      \field{volume}{96}
+      \field{year}{2011}
+      \field{pages}{390\bibrangedash 409}
+      \range{pages}{20}
+      \verb{doi}
+      \verb 10.1111/j.1468-229X.2011.00526.x
+      \endverb
+      \keyw{Rebellion Abbots Monks Pilgrimages Churches Nuns Monasteries Skepticism Surrender Friars}
+    \endentry
+    \entry{Wood2002}{book}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=d2ba2159e27b563b4396bfdeb08d22f1}{%
+           family={Wood},
+           familyi={W\bibinitperiod},
+           given={Andy},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Basingstoke}%
+      }
+      \list{publisher}{1}{%
+        {Palgrave}%
+      }
+      \strng{namehash}{d2ba2159e27b563b4396bfdeb08d22f1}
+      \strng{fullhash}{d2ba2159e27b563b4396bfdeb08d22f1}
+      \strng{fullhashraw}{d2ba2159e27b563b4396bfdeb08d22f1}
+      \strng{bibnamehash}{d2ba2159e27b563b4396bfdeb08d22f1}
+      \strng{authorbibnamehash}{d2ba2159e27b563b4396bfdeb08d22f1}
+      \strng{authornamehash}{d2ba2159e27b563b4396bfdeb08d22f1}
+      \strng{authorfullhash}{d2ba2159e27b563b4396bfdeb08d22f1}
+      \strng{authorfullhashraw}{d2ba2159e27b563b4396bfdeb08d22f1}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Riot, rebellion and popular politics in Early Modern England}
+      \field{isbn}{0333637615}
+      \field{series}{Social history in perspective}
+      \field{title}{Riot, rebellion and popular politics in Early Modern England}
+      \field{year}{2002}
+      \keyw{Political violence -- England -- History}
+    \endentry
+    \entry{Woodward1969}{book}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=944c9c7d8f6bf5bc55ad555df8029270}{%
+           family={Woodward},
+           familyi={W\bibinitperiod},
+           given={G\bibnamedelima W\bibnamedelima O},
+           giveni={G\bibinitperiod\bibinitdelim W\bibinitperiod\bibinitdelim O\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {London}%
+      }
+      \strng{namehash}{944c9c7d8f6bf5bc55ad555df8029270}
+      \strng{fullhash}{944c9c7d8f6bf5bc55ad555df8029270}
+      \strng{fullhashraw}{944c9c7d8f6bf5bc55ad555df8029270}
+      \strng{bibnamehash}{944c9c7d8f6bf5bc55ad555df8029270}
+      \strng{authorbibnamehash}{944c9c7d8f6bf5bc55ad555df8029270}
+      \strng{authornamehash}{944c9c7d8f6bf5bc55ad555df8029270}
+      \strng{authorfullhash}{944c9c7d8f6bf5bc55ad555df8029270}
+      \strng{authorfullhashraw}{944c9c7d8f6bf5bc55ad555df8029270}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{The dissolution of the monasteries}
+      \field{year}{1969}
+      \keyw{Monasteries – Great Britain}
+    \endentry
+    \entry{Youings1971}{book}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=4f419ed80d704d40520480e9c44934be}{%
+           family={Youings},
+           familyi={Y\bibinitperiod},
+           given={Joyce},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{2}{%
+        {George Allen}%
+        {Unwin Ltd}%
+      }
+      \strng{namehash}{4f419ed80d704d40520480e9c44934be}
+      \strng{fullhash}{4f419ed80d704d40520480e9c44934be}
+      \strng{fullhashraw}{4f419ed80d704d40520480e9c44934be}
+      \strng{bibnamehash}{4f419ed80d704d40520480e9c44934be}
+      \strng{authorbibnamehash}{4f419ed80d704d40520480e9c44934be}
+      \strng{authornamehash}{4f419ed80d704d40520480e9c44934be}
+      \strng{authorfullhash}{4f419ed80d704d40520480e9c44934be}
+      \strng{authorfullhashraw}{4f419ed80d704d40520480e9c44934be}
+      \field{sortinit}{Y}
+      \field{sortinithash}{fd67ad5a9ef0f7456bdd9aab10fe1495}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{The Dissolution of the Monasteries}
+      \field{year}{1971}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

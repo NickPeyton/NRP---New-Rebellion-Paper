@@ -1,0 +1,356 @@
+% Setting document class to article and font to 12pt
+\documentclass[12pt]{article}
+
+% Loading all the packages (probably way more than we need)
+\usepackage{amssymb,amsmath,amsfonts,booktabs,eurosym,geometry,ulem,graphicx,color,setspace,sectsty,comment,caption,pdflscape,subfigure,array,hyperref, etoolbox, keyval, ifthen, url,float, csvsimple, nameref, xstring, tabularx, dcolumn, threeparttable}
+\usepackage[font=normalsize,labelfont={bf}]{caption}
+% Making sure the language package is in English
+\usepackage[english]{babel}
+\usepackage[autostyle, english = american]{csquotes}
+\MakeOuterQuote{"}
+% Loading reference and bibliography packages in correct configuration. This configuration does Chicago-style footnotes.
+\usepackage[notes, backend=biber, useibid=true, doi=false, url=false]{biblatex-chicago}
+
+% Setting bibliography to library.bib, the bibtex file with everything I've ever cited.
+\bibliography{library.bib}
+
+% Setting \emph{} to use italics
+\normalem
+
+% Setting normal spacing between lines
+\doublespacing
+% Setting margins
+\geometry{left=1.0in,right=1.0in,top=1.0in,bottom=1.0in}
+
+\begin{document}
+
+\begin{titlepage}
+\title{Tenants in Revolt:\linebreak The Dissolution of the Monasteries and the Pilgrimage of Grace}
+\author{Nick Peyton}
+\date{\today}
+\maketitle
+
+\setcounter{page}{0}
+\thispagestyle{empty}
+\end{titlepage}
+\pagebreak \newpage
+
+\section*{Abstract}
+This paper provides the first econometric evidence on the causes of the 1536–37 Pilgrimage of Grace, the largest popular uprising in Tudor England. Drawing on a geocoded dataset linking rebel muster sites and gentry residences to detailed parish-level data from the Valor Ecclesiasticus and the 1524–25 Lay Subsidy, I test competing hypotheses about religious and economic motivations for revolt. Multiple regression models show that areas with greater monastic landholding, and in particular more monastic tenants, were significantly more likely to rebel, even after controlling for wealth, population, taxation, and geography. By contrast, taxation levels and changes show weaker and inconsistent effects. The findings suggest that specter of tenurial instability raised by the Dissolution was the key factor driving rebellion at the local level.
+
+\vspace*{\fill}
+\noindent
+JEL No. D74, N93, N43, N53
+
+\noindent
+Keywords: Dissolution of the Monasteries, rebellion, land tenure, popular revolt, civil conflict, early modern England
+
+\pagebreak \newpage
+\section{Introduction}
+
+Late in 1536, the most serious revolt in Henry VIII's reign broke out, beginning with a startlingly rapid uprising in Lincolnshire. As the King's commissioners advanced intent on dissolving Louth Park Abbey, tensions between the government and population reached a boiling point. A mix of gentry, secular clergy, and monks advancing both religious and economic demands quickly assembled a force of about 20,000 rebels to resist changes to their lives and religion. The rebellion was quickly dissolved under the threat of violent repression, but the Rising and the executions which followed helped spark a much more dangerous and widespread rebellion farther North.\autocite[28]{Fletcher2008}
+
+These rebels undertook a "Pilgrimage of Grace" beneath a banner depicting the Five Wounds of Christ, demanding an end to new taxes, the repeal of the Statute of Uses (a law governing land rights), the reversal of Tudor religious innovations, and the restoration of the smaller monasteries suppressed by the King's commissioners.\autocite[154]{Hoyle2001} The mix of religious and economic demands has created a long-running debate over the true motivations of the rebels that continues in modern historical writing. This paper uses a new dataset to provide the first econometric evidence in the debate between religious and economic causes of the rebellion.
+
+\section{Historical Background and Literature}
+The events at Louth Park Abbey were part of the Dissolution of the Monasteries, initiated after Henry VIII had separated England from the Catholic Church. Beginning in 1536, religious houses with under \pounds200 in net income were "suppressed," with their monks pensioned off and their lands taken into the management of the Crown. Movable wealth was carted off to London, church bells were melted down to make cannons, and even the lead was stripped out of the roofs, leaving the skeletons of ruined but still standing monasteries dotting the English countryside.\autocite[126]{Woodward1969} This was profoundly disturbing to many in England, who saw monasteries as both important cornerstones of public religious life and institutions with a crucial social role.
+
+After the spark at Louth, the rebellion rapidly spread northwest, jumping the Humber and tearing through Yorkshire into the Lake Counties.\autocite[176]{Hoyle2001} Over fifty rebel musters took place across Northern England, with tens of thousands of rebels mustering, arming themselves, and joining into a number of huge hosts to put their demands to the King's representatives.\autocite[376]{Bush1996} The tiny Royal army which met the main host outside Doncaster was far too small to offer any effective resistance to the massive rebel force, but the King's representatives were able to secure the rebel army's dispersal by promising amnesty and a fair hearing of their demands.\autocite[386]{Bush1996} The rebels returned to their homes and villages, and the Crown immediately reneged on the promise of amnesty, arresting many of the rebellions leaders, subjecting many to interrogation and execution.\autocite[38]{Fletcher2008} In the final analysis, the Pilgrimage accomplished very little, and may have even hastened the final destruction of monasticism in England by convincing the King that the "traitorouse monkes" and "naughtie religiouse persons"\autocite[285-6]{Clark2021} were his implacable enemies and the cause of the rebellion.\autocite[402]{Bernard2011}
+
+Historians who point to religious motivations for the Pilgrimage emphasize the lack of serious anticlericalism and anti-monasticism among a commons\footnote{The rebels used the word "commons" or "commonalty" as a collective singular noun to refer to themselves, the ordinary non-aristocratic people of England, a convention which I follow in this paper.} which was not clamoring for the religious reforms initiated by the Crown.\autocite[208]{McRee2004} Religious houses were also central players in the salvation of many ordinary people, with small houses in particular housing a large number of relics and pilgrimage sites for those too poor to make a major pilgrimage to Canterbury or the Continent.\autocite[424-5]{Heale2007} Cistercian monasteries are singled out by historians as uniquely involved in the lives of ordinary people around them and a potential motivating factor for participation in the rebellion.\autocite[83,88]{Carter2015} In addition, historians point toward the Carthusians\footnote{A small and relatively conservative religious order originating in France and emphasizing seclusion and community life.} as strident opponents of the break with Rome and potential instigators of rebellion.\autocite[267]{Clark2021}
+
+One of the rebellion's leaders, Robert Aske, wrote at length on the positive social and economic role of the monasteries in the sparsely-populated areas of the North. He pointed to monastic hospitality on the long roads between Northern towns and monastic poor relief as essential functions in the poorer and more lightly-populated North.\autocite[12]{Harrison1981} Michael Bush, the author of one of the most comprehensive studies of the Pilgrims' motivations, argues for this view, seeing the negative economic effects of the Dissolution as the main motivation for rebellion.\autocite[17-18]{Bush1996} These economic worries included popular fears that the North would be drained of coin when former monastic tenants instead sent their rents to the King.\autocite[60]{Davies1968} Other authors emphasize the fear of monastic tenants potentially facing a change from a predictable institutional landlord to a potentially unpredictable individual.\autocite[20]{Youings1971} In studies of Westminster Abbey, Barbara Harvey and other scholars have found that tenants and neighbors of monastic estates were some of the main sources of new novices joining the monastic life.\autocite[75-6]{Harvey1993} Monks retained ties to their families even after joining their religious houses, and monastic officials often used their positions to benefit family members, strengthening ties between monasteries and important local families.\autocite[64]{Clark2021} These ties were put to use by some religious houses such as Furness and Holm Cultram Abbeys as they actively mobilized their tenants to join the rebellion.\autocite[64,66]{Davies1968}
+
+Other authors like Richard Hoyle downplay the role of the Dissolution, pointing out that the suppression of smaller houses had largely already been accomplished without incident by the time the Pilgrimage of Grace broke out. Hoyle sees the restoration of the monasteries as Aske's personal fixation rather than a factor motivating and mobilizing the commons.\autocite[48-50]{Hoyle2001} In his view, the causes of the Pilgrimage can be found in the rumors racing up and down the North concerning new and arbitrary taxes, the pulling down of parish churches, and the seizure of church goods, the last of which was the most important.\autocite[88-91]{Hoyle2001} New religious instructions promulgated immediately before the Pilgrimage added fuel to this fire, leaving out prayers to saints and prayers for deliverance of souls from Purgatory.\autocite[86]{Hoyle2001}
+
+Another cause of rebellion may lie in the steep fiscal exactions of the newly-powerful Tudor state. Between 1509 and 1540, Henry VIII had pulled nearly twice as much from his country in taxes alone as his father had during his own unusually extractive reign.\autocite[27]{Fletcher2008} A general lack of liquidity made early modern taxation very painful, often requiring the sale of personal assets.\autocite[656-8]{Hoyle1998} Some scholars have noted the remarkable overlap between the areas of the Pilgrimage and traditional strongholds of tax resistance, particularly Richmondshire in North Yorkshire.\autocite[174]{Hoyle1993} They point toward a deep continuity between the Pilgrimage and more traditional tax revolts, thereby de-emphasizing religion as a motivating factor.
+
+Given the turbulence of the English Reformation and the uncertainty that surrounds any rebellion, the swirl of rumors and half-truths circulating through the North on the eve of the Pilgrimage form a crucial backdrop needed to understand the events of October 1536. Whispers about arbitrary taxation and deep changes to popular religion were racing across the North, made much more plausible by Royal changes to both the liturgy and the laws of property.\autocite[28-9]{Fletcher2008} These rumors created the specter of a wholesale assault on religion at the parish level, with often-repeated rumors claiming that King and council intended to seize the gold and silver of parish churches and even tear them down.\autocite[88-91]{Hoyle2001}
+
+Finally, there are some authors who deny the possibility of "separating" religious and economic motivations, noting that the participants themselves would have seen no distinction between the proper ordering of the economy and the correct practices of the true faith, as both were simply expressions of the same divine will.\autocite[14]{Fletcher2008} Thus, the plunder of the church and the plunder of the commons could be tied together to paint a picture of the Royal government upending the natural order of the kingdom for their own gain. Indeed, one of the primary goals of the rebels was to remove Thomas Cromwell, the perceived architect of the hated religious and fiscal changes, from the King's Council.\autocite[308, 312]{Bush1991a} Religion was the language of \emph{all} popular revolts during this period---even straightforwardly economic ones---which makes distinctions between religious and secular motivations even murkier.\autocite[80]{Wood2002}
+
+An episode which illustrates the complexity of rebel motivations which occurred in the Lake Counties is relayed by Scott Harrison, with rebels demanding a reduction in the tithes that went to support major monasteries\autocite[59-60]{Harrison1981} while the monks from some of those same monasteries were directly involved in rallying support for the rebels.\autocite[73]{Harrison1981} While it may be somewhat anachronistic, it is worth trying to sift out the \emph{predictors}---and potentially the motivations---of rebellion rooted in taxation of the commons versus the assault on the church, and in particular to examine the effect of different channels between the Dissolution and the Pilgrimage of Grace.
+
+\section{Research Questions and Hypotheses}
+
+This paper seeks to provide econometric evidence to support or falsify a number of hypothesized causes of the Pilgrimage of Grace.
+
+Authors like Richard Hoyle see the causes of the Pilgrimage in parish-level religious changes, increased taxes,\autocite[173-4]{Hoyle1993} and rumors of more to come.\autocite[17, 88-91]{Hoyle2001} As rumors and views on parish religious changes are nearly impossible to detect quantitatively, an association between taxation and rebellion is the only testable implication of this view.
+
+\emph{H\textsubscript{1}: Measures of total taxation or increases in taxation will be positively and statistically significantly associated with rebellion.}
+
+If, on the other hand, authors like Michael Bush have the best explanation for the Pilgrimage, we should see monastic economic variables take on more significance, particularly in areas reliant on monks as landlords, sources of demand, or poor relief.\autocite[18, 276]{Bush1996} 
+
+\emph{H\textsubscript{2}: Monastic landholding, alms, or net income will be positively and statistically significantly associated with rebellion.}
+
+The analysis in this paper seeks to confirm or disprove both of these hypotheses and add the first ever econometric evidence to the long-running historical debate over the Pilgrimage of Grace.
+
+\section{Data}
+
+\subsection{The Rebellion}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=.5\linewidth]{Output/Images/Maps/rebellion2.png}
+\caption{The Lincolnshire Rising and the Pilgrimage of Grace}
+\label{map:rebMap}
+\end{figure}
+
+\subsubsection{Rebel Musters}
+
+In the beginning of the Pilgrimage of Grace, rebels held small-scale local musters, often bringing together all the fighting-age men of a given area. These musters were the ground level of the revolt, often attracting so many willing participants that some had to be sent home for lack of supplies.\autocite[58]{Bush1996} Figure \ref{map:rebMap} shows the distribution of rebel musters and seats of rebellious gentlemen across the North, running in a broad slash northwest from the initial confrontation outside Louth Park Abbey in October 1536, indicated by the red starburst.
+
+In creating the dataset of rebel muster sites, I drew on maps in \emph{The Pilgrimage of Grace: A Study of the Rebel Armies of October 1536} by M. L. Bush, the most comprehensive study of the participants of the Pilgrimage to date.\autocite{Bush1996} This study was based largely on the results of the Royal investigation which took place after the rising. This investigation brought together testimony and documents from most of the primary actors on both sides of the rebellion and is the main source for most subsequent histories of the event.
+
+This analysis only concerns the mustering sites of the Pilgrims, leading to obvious questions about the correlation between the sites of concentration and actual local support for the rebellions. It is certainly possible that rebels drawn from far away would muster at a given location (one potentially \emph{not} surrounded by supporters of the rising) for strategic or practical reasons. However, testimonies from participants and witnesses often refer to the rebels returning to their homes at night, indicating that, at least for most rebels, the initial muster sites were likely very nearby.\autocite[120]{Hoyle2001} In addition, men were often mustered and organized along the same lines as their parish militias, again pointing toward the local nature of the initial musters.\autocite[30-1]{Bush1996} A final piece of evidence pointing toward the local nature of the musters is their sheer density. With some musters less than 2 kilometers apart and most forming clusters at distances of 10-20 kilometers, many musters seem to have drawn on the population of a relatively small area. As very localized events involving a large proportion of the population, the presence of a rebel muster is thus a good indication that a given area was sympathetic to the aims of the Pilgrimage and ready to pick up arms in support of it.
+
+Finally, I have divided the musters into "primary" and "non-primary" musters based on descriptions in Bush's work. Primary musters are the gatherings at which, according to Bush's account, local men first joined together and took up arms in revolt. Non-primary musters are those for which Bush's description does not appear to support this conclusion, and often took place along the rebel army's line of march rather than as an organic gathering of rebels. I cannot rule out new rebels joining the army at non-primary musters, but primary musters, as the places where local men crossed the line into rebellion, are a better indicator of local support.
+
+\subsubsection{Rebel Gentlemen}
+
+Bush's work also contains the names and county seats of rebel gentlemen, again based on documents and interrogations after the suppression of the rebellion. Many of these gentlemen had their own grievances against the Crown, and their energy and enthusiasm in working for the rebel cause after capture may indicate genuine sympathy with rebel aims.\autocite[133]{Bush1996} However, the gentlemen involved in the rebellion almost unanimously claimed to have been forced to join under threat to their person or goods, generally the latter.\autocite[193]{Bush1996} In my view, this also reflects local support for the rebellion, as the causal path runs from local support to gentlemen's involvement in the rebellion through threats to their houses and goods. The seats of rebel gentlemen therefore provide another, albeit rougher, indication of local support for the Pilgrims that contains both elements of elite grievance and popular enthusiasm.
+
+\subsection{The \emph{Valor Ecclesiasticus}}
+
+In assessing the role of the Dissolution of the Monasteries in causing the Pilgrimage of Grace, the most crucial data concerns the monasteries themselves. Fortunately, the Crown undertook an extremely detailed survey of all Church property in England, called the \emph{Valor Ecclesiasticus}, on the very eve of the Dissolution in 1535. This survey was conducted to provide a basis for taxation, and therefore sought to collect information on all income received by the monasteries, which tended to come from land, tithes, and transfers from other religious institutions. The expenditures recorded are more limited, with only specific types of outlays classified as deductible for tax purposes, including fees to secular officials, transfers to other religious institutions, and alms given in memory of named benefactors. This dataset combines this income and expenditure to produce a uniquely detailed picture of the English monastic system before the Dissolution.
+
+Each monastery is listed in the \emph{Valor}, with its income and expenditure broken down by type and location. Property during this period was generally referred to by the annual income it would yield rather than its purchase price, a convention followed in the \emph{Valor}.\footnote{Purchase prices during this period were usually set at a given number of years' net income, often twenty.} Each religious house is recorded with its sources of income broken down into an itemized list, generally beginning with the monastery's temporal possessions.\footnote{"Temporal" possessions like land were distinguished from "spiritual" possessions like the right to collect tithe income.} Each village in which the monastery owned land is listed along with the yearly proceeds in pounds, shillings, and pence.\footnote{This could be rents or proceeds from land farmed by the monks themselves.} The temporal section also includes any profits of woods, fisheries, mines, courts, etc. The spiritual income section includes any tithes from parish churches or transfers from other religious institutions sent to the monastery. As the \emph{Valor} was collected for tax purposes, it (aspirationally) contains all monastic income, but only the portion of monastic expenditure which was deductible for tax purposes. These deductions included money paid out in land rent, transfers to other religious organizations, fees paid to stewards, bailiffs, and auditors, and alms \emph{given perpetually from the foundation of a named benefactor}.\autocite[23-4]{ValorIntro} The survey is regarded as broadly accurate, particularly in recording land rents.\autocite[38]{Savine1909} The amount of tithe and other spiritual income is somewhat less accurately reported, tending toward undervaluation but with very few outright omissions.\autocite[48]{Savine1909} 
+
+As described in a previous paper, I have created a database which contains each entry in a sample of the \emph{Valor}. To this dataset, I have added all entries from all houses in both the North of England and Lincolnshire. Each entry appears as a line consisting of the location of the religious house and the location of the counterparty in each "transaction," a value in pounds, shillings, and pence with sign indicating direction, and a series of dummies indicating the type of "transaction." Note that I use the word "transaction" to represent a single entry in the \emph{Valor}, and therefore a specific amount of money sent or received over the course of an ordinary year. Any given entry may represent income from a number of nearby sources (e.g. multiple small parcels of land rented to tenants in the same town) or income received in a different number of individual installments, but they all represent an annual value of money or goods entering or exiting the monastic balance sheet. I have merged this data with an educational dataset from the National Archives containing information on the order, gender, and dissolution date of each house to create the final dataset. The dataset of transactions has been spatially joined with the shapefile of ancient parishes to create variables indicating the volume of money entering or leaving each parish due to each type of transaction. In addition, the location of individual monasteries has been spatially joined with the same parish file to create variables recording the presence of monasteries of specific orders and "small" (under \pounds200 in net income per year) monasteries slated for dissolution.
+
+In addressing the controversy over the motivations of participants in the Pilgrimage of Grace, the monastic variables fall into two main categories. The first concerns purely religious motivations and the sheer fact of the Dissolution itself and includes variables like the presence of a monastic house and its net income (roughly proportional to its size and number of monks). The second category concerns monasteries as economic and social institutions, and includes variables like monastic land income, usually indicating rent paid by tenants on land owned by the monastery, tithe income paid by parishioners of churches "appropriated" to the monastery, and monastic alms expenditure, generally given to the poor at the site of the monastery itself. The significance or insignificance of these two sets of variables will provide valuable evidence on the potential motivations of those who took part in the Pilgrimage. 
+
+\subsubsection{Land}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=.5\linewidth]{Output/Images/Maps/llandOwned.png}
+\caption{Monastic Land Income by Parish}
+\label{map:llandOwned}
+\end{figure}
+
+The "land" variable represents income from the monastic demesne worked largely by hired laborers, rent paid by tenants, and leases paid by larger farmers. Each of these three categories of land income represents a group of people in some way economically dependent on the monasteries and often with close personal connections to them. These are also the people who faced an uncertain future once monastic lands were turned over to the Crown or to private purchasers.
+
+As can be seen in Figure \ref{map:llandOwned}, there is very little land income recorded in the \emph{Valor} for Northumberland, and a region overlapping the border between the North and East Ridings of Yorkshire is substantially thinner than the regions surrounding it. This is due to some damage to the \emph{Valor} itself, and will be covered in more detail below.
+
+In the North, the median distance of a land income source from a monastic house was 18 kilometers, relatively close but difficult to travel and return in a single day on foot. This likely overstates the distance to the median monastic tenant, as monasteries generally held larger parcels of land (or larger collections of parcels all listed in the same entry) closer to the house itself. 
+
+\subsubsection{Tithes}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=.5\linewidth]{Output/Images/Maps/lTitheOutT.png}
+\caption{Monastic Tithe Income by Parish}
+\label{map:ltitheOutT}
+\end{figure}
+
+The "tithe" variable represents income from churches "appropriated" to the monastery, an arrangement in which the monastery would collect a parish's tithes in exchange for staffing its church. In parishes very close to monasteries this job was often done by the monks themselves while vicars were generally hired for those further away.\autocite[50]{Knowles1955} Tithes \emph{did} often come from somewhat farther away than land income at an average of 28 kilometers, leaving the providers of this form of monastic income a bit more distant from---and therefore less likely to have personal ties with---the monasteries they paid into. In addition, monasteries often purchased grain from their own tenants, effectively converting their rents from cash to in-kind and forging closer economic bonds.\autocite[139]{Threlfall-Holmes2005} This distance and the lack of back-and-forth created by the combination of rents and grain purchases described by the land income variable creates the impression of a more extractive relationship between the owners and payers of monastic tithes.\footnote{Note that this "tithe" variable also includes a very small portion of glebe income. Glebe was the land around a parish church, and was appropriated to the monasteries with the parish churches themselves so has been included with the tithe income.} Indeed, other scholars point toward this extractive relationship as a motivator for the Pilgrimage, with Pilgrims in the Lake Counties in particular rising up \emph{against} the tithes levied by the larger abbeys while their fellows rose up (potentially) against the Dissolution.\autocite[59-60]{Harrison1981}
+
+\subsubsection{Alms}
+
+\begin{figure}[h]
+\includegraphics[width=.5\linewidth]{Output/Images/Maps/lalmsInTot.png}
+\centering
+\caption{Monastic Almsgiving by Parish}
+\label{map:lalmsInTot}
+\end{figure}
+
+Almsgiving was one of the primary functions of England's monasteries, second only to their redemptive role. Alms were often given in bread, beer, or coin, and were generally given within the grounds of the monasteries themselves. The loss of these alms was a direct material consequence of the Dissolution that hit local paupers particularly hard, and a key potential motivation for the Pilgrimage as a whole.\autocite[18]{Bush1996} Despite the central role of alms in both the popular image and stated mission of monasteries, the scale of monastic almsgiving was very small relative to monastic incomes if only the figures in the \emph{Valor} are taken into account, coming in at around 2\% of monastic expenditure across England. However, this seeming stinginess is likely due to a quirk of the \emph{Valor}, which only records alms given perpetually from the donation of a named benefactor. A few entries in the \emph{Valor} contain ordinary alms given by the monastery, but these are struck out with a marginal note reading "disallowed." In the few entries where this occurs, the total value of disallowed alms can run to over seven times that of those permitted. While there may be some correlation between alms given for named benefactors and total alms given (as larger monastic foundations would tend to have more of both), the ratios between allowed and disallowed alms vary greatly, indicating that alms figures recorded in the \emph{Valor} are not a reliable guide to monastic charity before the Dissolution.
+
+\subsubsection{Monasteries and Their Income}
+A fourth key variable is the presence of monasteries and their net income. I have used net rather than gross income as the primary measure of monastic income. Net income figures are available for all houses while gross income is not, for reasons discussed below. The net income figures given by the National Archives' dataset comprise the gross income of each monastery less the costs of land rental, fees to secular officials, perpetual alms, transfers to other religious institutions, and corrodies paid out to individuals.\footnote{Corrodies were essentially annuities which were paid out in kind, often purchased to provide material security for the purchaser in old age.}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=.5\linewidth]{Output/Images/Maps/lnetInc.png}
+\caption{Recorded Net Flow Through Monastic System by Parish}
+\label{map:lnetInc}
+\end{figure}
+
+These expenses are already recorded in the dataset, but the Net Income figure represents monastic purchasing power above and beyond these figures, much of which would have flowed back into the local economy. The redirection of this purchasing power after the Dissolution could have been disastrous for towns that relied on---and in many cases had arisen in the first place because of---their local monasteries. 
+
+Despite the potential economic benefits of living near a monastery with a high net income, there could also be substantial drawbacks. Monasteries and their inhabitants were often powerful and controversial players in local politics, throwing their weight around at the expense of their secular neighbors. For example, the abbey at Bury St Edmunds had been protecting its own often violent staff from justice for over a decade before one of its secular officials murdered a man in 1539.\autocite[99-100]{Clark2021} However, incidents of this kind were becoming increasingly rare as relations between the monks and secular society improved during the century leading up to the Dissolution.\autocite[278-9]{Clark2009}
+
+I have used variables indicating both the presence of a monastery and the net income of said monastery despite their substantial overlap because of the controversy in the literature over whether the Pilgrimage was motivated more by the \emph{fact} of the assault on the monasteries or by the economic \emph{effects} of that assault. Figure \ref{map:lnetInc} shows these variables, with each shaded parish containing a religious house and darker parishes containing houses with a larger net income. 
+
+\subsection{Other Data}
+
+In order to properly evaluate the relative importance of the Dissolution of the Monasteries, we also need information on underlying economic conditions in each parish. These conditions have been identified as potential drivers of revolt either in combination or in contrast with Dissolution-related motivations. In the first of the non-monastic economic variables, we have the population of towns in each parish based on a dataset compiled by Patrick Wallis and Charlie Udale. This dataset combines both the diocesan survey of 1563 (mostly for smaller towns) and the estimates of Jan De Vries (mostly larger towns). For towns with no population estimates in the Wallis-Udale dataset, I have substituted estimates from Eltjo Buringh, who has produced an updated version of the Bairoch urban population dataset.\footnote{The original dataset is a set very widely-used population estimates from the 1988 article "The population of European cities, 800-1850" by Bairoch, Batou, and Chevre.} This combined dataset comprises a large proportion of entire population of the North. As we will see below, switching between Wallis/Udale, Buringh, and combined population datasets changes the sign and significance of the population variable, but not that of the variables of interest. This largely indicates that different sizes of towns were more or less likely to see rebel musters, but does not cast doubt on the relevance of monastic variables to the rebellion.
+
+The use of a population estimate from after the Pilgrimage of Grace may raise some eyebrows, but the rebellion itself was not particularly destructive of lives or capital and was suppressed through trickery and "politicking" rather than violence. No substantial violence or sustained campaign of repression occurred which would have affected the distribution of population in the decades following the rebellion. Due to these concerns, however, I have also conducted regressions using only Buringh's estimates of population in 1500, with much the same results.
+
+For parish boundaries, I have used the shapefile of the ancient parishes of England and Wales circa 1851 created by the Cambridge Group for the History of Population and Social Structure. These boundaries changed somewhat between 1536 and 1851, but I have used a number of strategies to account for these changes, described below.
+
+For the population and wealth of the countryside, I manually created shapefiles based on maps in "The Distribution of Taxable Population and Wealth in England During the Early Sixteenth Century" by John Sheail. These maps were created based on the returns of the 1524-5 lay subsidy, which was a tax levied on each man's household property, landed income, or wages, whichever was greatest. Men with below \pounds2 of goods and \pounds1 of land or wage income were excluded. The rates were 2.5\% on goods if valued at below \pounds20 and 5\% on landed income or goods valued at above \pounds20. Wage incomes were theoretically also taxed at 5\%, but in practice subsidy commissioners tended to impose a flat poll tax of 4 pence on wage-earners.\autocite[111-12]{Sheail1972} The goods tax accounted for a majority of taxpayers and a vast majority of value, making the subsidy returns a reasonably good proxy for the actual material wealth in a given parish.\autocite[112]{Sheail1972} Unlike many of the other post-1334 lay subsidies, those of 1524 and 1525 are regarded by scholars as relatively accurate.\autocite[202]{Hadwin1983} 
+
+A mean figure per taxpayer can be calculated by dividing the tax revenue density (in shillings per square mile) by the taxpayer density (taxpayers per square mile) in each parish, where both are available. This figure papers over substantial differences in types of wealth and shows only sufficiently wealthy male heads of household. The subsidy rolls record 111,923 taxpayers in 1524-5,\autocite[115]{Sheail1972} less than 5\% of an English population estimated at 2.35 million.\autocite[20]{Broadberry2015} However, as parish registers do not begin until 1538 at the earliest, this figure is likely the best available measure of wealth at the parish level during this period.
+
+The 1525 lay subsidy data is provided as a range, e.g. 0-1 taxpayers or 40-49 shillings per square mile. The highest revenue and taxpayer density brackets are "50 shillings and over" and "20 taxpayers and over," so the upper end of these ranges have been assigned to 100 shillings and 40 taxpayers. I have conducted analyses with the lower and upper limits, and with the mean of each range. As no choice in selecting these figures meaningfully alters the final results, I have reported the coefficients of the regressions containing the mean values.
+
+Including this variable restricts the sample somewhat, as there are no returns for Cumberland, most of Westmorland, Northumberland, and Durham. I have dropped this variable for some of the final regression specifications to ensure that the exclusion of these regions has no effect on the coefficients of interest, but the other regressions are run without these counties.
+
+I have also included the percentage change in the Lay Subsidy between the 1332 assessment and the 1525 assessment, drawn from Heldring, Robinson, and Vollmer.\autocite[2124]{Heldring2021} 
+
+The shapefiles were created by overlaying each image on the Ancient Parishes shapefile and selecting the parishes in each shaded region on the map. In the vast majority of cases, the parish boundaries lined up perfectly, but where this was not the case I assigned each parish to the population or revenue bracket containing the majority of its area.
+
+Finally, the terrain variables are drawn from the Atlas of Rural Settlement of England and Wales, and each parish is assigned the terrain type under its centroid. This puts each parish into the "Lowland," "Upland," or "Intermediate" category, and provides a very rough way to control for differences in attitudes and relationships to government in different settlement zones.
+
+\subsection{Limitations of the Data}
+
+This data, as with so much in the early modern period, has a number of flaws which should temper any strong conclusions drawn from this paper's analysis. These flaws can broadly be divided between damage to the original record, changes in parish boundaries between the sixteenth and nineteenth centuries, and potential errors in georeferencing early modern towns.
+
+\subsubsection{Damage to the \emph{Valor}}
+
+
+One of the most serious limitations of this dataset is the extensive damage to the \emph{Valor Ecclesiasticus} itself. Sections covering most of Northumberland and some of the North and East Ridings of Yorkshire have been lost and damaged. Both the records of the Royal commissioners and the original \emph{Valor} have been lost and damaged, but net income figures survive through a "digest" version of the \emph{Valor} called the \emph{Liber Valorum}. The National Archives used the \emph{Liber Valorum} figures to fill in net incomes where they were missing from the \emph{Valor}. As can be seen in Figure \ref{map:Incomplete}, most of the monasteries missing line-item data are relatively small, but they are highly concentrated in two clusters covering most of Northumberland and spanning the border between the East and North Ridings of Yorkshire.
+
+\begin{figure}[h]
+\includegraphics[width=.5\linewidth]{Output/Images/Maps/Incomplete.png}
+\centering
+\caption{Map of Complete (Blue) and Incomplete (Orange) Houses}
+\label{map:Incomplete}
+\end{figure}
+
+As each house tended to hold most of its possessions and draw most of its income from a relatively small area, a missing house will create a visible gap in any maps of the monastic variables taken from the \emph{Valor}. These gaps can clearly be seen in the maps of these variables shown above, with most of Northumberland and some of Yorkshire having less recorded monastic land and tithe income than was likely the case in reality.
+
+Despite the extent of the damage, it seems unlikely that damage to the \emph{Valor Ecclesiasticus} would correlate with any monastic or economic variables of interest, or with the prevalence of rebel musters. Nevertheless, to account for this problem, I have included a "less damage" version of each analysis which removes Northumberland. This created little change in effect sizes or significance. These specifications still leave the potential issue of houses with incomplete entries holding substantial property in other counties, but given the local nature of the average house's holdings this seems unlikely.
+
+\subsubsection{Parish Boundary Changes}
+My primary unit of analysis is the parish. It was the fundamental social unit of medieval English society and was the basis for organizing the Pilgrimage itself.\autocite[51]{Wood2002} The mean parish in the North had an area of approximately six square kilometers and was the lowest ecclesiastical and civil administrative unit. Nearly everyone in a parish would have known everyone else, and during the Pilgrimage they generally took up arms or declined to do so as a unit. The boundaries of parishes changed somewhat in the roughly 300 years between the events of the Pilgrimage and 1851, so I have used a number of strategies to reduce the impact of specific parish boundary changes on the results.
+
+I have included an inverse distance weighted specification for most of the relevant variables, dividing each value in the underlying dataset (e.g. the annual value of land owned by a monastery, the population of a given town, etc.) by the distance from that point to the edge of the parish in question. Each inverse-distance-weighted variable has a minimum cutoff distance of 7 miles or 11.2km (a conservative estimate of a day's walk and return), after which it is assigned a value of one to avoid near-infinite values at very small distances.\autocite[147]{Horrox2006} The maximum distance is set to 112km, though properties at distances greater than this would likely have very little influence on the inverse distance weighted variables. The reasons for including this specification are twofold. Most importantly, this construction dramatically reduces the impact of georeferencing errors or parish boundary changes. If a parcel of monastic land is mistakenly assigned on the wrong side of a parish boundary or that boundary had shifted since the sixteenth century, only a small change in the inverse-distance-weighted variable would result. A second reason to use an inverse-distance-weighted specification is to capture the spillover effects which almost inevitably existed. Although parishes tended to revolt (or not) as units, the people in them were impacted by the views, actions, and circumstances of their neighbors outside the parish. These factors cannot be captured if each parish is treated in isolation, so inverse-distance-weighting the variables better reflects the influences of a parish's local area.
+
+I have also generated grids of 1, 2, 5, 10, and 20 kilometers covering the North of England, then conducted a negative binomial regression on the number of rebel musters in each cell, with similar results to the parish regression. This does less to address georeferencing errors (though larger grid sizes will be more tolerant of small errors), but helps to eliminate the parish boundary problems discussed above.
+
+\subsubsection{Georeferencing Issues}
+
+Much like the boundaries of parishes, the names of some towns and villages have changed substantially in the nearly five hundred years since the Dissolution. In addition, many towns share names with close or distant neighbors in the same county, making georeferencing less reliable. As laid out in more detail in a previous paper, significant care has been taken to select proper coordinates for each village, using multiple sources and following some heuristics to minimize error. Despite these efforts, some errors will inevitably slip through, placing income sources or expenditure destinations on the wrong side of parish boundaries and thus creating errors in the parish variables. 
+
+The two strategies for reducing the effect of parish boundary changes detailed above also help to solve any potential georeferencing issues by softening the potentially large effect of putting a point on the wrong side of a parish boundary.
+
+
+
+
+\section{Results}
+\subsection{Directed Acyclic Graph and Causal Inference}
+In order to make explicit the potential causal connections between the variables I am investigating, I have constructed a directed acyclic graph (DAG) with causal arrows between the variables of interest, shown in Figure \ref{dag}. This graph models only the connections between these variables in a given parish, and not in the North as a whole. 
+
+\begin{figure}
+\centering
+\includegraphics[width=.8\linewidth]{Output/Images/Graphs/LittleRebellionDAG.png}
+\caption{Causes of Rebellion DAG}
+\label{dag}
+\end{figure}
+
+
+The key causal chain I will be investigating is the link between monastic land and my three measures of rebellion. In theory, and according to the simplified relationships in the DAG, the only variables required to create d-separation and isolate the controlled direct effect of land are population and wealth, presented in Table \ref{tab:dag}
+
+\input{Output/Tables/dag}
+
+The results of this simplified model point toward land as a key predictor of rebellion at the parish level. In order to better account for potential causal effects not captured in the simple model above, all further regressions will contain many more variables.
+
+\subsection{Main Regression Specification}
+
+All of the regressions presented below follow the same basic form:
+\begin{equation}
+    \begin{aligned}
+Rebellion_{i} = \beta_{0} & + \beta_{1}MonasticLand_{i} + \beta_{2}Tithe + \beta_{3}Alms + \beta_{4}MonasticIncome  \\ 
+& + \beta_{5}TaxLevel_{i} + \beta_{6}TaxChange_{i} + \beta_{7}Population_{i} + \beta_{8}\textbf{X}_{i} + \epsilon_i
+    \end{aligned}
+\end{equation}
+Rebellion is one of the three indicators of rebellion discussed above (muster, primary muster, or rebel gentleman), MonasticLand is monastic landownership, Tithe is the value of tithes collected, Alms is the value of recorded almsgiving, MonasticIncome is the value of monastic income net of expenses, TaxLevel is the estimated lay subsidy per capita in 1525, TaxChange is the change in taxation between 1332 and 1525, Population is the population figure described above, and \textbf{X} is a vector of geographic covariates including x and y coordinates, terrain type, slope, elevation, and distance from the outbreak of the rebellion at Louth Park Abbey.
+\subsection{Logistic Regressions}
+
+I begin with a simple logistic regression of the rebel muster dummy on the value of monastic land in each parish, then add the other monastic variables, taxation and population, and geographic controls. The coefficient for monastic land ownership is consistently positive and statistically significant across all three measures of rebellion. The effect is also practically significant, with a doubling in the amount of monastic land in a parish associated with a roughly nine percentage point increase in the probability of a primary rebel muster. It is worth noting that the value of alms given is consistently positive, but only weakly significant, and decreasingly so as more variables are added. As mentioned above, the alms recorded in the \emph{Valor} are only those given perpetually from the bequest of a named benefactor, so it is possible that the regularity of these alms had become a fixture in local communities or that these bequests indicate a tighter connection with local people, but the evidence is currently insufficient to draw any strong conclusions.
+
+Note that N drops slightly when geographical variables are included, as certain rare values of the "terrain type" variable perfectly predict (a lack of) rebel musters in a given parish and have therefore been dropped from the analysis.
+
+\input{Output/Tables/muster_all}
+
+\input{Output/Tables/primary_all}
+
+\input{Output/Tables/seat_all}
+
+
+\subsection{Survival Analysis}
+As the rebellion was a dynamic event that spread northwest over a matter of weeks as new parishes heard the news of the uprising, it may be more appropriate to use a survival analysis model rather than a simple cross-sectional logistic model. A Cox Proportional Hazard model can take into account the differing times at which different parishes were "exposed" to the potential for rebellion by hearing the news of risings farther south and east. 
+
+\begin{figure}
+\centering
+    \includegraphics[width=.75\linewidth]{Output/Images/Maps/RoutesCropped.png}
+    \caption{Shipping Routes and Roman Roads of Northern England}
+    \label{routes}
+\end{figure}
+
+Using the combination of the Roman road network (still the core routes of the early modern road network) and a map of historical shipping routes shown in Figure \ref{routes}, I estimated that news of the rising at Louth Park Abbey at an average of 50 kilometers per day via road or river and 100 kilometers per day via ship. Calculating "exposure" times for the centroid of each parish, I then constructed a "survival" variable by subtracting the "exposure" day from the day of the first primary muster. If the parish experiences no muster, I set the survival value to the difference (in days) between the end of the rebellion i.e. the confrontation at Doncaster and the dispersal of the rebel army. As with the logistic model, the value of monastic land in a parish is a statistically significant predictor of rebellion, indicating that parishes with more monastic land were more likely to rebel and did so sooner than parishes with less monastic land. The coefficient of .132 gives a hazard ratio of 1.14 ($e^{.132}$) for each increase of a factor of $e$ in the value of monastic land in a parish. In more human terms, a doubling of monastic land in a parish results in a ten percent higher instantaneous risk of rebellion at any given point in time.
+\input{Output/Tables/survival}
+
+\subsection{Propensity Score Matching}
+
+Because the distribution of monastic land is non-random and is likely due to factors that have some correlation with the likelihood of rebellion, I conducted both a propensity score matching (PSM) and inverse probability weighting analysis. PSM works by calculating the likelihood of receiving treatment given the other covariates in the regression called the "propensity score," then matching each "treated" observation with one or more observations with the same propensity score. This allows us to obtain the Average Treatment Effect (ATE), or the expected change in the outcome value based solely on the treatment itself.
+In this case, I have set thresholds at \pounds1, \pounds2, \pounds5, \pounds10, \pounds20, with any value over the threshold as "treated." PSM will match observations based on how likely each parish would be to have more monastic land than the threshold, based on the parish's other features. Ideally, doing so will isolate the effect of certain amounts of monastic land independent of all other observable features of the parish.
+
+\input{Output/Tables/PSM}
+
+The results of the PSM analysis show different levels of significance at different thresholds of monastic landownership, but all coefficients on the "Land Treatment" variable are positive. 
+
+\input{Output/Tables/IPW}
+
+An even more effective method of isolating the effect of monastic land involves inverse probability weighting (IPW). By conducting regressions of only the outcome variable on the variable of interest and weighting by the inverse of a continuous propensity score, we can achieve a similar effect to PSM specification while allowing for a continuous "treatment" variable. By weighting each observation by the inverse probability of the parish having its observed quantity of monastic land, we boost the influence of observations that "shouldn't" have that much monastic land given their other observable features, statistically imitating the conditions of randomized treatment assignment and further isolating the variable of interest. The results of this analysis are similar to those presented above, and are consistent whether the model is a simple logistic regression or a Cox Proportional Hazard model like the one specified above.
+
+\input{Output/Tables/primary_split.tex}
+
+Finally, in order to try to pry apart the effect of monastic land that may have provided employment from the effect of monastic land containing monastic tenants, I have conducted a regression that splits the land at the "site" of the monastery (recorded as such in the \emph{Valor} from land farther afield. Monastic site land was far more likely to be demesne i.e. land that was not rented out to tenants but was farmed directly by wage-earning agricultural laborers, while land not directly connected to the site of the monastery drew a far greater share of its revenue from tenants. As shown in Table \ref{tab:primary_split}, a greater amount of off-site land in a parish is a very strong predictor of revolt. Interestingly, a greater value of monastic site land predicts a \emph{lower} likelihood of revolt, potentially indicating a lack of sympathy with monasteries that dominated their local parishes using large numbers of hired laborers. More research will be needed to identify the causal channels more cleanly, but these results provide a strong indication that monastic tenants themselves are a key predictor of revolt.
+
+\section{Discussion}
+
+The results are broadly consistent across specifications and largely support H\textsubscript{2}, which emphasizes the economic dislocation caused by the Dissolution as a primary reason for the Pilgrimage. The final regression in particular points toward the potential disruption of the link between the monasteries and their tenants---and its replacement by the distant Crown or an unknown secular landlord---as the crucial factor predicting revolt at the local level.
+
+There are several reasons for the connection between monastic land ownership and rebellion. First---and in my view most likely---fear of turnover in tenancy during an era of high inflation and rising entry fines could be a powerful motivator for revolt.  Monasteries were perceived as reliable and stable landlords who changed the terms of tenancy both slowly and infrequently, allowing the kind of stability so beloved by peasant families.\autocite[113-4]{Clark2021} Much of the commons also feared the disruption to longstanding tenancy contracts which would likely take place if lands owned by the monasteries were seized.\autocite[276]{Bush1996} In an era of increasing inflation, any landlord not consistently raising entry fines would likely be looked on with some affection.\autocite[47]{Harrison1981} In addition, monasteries provided further economic stability by being reliable purchasers of their tenants' grain and produce. There were public fears that, if the monasteries were dissolved, coinage paid in rent would be redirected to the Crown and permanently leave the Northern economy rather than returning to the commons.\autocite[60]{Davies1968}
+
+Second, the ties between monasteries and their tenants went far deeper than simple economic relationships. In the North, the median distance of a land income source from a monastic house was 18 kilometers, relatively close but difficult to travel and return in a single day on foot. This likely overstates the distance to the median monastic tenant, as the average parcel of land decreases in size as distance to the monastic house increases. Tenants likely had substantial face-to-face contact with their monastic landlords, forming personal bonds that went beyond economic necessity. Moreover, tenants often had very close familial ties with their local monasteries. At Westminster Abbey, those who lived on or near monastic estates were a key source of novices for the monastery. While recruitment from the towns of London and Westminster had grown during the early modern period, the sons of tenants and neighbors still formed an important share of new monks by the time of the Dissolution.\autocite[75-6]{Harvey1993} In addition, many families had long histories of sending sons to become monks in specific monasteries, lending these connections the weight of family tradition.\autocite[61]{Clark2021} Once they had become monks, particularly if they attained higher ranks, these sons often used monastic resources to help family members outside the convent, creating powerful familial-economic ties between lay and religious society.\autocite[64]{Clark2021} Indeed, the recruitment of young men from their own neighbors and estates and the thick network of local social relationships this produced may be one of the main reasons for the improvement in relations between monasteries and their nearby towns in the fifteenth and early sixteenth century.\autocite[278-9]{Clark2009}
+
+Finally, the monastic land value variable may simply be picking up some rural population density that is not fully captured by my measure of population in each parish. This seems somewhat unlikely, as the correlation between monastic land value and population as captured by the existing dataset is 0.14, but it is possible that the correlation between monastic land and population outside of towns and villages is far higher.
+
+The work done thus far has established the robust correlation between monastic land and rebellion, so the focus of future analyses will be the mechanism behind this correlation.
+
+
+\section{Conclusion}
+
+The foregoing analyses have established the robust correlation between monastic land and the presence of rebel gentlemen or musters, particularly primary musters where local people took up arms in rebellion for the first time. In addition, monastic land located away from the religious house and therefore more likely to contain monastic tenants is a far better predictor than monastic land more generally. Taken together, these two results provide the first econometric evidence in the long-running debate over the causes of the Pilgrimage and bolster the case of scholars like Michael Bush who point to the economic impact of the Dissolution as the key driver of the revolt. An assault on traditional religion, when combined with the threat of serious economic upheaval, provided a powerful spur that led common people to take up arms and march south to confront the Crown.
+
+\clearpage
+\singlespacing
+\printbibliography[heading=subbibliography, segment=\therefsegment]
+\doublespacing
+
+\section{Paper 2 Appendix}
+\subsection{Regressions on Grid Cells}
+\begin{center}
+\includegraphics{Output/Images/Maps/grid10.png}
+\end{center}
+
+Many parish boundaries changed somewhat in the three centuries between the Pilgrimage and the setting of their "historic boundaries" in 1851. To ensure that my results are robust to the changes in parish boundaries and to determine whether my results scale, I assigned the underlying \emph{Valor} dataset to grid cells with sides of 2, 5, 10, and 20km using the same process as the parishes. I used the same variables as above, but switched to a Poisson regression as many cells contain more than one muster. These results are presented in Tables \ref{tab:grid_muster}-\ref{tab:grid_seats}, bolstering the above results and showing that they scale to larger distances (i.e. monastic landownership provided some \emph{motivation} for the rebellion rather than just being a convenient and symbolic place for rebels to muster).
+
+\input{Output/Tables/grid_muster}
+\input{Output/Tables/grid_primary}
+\input{Output/Tables/grid_seats}
+
+\subsection{Conley Standard Errors}
+The results are robust to potential spatial autocorrelation as far away as 200km (the distance from Doncaster to London). This is encouraging, and indicates that the relationships described above are unlikely to be due to spatial autocorrelation. These results are presented in Table \ref{tab:conley}.
+\newpage
+\input{Output/Tables/conley}
+\subsection{Kelly Spatial Noise Test}
+Share of results of regressions on randomly-generated, spatially-autocorrelated primary muster patterns with p-values lower than main regression:
+            \begin{itemize}
+                \item Land: 13.6\%
+                \item Tithe: 29.8\%
+                \item Alms: 37.9\%
+                \item Friary: 68.8\%
+                \item Lay Subsidy: 68.5\%
+            \end{itemize}
+This result is less encouraging, potentially pointing to spatial autocorrelation patterns not captured by Conley standard errors as a driver of some results.
+\clearpage
+\printbibliography
+
+\end{document}

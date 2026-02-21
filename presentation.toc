@@ -1,0 +1,6 @@
+\beamer@sectionintoc {1}{Background}{2}{0}{1}
+\beamer@sectionintoc {2}{Data}{6}{0}{2}
+\beamer@sectionintoc {3}{Methods and Results}{11}{0}{3}
+\beamer@sectionintoc {4}{Discussion}{18}{0}{4}
+\beamer@sectionintoc {5}{Future Plans}{20}{0}{5}
+\beamer@sectionintoc {6}{Appendix: Robustness Checks}{22}{1}{6}
