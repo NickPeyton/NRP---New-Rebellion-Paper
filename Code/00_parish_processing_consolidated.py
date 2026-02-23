@@ -9,7 +9,7 @@ import os
 from tqdm import tqdm
 
 tqdm.pandas()
-os.chdir('C:/PhD/DissolutionProgramming/REB---Rebellion-Paper')
+os.chdir('C:/PhD/DissolutionProgramming/NRP---New-Rebellion-Paper')
 # Define Paths relative to project root
 RAW = 'Data/Raw/'
 PROCESSED = 'Data/Processed/'

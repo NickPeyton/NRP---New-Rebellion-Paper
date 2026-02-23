@@ -6,7 +6,7 @@ pacman::p_load(
     gridExtra, ggfortify
 )
 
-setwd("C:/PhD/DissolutionProgramming/REB---Rebellion-Paper/")
+setwd("C:/PhD/DissolutionProgramming/NRP---New-Rebellion-Paper/")
 
 # Custom function to calculate 90% CI for svyglm objects
 confint90_svyglm <- function(model) {
@@ -46,7 +46,7 @@ rdf$X_COORD <- scale(rdf$X_COORD, center = TRUE, scale = TRUE)[, 1]
 rdf$Y_COORD <- scale(rdf$Y_COORD, center = TRUE, scale = TRUE)[, 1]
 rdf$area <- scale(rdf$area, center = TRUE, scale = TRUE)[, 1]
 rdf$mean_slope <- scale(rdf$mean_slope, center = TRUE, scale = TRUE)[, 1]
-rdf$dry_1535 <- scale(rdf$dry_1535, center = TRUE, scale = TRUE)[, 1]
+rdf$wet_1535 <- scale(rdf$wet_1535, center = TRUE, scale = TRUE)[, 1]
 rdf$wet_1536 <- scale(rdf$wet_1536, center = TRUE, scale = TRUE)[, 1]
 rdf$dwx_1536 <- scale(rdf$dwx_1536, center = TRUE, scale = TRUE)[, 1]
 
@@ -61,7 +61,7 @@ weightitmodel <- weightit(
     llandOwned ~
         ltitheOutT + lalmsInTot + lnetInc + friary +
         lLStax_pc + lpopC + X_COORD + Y_COORD + area + uplands + lowlands +
-        mean_slope + dry_1535 + wet_1536 + dwx_1536 + dg_percy,
+        mean_slope + wet_1535 + wet_1536 + dwx_1536 + dg_percy,
     data = rdf,
     method = "cbps",
     over = FALSE
@@ -72,7 +72,7 @@ weights <- weightitmodel$weights
 weighted_lm <- svyglm(
     primary ~ llandOwned + ltitheOutT + lalmsInTot + lnetInc + friary +
         lLStax_pc + lpopC + X_COORD + Y_COORD + area + uplands + lowlands +
-        mean_slope + dry_1535 + wet_1536 + dwx_1536 + dg_percy,
+        mean_slope + wet_1535 + wet_1536 + dwx_1536 + dg_percy,
     data = rdf,
     weights = weights,
     design = svydesign(~1, weights = weights, data = rdf),
@@ -83,7 +83,7 @@ weighted_lm <- svyglm(
 weighted_survival <- coxph(
     Surv(primary_survival, primary) ~ llandOwned + ltitheOutT + lalmsInTot +
         lnetInc + friary + lLStax_pc + lpopC + X_COORD + Y_COORD + area +
-        uplands + lowlands + mean_slope + dry_1535 + wet_1536 + dwx_1536 + dg_percy,
+        uplands + lowlands + mean_slope + wet_1535 + wet_1536 + dwx_1536 + dg_percy,
     data = rdf,
     weights = weights,
     robust = TRUE
@@ -98,7 +98,7 @@ coef_labels <- c(
     "friary" = "Friary",
     "lLStax_pc" = "ln(Lay Subsidy)",
     "lpopC" = "ln(Population)",
-    "dry_1535" = "Dry 1535",
+    "wet_1535" = "Wet 1535",
     "wet_1536" = "Wet 1536",
     "dwx_1536" = "Dry x Wet",
     "dg_percy" = "Percy",
@@ -241,14 +241,14 @@ cat("Running survival analysis models...\n")
 cox1 <- coxph(
     Surv(primary_survival, primary) ~
         llandOwned + ltitheOutT + lalmsInTot + lnetInc + friary +
-        dry_1535 + wet_1536 + dwx_1536 + dg_percy,
+        wet_1535 + wet_1536 + dwx_1536 + dg_percy,
     data = rdf
 )
 
 cox2 <- coxph(
     Surv(primary_survival, primary) ~
         llandOwned + ltitheOutT + lalmsInTot + lnetInc + friary +
-        dry_1535 + wet_1536 + dwx_1536 + dg_percy +
+        wet_1535 + wet_1536 + dwx_1536 + dg_percy +
         lLStax_pc + lpopC,
     data = rdf
 )
@@ -256,7 +256,7 @@ cox2 <- coxph(
 cox3 <- coxph(
     Surv(primary_survival, primary) ~
         llandOwned + ltitheOutT + lalmsInTot + lnetInc + friary +
-        dry_1535 + wet_1536 + dwx_1536 + dg_percy +
+        wet_1535 + wet_1536 + dwx_1536 + dg_percy +
         lLStax_pc + lpopC + X_COORD + Y_COORD + area +
         uplands + lowlands + mean_slope,
     data = rdf
@@ -265,7 +265,7 @@ cox3 <- coxph(
 # Extract coefficients from all models with 90% CI
 vars_of_interest <- c(
     "llandOwned", "ltitheOutT", "lalmsInTot", "lnetInc",
-    "friary", "dry_1535", "wet_1536", "dwx_1536", "dg_percy"
+    "friary", "wet_1535", "wet_1536", "dwx_1536", "dg_percy"
 )
 
 cox1_tidy <- tidy(cox1, conf.int = TRUE, conf.level = 0.90, exponentiate = TRUE) %>%
@@ -494,15 +494,42 @@ ggsave("Output/Images/Graphs/survival_curve.png",
 
 # Plot 7: Stratified survival curves by land ownership quartiles
 cat("Creating stratified survival curves...\n")
-rdf$land_quartile <- cut(rdf$llandOwned,
-    breaks = quantile(rdf$llandOwned, probs = seq(0, 1, 0.25)),
-    labels = c("Q1 (Lowest)", "Q2", "Q3", "Q4 (Highest)"),
-    include.lowest = TRUE
-)
+# Use unique() to handle duplicate breaks in quantiles
+breaks <- unique(quantile(rdf$llandOwned, probs = seq(0, 1, 0.25)))
+n_groups <- length(breaks) - 1
+
+if (n_groups >= 2) {
+    # Create labels based on actual number of groups
+    if (n_groups == 4) {
+        group_labels <- c("Q1 (Lowest)", "Q2", "Q3", "Q4 (Highest)")
+    } else if (n_groups == 3) {
+        group_labels <- c("Lower Tertile", "Middle Tertile", "Upper Tertile")
+    } else {
+        group_labels <- c("Lower Half", "Upper Half")
+    }
+
+    rdf$land_quartile <- cut(rdf$llandOwned,
+        breaks = breaks,
+        labels = group_labels,
+        include.lowest = TRUE
+    )
+} else {
+    # Fallback: create binary split if not enough unique values
+    rdf$land_quartile <- cut(rdf$llandOwned,
+        breaks = 2,
+        labels = c("Lower Half", "Upper Half"),
+        include.lowest = TRUE
+    )
+    group_labels <- c("Lower Half", "Upper Half")
+    n_groups <- 2
+}
 
 fit_surv_strat <- survfit(Surv(primary_survival, primary) ~ land_quartile,
     data = rdf, conf.int = 0.90
 )
+
+# Create palette based on number of groups
+palette_colors <- c("#1B9E77", "#D95F02", "#7570B3", "#8B0000")[1:n_groups]
 
 p7 <- ggsurvplot(
     fit_surv_strat,
@@ -514,13 +541,13 @@ p7 <- ggsurvplot(
     ylab = "Probability of No Rebellion",
     title = "Survival by Monastic Land Ownership Quartile (90% CI)",
     legend.title = "Land Owned",
-    legend.labs = c("Q1 (Lowest)", "Q2", "Q3", "Q4 (Highest)"),
+    legend.labs = group_labels,
     ggtheme = theme_minimal(),
-    palette = c("#1B9E77", "#D95F02", "#7570B3", "#8B0000")
+    palette = palette_colors
 )
 
 ggsave("Output/Images/Graphs/survival_by_land.png",
-    print(p7),
+    p7$plot,
     width = 10, height = 8, dpi = 300
 )
 

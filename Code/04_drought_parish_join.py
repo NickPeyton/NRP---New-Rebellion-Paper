@@ -2,7 +2,7 @@ import pandas as pd
 import geopandas as gpd
 from shapely.geometry import Point, box
 import os
-
+os.chdir(r"C:/PhD/DissolutionProgramming/NRP---New-Rebellion-Paper")
 # 1. Load the processed drought CSV
 drought_csv = 'Data/Processed/drought_intensity_bng.csv'
 df = pd.read_csv(drought_csv)
@@ -31,7 +31,7 @@ drought_gdf = drought_gdf.rename(columns={
     'pdsi_ext_3yr': 'exw_3yr',
     'pdsi_ext_5yr': 'exw_5yr',
     'pdsi_ext_10yr': 'exw_10yr',
-    'pdsi_1535': 'dry_1535',
+    'pdsi_1535': 'wet_1535',
     'pdsi_1536': 'wet_1536',
     'pdsi_1535x1536': 'dwx_1536'
 })
@@ -58,7 +58,7 @@ parish_centroids.geometry = parishes.centroid
 drought_data_cols = [
     'dr_1yr', 'dr_2yr', 'dr_3yr', 'dr_5yr', 'dr_10yr',
     'exw_1yr', 'exw_2yr', 'exw_3yr', 'exw_5yr', 'exw_10yr',
-    'dry_1535', 'wet_1536', 'dwx_1536',
+    'wet_1535', 'wet_1536', 'dwx_1536',
     'geometry'
 ]
 joined = gpd.sjoin(parish_centroids, drought_gdf[drought_data_cols], how='left', predicate='within')
@@ -75,7 +75,7 @@ parishes['exw_2'] = joined['exw_2yr']
 parishes['exw_3'] = joined['exw_3yr']
 parishes['exw_5'] = joined['exw_5yr']
 parishes['exw_10'] = joined['exw_10yr']
-parishes['dry_1535'] = joined['dry_1535']
+parishes['wet_1535'] = joined['wet_1535']
 parishes['wet_1536'] = joined['wet_1536']
 parishes['dwx_1536'] = joined['dwx_1536']
 

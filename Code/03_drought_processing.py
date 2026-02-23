@@ -2,7 +2,8 @@ import pandas as pd
 import geopandas as gpd
 import numpy as np
 from shapely.geometry import Point
-
+import os
+os.chdir(r"C:/PhD/DissolutionProgramming/NRP---New-Rebellion-Paper")
 # Load the data
 coords_path = 'Data/Raw/drought_coords.csv'
 values_path = 'Data/Raw/drought_values.csv'
@@ -27,13 +28,13 @@ windows = {
 
 results = {}
 
-# Single-year drought (1535), flipped so higher = more severe drought
+# Single-year wet weather (1535)
 year_1535_df = values_df[values_df['year'] == 1535]
 if not year_1535_df.empty:
     year_1535_values = year_1535_df.drop(columns=['year']).mean()
-    results['pdsi_1535'] = -1 * year_1535_values
+    results['pdsi_1535'] = year_1535_values
 
-# Single-year wet weather (1536), unflipped so higher = wetter
+# Single-year wet weather (1536)
 year_1536_df = values_df[values_df['year'] == 1536]
 if not year_1536_df.empty:
     year_1536_values = year_1536_df.drop(columns=['year']).mean()

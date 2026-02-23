@@ -12,7 +12,7 @@ import os
 import matplotlib.pyplot as plt
 
 # Set paths
-base_dir = r"C:\PhD\DissolutionProgramming\REB---Rebellion-Paper"
+base_dir = r"C:\PhD\DissolutionProgramming\NRP---New-Rebellion-Paper"
 processed_dir = os.path.join(base_dir, "Data", "Processed")
 raw_gis_dir = os.path.join(base_dir, "Data", "Raw", "GIS")
 bng_dir = os.path.join(raw_gis_dir, "BNG Projections")
@@ -23,7 +23,7 @@ print("Loading Data...")
 north_parish_flows = gpd.read_file(os.path.join(processed_dir, "northParishFlows.shp"))
 
 # Load England File
-counties_base = gpd.read_file(r"C:\PhD\DissolutionProgramming\REB---Rebellion-Paper\Data\Raw\GIS\BNG Projections\countiesBNG.shp")
+counties_base = gpd.read_file(os.path.join(bng_dir, "countiesBNG.shp"))
 
 # Load Source Point
 louth_park = gpd.read_file(os.path.join(bng_dir, "LouthParkAbbey.shp"))
@@ -358,7 +358,6 @@ legend_elements = [
 ]
 ax.legend(handles=legend_elements, loc='upper right', fontsize=10, framealpha=0.9)
 
-ax.set_title('Least Cost Surface with Historical Route Networks', fontsize=14, fontweight='bold')
 
 # Remove axis ticks and labels
 ax.set_xticks([])

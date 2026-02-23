@@ -9,7 +9,7 @@ from shapely.geometry import MultiPoint
 from shapely.ops import unary_union
 import os
 
-os.chdir(r"C:/PhD/DissolutionProgramming/REB---Rebellion-Paper")
+os.chdir(r"C:/PhD/DissolutionProgramming/NRP---New-Rebellion-Paper")
 # Load the shapefiles
 reb_points = gpd.read_file('./Data/Raw/GIS/BNG Projections/rebPoints.shp')
 gentlemen = gpd.read_file('./Data/Raw/GIS/BNG Projections/gentlemenInvolved.shp')
