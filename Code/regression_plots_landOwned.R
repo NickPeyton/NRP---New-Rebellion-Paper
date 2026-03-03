@@ -4,12 +4,9 @@ pacman::p_load(
 
 setwd("C:/PhD/DissolutionProgramming/NRP---New-Rebellion-Paper/")
 pdf <- read_sf(dsn = "Data/Processed/northParishFlows.shp")
-pdf$lbigLand <- log(pdf$bigLand + 1)
 
 # Standardize and center continuous variables
 pdf$llandOwned <- scale(pdf$llandOwned, center = TRUE, scale = TRUE)[, 1]
-pdf$lsmLand <- scale(pdf$lsmLand, center = TRUE, scale = TRUE)[, 1]
-pdf$lbigLand <- scale(pdf$lbigLand, center = TRUE, scale = TRUE)[, 1]
 pdf$ltitheOutT <- scale(pdf$ltitheOutT, center = TRUE, scale = TRUE)[, 1]
 pdf$lalmsInTot <- scale(pdf$lalmsInTot, center = TRUE, scale = TRUE)[, 1]
 pdf$lnetInc <- scale(pdf$lnetInc, center = TRUE, scale = TRUE)[, 1]
@@ -21,25 +18,24 @@ pdf$mean_slope <- scale(pdf$mean_slope, center = TRUE, scale = TRUE)[, 1]
 pdf$wet_1535 <- scale(pdf$wet_1535, center = TRUE, scale = TRUE)[, 1]
 pdf$wet_1536 <- scale(pdf$wet_1536, center = TRUE, scale = TRUE)[, 1]
 
-monastic_vars <- c("lsmLand", "lbigLand", "ltitheOutT", "lalmsInTot", "lnetInc", "friary")
+monastic_vars <- c("llandOwned", "ltitheOutT", "lalmsInTot", "lnetInc", "friary")
 controls <- c("lLStax_pc", "wet_1535", "wet_1536", "dg_percy", "lpopC", "Y_COORD", "uplands", "lowlands", "area", "mean_slope")
 controls_no_percy <- c("lLStax_pc", "wet_1535", "wet_1536", "lpopC", "Y_COORD", "uplands", "lowlands", "area", "mean_slope")
 
 # Variables to plot (in order of appearance in regression)
 vars_to_plot <- c(
-    "lsmLand", "lbigLand", "ltitheOutT", "lalmsInTot", "lnetInc", "friary",
+    "llandOwned", "ltitheOutT", "lalmsInTot", "lnetInc", "friary",
     "lLStax_pc", "wet_1535", "wet_1536", "dg_percy"
 )
 
 vars_to_plot_seats <- c(
-    "lsmLand", "lbigLand", "ltitheOutT", "lalmsInTot", "lnetInc", "friary",
+    "llandOwned", "ltitheOutT", "lalmsInTot", "lnetInc", "friary",
     "lLStax_pc", "wet_1535", "wet_1536"
 )
 
 # Variable labels for plotting
 var_labels <- c(
-    "lsmLand" = "Small Monastery Land",
-    "lbigLand" = "Large Monastery Land",
+    "llandOwned" = "Land Owned",
     "ltitheOutT" = "Tithe",
     "lalmsInTot" = "Alms",
     "lnetInc" = "Net Income",
@@ -114,7 +110,7 @@ seat_coefs$order <- match(seat_coefs$variable, vars_to_plot_seats)
 # Create coefficient plot for Muster models
 muster_plot <- ggplot(muster_coefs, aes(x = coefficient, y = reorder(variable_label, -order))) +
     geom_vline(xintercept = 0, linetype = "dashed", color = "gray50") +
-    geom_errorbarh(aes(xmin = ci_lower, xmax = ci_upper), height = 0.2, color = "gray30") +
+    geom_errorbar(aes(xmin = ci_lower, xmax = ci_upper), width = 0.2, color = "gray30", orientation = "y") +
     geom_point(aes(color = significant), size = 3) +
     scale_color_manual(
         values = c("FALSE" = "gray60", "TRUE" = "#0072B2"),
@@ -136,7 +132,7 @@ muster_plot <- ggplot(muster_coefs, aes(x = coefficient, y = reorder(variable_la
     )
 
 # Save muster plot
-ggsave("Output/Images/Graphs/muster_coefficients.png",
+ggsave("Output/Images/Graphs/muster_coefficients_landOwned.png",
     plot = muster_plot,
     width = 10, height = 6, dpi = 300
 )
@@ -144,7 +140,7 @@ ggsave("Output/Images/Graphs/muster_coefficients.png",
 # Create coefficient plot for Primary models
 primary_plot <- ggplot(primary_coefs, aes(x = coefficient, y = reorder(variable_label, -order))) +
     geom_vline(xintercept = 0, linetype = "dashed", color = "gray50") +
-    geom_errorbarh(aes(xmin = ci_lower, xmax = ci_upper), height = 0.2, color = "gray30") +
+    geom_errorbar(aes(xmin = ci_lower, xmax = ci_upper), width = 0.2, color = "gray30", orientation = "y") +
     geom_point(aes(color = significant), size = 3) +
     scale_color_manual(
         values = c("FALSE" = "gray60", "TRUE" = "#0072B2"),
@@ -166,7 +162,7 @@ primary_plot <- ggplot(primary_coefs, aes(x = coefficient, y = reorder(variable_
     )
 
 # Save primary plot
-ggsave("Output/Images/Graphs/primary_coefficients.png",
+ggsave("Output/Images/Graphs/primary_coefficients_landOwned.png",
     plot = primary_plot,
     width = 10, height = 6, dpi = 300
 )
@@ -174,7 +170,7 @@ ggsave("Output/Images/Graphs/primary_coefficients.png",
 # Create coefficient plot for Seats models
 seat_plot <- ggplot(seat_coefs, aes(x = coefficient, y = reorder(variable_label, -order))) +
     geom_vline(xintercept = 0, linetype = "dashed", color = "gray50") +
-    geom_errorbarh(aes(xmin = ci_lower, xmax = ci_upper), height = 0.2, color = "gray30") +
+    geom_errorbar(aes(xmin = ci_lower, xmax = ci_upper), width = 0.2, color = "gray30", orientation = "y") +
     geom_point(aes(color = significant), size = 3) +
     scale_color_manual(
         values = c("FALSE" = "gray60", "TRUE" = "#0072B2"),
@@ -196,12 +192,12 @@ seat_plot <- ggplot(seat_coefs, aes(x = coefficient, y = reorder(variable_label,
     )
 
 # Save seat plot
-ggsave("Output/Images/Graphs/seats_coefficients.png",
+ggsave("Output/Images/Graphs/seats_coefficients_landOwned.png",
     plot = seat_plot,
     width = 10, height = 6, dpi = 300
 )
 
-cat("\nRegression plots created successfully!\n")
-cat("- Output/Images/Graphs/muster_coefficients.png\n")
-cat("- Output/Images/Graphs/primary_coefficients.png\n")
-cat("- Output/Images/Graphs/seats_coefficients.png\n")
+cat("\nRegression plots (landOwned) created successfully!\n")
+cat("- Output/Images/Graphs/muster_coefficients_landOwned.png\n")
+cat("- Output/Images/Graphs/primary_coefficients_landOwned.png\n")
+cat("- Output/Images/Graphs/seats_coefficients_landOwned.png\n")

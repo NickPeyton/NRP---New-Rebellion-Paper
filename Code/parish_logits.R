@@ -6,8 +6,24 @@ pacman::p_load(
 
 setwd("C:/PhD/DissolutionProgramming/NRP---New-Rebellion-Paper/")
 pdf <- read_sf(dsn = "Data/Processed/northParishFlows.shp")
+pdf$lbigLand <- log(pdf$bigLand + 1)
 
-monastic_vars <- c("llandOwned", "ltitheOutT", "lalmsInTot", "lnetInc", "friary")
+# Standardize and center continuous variables
+pdf$llandOwned <- scale(pdf$llandOwned, center = TRUE, scale = TRUE)[, 1]
+pdf$lsmLand <- scale(pdf$lsmLand, center = TRUE, scale = TRUE)[, 1]
+pdf$lbigLand <- scale(pdf$lbigLand, center = TRUE, scale = TRUE)[, 1]
+pdf$ltitheOutT <- scale(pdf$ltitheOutT, center = TRUE, scale = TRUE)[, 1]
+pdf$lalmsInTot <- scale(pdf$lalmsInTot, center = TRUE, scale = TRUE)[, 1]
+pdf$lnetInc <- scale(pdf$lnetInc, center = TRUE, scale = TRUE)[, 1]
+pdf$lLStax_pc <- scale(pdf$lLStax_pc, center = TRUE, scale = TRUE)[, 1]
+pdf$lpopC <- scale(pdf$lpopC, center = TRUE, scale = TRUE)[, 1]
+pdf$Y_COORD <- scale(pdf$Y_COORD, center = TRUE, scale = TRUE)[, 1]
+pdf$area <- scale(pdf$area, center = TRUE, scale = TRUE)[, 1]
+pdf$mean_slope <- scale(pdf$mean_slope, center = TRUE, scale = TRUE)[, 1]
+pdf$wet_1535 <- scale(pdf$wet_1535, center = TRUE, scale = TRUE)[, 1]
+pdf$wet_1536 <- scale(pdf$wet_1536, center = TRUE, scale = TRUE)[, 1]
+
+monastic_vars <- c("lsmLand", "lbigLand", "ltitheOutT", "lalmsInTot", "lnetInc", "friary")
 # Removed X_COORD (VIF=24.6), news_day (VIF=35.8), and LS_pc_ch (680 NAs)
 controls <- c("lLStax_pc", "wet_1535", "wet_1536", "dg_percy", "lpopC", "Y_COORD", "uplands", "lowlands", "area", "mean_slope")
 
@@ -38,7 +54,7 @@ for (var in monastic_vars) {
 
 hide_vars <- c("Constant", "Y_COORD", "uplands", "lowlands", "area", "mean_slope")
 cov_labels <- c(
-  "ln(Land Owned)", "ln(Tithe)", "ln(Alms)", "ln(Net Income)", "Friary",
+  "ln(Small Monastery Land)", "ln(Large Monastery Land)", "ln(Tithe)", "ln(Alms)", "ln(Net Income)", "Friary",
   "ln(Lay Subsidy)", "Wet 1535", "Wet 1536", "Percy", "ln(Population)"
 )
 stargazer(muster_results_list,
@@ -84,7 +100,7 @@ stargazer(seat_results_list,
 )
 
 var_list_list <- list(
-  c("llandOwned"),
+  c("lsmLand", "lbigLand"),
   c("ltitheOutT", "lalmsInTot", "lnetInc", "friary"),
   c("lLStax_pc", "lpopC", "wet_1535", "wet_1536", "dg_percy"),
   c("Y_COORD", "uplands", "lowlands", "area", "mean_slope")
@@ -125,7 +141,7 @@ for (vars in var_list_list) {
 }
 
 cov_labels <- c(
-  "ln(Land Owned)", "ln(Tithe)", "ln(Alms)", "ln(Net Income)", "Friary",
+  "ln(Small Monastery Land)", "ln(Large Monastery Land)", "ln(Tithe)", "ln(Alms)", "ln(Net Income)", "Friary",
   "ln(Lay Subsidy)", "Wet 1535", "Wet 1536", "Percy", "ln(Population)"
 )
 
