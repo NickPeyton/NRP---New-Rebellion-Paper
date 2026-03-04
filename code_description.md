@@ -5,7 +5,7 @@ This document provides a brief description of each script found in the `Code/` d
 ## Python Scripts
 
 ### `00_parish_processing_consolidated.py`
-The primary data processing pipeline. It loads and cleans the *Valor Ecclesiasticus* dataset, creates geographic "flow" lines for monastic income and expenditure, and performs spatial joins with ancient parish shapefiles. It aggregates economic data, rebellion muster points, and gentry seats to the parish level, preparing the final dataset for analysis.
+The primary data processing pipeline. It loads and cleans the *Valor Ecclesiasticus* dataset, creates geographic "flow" lines for monastic income and expenditure, and performs spatial joins with ancient parish shapefiles. It aggregates economic data, rebellion muster points, and gentry seats to the parish level, preparing the final dataset for analysis. New variables added: `bigHouse` (dummy for houses with net income > £200/yr), `smHouse` (dummy ≤ £200/yr), distance-decay weighted land and tithe variables (`lo_dw`, `sm_dw`, `ti_dw`) using a 12.5 km threshold, per capita and per sq km denominator versions of all main monastic variables, and `distScot` (distance from parish centroid to the Scottish border, approximated as the northern boundary of the north English counties).
 
 ### `01_rebel_var_mods.py`
 Extends the rebellion-related variables. It calculates parish proximity to rebel muster points (within 10km) and assigns parishes to specific "hosts" (gentlemen involved in the rebellion) based on convex hulls and distance (within 50km). It also creates dummy variables for influential surnames like Darcy, Percy, and Neville.
@@ -52,7 +52,10 @@ Runs Logit regressions with Conley standard errors. This approach accounts for s
 The R implementation of grid-based regressions. It performs Poisson models on muster and seat counts across different grid sizes, exploring the robustness of the results to different geographic aggregations.
 
 ### `parish_logits.R`
-Executes parish-level Logit and Poisson regressions. It focuses on the relationship between specific monastic variables (land, tithes, alms, net income) and rebellion outcomes, producing LaTeX tables for the paper.
+Executes parish-level Logit and Poisson regressions. It focuses on the relationship between specific monastic variables (land, tithes, alms, and house-size dummies) and rebellion outcomes, producing LaTeX tables for the paper. Updated: `lnetInc` replaced by `smHouse`/`bigHouse` dummies; `dg_percy` replaced by `disg_gnt` (all disgruntled gentry surnames); `distScot` added to controls; full robustness model (all monastic variables simultaneously) added, outputting to `Output/Tables/full_monastic.tex`.
+
+### `parish_logits_interactions.R`
+Runs the same parish-level regressions as `parish_logits.R` but uses distance-decay weighted versions of monastic land and tithe variables. Tests three specifications: raw distance-weighted values, per-capita distance-weighted values, and per-sq-km distance-weighted values. Outputs 9 LaTeX tables to `Output/Tables/` with prefix `muster_dw_*`, `primary_dw_*`, `seat_dw_*`.
 
 ### `PSM.R`
 Implements Propensity Score Matching (PSM) and Inverse-Probability-Weighting (IPW). It estimates the treatment effect of monastic land ownership on rebellion using weighted Logit and Cox Proportional Hazards models to control for selection bias.

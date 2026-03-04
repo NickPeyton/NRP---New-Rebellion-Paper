@@ -142,9 +142,17 @@ print('Processing points for parish aggregation...')
 # Small House categorization
 net_df = north_lines_gdf[north_lines_gdf['counterParty']=='Net income'][['total', 'geometry']].rename(columns={'total':'rhNetInc'})
 net_df['smHouse'] = (net_df['rhNetInc'] <= (200*240)).astype(int)
+net_df['bigHouse'] = (net_df['rhNetInc'] > (200*240)).astype(int)
 
 # Separate flows into source/destination points
 lines_proc = north_lines_gdf[north_lines_gdf['sum']==0].copy()
+
+# Distance-decay weights: 1 if distance <= 12.5 km, else min(1, 1/(distance_km - 12.5))
+# The min() caps weights at 1 for the 12.5-13.5 km range, preventing near-singularity spikes.
+# Decay begins (weight < 1) only once distance exceeds 13.5 km.
+llen_km = lines_proc.geometry.length / 1000
+lines_proc['dist_w'] = np.where(llen_km <= 12.5, 1.0, np.minimum(1.0, 1.0 / (llen_km - 12.5)))
+
 in_parts, out_parts = [], []
 
 for d in ['in', 'out']:
@@ -156,6 +164,10 @@ for d in ['in', 'out']:
             temp[v + 'InTot'] = temp[v] * temp['inTot']
             temp[v + 'OutTot'] = 0
         temp['landOwned'] = temp['dissLand'] = temp['ownLandVal'] = temp['otherLandVal'] = temp['smLand'] = 0
+        temp['lo_dw'] = 0
+        temp['sl_dw'] = 0
+        temp['bl_dw'] = 0
+        temp['ti_dw'] = 0
         in_parts.append(temp)
     else:
         temp['geometry'] = temp['geometry'].map(lambda x: sh.geometry.Point(list(x.coords)[0]))
@@ -168,6 +180,10 @@ for d in ['in', 'out']:
         temp['ownLandVal'] = temp['landOwned'] * temp['ownLand']
         temp['otherLandVal'] = temp['landOwned'] - temp['ownLandVal']
         temp['smLand'] = temp['landOwned'] * temp['smallHouse']
+        temp['lo_dw'] = temp['landOwned'] * temp['dist_w']
+        temp['sl_dw'] = temp['smLand'] * temp['dist_w']
+        temp['bl_dw'] = (temp['landOwned'] - temp['smLand']) * temp['dist_w']
+        temp['ti_dw'] = temp['titheOutTot'] * temp['dist_w']
         out_parts.append(temp)
 
 in_out_df = gp.GeoDataFrame(pd.concat(in_parts + out_parts), geometry='geometry', crs='epsg:27700')
@@ -196,7 +212,8 @@ parish_df = parish_df.dissolve(by='par_county', aggfunc=aggDict)
 
 # %% Spatial Aggregation of Flows, Musters, and Seats
 print('Spatially joining flows and rebellion data...')
-io_vars = ['outTot', 'inTot', 'landOwned', 'dissLand', 'smLand', 'ownLandVal', 'otherLandVal'] + [v + 'InTot' for v in catVars] + [v + 'OutTot' for v in catVars]
+io_vars = ['outTot', 'inTot', 'landOwned', 'dissLand', 'smLand', 'ownLandVal', 'otherLandVal',
+           'lo_dw', 'sl_dw', 'bl_dw', 'ti_dw'] + [v + 'InTot' for v in catVars] + [v + 'OutTot' for v in catVars]
 # Using intersects to ensure points on boundaries are captured
 joined_io = gp.sjoin(in_out_df, parish_df[['geometry']], how='right', predicate='intersects').groupby('par_county').agg({v: 'sum' for v in io_vars})
 parish_df = parish_df.join(joined_io)
@@ -211,7 +228,7 @@ parish_df['primary'] = parish_df['primary'].fillna(0).astype(int)
 joined_seats = gp.sjoin(seat_df, parish_df[['geometry']], how='right', predicate='intersects').groupby('par_county').agg({'seats':'sum'}).fillna(0)
 parish_df = parish_df.join(joined_seats)
 
-joined_net = gp.sjoin(net_df, parish_df[['geometry']], how='right', predicate='intersects').groupby('par_county').agg({'rhNetInc':'sum', 'smHouse':'sum'}).fillna(0)
+joined_net = gp.sjoin(net_df, parish_df[['geometry']], how='right', predicate='intersects').groupby('par_county').agg({'rhNetInc':'sum', 'smHouse':'max', 'bigHouse':'max'}).fillna(0)
 parish_df = parish_df.join(joined_net)
 parish_df['netFlow'] = parish_df['inTot'] - parish_df['outTot']
 
@@ -257,6 +274,24 @@ population_df = population_df.rename(columns={'pop': 'popC'})
 joined_pop = gp.sjoin(parish_df[['geometry']], population_df[['geometry', 'popC']], how='left', predicate='intersects').groupby('par_county').agg({'popC':'sum'}).fillna(0)
 parish_df = parish_df.join(joined_pop)
 
+# Distance to Scottish border
+# Use the northern boundary of the consolidated north counties as an approximation
+print('Calculating distance to Scottish border...')
+counties_gdf = gp.read_file(RAW + 'GIS/BNG Projections/CountiesConsolidatedBNG.shp')
+name_col = next((c for c in counties_gdf.columns
+                 if c.upper() in ['NAME', 'CTYNAME', 'GAZ_CNTY', 'COUNTY', 'COUN_NAME']), None)
+if name_col:
+    north_cty = counties_gdf[counties_gdf[name_col].str.upper().str.strip().isin(
+        [n.upper() for n in north_list])]
+    north_union = north_cty.unary_union if len(north_cty) > 0 else parish_df.unary_union
+else:
+    north_union = parish_df.unary_union
+bds = north_union.bounds  # (minx, miny, maxx, maxy)
+northing_thresh = bds[1] + 0.7 * (bds[3] - bds[1])
+scot_clip = sh.geometry.box(bds[0] - 10000, northing_thresh, bds[2] + 10000, bds[3] + 10000)
+scot_border = north_union.boundary.intersection(scot_clip)
+parish_df['distScot'] = parish_df.geometry.centroid.distance(scot_border)
+
 # Truncate variable names for Shapefile compatibility
 truncDict = {'copyhold_count_1850':'copys_1850', 'copyhold_count':'copys', 'NrGentry_1400':'gent_1400', 'copyhold_count_1516':'copys_1516', 'perc_catholics_1800':'cath_1800', 'ind_share_1831':'ind_1831', 'agr_share_1831':'agr_1831', 'LS_pc_change':'LS_pc_ch', 'pc_change1525_1086':'pc15251086', 'pc_change1525_1066':'pc15251066', 'pc_change1332_1086':'pc13321086', 'pc_change1332_1066':'pc13321066', 'pc_change1086_1066':'pc10861066', 'LStax_pc_1332':'lspc1332', 'agr_share_1370':'agsh1370', 'ind_share_1370':'indsh1370', 'mean_elevation':'mean_elev', 'wheatsuitability':'wheatsuit', 'distancetoriver':'distriver', 'distancetomarkettown':'distmkt', 'distancetoborder':'distborder', 'distancetolondon':'distlond', 'distancetocoal':'distcoal'}
 parish_df = parish_df.rename(columns=truncDict)
@@ -301,6 +336,53 @@ pdf['lownLand'] = np.log(pdf['ownLandVal'] + 1)
 for monast_var in ['land', 'alms', 'tithe']:
     pdf[f'l{monast_var}InTot'] = np.log(pdf[f'{monast_var}InTot'] + 1)
     pdf[f'l{monast_var}OutTot'] = np.log(pdf[f'{monast_var}OutTot'] + 1)
+
+# Per capita and per square km denominator versions of monastic variables
+safe_popC = pdf['popC'].replace(0, np.nan)
+safe_area = pdf['area'].replace(0, np.nan)  # area is in km² (divided by 1M above)
+
+pdf['lo_pc'] = pdf['landOwned'] / safe_popC
+pdf['lo_sk'] = pdf['landOwned'] / safe_area
+pdf['sm_pc'] = pdf['smLand'] / safe_popC
+pdf['sm_sk'] = pdf['smLand'] / safe_area
+pdf['bg_pc'] = pdf['bigLand'] / safe_popC
+pdf['bg_sk'] = pdf['bigLand'] / safe_area
+pdf['ti_pc'] = pdf['titheIncCalc'] / safe_popC
+pdf['ti_sk'] = pdf['titheIncCalc'] / safe_area
+pdf['ni_pc'] = pdf['rhNetInc'] / safe_popC
+pdf['ni_sk'] = pdf['rhNetInc'] / safe_area
+
+# Distance-weighted per capita and per sq km
+pdf['lo_dwpc'] = pdf['lo_dw'] / safe_popC
+pdf['lo_dwsk'] = pdf['lo_dw'] / safe_area
+pdf['sl_dwpc'] = pdf['sl_dw'] / safe_popC
+pdf['sl_dwsk'] = pdf['sl_dw'] / safe_area
+pdf['bl_dwpc'] = pdf['bl_dw'] / safe_popC
+pdf['bl_dwsk'] = pdf['bl_dw'] / safe_area
+pdf['ti_dwpc'] = pdf['ti_dw'] / safe_popC
+pdf['ti_dwsk'] = pdf['ti_dw'] / safe_area
+
+# Log transforms for distance-weighted and denominator variables (for regressions)
+pdf['llo_dw'] = np.log(pdf['lo_dw'] + 1)
+pdf['lsl_dw'] = np.log(pdf['sl_dw'] + 1)
+pdf['lbl_dw'] = np.log(pdf['bl_dw'] + 1)
+pdf['lti_dw'] = np.log(pdf['ti_dw'] + 1)
+pdf['llo_pc'] = np.log(pdf['lo_pc'].fillna(0) + 1)
+pdf['llo_sk'] = np.log(pdf['lo_sk'].fillna(0) + 1)
+pdf['lsm_pc'] = np.log(pdf['sm_pc'].fillna(0) + 1)
+pdf['lsm_sk'] = np.log(pdf['sm_sk'].fillna(0) + 1)
+pdf['lbg_pc'] = np.log(pdf['bg_pc'].fillna(0) + 1)
+pdf['lbg_sk'] = np.log(pdf['bg_sk'].fillna(0) + 1)
+pdf['lti_pc'] = np.log(pdf['ti_pc'].fillna(0) + 1)
+pdf['lti_sk'] = np.log(pdf['ti_sk'].fillna(0) + 1)
+pdf['llo_dwpc'] = np.log(pdf['lo_dwpc'].fillna(0) + 1)
+pdf['llo_dwsk'] = np.log(pdf['lo_dwsk'].fillna(0) + 1)
+pdf['lsl_dwpc'] = np.log(pdf['sl_dwpc'].fillna(0) + 1)
+pdf['lsl_dwsk'] = np.log(pdf['sl_dwsk'].fillna(0) + 1)
+pdf['lbl_dwpc'] = np.log(pdf['bl_dwpc'].fillna(0) + 1)
+pdf['lbl_dwsk'] = np.log(pdf['bl_dwsk'].fillna(0) + 1)
+pdf['lti_dwpc'] = np.log(pdf['ti_dwpc'].fillna(0) + 1)
+pdf['lti_dwsk'] = np.log(pdf['ti_dwsk'].fillna(0) + 1)
 
 # Final Output
 # pdf.drop(columns=['par_county'], inplace=True)  # Drop ID for shapefile compatibility

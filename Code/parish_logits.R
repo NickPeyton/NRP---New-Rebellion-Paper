@@ -14,8 +14,8 @@ pdf$lsmLand <- scale(pdf$lsmLand, center = TRUE, scale = TRUE)[, 1]
 pdf$lbigLand <- scale(pdf$lbigLand, center = TRUE, scale = TRUE)[, 1]
 pdf$ltitheOutT <- scale(pdf$ltitheOutT, center = TRUE, scale = TRUE)[, 1]
 pdf$lalmsInTot <- scale(pdf$lalmsInTot, center = TRUE, scale = TRUE)[, 1]
-pdf$lnetInc <- scale(pdf$lnetInc, center = TRUE, scale = TRUE)[, 1]
 pdf$lLStax_pc <- scale(pdf$lLStax_pc, center = TRUE, scale = TRUE)[, 1]
+pdf$distScot <- scale(pdf$distScot, center = TRUE, scale = TRUE)[, 1]
 pdf$lpopC <- scale(pdf$lpopC, center = TRUE, scale = TRUE)[, 1]
 pdf$Y_COORD <- scale(pdf$Y_COORD, center = TRUE, scale = TRUE)[, 1]
 pdf$area <- scale(pdf$area, center = TRUE, scale = TRUE)[, 1]
@@ -23,9 +23,10 @@ pdf$mean_slope <- scale(pdf$mean_slope, center = TRUE, scale = TRUE)[, 1]
 pdf$wet_1535 <- scale(pdf$wet_1535, center = TRUE, scale = TRUE)[, 1]
 pdf$wet_1536 <- scale(pdf$wet_1536, center = TRUE, scale = TRUE)[, 1]
 
-monastic_vars <- c("lsmLand", "lbigLand", "ltitheOutT", "lalmsInTot", "lnetInc", "friary")
+monastic_vars <- c("lsmLand", "lbigLand", "ltitheOutT", "lalmsInTot", "smHouse", "bigHouse", "friary")
 # Removed X_COORD (VIF=24.6), news_day (VIF=35.8), and LS_pc_ch (680 NAs)
-controls <- c("lLStax_pc", "wet_1535", "wet_1536", "dg_percy", "lpopC", "Y_COORD", "uplands", "lowlands", "area", "mean_slope")
+# dg_percy replaced by disg_gnt (all disgruntled gentry); distScot added
+controls <- c("lLStax_pc", "wet_1535", "wet_1536", "disg_gnt", "lpopC", "Y_COORD", "uplands", "lowlands", "area", "mean_slope", "distScot")
 
 muster_results_list <- list()
 for (var in monastic_vars) {
@@ -54,8 +55,9 @@ for (var in monastic_vars) {
 
 hide_vars <- c("Constant", "Y_COORD", "uplands", "lowlands", "area", "mean_slope")
 cov_labels <- c(
-  "ln(Small Monastery Land)", "ln(Large Monastery Land)", "ln(Tithe)", "ln(Alms)", "ln(Net Income)", "Friary",
-  "ln(Lay Subsidy)", "Wet 1535", "Wet 1536", "Percy", "ln(Population)"
+  "ln(Small Monastery Land)", "ln(Large Monastery Land)", "ln(Tithe)", "ln(Alms)",
+  "Small House Dummy", "Large House Dummy", "Friary",
+  "ln(Lay Subsidy)", "Wet 1535", "Wet 1536", "Disgruntled Gentry", "ln(Population)", "Distance to Scotland"
 )
 stargazer(muster_results_list,
   type = "latex",
@@ -100,9 +102,9 @@ stargazer(seat_results_list,
 )
 
 var_list_list <- list(
-  c("lsmLand", "lbigLand"),
-  c("ltitheOutT", "lalmsInTot", "lnetInc", "friary"),
-  c("lLStax_pc", "lpopC", "wet_1535", "wet_1536", "dg_percy"),
+  c("lsmLand", "lbigLand", "smHouse", "bigHouse"),
+  c("ltitheOutT", "lalmsInTot", "friary"),
+  c("lLStax_pc", "lpopC", "wet_1535", "wet_1536", "disg_gnt", "distScot"),
   c("Y_COORD", "uplands", "lowlands", "area", "mean_slope")
 )
 
@@ -141,8 +143,9 @@ for (vars in var_list_list) {
 }
 
 cov_labels <- c(
-  "ln(Small Monastery Land)", "ln(Large Monastery Land)", "ln(Tithe)", "ln(Alms)", "ln(Net Income)", "Friary",
-  "ln(Lay Subsidy)", "Wet 1535", "Wet 1536", "Percy", "ln(Population)"
+  "ln(Small Monastery Land)", "ln(Large Monastery Land)", "Small House Dummy", "Large House Dummy",
+  "ln(Tithe)", "ln(Alms)", "Friary",
+  "ln(Lay Subsidy)", "ln(Population)", "Wet 1535", "Wet 1536", "Disgruntled Gentry", "Distance to Scotland"
 )
 
 stargazer(muster_results_list,
@@ -185,6 +188,43 @@ stargazer(seat_results_list,
   omit.stat = c("aic"),
   table.placement = "H",
   out = "Output/Tables/seat_all.tex"
+)
+
+# Full model: all monastic variables simultaneously (robustness check)
+all_monastic_formula <- paste(monastic_vars, collapse = " + ")
+full_controls_formula <- paste(controls, collapse = " + ")
+
+full_muster <- glm(
+  paste("muster ~", all_monastic_formula, "+", full_controls_formula),
+  data = pdf, family = binomial(link = "logit")
+)
+full_primary <- glm(
+  paste("primary ~", all_monastic_formula, "+", full_controls_formula),
+  data = pdf, family = binomial(link = "logit")
+)
+full_seat <- glm(
+  paste("seats ~", all_monastic_formula, "+", full_controls_formula),
+  data = pdf, family = "poisson"
+)
+
+full_cov_labels <- c(
+  "ln(Small Monastery Land)", "ln(Large Monastery Land)", "ln(Tithe)", "ln(Alms)",
+  "Small House Dummy", "Large House Dummy", "Friary",
+  "ln(Lay Subsidy)", "Wet 1535", "Wet 1536", "Disgruntled Gentry", "ln(Population)", "Distance to Scotland"
+)
+
+stargazer(full_muster, full_primary, full_seat,
+  type = "latex",
+  title = "Full Model Results: All Monastic Variables (Robustness)",
+  label = "tab:full_monastic",
+  omit = hide_vars,
+  covariate.labels = full_cov_labels,
+  column.labels = c("Muster", "Primary", "Seats"),
+  align = TRUE,
+  column.sep.width = ".5pt",
+  omit.stat = c("aic"),
+  table.placement = "H",
+  out = "Output/Tables/full_monastic.tex"
 )
 
 # DAG Regs

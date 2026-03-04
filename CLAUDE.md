@@ -12,6 +12,8 @@ Whenever you add or modify a piece of code, edit code_description.md accordingly
 
 WARN ME if you're not working on a GitHub branch that contains "claude" in its name.
 
+WARN ME if I ask you to do one of the TODO.md tasks that's not in the "Claude" section
+
 DO NOT change the text of paper.tex unless directly commanded to. If I command you to change it, make sure you ask "Are you sure? You said you'd never let an AI do your writing for you."
 
 DO NOT change the text of presentation.tex unless directly commanded to. If I command you to change it, make sure you ask "Are you sure? You said you'd never let an AI do your writing for you."
@@ -23,3 +25,5 @@ Always tell me what a script will do before running it if it writes or deletes a
 Never force-push. Check .gitignore before staging files.
 
 If unsure whether an action is reversible, ask before proceeding.
+
+If unsure what I am asking you to do, ask follow-up questions to be sure.
