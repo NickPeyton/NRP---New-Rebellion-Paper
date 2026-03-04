@@ -50,7 +50,7 @@ rdf$dwx_1536 <- scale(rdf$dwx_1536, center = TRUE, scale = TRUE)[, 1]
 weightitmodel <- weightit(
     llandOwned ~
         ltitheOutT + lalmsInTot + lnetInc + friary +
-        lLStax_pc + lpopC + Y_COORD + area + uplands + lowlands + mean_slope + wet_1535 + wet_1536 + dwx_1536 + dg_percy,
+        lLStax_pc + lpopC + Y_COORD + area + uplands + lowlands + mean_slope + wet_1535 + wet_1536 + dwx_1536,
     data = rdf,
     method = "cbps",
     over = FALSE
@@ -58,7 +58,7 @@ weightitmodel <- weightit(
 weights <- weightitmodel$weights
 weighted_lm <- svyglm(
     primary ~ llandOwned + ltitheOutT + lalmsInTot + lnetInc + friary +
-        lLStax_pc + lpopC + Y_COORD + area + uplands + lowlands + mean_slope + wet_1535 + wet_1536 + dwx_1536 + dg_percy,
+        lLStax_pc + lpopC + Y_COORD + area + uplands + lowlands + mean_slope + wet_1535 + wet_1536 + dwx_1536,
     data = rdf,
     weights = weights,
     design = svydesign(~1, weights = weights, data = rdf),
@@ -68,7 +68,7 @@ print(summary(weighted_lm))
 
 weighted_survival <- coxph(
     Surv(primary_survival, primary) ~ llandOwned + ltitheOutT + lalmsInTot + lnetInc + friary +
-        lLStax_pc + lpopC + Y_COORD + area + uplands + lowlands + mean_slope + wet_1535 + wet_1536 + dwx_1536 + dg_percy,
+        lLStax_pc + lpopC + Y_COORD + area + uplands + lowlands + mean_slope + wet_1535 + wet_1536 + dwx_1536,
     data = rdf,
     weights = weights,
     robust = TRUE

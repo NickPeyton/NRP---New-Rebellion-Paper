@@ -1,7 +1,7 @@
 pacman::p_load(
   sf, tidyverse, stargazer, dplyr,
   raster, spdep, sp, ggplot2, robust,
-  lmtest, sandwich
+  lmtest, sandwich, car
 )
 
 setwd("C:/PhD/DissolutionProgramming/NRP---New-Rebellion-Paper/")
@@ -17,7 +17,6 @@ pdf$lalmsInTot <- scale(pdf$lalmsInTot, center = TRUE, scale = TRUE)[, 1]
 pdf$lLStax_pc <- scale(pdf$lLStax_pc, center = TRUE, scale = TRUE)[, 1]
 pdf$distScot <- scale(pdf$distScot, center = TRUE, scale = TRUE)[, 1]
 pdf$lpopC <- scale(pdf$lpopC, center = TRUE, scale = TRUE)[, 1]
-pdf$Y_COORD <- scale(pdf$Y_COORD, center = TRUE, scale = TRUE)[, 1]
 pdf$area <- scale(pdf$area, center = TRUE, scale = TRUE)[, 1]
 pdf$mean_slope <- scale(pdf$mean_slope, center = TRUE, scale = TRUE)[, 1]
 pdf$wet_1535 <- scale(pdf$wet_1535, center = TRUE, scale = TRUE)[, 1]
@@ -25,8 +24,9 @@ pdf$wet_1536 <- scale(pdf$wet_1536, center = TRUE, scale = TRUE)[, 1]
 
 monastic_vars <- c("lsmLand", "lbigLand", "ltitheOutT", "lalmsInTot", "smHouse", "bigHouse", "friary")
 # Removed X_COORD (VIF=24.6), news_day (VIF=35.8), and LS_pc_ch (680 NAs)
-# dg_percy replaced by disg_gnt (all disgruntled gentry); distScot added
-controls <- c("lLStax_pc", "wet_1535", "wet_1536", "disg_gnt", "lpopC", "Y_COORD", "uplands", "lowlands", "area", "mean_slope", "distScot")
+# Removed disg_gnt (causally downstream from rebellion)
+# Removed Y_COORD (multicollinearity with distScot)
+controls <- c("lLStax_pc", "wet_1535", "wet_1536", "lpopC", "uplands", "lowlands", "area", "mean_slope", "distScot")
 
 muster_results_list <- list()
 for (var in monastic_vars) {
@@ -53,11 +53,11 @@ for (var in monastic_vars) {
   seat_results_list[[var]] <- result
 }
 
-hide_vars <- c("Constant", "Y_COORD", "uplands", "lowlands", "area", "mean_slope")
+hide_vars <- c("Constant", "uplands", "lowlands", "area", "mean_slope")
 cov_labels <- c(
   "ln(Small Monastery Land)", "ln(Large Monastery Land)", "ln(Tithe)", "ln(Alms)",
   "Small House Dummy", "Large House Dummy", "Friary",
-  "ln(Lay Subsidy)", "Wet 1535", "Wet 1536", "Disgruntled Gentry", "ln(Population)", "Distance to Scotland"
+  "ln(Lay Subsidy)", "Wet 1535", "Wet 1536", "ln(Population)", "Distance to Scotland"
 )
 stargazer(muster_results_list,
   type = "latex",
@@ -104,8 +104,8 @@ stargazer(seat_results_list,
 var_list_list <- list(
   c("lsmLand", "lbigLand", "smHouse", "bigHouse"),
   c("ltitheOutT", "lalmsInTot", "friary"),
-  c("lLStax_pc", "lpopC", "wet_1535", "wet_1536", "disg_gnt", "distScot"),
-  c("Y_COORD", "uplands", "lowlands", "area", "mean_slope")
+  c("lLStax_pc", "lpopC", "wet_1535", "wet_1536", "distScot"),
+  c("uplands", "lowlands", "area", "mean_slope")
 )
 
 var_list <- c()
@@ -145,7 +145,7 @@ for (vars in var_list_list) {
 cov_labels <- c(
   "ln(Small Monastery Land)", "ln(Large Monastery Land)", "Small House Dummy", "Large House Dummy",
   "ln(Tithe)", "ln(Alms)", "Friary",
-  "ln(Lay Subsidy)", "ln(Population)", "Wet 1535", "Wet 1536", "Disgruntled Gentry", "Distance to Scotland"
+  "ln(Lay Subsidy)", "ln(Population)", "Wet 1535", "Wet 1536", "Distance to Scotland"
 )
 
 stargazer(muster_results_list,
@@ -210,7 +210,7 @@ full_seat <- glm(
 full_cov_labels <- c(
   "ln(Small Monastery Land)", "ln(Large Monastery Land)", "ln(Tithe)", "ln(Alms)",
   "Small House Dummy", "Large House Dummy", "Friary",
-  "ln(Lay Subsidy)", "Wet 1535", "Wet 1536", "Disgruntled Gentry", "ln(Population)", "Distance to Scotland"
+  "ln(Lay Subsidy)", "Wet 1535", "Wet 1536", "ln(Population)", "Distance to Scotland"
 )
 
 stargazer(full_muster, full_primary, full_seat,
@@ -256,3 +256,74 @@ stargazer(dag_muster, dag_primary, dag_seat,
   table.placement = "H",
   out = "Output/Tables/dag.tex"
 )
+# ============================================================================
+# VIF Analysis for Multicollinearity Detection
+# ============================================================================
+
+cat("\n========== VIF ANALYSIS ==========\n\n")
+
+# Function to calculate and display VIF
+vif_table <- function(model, model_name) {
+  cat(paste0("Model: ", model_name, "\n"))
+  cat("-----------------------------------\n")
+  vif_values <- vif(model)
+  vif_df <- data.frame(
+    Variable = names(vif_values),
+    VIF = round(vif_values, 3)
+  )
+  vif_df <- vif_df[order(-vif_df$VIF), ]
+  print(vif_df)
+  cat("\n")
+  return(vif_df)
+}
+
+# Individual monastic vars (using the full control set)
+cat("=== INDIVIDUAL MONASTIC VARIABLE MODELS ===\n\n")
+for (i in seq_along(monastic_vars)) {
+  vif_table(muster_results_list[[i]], 
+            paste("Muster -", monastic_vars[[i]]))
+}
+
+# Progressive model - final fully specified model
+cat("\n=== PROGRESSIVE MODELS (Final) ===\n\n")
+vif_table(muster_results_list[[4]], "Muster - Full Progressive")
+vif_table(primary_results_list[[4]], "Primary - Full Progressive")
+vif_table(seat_results_list[[4]], "Seats - Full Progressive")
+
+# Full model with all monastic variables
+cat("\n=== FULL MODELS (All Monastic Vars) ===\n\n")
+vif_table(full_muster, "Muster - Full Model")
+vif_table(full_primary, "Primary - Full Model")
+vif_table(full_seat, "Seats - Full Model")
+
+# DAG models
+cat("\n=== DAG MODELS ===\n\n")
+vif_table(dag_muster, "Muster - DAG Model")
+vif_table(dag_primary, "Primary - DAG Model")
+vif_table(dag_seat, "Seats - DAG Model")
+
+# Summary: Identify high-VIF predictors (VIF > 10 indicates problematic multicollinearity)
+cat("\n========== VIF SUMMARY & RECOMMENDATIONS ==========\n")
+cat("VIF Interpretation:\n")
+cat("  VIF < 5:    Low multicollinearity (generally acceptable)\n")
+cat("  VIF 5-10:   Moderate multicollinearity (use with caution)\n")
+cat("  VIF > 10:   High multicollinearity (problematic)\n\n")
+
+# Extract and summarize all VIF values
+all_vif_results <- list()
+all_vif_results[["muster_model1"]] <- vif(muster_results_list[[1]])
+all_vif_results[["muster_full_prog"]] <- vif(muster_results_list[[4]])
+all_vif_results[["full_muster"]] <- vif(full_muster)
+
+high_vif <- sapply(all_vif_results, function(x) any(x > 10))
+if (any(high_vif)) {
+  cat("WARNING: High VIF (>10) detected in:\n")
+  for (name in names(high_vif)[high_vif]) {
+    high_vars <- names(all_vif_results[[name]][all_vif_results[[name]] > 10])
+    cat(paste("  -", name, ":", paste(high_vars, collapse=", "), "\n"))
+  }
+} else {
+  cat("✓ No high VIF (>10) detected. Multicollinearity appears manageable.\n")
+}
+
+cat("\n")

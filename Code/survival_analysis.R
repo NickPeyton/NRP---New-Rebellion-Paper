@@ -45,8 +45,7 @@ cox1 <- coxph(
         lalmsInTot +
         lnetInc +
         friary +
-        wet_1535 + wet_1536 +
-        dg_percy,
+        wet_1535 + wet_1536,
     data = rdf
 )
 cox2 <- coxph(
@@ -57,7 +56,6 @@ cox2 <- coxph(
         lnetInc +
         friary +
         wet_1535 + wet_1536 +
-        dg_percy +
         lLStax_pc +
         lpopC,
     data = rdf
@@ -69,7 +67,6 @@ cox3 <- coxph(Surv(primary_survival, primary) ~
     lnetInc +
     friary +
     wet_1535 + wet_1536 +
-    dg_percy +
     lLStax_pc +
     lpopC +
     Y_COORD +
@@ -90,7 +87,7 @@ stargazer(cox1, cox2, cox3,
         c("Geographic Controls", "N", "N", "Y")
     ),
     covariate.labels = c(
-        "ln(Land Owned)", "ln(Tithe)", "ln(Alms)", "ln(Monastic Net Income)", "Friary", "Wet 1535", "Wet 1536", "Percy", "ln(1535 Lay Subsidy Amount)", "ln(Population)"
+        "ln(Land Owned)", "ln(Tithe)", "ln(Alms)", "ln(Monastic Net Income)", "Friary", "Wet 1535", "Wet 1536", "ln(1535 Lay Subsidy Amount)", "ln(Population)"
     ),
     omit.stat = c("wald", "lr", "logrank"),
     out = "Output/Tables/survival.tex"

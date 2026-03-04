@@ -39,7 +39,7 @@ Before executing any script that writes, modifies, or deletes files:
 - Explain exactly which files will be affected
 - Explain whether the operation is reversible
 
-Do not execute any task not in the "Claude" section of the TODO.md file unless explicitly asked to do so.
+Do not execute any task not in the "Claude" or "Gemini" section of the TODO.md file unless explicitly asked to do so.
 
 TRANSPARENCY REQUIREMENTS
 

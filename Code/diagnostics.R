@@ -32,7 +32,7 @@ print(round(cor_matrix, 3))
 cat("\n=== Variance Inflation Factors ===\n")
 model <- glm(
     primary ~ llandOwned + lLStax_pc + LS_pc_ch + wet_1535 + wet_1536 +
-        dg_percy + lpopC + X_COORD + Y_COORD + uplands + lowlands + area +
+        lpopC + X_COORD + Y_COORD + uplands + lowlands + area +
         mean_slope + news_day,
     data = pdf, family = binomial
 )
@@ -47,7 +47,7 @@ cat("\n=== Model with standardized llandOwned ===\n")
 pdf$llandOwned_std <- scale(pdf$llandOwned)[, 1]
 model_std <- glm(
     primary ~ llandOwned_std + lLStax_pc + LS_pc_ch + wet_1535 + wet_1536 +
-        dg_percy + lpopC + X_COORD + Y_COORD + uplands + lowlands + area +
+        lpopC + X_COORD + Y_COORD + uplands + lowlands + area +
         mean_slope + news_day,
     data = pdf, family = binomial
 )

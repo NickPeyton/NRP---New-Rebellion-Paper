@@ -153,7 +153,7 @@ ax.scatter([src_c], [src_r], c='red', marker='*', label='Louth Park Abbey', s=20
 ax.set_title('Least Cost Surface (Days from Louth Park)')
 ax.legend()
 plt.savefig(os.path.join('Output/Images/Maps/news_day_cost_surface.png'), dpi=300)
-plt.show()
+# plt.show()
 
 #%% Plot Least Cost Surface with Route Overlays
 print("Creating route overlay plot...")
@@ -369,4 +369,4 @@ ax.set_ylabel('')
 output_path = os.path.join(base_dir, 'Output/Images/Maps/news_day_with_routes.png')
 plt.savefig(output_path, dpi=300, bbox_inches='tight')
 print(f"Route overlay saved to {output_path}")
-plt.show()
+# plt.show()

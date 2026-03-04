@@ -44,8 +44,7 @@ cox1 <- coxph(
         lalmsInTot +
         lnetInc +
         friary +
-        wet_1535 + wet_1536 +
-        dg_percy,
+        wet_1535 + wet_1536,
     data = rdf
 )
 
@@ -58,7 +57,6 @@ cox2 <- coxph(
         lnetInc +
         friary +
         wet_1535 + wet_1536 +
-        dg_percy +
         lLStax_pc +
         lpopC,
     data = rdf
@@ -72,7 +70,6 @@ cox3 <- coxph(Surv(primary_survival, primary) ~
     lnetInc +
     friary +
     wet_1535 + wet_1536 +
-    dg_percy +
     lLStax_pc +
     lpopC +
     Y_COORD +
@@ -84,17 +81,17 @@ cox3 <- coxph(Surv(primary_survival, primary) ~
 # Variables to plot for each model
 vars_cox1 <- c(
     "lsmLand", "lbigLand", "ltitheOutT", "lalmsInTot", "lnetInc", "friary",
-    "wet_1535", "wet_1536", "dg_percy"
+    "wet_1535", "wet_1536"
 )
 
 vars_cox2 <- c(
     "lsmLand", "lbigLand", "ltitheOutT", "lalmsInTot", "lnetInc", "friary",
-    "wet_1535", "wet_1536", "dg_percy", "lLStax_pc", "lpopC"
+    "wet_1535", "wet_1536", "lLStax_pc", "lpopC"
 )
 
 vars_cox3 <- c(
     "lsmLand", "lbigLand", "ltitheOutT", "lalmsInTot", "lnetInc", "friary",
-    "wet_1535", "wet_1536", "dg_percy", "lLStax_pc", "lpopC"
+    "wet_1535", "wet_1536", "lLStax_pc", "lpopC"
 )
 
 # Variable labels
@@ -107,7 +104,6 @@ var_labels <- c(
     "friary" = "Friary",
     "wet_1535" = "Wet 1535",
     "wet_1536" = "Wet 1536",
-    "dg_percy" = "Percy",
     "lLStax_pc" = "Lay Subsidy per Capita",
     "lpopC" = "Population"
 )

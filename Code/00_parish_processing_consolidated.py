@@ -6,7 +6,7 @@ import geopandas as gp
 import shapely as sh
 import re
 import os
-from tqdm import tqdm
+from tqdm.auto import tqdm
 
 tqdm.pandas()
 os.chdir('C:/PhD/DissolutionProgramming/NRP---New-Rebellion-Paper')
@@ -168,6 +168,10 @@ for d in ['in', 'out']:
         temp['sl_dw'] = 0
         temp['bl_dw'] = 0
         temp['ti_dw'] = 0
+        temp['llo_dw'] = 0
+        temp['lsl_dw'] = 0
+        temp['lbl_dw'] = 0
+        temp['lti_dw'] = 0
         in_parts.append(temp)
     else:
         temp['geometry'] = temp['geometry'].map(lambda x: sh.geometry.Point(list(x.coords)[0]))
@@ -184,6 +188,11 @@ for d in ['in', 'out']:
         temp['sl_dw'] = temp['smLand'] * temp['dist_w']
         temp['bl_dw'] = (temp['landOwned'] - temp['smLand']) * temp['dist_w']
         temp['ti_dw'] = temp['titheOutTot'] * temp['dist_w']
+        # Log-weighted versions (log first, then distance-weight)
+        temp['llo_dw'] = np.log(temp['landOwned'] + 1) * temp['dist_w']
+        temp['lsl_dw'] = np.log(temp['smLand'] + 1) * temp['dist_w']
+        temp['lbl_dw'] = np.log((temp['landOwned'] - temp['smLand']) + 1) * temp['dist_w']
+        temp['lti_dw'] = np.log(temp['titheOutTot'] + 1) * temp['dist_w']
         out_parts.append(temp)
 
 in_out_df = gp.GeoDataFrame(pd.concat(in_parts + out_parts), geometry='geometry', crs='epsg:27700')
@@ -213,7 +222,7 @@ parish_df = parish_df.dissolve(by='par_county', aggfunc=aggDict)
 # %% Spatial Aggregation of Flows, Musters, and Seats
 print('Spatially joining flows and rebellion data...')
 io_vars = ['outTot', 'inTot', 'landOwned', 'dissLand', 'smLand', 'ownLandVal', 'otherLandVal',
-           'lo_dw', 'sl_dw', 'bl_dw', 'ti_dw'] + [v + 'InTot' for v in catVars] + [v + 'OutTot' for v in catVars]
+           'lo_dw', 'sl_dw', 'bl_dw', 'ti_dw', 'llo_dw', 'lsl_dw', 'lbl_dw', 'lti_dw'] + [v + 'InTot' for v in catVars] + [v + 'OutTot' for v in catVars]
 # Using intersects to ensure points on boundaries are captured
 joined_io = gp.sjoin(in_out_df, parish_df[['geometry']], how='right', predicate='intersects').groupby('par_county').agg({v: 'sum' for v in io_vars})
 parish_df = parish_df.join(joined_io)
@@ -362,11 +371,8 @@ pdf['bl_dwsk'] = pdf['bl_dw'] / safe_area
 pdf['ti_dwpc'] = pdf['ti_dw'] / safe_popC
 pdf['ti_dwsk'] = pdf['ti_dw'] / safe_area
 
-# Log transforms for distance-weighted and denominator variables (for regressions)
-pdf['llo_dw'] = np.log(pdf['lo_dw'] + 1)
-pdf['lsl_dw'] = np.log(pdf['sl_dw'] + 1)
-pdf['lbl_dw'] = np.log(pdf['bl_dw'] + 1)
-pdf['lti_dw'] = np.log(pdf['ti_dw'] + 1)
+# Note: llo_dw, lsl_dw, lbl_dw, lti_dw are already log-transformed and distance-weighted from line-level aggregation
+# No further transformation needed
 pdf['llo_pc'] = np.log(pdf['lo_pc'].fillna(0) + 1)
 pdf['llo_sk'] = np.log(pdf['lo_sk'].fillna(0) + 1)
 pdf['lsm_pc'] = np.log(pdf['sm_pc'].fillna(0) + 1)
@@ -375,14 +381,15 @@ pdf['lbg_pc'] = np.log(pdf['bg_pc'].fillna(0) + 1)
 pdf['lbg_sk'] = np.log(pdf['bg_sk'].fillna(0) + 1)
 pdf['lti_pc'] = np.log(pdf['ti_pc'].fillna(0) + 1)
 pdf['lti_sk'] = np.log(pdf['ti_sk'].fillna(0) + 1)
-pdf['llo_dwpc'] = np.log(pdf['lo_dwpc'].fillna(0) + 1)
-pdf['llo_dwsk'] = np.log(pdf['lo_dwsk'].fillna(0) + 1)
-pdf['lsl_dwpc'] = np.log(pdf['sl_dwpc'].fillna(0) + 1)
-pdf['lsl_dwsk'] = np.log(pdf['sl_dwsk'].fillna(0) + 1)
-pdf['lbl_dwpc'] = np.log(pdf['bl_dwpc'].fillna(0) + 1)
-pdf['lbl_dwsk'] = np.log(pdf['bl_dwsk'].fillna(0) + 1)
-pdf['lti_dwpc'] = np.log(pdf['ti_dwpc'].fillna(0) + 1)
-pdf['lti_dwsk'] = np.log(pdf['ti_dwsk'].fillna(0) + 1)
+# Per capita and per sq km logged distance-weighted variables
+pdf['llo_dwpc'] = pdf['llo_dw'] / safe_popC
+pdf['llo_dwsk'] = pdf['llo_dw'] / safe_area
+pdf['lsl_dwpc'] = pdf['lsl_dw'] / safe_popC
+pdf['lsl_dwsk'] = pdf['lsl_dw'] / safe_area
+pdf['lbl_dwpc'] = pdf['lbl_dw'] / safe_popC
+pdf['lbl_dwsk'] = pdf['lbl_dw'] / safe_area
+pdf['lti_dwpc'] = pdf['lti_dw'] / safe_popC
+pdf['lti_dwsk'] = pdf['lti_dw'] / safe_area
 
 # Final Output
 # pdf.drop(columns=['par_county'], inplace=True)  # Drop ID for shapefile compatibility

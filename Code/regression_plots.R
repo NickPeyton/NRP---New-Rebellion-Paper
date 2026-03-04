@@ -22,16 +22,10 @@ pdf$wet_1535 <- scale(pdf$wet_1535, center = TRUE, scale = TRUE)[, 1]
 pdf$wet_1536 <- scale(pdf$wet_1536, center = TRUE, scale = TRUE)[, 1]
 
 monastic_vars <- c("lsmLand", "lbigLand", "ltitheOutT", "lalmsInTot", "lnetInc", "friary")
-controls <- c("lLStax_pc", "wet_1535", "wet_1536", "dg_percy", "lpopC", "Y_COORD", "uplands", "lowlands", "area", "mean_slope")
-controls_no_percy <- c("lLStax_pc", "wet_1535", "wet_1536", "lpopC", "Y_COORD", "uplands", "lowlands", "area", "mean_slope")
+controls <- c("lLStax_pc", "wet_1535", "wet_1536", "lpopC", "Y_COORD", "uplands", "lowlands", "area", "mean_slope")
 
 # Variables to plot (in order of appearance in regression)
 vars_to_plot <- c(
-    "lsmLand", "lbigLand", "ltitheOutT", "lalmsInTot", "lnetInc", "friary",
-    "lLStax_pc", "wet_1535", "wet_1536", "dg_percy"
-)
-
-vars_to_plot_seats <- c(
     "lsmLand", "lbigLand", "ltitheOutT", "lalmsInTot", "lnetInc", "friary",
     "lLStax_pc", "wet_1535", "wet_1536"
 )
@@ -46,8 +40,7 @@ var_labels <- c(
     "friary" = "Friary",
     "lLStax_pc" = "Lay Subsidy per Capita",
     "wet_1535" = "Wet 1535",
-    "wet_1536" = "Wet 1536",
-    "dg_percy" = "Percy"
+    "wet_1536" = "Wet 1536"
 )
 
 # Function to extract coefficients with CIs (90% CI)
@@ -97,19 +90,19 @@ primary_coefs$variable_label <- var_labels[primary_coefs$variable]
 primary_coefs$significant <- primary_coefs$p_value < 0.10
 primary_coefs$order <- match(primary_coefs$variable, vars_to_plot)
 
-# Run one full seat model with all variables (excluding Percy)
-seat_formula <- paste("seats ~", paste(c(monastic_vars, controls_no_percy), collapse = " + "))
+# Run one full seat model with all variables
+seat_formula <- paste("seats ~", paste(c(monastic_vars, controls), collapse = " + "))
 seat_model <- glm(seat_formula, data = pdf, family = "poisson")
 
-# Extract coefficients for variables to plot (excluding Percy)
+# Extract coefficients for variables to plot
 seat_coefs_list <- list()
-for (var in vars_to_plot_seats) {
+for (var in vars_to_plot) {
     seat_coefs_list[[var]] <- extract_coefs(seat_model, var)
 }
 seat_coefs <- bind_rows(seat_coefs_list)
 seat_coefs$variable_label <- var_labels[seat_coefs$variable]
 seat_coefs$significant <- seat_coefs$p_value < 0.10
-seat_coefs$order <- match(seat_coefs$variable, vars_to_plot_seats)
+seat_coefs$order <- match(seat_coefs$variable, vars_to_plot)
 
 # Create coefficient plot for Muster models
 muster_plot <- ggplot(muster_coefs, aes(x = coefficient, y = reorder(variable_label, -order))) +

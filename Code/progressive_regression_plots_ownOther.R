@@ -23,7 +23,7 @@ pdf$wet_1536 <- scale(pdf$wet_1536, center = TRUE, scale = TRUE)[, 1]
 var_list_list <- list(
     c("lownLand", "lotherLand"),
     c("ltitheOutT", "lalmsInTot", "lnetInc", "friary"),
-    c("lLStax_pc", "lpopC", "wet_1535", "wet_1536", "dg_percy"),
+    c("lLStax_pc", "lpopC", "wet_1535", "wet_1536"),
     c("Y_COORD", "uplands", "lowlands", "area", "mean_slope")
 )
 
@@ -38,14 +38,13 @@ var_labels <- c(
     "lLStax_pc" = "Lay Subsidy per Capita",
     "lpopC" = "Population",
     "wet_1535" = "Wet 1535",
-    "wet_1536" = "Wet 1536",
-    "dg_percy" = "Percy"
+    "wet_1536" = "Wet 1536"
 )
 
 # Variables to plot (focus on main variables, not geographic controls)
 vars_to_plot <- c(
     "lownLand", "lotherLand", "ltitheOutT", "lalmsInTot", "lnetInc", "friary",
-    "lLStax_pc", "lpopC", "wet_1535", "wet_1536", "dg_percy"
+    "lLStax_pc", "lpopC", "wet_1535", "wet_1536"
 )
 
 # Function to extract coefficients with 90% CI from glm
@@ -101,9 +100,7 @@ seat_results_list <- list()
 i <- 1
 for (vars in var_list_list) {
     var_list <- c(var_list, vars)
-    # Remove dg_percy from seats models if present
-    var_list_seats <- var_list[var_list != "dg_percy"]
-    formula <- paste("seats ~", paste(var_list_seats, collapse = " + "))
+    formula <- paste("seats ~", paste(var_list, collapse = " + "))
     result <- glm(formula, data = pdf, family = "poisson")
     seat_results_list[[i]] <- result
     i <- i + 1
@@ -141,11 +138,10 @@ primary_coefs$significant <- primary_coefs$p_value < 0.10
 primary_coefs$order <- match(primary_coefs$variable, vars_to_plot)
 primary_coefs$model <- factor(primary_coefs$model, levels = c("Model 4", "Model 3", "Model 2", "Model 1"))
 
-# Extract coefficients for seat models (excluding Percy)
-vars_to_plot_seats <- vars_to_plot[vars_to_plot != "dg_percy"]
+# Extract coefficients for seat models
 seat_coefs_all <- list()
 for (i in 1:4) {
-    for (var in vars_to_plot_seats) {
+    for (var in vars_to_plot) {
         coef_data <- extract_coefs_glm(seat_results_list[[i]], var, i)
         if (!is.null(coef_data)) {
             seat_coefs_all[[length(seat_coefs_all) + 1]] <- coef_data
@@ -155,7 +151,7 @@ for (i in 1:4) {
 seat_coefs <- bind_rows(seat_coefs_all)
 seat_coefs$variable_label <- var_labels[seat_coefs$variable]
 seat_coefs$significant <- seat_coefs$p_value < 0.10
-seat_coefs$order <- match(seat_coefs$variable, vars_to_plot_seats)
+seat_coefs$order <- match(seat_coefs$variable, vars_to_plot)
 seat_coefs$model <- factor(seat_coefs$model, levels = c("Model 4", "Model 3", "Model 2", "Model 1"))
 
 # Create plot for Muster models (all 4 models on same plot)

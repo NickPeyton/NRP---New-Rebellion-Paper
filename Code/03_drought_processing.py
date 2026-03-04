@@ -5,8 +5,8 @@ from shapely.geometry import Point
 import os
 os.chdir(r"C:/PhD/DissolutionProgramming/NRP---New-Rebellion-Paper")
 # Load the data
-coords_path = 'Data/Raw/drought_coords.csv'
-values_path = 'Data/Raw/drought_values.csv'
+coords_path = 'Data/Raw/CSV/drought_coords.csv'
+values_path = 'Data/Raw/CSV/drought_values.csv'
 
 coords_df = pd.read_csv(coords_path)
 values_df = pd.read_csv(values_path)

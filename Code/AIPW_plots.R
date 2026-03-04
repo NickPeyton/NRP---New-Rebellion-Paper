@@ -47,7 +47,7 @@ rdf$dwx_1536 <- scale(rdf$dwx_1536, center = TRUE, scale = TRUE)[, 1]
 weightitmodel <- weightit(
     lsmLand ~
         lbigLand + ltitheOutT + lalmsInTot + lnetInc + friary +
-        lLStax_pc + lpopC + Y_COORD + area + uplands + lowlands + mean_slope + wet_1535 + wet_1536 + dwx_1536 + dg_percy,
+        lLStax_pc + lpopC + Y_COORD + area + uplands + lowlands + mean_slope + wet_1535 + wet_1536 + dwx_1536,
     data = rdf,
     method = "cbps",
     over = FALSE
@@ -57,7 +57,7 @@ weights <- weightitmodel$weights
 # Weighted logit model for primary
 weighted_lm_primary <- svyglm(
     primary ~ lsmLand + lbigLand + ltitheOutT + lalmsInTot + lnetInc + friary +
-        lLStax_pc + lpopC + Y_COORD + area + uplands + lowlands + mean_slope + wet_1535 + wet_1536 + dwx_1536 + dg_percy,
+        lLStax_pc + lpopC + Y_COORD + area + uplands + lowlands + mean_slope + wet_1535 + wet_1536 + dwx_1536,
     data = rdf,
     weights = weights,
     design = svydesign(~1, weights = weights, data = rdf),
@@ -67,7 +67,7 @@ weighted_lm_primary <- svyglm(
 # Weighted logit model for muster
 weighted_lm_muster <- svyglm(
     muster ~ lsmLand + lbigLand + ltitheOutT + lalmsInTot + lnetInc + friary +
-        lLStax_pc + lpopC + Y_COORD + area + uplands + lowlands + mean_slope + wet_1535 + wet_1536 + dwx_1536 + dg_percy,
+        lLStax_pc + lpopC + Y_COORD + area + uplands + lowlands + mean_slope + wet_1535 + wet_1536 + dwx_1536,
     data = rdf,
     weights = weights,
     design = svydesign(~1, weights = weights, data = rdf),
@@ -87,7 +87,7 @@ weighted_lm_seats <- svyglm(
 # Weighted survival model
 weighted_survival <- coxph(
     Surv(primary_survival, primary) ~ lsmLand + lbigLand + ltitheOutT + lalmsInTot + lnetInc + friary +
-        lLStax_pc + lpopC + Y_COORD + area + uplands + lowlands + mean_slope + wet_1535 + wet_1536 + dwx_1536 + dg_percy,
+        lLStax_pc + lpopC + Y_COORD + area + uplands + lowlands + mean_slope + wet_1535 + wet_1536 + dwx_1536,
     data = rdf,
     weights = weights,
     robust = TRUE
@@ -95,12 +95,6 @@ weighted_survival <- coxph(
 
 # Variables to plot (excluding geographic controls to match the parish plots)
 vars_to_plot <- c(
-    "lsmLand", "lbigLand", "ltitheOutT", "lalmsInTot", "lnetInc", "friary",
-    "lLStax_pc", "wet_1535", "wet_1536", "dg_percy", "lpopC"
-)
-
-# Variables for seats model (excluding Percy)
-vars_to_plot_seats <- c(
     "lsmLand", "lbigLand", "ltitheOutT", "lalmsInTot", "lnetInc", "friary",
     "lLStax_pc", "wet_1535", "wet_1536", "lpopC"
 )
@@ -116,7 +110,6 @@ var_labels <- c(
     "lLStax_pc" = "Lay Subsidy per Capita",
     "wet_1535" = "Wet 1535",
     "wet_1536" = "Wet 1536",
-    "dg_percy" = "Percy",
     "lpopC" = "Population"
 )
 
@@ -180,13 +173,13 @@ logit_muster_coefs$order <- match(logit_muster_coefs$variable, vars_to_plot)
 
 # Extract coefficients for weighted logit (seats)
 logit_seats_coefs_list <- list()
-for (var in vars_to_plot_seats) {
+for (var in vars_to_plot) {
     logit_seats_coefs_list[[var]] <- extract_coefs_svyglm(weighted_lm_seats, var)
 }
 logit_seats_coefs <- bind_rows(logit_seats_coefs_list)
 logit_seats_coefs$variable_label <- var_labels[logit_seats_coefs$variable]
 logit_seats_coefs$significant <- logit_seats_coefs$p_value < 0.10
-logit_seats_coefs$order <- match(logit_seats_coefs$variable, vars_to_plot_seats)
+logit_seats_coefs$order <- match(logit_seats_coefs$variable, vars_to_plot)
 
 # Extract coefficients for weighted survival
 survival_coefs_list <- list()
