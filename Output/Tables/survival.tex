@@ -1,58 +1,60 @@
 
 % Table created by stargazer v.5.2.3 by Marek Hlavac, Social Policy Institute. E-mail: marek.hlavac at gmail.com
-% Date and time: Mon, Feb 23, 2026 - 21:41:30
+% Date and time: Mon, Feb 23, 2026 - 21:50:29
 % Requires LaTeX packages: dcolumn 
-\begin{table}[H] \centering 
+
+
+\begin{table}[H] \centering \singlespacing
+\begin{threeparttable}
   \caption{Risk of Rebellion - Cox Proportional Hazards Model} 
   \label{} 
 \begin{tabular}{@{\extracolsep{5pt}}lD{.}{.}{-3} D{.}{.}{-3} D{.}{.}{-3} } 
 \\[-1.8ex]\hline 
 \hline \\[-1.8ex] 
- & \multicolumn{3}{c}{\textit{Dependent variable:}} \\ 
-\cline{2-4} 
-\\[-1.8ex] & \multicolumn{3}{c}{primary\_survival} \\ 
+
  & \multicolumn{1}{c}{Land} & \multicolumn{1}{c}{Taxation and Population} & \multicolumn{1}{c}{Geographic Controls} \\ 
-\\[-1.8ex] & \multicolumn{1}{c}{(1)} & \multicolumn{1}{c}{(2)} & \multicolumn{1}{c}{(3)}\\ 
+
 \hline \\[-1.8ex] 
  ln(Land Owned) & 0.679^{**} & 0.400 & 0.430 \\ 
   & (0.278) & (0.305) & (0.309) \\ 
-  & & & \\ 
+   
  ln(Tithe) & -0.144 & -0.223 & -0.231 \\ 
   & (0.217) & (0.254) & (0.257) \\ 
-  & & & \\ 
+   
  ln(Alms) & 0.243 & 0.208 & 0.172 \\ 
   & (0.158) & (0.175) & (0.191) \\ 
-  & & & \\ 
+   
  ln(Monastic Net Income) & 0.007 & 0.073 & 0.085 \\ 
   & (0.211) & (0.227) & (0.227) \\ 
-  & & & \\ 
+   
  Friary & 0.452 & 0.291 & 0.295 \\ 
   & (0.845) & (0.970) & (1.022) \\ 
-  & & & \\ 
+   
  Wet 1535 & -0.355 & -0.149 & -0.121 \\ 
   & (0.253) & (0.287) & (0.304) \\ 
-  & & & \\ 
+   
  Wet 1536 & 1.069^{***} & 0.711^{**} & 0.499 \\ 
   & (0.252) & (0.285) & (0.337) \\ 
-  & & & \\ 
+   
  Percy & 0.979^{**} & 0.891^{*} & 0.838 \\ 
   & (0.452) & (0.504) & (0.541) \\ 
-  & & & \\ 
+   
  ln(1535 Lay Subsidy Amount) &  & -0.058 & 0.048 \\ 
   &  & (0.279) & (0.305) \\ 
-  & & & \\ 
- ln(Population) &  & 0.418^{***} & 0.377^{**} \\ 
-  &  & (0.141) & (0.158) \\ 
-  & & & \\ 
+   
 \hline \\[-1.8ex] 
 Population & N & Y & Y \\ 
 Geographic Controls & N & N & Y \\ 
 Observations & \multicolumn{1}{c}{1,576} & \multicolumn{1}{c}{1,391} & \multicolumn{1}{c}{1,391} \\ 
 R$^{2}$ & \multicolumn{1}{c}{0.021} & \multicolumn{1}{c}{0.026} & \multicolumn{1}{c}{0.027} \\ 
-Max. Possible R$^{2}$ & \multicolumn{1}{c}{0.193} & \multicolumn{1}{c}{0.188} & \multicolumn{1}{c}{0.188} \\ 
-Log Likelihood & \multicolumn{1}{c}{-152.562} & \multicolumn{1}{c}{-126.588} & \multicolumn{1}{c}{-125.642} \\ 
-\hline 
-\hline \\[-1.8ex] 
-\textit{Note:}  & \multicolumn{3}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
-\end{tabular} 
+
+
+\end{tabular}  
+\begin{tablenotes}
+    \item * p$<$.1, ** p$<$.05, ***p$<$.01 
+        \footnotesize
+    \item Note: land owned is the value of monastic land in the parish in pounds, tithe is the value of tithes taken from the parish in pounds, alms are the amount of recorded alms distributed in the parish in pounds, net income is the calculated net income of any monastic house in the parish in pounds, friary is a dummy representing the presence of a friary based on a dataset from The National Archives, population is the sum of town populations in a parish drawn from a combination of datasets, one from Eltjo Buringh and one from Patrick Wallis and Charlie Udale, lay subsidy per capita is drawn from Heldring, Robinson, and Vollmer (2021), wet 1535 and 1536 is the Palmer Drought Severity Index in the 0.5 by 0.5 degree grid cell containing the parish's centroid, and Percy is a dummy drawn from Bush's \textit{The Pilgrimage of Grace: A Study of the Rebel Armies of 1536.}
+    
+\end{tablenotes}
+\end{threeparttable}
 \end{table} 

@@ -1,54 +1,57 @@
 
 % Table created by stargazer v.5.2.3 by Marek Hlavac, Social Policy Institute. E-mail: marek.hlavac at gmail.com
-% Date and time: Mon, Feb 23, 2026 - 21:41:23
+% Date and time: Mon, Feb 23, 2026 - 22:03:07
 % Requires LaTeX packages: dcolumn 
-\begin{table}[H] \centering 
+\begin{table}[H] \centering \singlespacing
+\begin{threeparttable}
   \caption{Muster Results: All Variables} 
   \label{tab:muster_all} 
 \begin{tabular}{@{\extracolsep{.5pt}}lD{.}{.}{-3} D{.}{.}{-3} D{.}{.}{-3} D{.}{.}{-3} } 
 \\[-1.8ex]\hline 
 \hline \\[-1.8ex] 
- & \multicolumn{4}{c}{\textit{Dependent variable:}} \\ 
-\cline{2-5} 
-\\[-1.8ex] & \multicolumn{4}{c}{muster} \\ 
+
 \\[-1.8ex] & \multicolumn{1}{c}{(1)} & \multicolumn{1}{c}{(2)} & \multicolumn{1}{c}{(3)} & \multicolumn{1}{c}{(4)}\\ 
 \hline \\[-1.8ex] 
- ln(Land Owned) & 0.107^{***} & 0.089^{**} & 0.045 & 0.056 \\ 
-  & (0.039) & (0.044) & (0.055) & (0.056) \\ 
-  & & & & \\ 
- ln(Tithe) &  & -0.061 & -0.087 & -0.090 \\ 
-  &  & (0.046) & (0.059) & (0.060) \\ 
-  & & & & \\ 
- ln(Alms) &  & 0.141^{*} & 0.108 & 0.085 \\ 
-  &  & (0.079) & (0.098) & (0.104) \\ 
-  & & & & \\ 
- ln(Net Income) &  & 0.044 & 0.075 & 0.076 \\ 
-  &  & (0.045) & (0.054) & (0.053) \\ 
-  & & & & \\ 
+ ln(Land Owned) & 0.390^{***} & 0.325^{**} & 0.163 & 0.204 \\ 
+  & (0.144) & (0.160) & (0.200) & (0.205) \\ 
+   
+ ln(Tithe) &  & -0.199 & -0.282 & -0.292 \\ 
+  &  & (0.150) & (0.191) & (0.195) \\ 
+   
+ ln(Alms) &  & 0.195^{*} & 0.149 & 0.117 \\ 
+  &  & (0.110) & (0.135) & (0.144) \\ 
+   
+ ln(Net Income) &  & 0.127 & 0.215 & 0.220 \\ 
+  &  & (0.130) & (0.155) & (0.152) \\ 
+   
  Friary &  & 0.877^{**} & 0.429 & 0.556 \\ 
   &  & (0.446) & (0.711) & (0.718) \\ 
-  & & & & \\ 
- ln(Lay Subsidy) &  &  & 0.032 & 0.130 \\ 
-  &  &  & (0.121) & (0.135) \\ 
-  & & & & \\ 
- Wet 1535 &  &  & 0.210^{***} & 0.171^{***} \\ 
-  &  &  & (0.052) & (0.058) \\ 
-  & & & & \\ 
- Wet 1536 &  &  & -0.214 & -0.145 \\ 
-  &  &  & (0.226) & (0.234) \\ 
-  & & & & \\ 
- Percy &  &  & 0.496^{**} & 0.213 \\ 
-  &  &  & (0.225) & (0.261) \\ 
-  & & & & \\ 
+   
+ ln(Lay Subsidy) &  &  & 0.048 & 0.197 \\ 
+  &  &  & (0.184) & (0.204) \\ 
+   
+ Wet 1535 &  &  & 0.439^{***} & 0.358^{***} \\ 
+  &  &  & (0.109) & (0.121) \\ 
+   
+ Wet 1536 &  &  & -0.204 & -0.138 \\ 
+  &  &  & (0.215) & (0.224) \\ 
+   
+ Percy &  &  & 0.466^{**} & 0.200 \\ 
+  &  &  & (0.211) & (0.245) \\ 
+   
  ln(Population) &  &  & 0.678^{*} & 0.750^{*} \\ 
   &  &  & (0.371) & (0.401) \\ 
-  & & & & \\ 
+   
 \hline \\[-1.8ex] 
 Geographic Controls & N & N & N & Y \\ 
 Observations & \multicolumn{1}{c}{1,755} & \multicolumn{1}{c}{1,755} & \multicolumn{1}{c}{1,391} & \multicolumn{1}{c}{1,391} \\ 
-Log Likelihood & \multicolumn{1}{c}{-247.498} & \multicolumn{1}{c}{-241.786} & \multicolumn{1}{c}{-164.914} & \multicolumn{1}{c}{-160.466} \\ 
-\hline 
-\hline \\[-1.8ex] 
-\textit{Note:}  & \multicolumn{4}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
-\end{tabular} 
+
+\end{tabular}  
+\begin{tablenotes}
+    \item * p$<$.1, ** p$<$.05, ***p$<$.01 
+        \footnotesize
+    \item Note: land owned is the value of monastic land in the parish in pounds, tithe is the value of tithes taken from the parish in pounds, alms are the amount of recorded alms distributed in the parish in pounds, net income is the calculated net income of any monastic house in the parish in pounds, friary is a dummy representing the presence of a friary based on a dataset from The National Archives, population is the sum of town populations in a parish drawn from a combination of datasets, one from Eltjo Buringh and one from Patrick Wallis and Charlie Udale, lay subsidy per capita is drawn from Heldring, Robinson, and Vollmer (2021), wet 1535 and 1536 is the Palmer Drought Severity Index in the 0.5 by 0.5 degree grid cell containing the parish's centroid, and Percy is a dummy drawn from Bush's \textit{The Pilgrimage of Grace: A Study of the Rebel Armies of 1536.}
+    
+\end{tablenotes}
+\end{threeparttable}
 \end{table} 

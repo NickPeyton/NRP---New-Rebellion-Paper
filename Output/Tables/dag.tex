@@ -1,8 +1,9 @@
 
 % Table created by stargazer v.5.2.3 by Marek Hlavac, Social Policy Institute. E-mail: marek.hlavac at gmail.com
-% Date and time: Mon, Feb 23, 2026 - 21:41:24
+% Date and time: Mon, Feb 23, 2026 - 22:03:08
 % Requires LaTeX packages: dcolumn 
-\begin{table}[H] \centering 
+\begin{table}[H] \centering \singlespacing
+\begin{threeparttable}
   \caption{DAG Results} 
   \label{tab:dag} 
 \begin{tabular}{@{\extracolsep{.5pt}}lD{.}{.}{-3} D{.}{.}{-3} D{.}{.}{-3} } 
@@ -14,23 +15,29 @@
 \\[-1.8ex] & \multicolumn{1}{c}{\textit{logistic}} & \multicolumn{1}{c}{\textit{logistic}} & \multicolumn{1}{c}{\textit{Poisson}} \\ 
 \\[-1.8ex] & \multicolumn{1}{c}{(1)} & \multicolumn{1}{c}{(2)} & \multicolumn{1}{c}{(3)}\\ 
 \hline \\[-1.8ex] 
- ln(Land Owned) & 0.074^{*} & 0.124^{*} & 0.053^{*} \\ 
-  & (0.043) & (0.065) & (0.028) \\ 
-  & & & \\ 
- ln(Population) & 0.232^{***} & 0.258^{***} & 0.089^{**} \\ 
-  & (0.042) & (0.057) & (0.035) \\ 
-  & & & \\ 
- ln(Lay Subsidy Per Capita) & -0.107 & -0.212 & -0.036 \\ 
-  & (0.107) & (0.167) & (0.067) \\ 
-  & & & \\ 
- Constant & -3.972^{***} & -5.030^{***} & -2.988^{***} \\ 
-  & (0.293) & (0.466) & (0.187) \\ 
-  & & & \\ 
+ ln(Land Owned) & 0.269^{*} & 0.454^{*} & 0.192^{*} \\ 
+  & (0.155) & (0.236) & (0.103) \\ 
+   
+ ln(Population) & 0.486^{***} & 0.540^{***} & 0.186^{**} \\ 
+  & (0.087) & (0.119) & (0.072) \\ 
+   
+ ln(Lay Subsidy Per Capita) & -0.162 & -0.321 & -0.054 \\ 
+  & (0.162) & (0.253) & (0.102) \\ 
+   
+ Constant & -3.647^{***} & -4.608^{***} & -2.755^{***} \\ 
+  & (0.171) & (0.279) & (0.103) \\ 
+   
 \hline \\[-1.8ex] 
 Observations & \multicolumn{1}{c}{1,558} & \multicolumn{1}{c}{1,558} & \multicolumn{1}{c}{1,558} \\ 
 Log Likelihood & \multicolumn{1}{c}{-210.068} & \multicolumn{1}{c}{-113.725} & \multicolumn{1}{c}{-395.727} \\ 
 \hline 
 \hline \\[-1.8ex] 
-\textit{Note:}  & \multicolumn{3}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
-\end{tabular} 
+\end{tabular}  
+\begin{tablenotes}
+    \item * p$<$.1, ** p$<$.05, ***p$<$.01 
+        \footnotesize
+    \item Note: land owned is the value of monastic land in the parish in pounds, tithe is the value of tithes taken from the parish in pounds, alms are the amount of recorded alms distributed in the parish in pounds, net income is the calculated net income of any monastic house in the parish in pounds, friary is a dummy representing the presence of a friary based on a dataset from The National Archives, population is the sum of town populations in a parish drawn from a combination of datasets, one from Eltjo Buringh and one from Patrick Wallis and Charlie Udale, lay subsidy per capita is drawn from Heldring, Robinson, and Vollmer (2021), wet 1535 and 1536 is the Palmer Drought Severity Index in the 0.5 by 0.5 degree grid cell containing the parish's centroid, and Percy is a dummy drawn from Bush's \textit{The Pilgrimage of Grace: A Study of the Rebel Armies of 1536.}
+    
+\end{tablenotes}
+\end{threeparttable}
 \end{table} 

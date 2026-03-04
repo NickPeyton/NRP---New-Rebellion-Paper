@@ -1,54 +1,56 @@
 
 % Table created by stargazer v.5.2.3 by Marek Hlavac, Social Policy Institute. E-mail: marek.hlavac at gmail.com
-% Date and time: Mon, Feb 23, 2026 - 21:41:23
+% Date and time: Mon, Feb 23, 2026 - 22:03:07
 % Requires LaTeX packages: dcolumn 
-\begin{table}[H] \centering 
-  \caption{Primary Results: All Variables} 
+\begin{table}[H] \centering \singlespacing
+\begin{threeparttable}
+  \caption{Primary Muster Results: All Variables} 
   \label{tab:primary_all} 
 \begin{tabular}{@{\extracolsep{.5pt}}lD{.}{.}{-3} D{.}{.}{-3} D{.}{.}{-3} D{.}{.}{-3} } 
 \\[-1.8ex]\hline 
 \hline \\[-1.8ex] 
- & \multicolumn{4}{c}{\textit{Dependent variable:}} \\ 
-\cline{2-5} 
-\\[-1.8ex] & \multicolumn{4}{c}{primary} \\ 
 \\[-1.8ex] & \multicolumn{1}{c}{(1)} & \multicolumn{1}{c}{(2)} & \multicolumn{1}{c}{(3)} & \multicolumn{1}{c}{(4)}\\ 
 \hline \\[-1.8ex] 
- ln(Land Owned) & 0.179^{***} & 0.160^{**} & 0.112 & 0.116 \\ 
-  & (0.062) & (0.068) & (0.085) & (0.086) \\ 
-  & & & & \\ 
- ln(Tithe) &  & -0.038 & -0.065 & -0.070 \\ 
-  &  & (0.060) & (0.079) & (0.080) \\ 
-  & & & & \\ 
- ln(Alms) &  & 0.163 & 0.182 & 0.151 \\ 
-  &  & (0.109) & (0.135) & (0.142) \\ 
-  & & & & \\ 
- ln(Net Income) &  & 0.002 & 0.023 & 0.034 \\ 
-  &  & (0.067) & (0.082) & (0.081) \\ 
-  & & & & \\ 
+ ln(Land Owned) & 0.654^{***} & 0.584^{**} & 0.408 & 0.425 \\ 
+  & (0.226) & (0.249) & (0.312) & (0.315) \\ 
+   
+ ln(Tithe) &  & -0.125 & -0.211 & -0.227 \\ 
+  &  & (0.195) & (0.256) & (0.260) \\ 
+   
+ ln(Alms) &  & 0.225 & 0.252 & 0.209 \\ 
+  &  & (0.150) & (0.187) & (0.197) \\ 
+   
+ ln(Net Income) &  & 0.005 & 0.068 & 0.097 \\ 
+  &  & (0.192) & (0.237) & (0.234) \\ 
+   
  Friary &  & 0.365 & 0.358 & 0.474 \\ 
   &  & (0.853) & (0.991) & (1.006) \\ 
-  & & & & \\ 
- ln(Lay Subsidy) &  &  & 0.007 & 0.105 \\ 
-  &  &  & (0.189) & (0.209) \\ 
-  & & & & \\ 
- Wet 1535 &  &  & 0.221^{***} & 0.187^{**} \\ 
-  &  &  & (0.070) & (0.077) \\ 
-  & & & & \\ 
- Wet 1536 &  &  & -0.295 & -0.283 \\ 
-  &  &  & (0.318) & (0.329) \\ 
-  & & & & \\ 
- Percy &  &  & 0.887^{***} & 0.669^{*} \\ 
-  &  &  & (0.325) & (0.370) \\ 
-  & & & & \\ 
+   
+ ln(Lay Subsidy) &  &  & 0.011 & 0.160 \\ 
+  &  &  & (0.286) & (0.318) \\ 
+   
+ Wet 1535 &  &  & 0.462^{***} & 0.390^{**} \\ 
+  &  &  & (0.146) & (0.162) \\ 
+   
+ Wet 1536 &  &  & -0.281 & -0.270 \\ 
+  &  &  & (0.303) & (0.314) \\ 
+   
+ Percy &  &  & 0.833^{***} & 0.628^{*} \\ 
+  &  &  & (0.305) & (0.348) \\ 
+   
  ln(Population) &  &  & 0.903^{*} & 0.863 \\ 
   &  &  & (0.522) & (0.563) \\ 
-  & & & & \\ 
+   
 \hline \\[-1.8ex] 
 Geographic Controls & N & N & N & Y \\ 
 Observations & \multicolumn{1}{c}{1,755} & \multicolumn{1}{c}{1,755} & \multicolumn{1}{c}{1,391} & \multicolumn{1}{c}{1,391} \\ 
-Log Likelihood & \multicolumn{1}{c}{-138.705} & \multicolumn{1}{c}{-136.934} & \multicolumn{1}{c}{-86.266} & \multicolumn{1}{c}{-84.734} \\ 
-\hline 
-\hline \\[-1.8ex] 
-\textit{Note:}  & \multicolumn{4}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
-\end{tabular} 
+
+\end{tabular}  
+\begin{tablenotes}
+    \item * p$<$.1, ** p$<$.05, ***p$<$.01 
+        \footnotesize
+    \item Note: land owned is the value of monastic land in the parish in pounds, tithe is the value of tithes taken from the parish in pounds, alms are the amount of recorded alms distributed in the parish in pounds, net income is the calculated net income of any monastic house in the parish in pounds, friary is a dummy representing the presence of a friary based on a dataset from The National Archives, population is the sum of town populations in a parish drawn from a combination of datasets, one from Eltjo Buringh and one from Patrick Wallis and Charlie Udale, lay subsidy per capita is drawn from Heldring, Robinson, and Vollmer (2021), wet 1535 and 1536 is the Palmer Drought Severity Index in the 0.5 by 0.5 degree grid cell containing the parish's centroid, and Percy is a dummy drawn from Bush's \textit{The Pilgrimage of Grace: A Study of the Rebel Armies of 1536.}
+    
+\end{tablenotes}
+\end{threeparttable}
 \end{table} 
