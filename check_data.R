@@ -1,0 +1,26 @@
+library(sf)
+pdf <- read_sf(dsn = "Data/Processed/northParishFlows.shp")
+rdf <- data.frame(pdf)
+
+cat("=== Missing Values ===\n")
+cat("lownLand missing:", sum(is.na(rdf$lownLand)), "\n")
+cat("lotherLand missing:", sum(is.na(rdf$lotherLand)), "\n")
+cat("lsmLand missing:", sum(is.na(rdf$lsmLand)), "\n")
+cat("lbigLand missing:", sum(is.na(rdf$lbigLand)), "\n")
+cat("ownLand missing:", sum(is.na(rdf$ownLand)), "\n")
+cat("otherLand missing:", sum(is.na(rdf$otherLand)), "\n")
+
+cat("\n=== Value Ranges ===\n")
+cat("lownLand range:", min(rdf$lownLand, na.rm = T), "to", max(rdf$lownLand, na.rm = T), "\n")
+cat("lotherLand range:", min(rdf$lotherLand, na.rm = T), "to", max(rdf$lotherLand, na.rm = T), "\n")
+cat("lsmLand range:", min(rdf$lsmLand, na.rm = T), "to", max(rdf$lsmLand, na.rm = T), "\n")
+cat("lbigLand range:", min(rdf$lbigLand, na.rm = T), "to", max(rdf$lbigLand, na.rm = T), "\n")
+
+cat("\n=== Raw Land Values (non-logged) ===\n")
+cat("ownLand range:", min(rdf$ownLand, na.rm = T), "to", max(rdf$ownLand, na.rm = T), "\n")
+cat("otherLand range:", min(rdf$otherLand, na.rm = T), "to", max(rdf$otherLand, na.rm = T), "\n")
+cat("smLand range:", min(rdf$smLand, na.rm = T), "to", max(rdf$smLand, na.rm = T), "\n")
+cat("bigLand range:", min(rdf$bigLand, na.rm = T), "to", max(rdf$bigLand, na.rm = T), "\n")
+
+cat("\n=== Summary Stats ===\n")
+print(summary(rdf[c("lownLand", "lotherLand", "lsmLand", "lbigLand")]))
