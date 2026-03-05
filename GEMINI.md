@@ -29,7 +29,7 @@ All new derived datasets must:
 
 - Be saved in the folder in Data/Processed/ that matches their file type. If you're unsure where they go, ask me.
 - Have a brief but relevant and descriptive name in snake_case
-- Be logged in the data_description.txt file with a note explaining:
+- Be logged in the data_description.md file with a note explaining:
   - Brief description of dataset
   - Source file(s)
   - Transformation performed
