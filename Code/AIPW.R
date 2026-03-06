@@ -37,7 +37,6 @@ rdf$primary_survival <- ifelse(is.na(rdf$primary_survival), day, rdf$primary_sur
 rdf$llo_sk <- scale(rdf$llo_sk, center = TRUE, scale = TRUE)[, 1]
 rdf$lti_sk <- scale(rdf$lti_sk, center = TRUE, scale = TRUE)[, 1]
 rdf$lal_sk <- scale(rdf$lal_sk, center = TRUE, scale = TRUE)[, 1]
-rdf$lni_sk <- scale(rdf$lni_sk, center = TRUE, scale = TRUE)[, 1]
 rdf$lLStax_pc <- scale(rdf$lLStax_pc, center = TRUE, scale = TRUE)[, 1]
 rdf$lpopC <- scale(rdf$lpopC, center = TRUE, scale = TRUE)[, 1]
 rdf$Y_COORD <- scale(rdf$Y_COORD, center = TRUE, scale = TRUE)[, 1]
@@ -49,7 +48,7 @@ rdf$dwx_1536 <- scale(rdf$dwx_1536, center = TRUE, scale = TRUE)[, 1]
 
 weightitmodel <- weightit(
     llo_sk ~
-        lti_sk + lal_sk + lni_sk + friary +
+        lti_sk + lal_sk + smHouse + bigHouse + friary +
         lLStax_pc + lpopC + Y_COORD + area + uplands + lowlands + mean_slope + wet_1535 + wet_1536 + dwx_1536,
     data = rdf,
     method = "cbps",
@@ -57,7 +56,7 @@ weightitmodel <- weightit(
 )
 weights <- weightitmodel$weights
 weighted_lm <- svyglm(
-    primary ~ llo_sk + lti_sk + lal_sk + lni_sk + friary +
+    primary ~ llo_sk + lti_sk + lal_sk + smHouse + bigHouse + friary +
         lLStax_pc + lpopC + Y_COORD + area + uplands + lowlands + mean_slope + wet_1535 + wet_1536 + dwx_1536,
     data = rdf,
     weights = weights,
@@ -67,7 +66,7 @@ weighted_lm <- svyglm(
 print(summary(weighted_lm))
 
 weighted_survival <- coxph(
-    Surv(primary_survival, primary) ~ llo_sk + lti_sk + lal_sk + lni_sk + friary +
+    Surv(primary_survival, primary) ~ llo_sk + lti_sk + lal_sk + smHouse + bigHouse + friary +
         lLStax_pc + lpopC + Y_COORD + area + uplands + lowlands + mean_slope + wet_1535 + wet_1536 + dwx_1536,
     data = rdf,
     weights = weights,
