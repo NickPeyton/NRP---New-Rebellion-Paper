@@ -6,10 +6,10 @@ setwd("C:/PhD/DissolutionProgramming/NRP---New-Rebellion-Paper/")
 pdf <- read_sf(dsn = "Data/Processed/northParishFlows.shp")
 
 # Standardize and center continuous variables
-pdf$llandOwned <- scale(pdf$llandOwned, center = TRUE, scale = TRUE)[, 1]
-pdf$ltitheOutT <- scale(pdf$ltitheOutT, center = TRUE, scale = TRUE)[, 1]
-pdf$lalmsInTot <- scale(pdf$lalmsInTot, center = TRUE, scale = TRUE)[, 1]
-pdf$lnetInc <- scale(pdf$lnetInc, center = TRUE, scale = TRUE)[, 1]
+pdf$llo_sk <- scale(pdf$llo_sk, center = TRUE, scale = TRUE)[, 1]
+pdf$lti_sk <- scale(pdf$lti_sk, center = TRUE, scale = TRUE)[, 1]
+pdf$lal_sk <- scale(pdf$lal_sk, center = TRUE, scale = TRUE)[, 1]
+pdf$lni_sk <- scale(pdf$lni_sk, center = TRUE, scale = TRUE)[, 1]
 pdf$lLStax_pc <- scale(pdf$lLStax_pc, center = TRUE, scale = TRUE)[, 1]
 pdf$lpopC <- scale(pdf$lpopC, center = TRUE, scale = TRUE)[, 1]
 pdf$Y_COORD <- scale(pdf$Y_COORD, center = TRUE, scale = TRUE)[, 1]
@@ -18,21 +18,21 @@ pdf$mean_slope <- scale(pdf$mean_slope, center = TRUE, scale = TRUE)[, 1]
 pdf$wet_1535 <- scale(pdf$wet_1535, center = TRUE, scale = TRUE)[, 1]
 pdf$wet_1536 <- scale(pdf$wet_1536, center = TRUE, scale = TRUE)[, 1]
 
-monastic_vars <- c("llandOwned", "ltitheOutT", "lalmsInTot", "lnetInc", "friary")
+monastic_vars <- c("llo_sk", "lti_sk", "lal_sk", "lni_sk", "friary")
 controls <- c("lLStax_pc", "wet_1535", "wet_1536", "lpopC", "Y_COORD", "uplands", "lowlands", "area", "mean_slope")
 
 # Variables to plot (in order of appearance in regression)
 vars_to_plot <- c(
-    "llandOwned", "ltitheOutT", "lalmsInTot", "lnetInc", "friary",
+    "llo_sk", "lti_sk", "lal_sk", "lni_sk", "friary",
     "lLStax_pc", "wet_1535", "wet_1536"
 )
 
 # Variable labels for plotting
 var_labels <- c(
-    "llandOwned" = "Land Owned",
-    "ltitheOutT" = "Tithe",
-    "lalmsInTot" = "Alms",
-    "lnetInc" = "Net Income",
+    "llo_sk" = "Land Owned / km\u00b2",
+    "lti_sk" = "Tithe / km\u00b2",
+    "lal_sk" = "Alms / km\u00b2",
+    "lni_sk" = "Net Income / km\u00b2",
     "friary" = "Friary",
     "lLStax_pc" = "Lay Subsidy per Capita",
     "wet_1535" = "Wet 1535",

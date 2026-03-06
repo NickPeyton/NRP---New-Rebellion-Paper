@@ -359,6 +359,8 @@ pdf['bg_sk'] = pdf['bigLand'] / safe_area
 pdf['ti_pc'] = pdf['titheIncCalc'] / safe_popC
 pdf['ti_sk'] = pdf['titheIncCalc'] / safe_area
 pdf['al_sk'] = pdf['almsInTot'] / safe_area
+pdf['own_sk'] = pdf['ownLandVal'] / safe_area
+pdf['oth_sk'] = pdf['otherLandVal'] / safe_area
 pdf['ni_pc'] = pdf['rhNetInc'] / safe_popC
 pdf['ni_sk'] = pdf['rhNetInc'] / safe_area
 
@@ -383,6 +385,8 @@ pdf['lbg_sk'] = np.log(pdf['bg_sk'].fillna(0) + 1)
 pdf['lti_pc'] = np.log(pdf['ti_pc'].fillna(0) + 1)
 pdf['lti_sk'] = np.log(pdf['ti_sk'].fillna(0) + 1)
 pdf['lal_sk'] = np.log(pdf['al_sk'].fillna(0) + 1)
+pdf['lown_sk'] = np.log(pdf['own_sk'].fillna(0) + 1)
+pdf['loth_sk'] = np.log(pdf['oth_sk'].fillna(0) + 1)
 pdf['lni_sk'] = np.log(pdf['ni_sk'].fillna(0) + 1)
 # Per capita and per sq km logged distance-weighted variables
 pdf['llo_dwpc'] = pdf['llo_dw'] / safe_popC
