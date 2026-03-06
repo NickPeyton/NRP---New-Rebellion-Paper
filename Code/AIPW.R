@@ -34,10 +34,10 @@ rdf$primary_survival <- ifelse(is.na(rdf$primary_survival), day, rdf$primary_sur
 
 # Standardize and center continuous variables
 # Removed X_COORD (VIF=24.6) to match parish_logits.R specification
-rdf$llandOwned <- scale(rdf$llandOwned, center = TRUE, scale = TRUE)[, 1]
-rdf$ltitheOutT <- scale(rdf$ltitheOutT, center = TRUE, scale = TRUE)[, 1]
-rdf$lalmsInTot <- scale(rdf$lalmsInTot, center = TRUE, scale = TRUE)[, 1]
-rdf$lnetInc <- scale(rdf$lnetInc, center = TRUE, scale = TRUE)[, 1]
+rdf$llo_sk <- scale(rdf$llo_sk, center = TRUE, scale = TRUE)[, 1]
+rdf$lti_sk <- scale(rdf$lti_sk, center = TRUE, scale = TRUE)[, 1]
+rdf$lal_sk <- scale(rdf$lal_sk, center = TRUE, scale = TRUE)[, 1]
+rdf$lni_sk <- scale(rdf$lni_sk, center = TRUE, scale = TRUE)[, 1]
 rdf$lLStax_pc <- scale(rdf$lLStax_pc, center = TRUE, scale = TRUE)[, 1]
 rdf$lpopC <- scale(rdf$lpopC, center = TRUE, scale = TRUE)[, 1]
 rdf$Y_COORD <- scale(rdf$Y_COORD, center = TRUE, scale = TRUE)[, 1]
@@ -48,8 +48,8 @@ rdf$wet_1536 <- scale(rdf$wet_1536, center = TRUE, scale = TRUE)[, 1]
 rdf$dwx_1536 <- scale(rdf$dwx_1536, center = TRUE, scale = TRUE)[, 1]
 
 weightitmodel <- weightit(
-    llandOwned ~
-        ltitheOutT + lalmsInTot + lnetInc + friary +
+    llo_sk ~
+        lti_sk + lal_sk + lni_sk + friary +
         lLStax_pc + lpopC + Y_COORD + area + uplands + lowlands + mean_slope + wet_1535 + wet_1536 + dwx_1536,
     data = rdf,
     method = "cbps",
@@ -57,7 +57,7 @@ weightitmodel <- weightit(
 )
 weights <- weightitmodel$weights
 weighted_lm <- svyglm(
-    primary ~ llandOwned + ltitheOutT + lalmsInTot + lnetInc + friary +
+    primary ~ llo_sk + lti_sk + lal_sk + lni_sk + friary +
         lLStax_pc + lpopC + Y_COORD + area + uplands + lowlands + mean_slope + wet_1535 + wet_1536 + dwx_1536,
     data = rdf,
     weights = weights,
@@ -67,7 +67,7 @@ weighted_lm <- svyglm(
 print(summary(weighted_lm))
 
 weighted_survival <- coxph(
-    Surv(primary_survival, primary) ~ llandOwned + ltitheOutT + lalmsInTot + lnetInc + friary +
+    Surv(primary_survival, primary) ~ llo_sk + lti_sk + lal_sk + lni_sk + friary +
         lLStax_pc + lpopC + Y_COORD + area + uplands + lowlands + mean_slope + wet_1535 + wet_1536 + dwx_1536,
     data = rdf,
     weights = weights,
@@ -85,7 +85,7 @@ stargazer(weighted_lm, weighted_survival,
         c("Population", "Y", "Y"),
         c("Geographic Controls", "Y", "Y")
     ),
-    covariate.labels = c("ln(Land Owned)"),
+    covariate.labels = c("ln(Land Owned / km\\textsuperscript{2})"),
     column.sep.width = ".5pt",
     omit.stat = c("aic", "lr", "wald", "logrank"),
     omit = "Constant",
