@@ -10,7 +10,6 @@ pdf$lsm_sk <- scale(pdf$lsm_sk, center = TRUE, scale = TRUE)[, 1]
 pdf$lbg_sk <- scale(pdf$lbg_sk, center = TRUE, scale = TRUE)[, 1]
 pdf$lti_sk <- scale(pdf$lti_sk, center = TRUE, scale = TRUE)[, 1]
 pdf$lal_sk <- scale(pdf$lal_sk, center = TRUE, scale = TRUE)[, 1]
-pdf$lni_sk <- scale(pdf$lni_sk, center = TRUE, scale = TRUE)[, 1]
 pdf$lLStax_pc <- scale(pdf$lLStax_pc, center = TRUE, scale = TRUE)[, 1]
 pdf$lpopC <- scale(pdf$lpopC, center = TRUE, scale = TRUE)[, 1]
 pdf$Y_COORD <- scale(pdf$Y_COORD, center = TRUE, scale = TRUE)[, 1]
@@ -22,7 +21,7 @@ pdf$wet_1536 <- scale(pdf$wet_1536, center = TRUE, scale = TRUE)[, 1]
 # Variable groups for progressive model building
 var_list_list <- list(
     c("lsm_sk", "lbg_sk"),
-    c("lti_sk", "lal_sk", "lni_sk", "friary"),
+    c("lti_sk", "lal_sk", "smHouse", "bigHouse", "friary"),
     c("lLStax_pc", "lpopC", "wet_1535", "wet_1536"),
     c("Y_COORD", "uplands", "lowlands", "area", "mean_slope")
 )
@@ -33,7 +32,8 @@ var_labels <- c(
     "lbg_sk" = "Large Monastery Land / km\u00b2",
     "lti_sk" = "Tithe / km\u00b2",
     "lal_sk" = "Alms / km\u00b2",
-    "lni_sk" = "Net Income / km\u00b2",
+    "smHouse" = "Small House Dummy",
+    "bigHouse" = "Large House Dummy",
     "friary" = "Friary",
     "lLStax_pc" = "Lay Subsidy per Capita",
     "lpopC" = "Population",
@@ -43,7 +43,7 @@ var_labels <- c(
 
 # Variables to plot (focus on main variables, not geographic controls)
 vars_to_plot <- c(
-    "lsm_sk", "lbg_sk", "lti_sk", "lal_sk", "lni_sk", "friary",
+    "lsm_sk", "lbg_sk", "lti_sk", "lal_sk", "smHouse", "bigHouse", "friary",
     "lLStax_pc", "lpopC", "wet_1535", "wet_1536"
 )
 

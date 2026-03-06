@@ -27,7 +27,6 @@ rdf$primary_survival <- ifelse(is.na(rdf$primary_survival), day, rdf$primary_sur
 rdf$llo_sk <- scale(rdf$llo_sk, center = TRUE, scale = TRUE)[, 1]
 rdf$lti_sk <- scale(rdf$lti_sk, center = TRUE, scale = TRUE)[, 1]
 rdf$lal_sk <- scale(rdf$lal_sk, center = TRUE, scale = TRUE)[, 1]
-rdf$lni_sk <- scale(rdf$lni_sk, center = TRUE, scale = TRUE)[, 1]
 rdf$lLStax_pc <- scale(rdf$lLStax_pc, center = TRUE, scale = TRUE)[, 1]
 rdf$lpopC <- scale(rdf$lpopC, center = TRUE, scale = TRUE)[, 1]
 rdf$Y_COORD <- scale(rdf$Y_COORD, center = TRUE, scale = TRUE)[, 1]
@@ -42,7 +41,8 @@ cox1 <- coxph(
         llo_sk +
         lti_sk +
         lal_sk +
-        lni_sk +
+        smHouse +
+        bigHouse +
         friary +
         wet_1535 + wet_1536,
     data = rdf
@@ -52,7 +52,8 @@ cox2 <- coxph(
         llo_sk +
         lti_sk +
         lal_sk +
-        lni_sk +
+        smHouse +
+        bigHouse +
         friary +
         wet_1535 + wet_1536 +
         lLStax_pc +
@@ -63,7 +64,8 @@ cox3 <- coxph(Surv(primary_survival, primary) ~
     llo_sk +
     lti_sk +
     lal_sk +
-    lni_sk +
+    smHouse +
+    bigHouse +
     friary +
     wet_1535 + wet_1536 +
     lLStax_pc +
@@ -86,7 +88,7 @@ stargazer(cox1, cox2, cox3,
         c("Geographic Controls", "N", "N", "Y")
     ),
     covariate.labels = c(
-        "ln(Land Owned / km\\textsuperscript{2})", "ln(Tithe / km\\textsuperscript{2})", "ln(Alms / km\\textsuperscript{2})", "ln(Net Income / km\\textsuperscript{2})", "Friary", "Wet 1535", "Wet 1536", "ln(1535 Lay Subsidy Amount)", "ln(Population)"
+        "ln(Land Owned / km\\textsuperscript{2})", "ln(Tithe / km\\textsuperscript{2})", "ln(Alms / km\\textsuperscript{2})", "Small House Dummy", "Large House Dummy", "Friary", "Wet 1535", "Wet 1536", "ln(1535 Lay Subsidy Amount)", "ln(Population)"
     ),
     omit.stat = c("wald", "lr", "logrank"),
     out = "Output/Tables/survival.tex"
