@@ -28,7 +28,6 @@
 - [x] Include "full model" with all monastic variables as robustness check
 - [x] Create a new script (with new output table/graph names of course) with each monastic variable interacted with a measure of the inverse of its distance
 ###### Nick:
-- [ ] 
 - [ ] "Old" vs "New" Grievances analysis: which has higher R$^2$?
 ##### Data:
 - [ ] Add variable for Royal-influenced abbatial elections?
