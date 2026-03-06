@@ -19,16 +19,15 @@ rdf$primary_day <- replace(rdf$primary_day, rdf$primary_day < 1, day)
 
 rdf$survival <- rdf$day - rdf$news_day
 rdf$primary_survival <- rdf$primary_day - rdf$news_day
-rdf$llandOwned <- log(rdf$landOwned + 1)
 # Replace primary_survival NAs with 40 (indicating no event observed within the study period)
 rdf$primary_survival <- ifelse(is.na(rdf$primary_survival), day, rdf$primary_survival)
 
 # Standardize and center continuous variables
 # Removed LS_pc_ch (680 NAs) and X_COORD (VIF=24.6) to match parish_logits.R
-rdf$llandOwned <- scale(rdf$llandOwned, center = TRUE, scale = TRUE)[, 1]
-rdf$ltitheOutT <- scale(rdf$ltitheOutT, center = TRUE, scale = TRUE)[, 1]
-rdf$lalmsInTot <- scale(rdf$lalmsInTot, center = TRUE, scale = TRUE)[, 1]
-rdf$lnetInc <- scale(rdf$lnetInc, center = TRUE, scale = TRUE)[, 1]
+rdf$llo_sk <- scale(rdf$llo_sk, center = TRUE, scale = TRUE)[, 1]
+rdf$lti_sk <- scale(rdf$lti_sk, center = TRUE, scale = TRUE)[, 1]
+rdf$lal_sk <- scale(rdf$lal_sk, center = TRUE, scale = TRUE)[, 1]
+rdf$lni_sk <- scale(rdf$lni_sk, center = TRUE, scale = TRUE)[, 1]
 rdf$lLStax_pc <- scale(rdf$lLStax_pc, center = TRUE, scale = TRUE)[, 1]
 rdf$lpopC <- scale(rdf$lpopC, center = TRUE, scale = TRUE)[, 1]
 rdf$Y_COORD <- scale(rdf$Y_COORD, center = TRUE, scale = TRUE)[, 1]
@@ -40,20 +39,20 @@ rdf$dwx_1536 <- scale(rdf$dwx_1536, center = TRUE, scale = TRUE)[, 1]
 
 cox1 <- coxph(
     Surv(primary_survival, primary) ~
-        llandOwned +
-        ltitheOutT +
-        lalmsInTot +
-        lnetInc +
+        llo_sk +
+        lti_sk +
+        lal_sk +
+        lni_sk +
         friary +
         wet_1535 + wet_1536,
     data = rdf
 )
 cox2 <- coxph(
     Surv(primary_survival, primary) ~
-        llandOwned +
-        ltitheOutT +
-        lalmsInTot +
-        lnetInc +
+        llo_sk +
+        lti_sk +
+        lal_sk +
+        lni_sk +
         friary +
         wet_1535 + wet_1536 +
         lLStax_pc +
@@ -61,10 +60,10 @@ cox2 <- coxph(
     data = rdf
 )
 cox3 <- coxph(Surv(primary_survival, primary) ~
-    llandOwned +
-    ltitheOutT +
-    lalmsInTot +
-    lnetInc +
+    llo_sk +
+    lti_sk +
+    lal_sk +
+    lni_sk +
     friary +
     wet_1535 + wet_1536 +
     lLStax_pc +
@@ -87,7 +86,7 @@ stargazer(cox1, cox2, cox3,
         c("Geographic Controls", "N", "N", "Y")
     ),
     covariate.labels = c(
-        "ln(Land Owned)", "ln(Tithe)", "ln(Alms)", "ln(Monastic Net Income)", "Friary", "Wet 1535", "Wet 1536", "ln(1535 Lay Subsidy Amount)", "ln(Population)"
+        "ln(Land Owned / km\\textsuperscript{2})", "ln(Tithe / km\\textsuperscript{2})", "ln(Alms / km\\textsuperscript{2})", "ln(Net Income / km\\textsuperscript{2})", "Friary", "Wet 1535", "Wet 1536", "ln(1535 Lay Subsidy Amount)", "ln(Population)"
     ),
     omit.stat = c("wald", "lr", "logrank"),
     out = "Output/Tables/survival.tex"
