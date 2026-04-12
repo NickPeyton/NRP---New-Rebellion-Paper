@@ -16,19 +16,12 @@
 - [ ] Check primary sources for rebel interrogations
 - [ ] Examine treatment of tenants on Royal v monastic estates
 - [ ] Distinguish "commons-driven" vs "elite-driven" views of rebellion
+- [ ] Land-per-km^2 analysis
 ##### Analysis:
 ###### Claude:
-- [x] Replace the monastic net income variable with two dummies, one indicating the presence of a large house (200 pounds or more in net income) and one indicating the presence of a small house (sub-200 pounds net income), should already have been created in the data creation scripts.
-- [x] Modify monastic variables with "denominators" and use them for the analysis scripts
-	- [x] "Per capita" version with VALUE / popC
-	- [x] "Per square kilometer" version with VALUE / area
-- [x] Replace the "Percy" variable with the "disgruntled gentlemen" variable for analysis
-- [x] Add a "distance from Scottish border"
-- [x] Alter main regressions to examine one monastic variable at a time while keeping geographic and other controls
-- [x] Include "full model" with all monastic variables as robustness check
-- [x] Create a new script (with new output table/graph names of course) with each monastic variable interacted with a measure of the inverse of its distance
+- [ ] Incorporate the main_gentlemen.csv into the parish shapefile using the "20km" logic previously used for Percy variable in jn_01
+
 ###### Nick:
 - [ ] "Old" vs "New" Grievances analysis: which has higher R$^2$?
 ##### Data:
 - [ ] Add variable for Royal-influenced abbatial elections?
-- [ ] Full universe of top-level aristocrats and their seats/lands

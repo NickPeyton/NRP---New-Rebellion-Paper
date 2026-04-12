@@ -49,6 +49,14 @@ scPDSI (Palmer Drought Severity Index) values for each OWDA grid cell across rel
 
 ---
 
+### `main_gentlemen.csv`
+Individual records for major secular gentlemen and nobles active during the Pilgrimage of Grace (1536), including their country seat coordinates and role classification. Each row is one individual; columns record name, title, rank, family, country seat, county, latitude/longitude (WGS84), and six mutually exclusive role dummies: `Active_Loyalist`, `Reluctant_Loyalist`, `Neutral`, `Reluctant_Rebel`, `Rebel_Participant`, `Active_Rebel`.
+
+- **Source:** Constructed from historical records
+- **Used by:** `jn_05_gentlemen_parish_join.ipynb`
+
+---
+
 ### `HRV/` — Historical Rural Values tables (22 files)
 `HRVtable2a.csv` through `HRVtableA7b.csv`. Parish-level economic data on agricultural values and taxable wealth from Broadberry et al. Used to impute or cross-reference monastic income against rural economic baselines.
 
@@ -208,10 +216,10 @@ Square grid polygon shapefiles at 2 km, 5 km, 10 km, and 20 km resolutions, cove
 ## Processed Data — `Data/Processed/`
 
 ### `northParishFlows.shp` *(+ companion `.dbf`, `.prj`, `.shx`, `.cpg` files)*
-**The primary analytical dataset for the paper.** A polygon shapefile of ancient northern parishes containing all constructed variables: monastic economic variables (land, tithes, alms, house-size dummies, distance-weighted variants, per-capita and per-sq-km versions), rebellion outcomes (muster dummy, primary dummy, gentry seat count), geographic controls (terrain zone, urban proximity, distance to Scottish border, news travel days), population estimates, taxable wealth, and drought indices. This file is the sole input to all R analysis scripts.
+**The primary analytical dataset for the paper.** A polygon shapefile of ancient northern parishes containing all constructed variables: monastic economic variables (land, tithes, alms, house-size dummies, distance-weighted variants, per-capita and per-sq-km versions), rebellion outcomes (muster dummy, primary dummy, gentry seat count), geographic controls (terrain zone, urban proximity, distance to Scottish border, news travel days), population estimates, taxable wealth, drought indices, and gentleman proximity dummies. This file is the sole input to all R analysis scripts.
 
-- **Source:** Output of the Python processing pipeline (scripts `00`–`04`)
-- **Transformation:** Spatial joins and aggregation of all raw inputs to ancient parish polygons. Built by running scripts `00` through `04` in sequence.
+- **Source:** Output of the Python processing pipeline (scripts `00`–`05`)
+- **Transformation:** Spatial joins and aggregation of all raw inputs to ancient parish polygons. Built by running scripts `00` through `05` in sequence. Script `05` adds eight binary proximity variables derived from `main_gentlemen.csv`: `mg_any`, `mg_rebel`, `mg_act_reb`, `mg_part`, `mg_loyal`, `mg_act_loy`, `mg_neutral`, `mg_rel_reb` — each flagging parishes within 20 km of gentleman seats in the relevant role category. Script `05` also adds eight inverse-distance-weighted (IDW) counterparts: `mg_any_w`, `mg_rebel_w`, `mg_areb_w`, `mg_part_w`, `mg_loyal_w`, `mg_aloy_w`, `mg_neut_w`, `mg_rreb_w`. Each is the sum of weights across gentlemen in the group, where w(d) = 1 for d ≤ 10 km and w(d) = 10/d_km for d > 10 km (so 0.5 at 20 km, 0.33 at 30 km, etc.).
 - **Date created:** Updated through 2025–2026 analysis revisions
 
 ---

@@ -3,7 +3,8 @@ pacman::p_load(
     WeightIt, survey, survival
 )
 
-setwd("C:/PhD/DissolutionProgramming/NRP---New-Rebellion-Paper/")
+PROJECT_ROOT <- normalizePath(file.path(dirname(rstudioapi::getActiveDocumentContext()$path), ".."))
+setwd(PROJECT_ROOT)
 pdf <- read_sf(dsn = "Data/Processed/northParishFlows.shp")
 
 # Replace NAs in terrainTyp with 'Other'
@@ -25,14 +26,11 @@ rdf$primary_survival <- ifelse(is.na(rdf$primary_survival), day, rdf$primary_sur
 # Convert seats to binary (1 if seats > 1, 0 otherwise)
 rdf$seats <- ifelse(rdf$seats > 1, 1, rdf$seats)
 
-# Create and standardize lbigLand
-rdf$lbigLand <- log(rdf$bigLand + 1)
-
 # Standardize and center continuous variables
-rdf$lsmLand <- scale(rdf$lsmLand, center = TRUE, scale = TRUE)[, 1]
-rdf$lbigLand <- scale(rdf$lbigLand, center = TRUE, scale = TRUE)[, 1]
-rdf$ltitheOutT <- scale(rdf$ltitheOutT, center = TRUE, scale = TRUE)[, 1]
-rdf$lalmsInTot <- scale(rdf$lalmsInTot, center = TRUE, scale = TRUE)[, 1]
+rdf$lsm_arak <- scale(rdf$lsm_arak, center = TRUE, scale = TRUE)[, 1]
+rdf$lbg_arak <- scale(rdf$lbg_arak, center = TRUE, scale = TRUE)[, 1]
+rdf$lti_arak <- scale(rdf$lti_arak, center = TRUE, scale = TRUE)[, 1]
+rdf$lal_arak <- scale(rdf$lal_arak, center = TRUE, scale = TRUE)[, 1]
 rdf$lnetInc <- scale(rdf$lnetInc, center = TRUE, scale = TRUE)[, 1]
 rdf$lLStax_pc <- scale(rdf$lLStax_pc, center = TRUE, scale = TRUE)[, 1]
 rdf$lpopC <- scale(rdf$lpopC, center = TRUE, scale = TRUE)[, 1]
@@ -45,8 +43,8 @@ rdf$dwx_1536 <- scale(rdf$dwx_1536, center = TRUE, scale = TRUE)[, 1]
 
 # Calculate weights
 weightitmodel <- weightit(
-    lsmLand ~
-        lbigLand + ltitheOutT + lalmsInTot + lnetInc + friary +
+    lsm_arak ~
+        lbg_arak + lti_arak + lal_arak + lnetInc + friary +
         lLStax_pc + lpopC + Y_COORD + area + uplands + lowlands + mean_slope + wet_1535 + wet_1536 + dwx_1536,
     data = rdf,
     method = "cbps",
@@ -56,7 +54,7 @@ weights <- weightitmodel$weights
 
 # Weighted logit model for primary
 weighted_lm_primary <- svyglm(
-    primary ~ lsmLand + lbigLand + ltitheOutT + lalmsInTot + lnetInc + friary +
+    primary ~ lsm_arak + lbg_arak + lti_arak + lal_arak + lnetInc + friary +
         lLStax_pc + lpopC + Y_COORD + area + uplands + lowlands + mean_slope + wet_1535 + wet_1536 + dwx_1536,
     data = rdf,
     weights = weights,
@@ -66,7 +64,7 @@ weighted_lm_primary <- svyglm(
 
 # Weighted logit model for muster
 weighted_lm_muster <- svyglm(
-    muster ~ lsmLand + lbigLand + ltitheOutT + lalmsInTot + lnetInc + friary +
+    muster ~ lsm_arak + lbg_arak + lti_arak + lal_arak + lnetInc + friary +
         lLStax_pc + lpopC + Y_COORD + area + uplands + lowlands + mean_slope + wet_1535 + wet_1536 + dwx_1536,
     data = rdf,
     weights = weights,
@@ -76,7 +74,7 @@ weighted_lm_muster <- svyglm(
 
 # Weighted logit model for seats
 weighted_lm_seats <- svyglm(
-    seats ~ lsmLand + lbigLand + ltitheOutT + lalmsInTot + lnetInc + friary +
+    seats ~ lsm_arak + lbg_arak + lti_arak + lal_arak + lnetInc + friary +
         lLStax_pc + lpopC + Y_COORD + area + uplands + lowlands + mean_slope + wet_1535 + wet_1536 + dwx_1536,
     data = rdf,
     weights = weights,
@@ -86,7 +84,7 @@ weighted_lm_seats <- svyglm(
 
 # Weighted survival model
 weighted_survival <- coxph(
-    Surv(primary_survival, primary) ~ lsmLand + lbigLand + ltitheOutT + lalmsInTot + lnetInc + friary +
+    Surv(primary_survival, primary) ~ lsm_arak + lbg_arak + lti_arak + lal_arak + lnetInc + friary +
         lLStax_pc + lpopC + Y_COORD + area + uplands + lowlands + mean_slope + wet_1535 + wet_1536 + dwx_1536,
     data = rdf,
     weights = weights,
@@ -95,16 +93,16 @@ weighted_survival <- coxph(
 
 # Variables to plot (excluding geographic controls to match the parish plots)
 vars_to_plot <- c(
-    "lsmLand", "lbigLand", "ltitheOutT", "lalmsInTot", "lnetInc", "friary",
+    "lsm_arak", "lbg_arak", "lti_arak", "lal_arak", "lnetInc", "friary",
     "lLStax_pc", "wet_1535", "wet_1536", "lpopC"
 )
 
 # Variable labels
 var_labels <- c(
-    "lsmLand" = "Small Monastery Land",
-    "lbigLand" = "Large Monastery Land",
-    "ltitheOutT" = "Tithe",
-    "lalmsInTot" = "Alms",
+    "lsm_arak" = "Small Monastery Land / Arable km²",
+    "lbg_arak" = "Large Monastery Land / Arable km²",
+    "lti_arak" = "Tithe / Arable km²",
+    "lal_arak" = "Alms / Arable km²",
     "lnetInc" = "Net Income",
     "friary" = "Friary",
     "lLStax_pc" = "Lay Subsidy per Capita",

@@ -13,3 +13,4 @@ ipykernel
 phonetics
 unidecode
 spacy
+lifelines

@@ -4,7 +4,8 @@ pacman::p_load(
   lmtest, sandwich
 )
 
-setwd("C:/PhD/DissolutionProgramming/NRP---New-Rebellion-Paper/")
+PROJECT_ROOT <- normalizePath(file.path(dirname(rstudioapi::getActiveDocumentContext()$path), ".."))
+setwd(PROJECT_ROOT)
 pdf <- read_sf(dsn = "Data/Processed/northParishFlows.shp")
 
 # Standardize and center continuous variables (same controls as parish_logits.R)

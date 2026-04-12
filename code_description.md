@@ -5,7 +5,7 @@ This document provides a brief description of each script found in the `Code/` d
 ## Python Scripts
 
 ### `00_parish_processing_consolidated.py`
-The primary data processing pipeline. It loads and cleans the *Valor Ecclesiasticus* dataset, creates geographic "flow" lines for monastic income and expenditure, and performs spatial joins with ancient parish shapefiles. It aggregates economic data, rebellion muster points, and gentry seats to the parish level, preparing the final dataset for analysis. New variables added: `bigHouse` (dummy for houses with net income > £200/yr), `smHouse` (dummy ≤ £200/yr), distance-decay weighted land and tithe variables (`lo_dw`, `sm_dw`, `ti_dw`) using a 12.5 km threshold, per capita and per sq km denominator versions of all main monastic variables, and `distScot` (distance from parish centroid to the Scottish border, approximated as the northern boundary of the north English counties).
+The primary data processing pipeline. It loads and cleans the *Valor Ecclesiasticus* dataset, creates geographic "flow" lines for monastic income and expenditure, and performs spatial joins with ancient parish shapefiles. It aggregates economic data, rebellion muster points, and gentry seats to the parish level, preparing the final dataset for analysis. New variables added: `bigHouse` (dummy for houses with net income > £200/yr), `smHouse` (dummy ≤ £200/yr), distance-decay weighted land and tithe variables (`lo_dw`, `sm_dw`, `ti_dw`) using a 12.5 km threshold, per capita and per sq km denominator versions of all main monastic variables, `distScot` (distance from parish centroid to the Scottish border, approximated as the northern boundary of the north English counties), and terrain land-use shares: `pct_arable`, `pct_pastoral`, `pct_ag_land` (fraction of parish area classified as arable, pastoral, or agricultural respectively, derived from an area-weighted intersection with `TerrainZones.shp`).
 
 ### `01_rebel_var_mods.py`
 Extends the rebellion-related variables. It calculates parish proximity to rebel muster points (within 10km) and assigns parishes to specific "hosts" (gentlemen involved in the rebellion) based on convex hulls and distance (within 50km). It also creates dummy variables for influential surnames like Darcy and Neville.
@@ -18,6 +18,12 @@ Processes scPDSI drought data from the Old World Drought Atlas. It calculates av
 
 ### `04_drought_parish_join.py`
 Creates a shapefile of drought grid cells (`Data/Processed/drought_cells.shp`) and samples these cells at the centroid of each parish in `northParishFlows`. It attaches the 1, 2, 3, 5, and 10-year drought intensity averages to the parish shapefile as new variables (`drought_1` through `drought_10`).
+
+### `jn_survival_analysis.ipynb`
+Python translation of `survival_analysis.R`. Loads `northParishFlows.shp`, applies identical data processing and standardisation steps, fits three nested Cox Proportional Hazards models (via `lifelines.CoxPHFitter`), prints model summaries, and writes a stargazer-style LaTeX table to `Output/Tables/survival.tex`. Updated to include an events-vs-parameters convergence warning and a mild ridge penalizer (`penalizer=0.01`) for model 3 to prevent Newton-step NaN failures under sparse events.
+
+### `jn_05_gentlemen_parish_join.ipynb`
+Joins `main_gentlemen.csv` to the parish shapefile using the same 20 km proximity logic applied to the Percy/disgruntled-gentlemen variables in `jn_01`. Converts gentleman seat coordinates from WGS84 (EPSG:4326) to British National Grid (EPSG:27700), then for each role category buffers the relevant points by 20 000 m and flags parishes whose centroid falls within the union. Adds eight binary columns to `northParishFlows.shp`: `mg_any` (any gentleman), `mg_rebel` (Rebel_Participant or Active_Rebel), `mg_act_reb` (Active_Rebel only), `mg_part` (Rebel_Participant only), `mg_loyal` (Active_Loyalist or Reluctant_Loyalist), `mg_act_loy` (Active_Loyalist only), `mg_neutral` (Neutral), `mg_rel_reb` (Reluctant_Rebel only).
 
 ### `DAG_maker.py`
 Uses the `networkx` and `matplotlib` libraries to generate Directed Acyclic Graphs (DAGs). These visualizations represent the hypothesized causal relationships between variables such as population, wealth, monastic land tenure, and the probability of rebellion. Outputs to `Output/Images/Graphs/LittleRebellionDAG.png` and `Output/Images/Graphs/BigRebellionDAG.png`.
@@ -80,6 +86,9 @@ Variant of `regression_plots.R` using the monolithic `llandOwned` variable. Outp
 
 ### `survival_analysis.R`
 Conducts survival analysis using Cox Proportional Hazards models. It treats the timing of the rebellion as a "risk" process, estimating how monastic presence influenced the speed and likelihood of a parish joining the rebellion after the initial outbreak. Outputs `Output/Tables/survival.tex`.
+
+### `elite_vs_commons.R`
+Compares two explanatory frameworks for rebellion participation: an "elite" model using proximity dummies for loyalist and rebel gentlemen seats (`mg_loyal`, `mg_rebel`), and a "commons" model using monastic land, tithe, and alms variables per sq km (`lsm_sk`, `lbg_sk`, `lti_sk`, `lal_sk`). Both models include the same tax, population, and geographic controls. Fits logit (muster, primary) and Poisson (seats) regressions for each framework plus a combined model, prints HC3-robust coefficient tables, and reports McFadden's pseudo-R² for all nine models to allow direct framework comparison. Outputs to console only.
 
 ### `survival_plots.R`
 Creates coefficient plots for Cox Proportional Hazards models across three nested model specifications for the primary monastery outcome, visualising log hazard ratios with 90% confidence intervals. Outputs `Output/Images/Graphs/cox1_coefficients.png`, `cox2_coefficients.png`, `cox3_coefficients.png`.

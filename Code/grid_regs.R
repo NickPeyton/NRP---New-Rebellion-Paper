@@ -3,7 +3,8 @@ pacman::p_load(
   raster, spdep, sp, ggplot2
 )
 
-setwd("C:/PhD/DissolutionProgramming/REB---Rebellion-Paper/")
+PROJECT_ROOT <- normalizePath(file.path(dirname(rstudioapi::getActiveDocumentContext()$path), ".."))
+setwd(PROJECT_ROOT)
 
 g2df <- read_sf(dsn = "Data/Raw/grid2.shp")
 g5df <- read_sf(dsn = "Data/Raw/grid5.shp")
@@ -15,7 +16,7 @@ muster_results_list <- list()
 for (df in df_list) {
   df$lLStax_pc <- log(df$LStax_pc + 1)
   formula <- muster ~ llandOwned +
-    ltitheOutT + lalmsInTot + lnetInc + friary +
+    lti_arak + lal_arak + lnetInc + friary +
     lLStax_pc + LS_pc_ch + lpopC +
     X_COORD + Y_COORD + mean_slope + mean_elev
   result <- glm(formula, data = df, family = poisson)
@@ -25,7 +26,7 @@ primary_results_list <- list()
 for (df in df_list) {
   df$lLStax_pc <- log(df$LStax_pc + 1)
   formula <- primary ~ llandOwned +
-    ltitheOutT + lalmsInTot + lnetInc + friary +
+    lti_arak + lal_arak + lnetInc + friary +
     lLStax_pc + LS_pc_ch + lpopC +
     X_COORD + Y_COORD + mean_slope + mean_elev
   result <- glm(formula, data = df, family = poisson)
@@ -35,7 +36,7 @@ seats_results_list <- list()
 for (df in df_list) {
   df$lLStax_pc <- log(df$LStax_pc + 1)
   formula <- seats ~ llandOwned +
-    ltitheOutT + lalmsInTot + lnetInc + friary +
+    lti_arak + lal_arak + lnetInc + friary +
     lLStax_pc + LS_pc_ch + lpopC +
     X_COORD + Y_COORD + mean_slope + mean_elev
   result <- glm(formula, data = df, family = poisson)

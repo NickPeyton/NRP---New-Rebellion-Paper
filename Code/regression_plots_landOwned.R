@@ -2,11 +2,12 @@ pacman::p_load(
     sf, tidyverse, dplyr, ggplot2, broom
 )
 
-setwd("C:/PhD/DissolutionProgramming/NRP---New-Rebellion-Paper/")
+PROJECT_ROOT <- normalizePath(file.path(dirname(rstudioapi::getActiveDocumentContext()$path), ".."))
+setwd(PROJECT_ROOT)
 pdf <- read_sf(dsn = "Data/Processed/northParishFlows.shp")
 
 # Standardize and center continuous variables
-pdf$llo_sk <- scale(pdf$llo_sk, center = TRUE, scale = TRUE)[, 1]
+pdf$llo_arak <- scale(pdf$llo_arak, center = TRUE, scale = TRUE)[, 1]
 pdf$lti_sk <- scale(pdf$lti_sk, center = TRUE, scale = TRUE)[, 1]
 pdf$lal_sk <- scale(pdf$lal_sk, center = TRUE, scale = TRUE)[, 1]
 pdf$lLStax_pc <- scale(pdf$lLStax_pc, center = TRUE, scale = TRUE)[, 1]
@@ -17,18 +18,18 @@ pdf$mean_slope <- scale(pdf$mean_slope, center = TRUE, scale = TRUE)[, 1]
 pdf$wet_1535 <- scale(pdf$wet_1535, center = TRUE, scale = TRUE)[, 1]
 pdf$wet_1536 <- scale(pdf$wet_1536, center = TRUE, scale = TRUE)[, 1]
 
-monastic_vars <- c("llo_sk", "lti_sk", "lal_sk", "smHouse", "bigHouse", "friary")
+monastic_vars <- c("llo_arak", "lti_sk", "lal_sk", "smHouse", "bigHouse", "friary")
 controls <- c("lLStax_pc", "wet_1535", "wet_1536", "lpopC", "Y_COORD", "uplands", "lowlands", "area", "mean_slope")
 
 # Variables to plot (in order of appearance in regression)
 vars_to_plot <- c(
-    "llo_sk", "lti_sk", "lal_sk", "smHouse", "bigHouse", "friary",
+    "llo_arak", "lti_sk", "lal_sk", "smHouse", "bigHouse", "friary",
     "lLStax_pc", "wet_1535", "wet_1536"
 )
 
 # Variable labels for plotting
 var_labels <- c(
-    "llo_sk" = "Land Owned / km\u00b2",
+    "llo_arak" = "Land Owned / km\u00b2",
     "lti_sk" = "Tithe / km\u00b2",
     "lal_sk" = "Alms / km\u00b2",
     "smHouse" = "Small House Dummy",

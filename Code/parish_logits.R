@@ -4,11 +4,12 @@ pacman::p_load(
   lmtest, sandwich, car
 )
 
-setwd("C:/PhD/DissolutionProgramming/NRP---New-Rebellion-Paper/")
+PROJECT_ROOT <- normalizePath(file.path(dirname(rstudioapi::getActiveDocumentContext()$path), ".."))
+setwd(PROJECT_ROOT)
 pdf <- read_sf(dsn = "Data/Processed/northParishFlows.shp")
 
 # Standardize and center continuous variables
-pdf$llo_sk <- scale(pdf$llo_sk, center = TRUE, scale = TRUE)[, 1]
+pdf$llo_arak <- scale(pdf$llo_arak, center = TRUE, scale = TRUE)[, 1]
 pdf$lsm_sk <- scale(pdf$lsm_sk, center = TRUE, scale = TRUE)[, 1]
 pdf$lbg_sk <- scale(pdf$lbg_sk, center = TRUE, scale = TRUE)[, 1]
 pdf$lti_sk <- scale(pdf$lti_sk, center = TRUE, scale = TRUE)[, 1]
@@ -229,17 +230,17 @@ stargazer(full_muster, full_primary, full_seat,
 # DAG Regs
 dag_cov_labels <- c("ln(Land Owned / km\\textsuperscript{2})", "ln(Population)", "ln(Lay Subsidy Per Capita)")
 
-dag_muster <- glm(muster ~ llo_sk + lpopC + lLStax_pc,
+dag_muster <- glm(muster ~ llo_arak + lpopC + lLStax_pc,
   data = pdf,
   family = binomial(link = "logit")
 )
 
-dag_primary <- glm(primary ~ llo_sk + lpopC + lLStax_pc,
+dag_primary <- glm(primary ~ llo_arak + lpopC + lLStax_pc,
   data = pdf,
   family = binomial(link = "logit")
 )
 
-dag_seat <- glm(seats ~ llo_sk + lpopC + lLStax_pc,
+dag_seat <- glm(seats ~ llo_arak + lpopC + lLStax_pc,
   data = pdf,
   family = "poisson"
 )

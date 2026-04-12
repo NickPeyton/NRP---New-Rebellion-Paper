@@ -3,7 +3,8 @@ pacman::p_load(
     WeightIt, survey, survival
 )
 
-setwd("C:/PhD/DissolutionProgramming/NRP---New-Rebellion-Paper/")
+PROJECT_ROOT <- normalizePath(file.path(dirname(rstudioapi::getActiveDocumentContext()$path), ".."))
+setwd(PROJECT_ROOT)
 pdf <- read_sf(dsn = "Data/Processed/northParishFlows.shp")
 
 # Replace NAs in terrainTyp with 'Other'
@@ -30,8 +31,8 @@ rdf$lotherLand <- log(rdf$otherLand + 1)
 
 # Standardize and center continuous variables
 rdf$lotherLand <- scale(rdf$lotherLand, center = TRUE, scale = TRUE)[, 1]
-rdf$ltitheOutT <- scale(rdf$ltitheOutT, center = TRUE, scale = TRUE)[, 1]
-rdf$lalmsInTot <- scale(rdf$lalmsInTot, center = TRUE, scale = TRUE)[, 1]
+rdf$lti_arak <- scale(rdf$lti_arak, center = TRUE, scale = TRUE)[, 1]
+rdf$lal_arak <- scale(rdf$lal_arak, center = TRUE, scale = TRUE)[, 1]
 rdf$lnetInc <- scale(rdf$lnetInc, center = TRUE, scale = TRUE)[, 1]
 rdf$lLStax_pc <- scale(rdf$lLStax_pc, center = TRUE, scale = TRUE)[, 1]
 rdf$lpopC <- scale(rdf$lpopC, center = TRUE, scale = TRUE)[, 1]
@@ -45,7 +46,7 @@ rdf$dwx_1536 <- scale(rdf$dwx_1536, center = TRUE, scale = TRUE)[, 1]
 # Calculate weights
 weightitmodel <- weightit(
     lotherLand ~
-        ltitheOutT + lalmsInTot + lnetInc + friary +
+        lti_arak + lal_arak + lnetInc + friary +
         lLStax_pc + lpopC + Y_COORD + area + uplands + lowlands + mean_slope + wet_1535 + wet_1536 + dwx_1536,
     data = rdf,
     method = "cbps",
@@ -55,7 +56,7 @@ weights <- weightitmodel$weights
 
 # Weighted logit model for primary
 weighted_lm_primary <- svyglm(
-    primary ~ lotherLand + ltitheOutT + lalmsInTot + lnetInc + friary +
+    primary ~ lotherLand + lti_arak + lal_arak + lnetInc + friary +
         lLStax_pc + lpopC + Y_COORD + area + uplands + lowlands + mean_slope + wet_1535 + wet_1536 + dwx_1536,
     data = rdf,
     weights = weights,
@@ -65,7 +66,7 @@ weighted_lm_primary <- svyglm(
 
 # Weighted logit model for muster
 weighted_lm_muster <- svyglm(
-    muster ~ lotherLand + ltitheOutT + lalmsInTot + lnetInc + friary +
+    muster ~ lotherLand + lti_arak + lal_arak + lnetInc + friary +
         lLStax_pc + lpopC + Y_COORD + area + uplands + lowlands + mean_slope + wet_1535 + wet_1536 + dwx_1536,
     data = rdf,
     weights = weights,
@@ -75,7 +76,7 @@ weighted_lm_muster <- svyglm(
 
 # Weighted logit model for seats
 weighted_lm_seats <- svyglm(
-    seats ~ lotherLand + ltitheOutT + lalmsInTot + lnetInc + friary +
+    seats ~ lotherLand + lti_arak + lal_arak + lnetInc + friary +
         lLStax_pc + lpopC + Y_COORD + area + uplands + lowlands + mean_slope + wet_1535 + wet_1536 + dwx_1536,
     data = rdf,
     weights = weights,
@@ -85,7 +86,7 @@ weighted_lm_seats <- svyglm(
 
 # Weighted survival model
 weighted_survival <- coxph(
-    Surv(primary_survival, primary) ~ lotherLand + ltitheOutT + lalmsInTot + lnetInc + friary +
+    Surv(primary_survival, primary) ~ lotherLand + lti_arak + lal_arak + lnetInc + friary +
         lLStax_pc + lpopC + Y_COORD + area + uplands + lowlands + mean_slope + wet_1535 + wet_1536 + dwx_1536,
     data = rdf,
     weights = weights,
@@ -94,15 +95,15 @@ weighted_survival <- coxph(
 
 # Variables to plot (excluding geographic controls to match the parish plots)
 vars_to_plot <- c(
-    "lotherLand", "ltitheOutT", "lalmsInTot", "lnetInc", "friary",
+    "lotherLand", "lti_arak", "lal_arak", "lnetInc", "friary",
     "lLStax_pc", "wet_1535", "wet_1536", "lpopC"
 )
 
 # Variable labels
 var_labels <- c(
     "lotherLand" = "Offsite Land",
-    "ltitheOutT" = "Tithe",
-    "lalmsInTot" = "Alms",
+    "lti_arak" = "Tithe / Arable km²",
+    "lal_arak" = "Alms / Arable km²",
     "lnetInc" = "Net Income",
     "friary" = "Friary",
     "lLStax_pc" = "Lay Subsidy per Capita",

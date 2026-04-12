@@ -2,7 +2,8 @@ pacman::p_load(
     sf, tidyverse, dplyr, ggplot2, survival, broom
 )
 
-setwd("C:/PhD//DissolutionProgramming/NRP---New-Rebellion-Paper/")
+PROJECT_ROOT <- normalizePath(file.path(dirname(rstudioapi::getActiveDocumentContext()$path), ".."))
+setwd(PROJECT_ROOT)
 pdf <- read_sf(dsn = "Data/Processed/northParishFlows.shp")
 
 day <- 40
@@ -17,14 +18,11 @@ rdf$survival <- rdf$day - rdf$news_day
 rdf$primary_survival <- rdf$primary_day - rdf$news_day
 rdf$primary_survival <- ifelse(is.na(rdf$primary_survival), day, rdf$primary_survival)
 
-# Create and standardize lbigLand
-rdf$lbigLand <- log(rdf$bigLand + 1)
-
 # Standardize and center continuous variables
-rdf$lsmLand <- scale(rdf$lsmLand, center = TRUE, scale = TRUE)[, 1]
-rdf$lbigLand <- scale(rdf$lbigLand, center = TRUE, scale = TRUE)[, 1]
-rdf$ltitheOutT <- scale(rdf$ltitheOutT, center = TRUE, scale = TRUE)[, 1]
-rdf$lalmsInTot <- scale(rdf$lalmsInTot, center = TRUE, scale = TRUE)[, 1]
+rdf$lsm_arak <- scale(rdf$lsm_arak, center = TRUE, scale = TRUE)[, 1]
+rdf$lbg_arak <- scale(rdf$lbg_arak, center = TRUE, scale = TRUE)[, 1]
+rdf$lti_arak <- scale(rdf$lti_arak, center = TRUE, scale = TRUE)[, 1]
+rdf$lal_arak <- scale(rdf$lal_arak, center = TRUE, scale = TRUE)[, 1]
 rdf$lnetInc <- scale(rdf$lnetInc, center = TRUE, scale = TRUE)[, 1]
 rdf$lLStax_pc <- scale(rdf$lLStax_pc, center = TRUE, scale = TRUE)[, 1]
 rdf$lpopC <- scale(rdf$lpopC, center = TRUE, scale = TRUE)[, 1]
@@ -38,10 +36,10 @@ rdf$dwx_1536 <- scale(rdf$dwx_1536, center = TRUE, scale = TRUE)[, 1]
 # Run the three Cox models
 cox1 <- coxph(
     Surv(primary_survival, primary) ~
-        lsmLand +
-        lbigLand +
-        ltitheOutT +
-        lalmsInTot +
+        lsm_arak +
+        lbg_arak +
+        lti_arak +
+        lal_arak +
         lnetInc +
         friary +
         wet_1535 + wet_1536,
@@ -50,10 +48,10 @@ cox1 <- coxph(
 
 cox2 <- coxph(
     Surv(primary_survival, primary) ~
-        lsmLand +
-        lbigLand +
-        ltitheOutT +
-        lalmsInTot +
+        lsm_arak +
+        lbg_arak +
+        lti_arak +
+        lal_arak +
         lnetInc +
         friary +
         wet_1535 + wet_1536 +
@@ -63,10 +61,10 @@ cox2 <- coxph(
 )
 
 cox3 <- coxph(Surv(primary_survival, primary) ~
-    lsmLand +
-    lbigLand +
-    ltitheOutT +
-    lalmsInTot +
+    lsm_arak +
+    lbg_arak +
+    lti_arak +
+    lal_arak +
     lnetInc +
     friary +
     wet_1535 + wet_1536 +
@@ -80,26 +78,26 @@ cox3 <- coxph(Surv(primary_survival, primary) ~
 
 # Variables to plot for each model
 vars_cox1 <- c(
-    "lsmLand", "lbigLand", "ltitheOutT", "lalmsInTot", "lnetInc", "friary",
+    "lsm_arak", "lbg_arak", "lti_arak", "lal_arak", "lnetInc", "friary",
     "wet_1535", "wet_1536"
 )
 
 vars_cox2 <- c(
-    "lsmLand", "lbigLand", "ltitheOutT", "lalmsInTot", "lnetInc", "friary",
+    "lsm_arak", "lbg_arak", "lti_arak", "lal_arak", "lnetInc", "friary",
     "wet_1535", "wet_1536", "lLStax_pc", "lpopC"
 )
 
 vars_cox3 <- c(
-    "lsmLand", "lbigLand", "ltitheOutT", "lalmsInTot", "lnetInc", "friary",
+    "lsm_arak", "lbg_arak", "lti_arak", "lal_arak", "lnetInc", "friary",
     "wet_1535", "wet_1536", "lLStax_pc", "lpopC"
 )
 
 # Variable labels
 var_labels <- c(
-    "lsmLand" = "Small Monastery Land",
-    "lbigLand" = "Large Monastery Land",
-    "ltitheOutT" = "Tithe",
-    "lalmsInTot" = "Alms",
+    "lsm_arak" = "Small Monastery Land / Arable km²",
+    "lbg_arak" = "Large Monastery Land / Arable km²",
+    "lti_arak" = "Tithe / Arable km²",
+    "lal_arak" = "Alms / Arable km²",
     "lnetInc" = "Net Income",
     "friary" = "Friary",
     "wet_1535" = "Wet 1535",

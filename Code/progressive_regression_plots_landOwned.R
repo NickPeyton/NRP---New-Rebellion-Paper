@@ -2,11 +2,12 @@ pacman::p_load(
     sf, tidyverse, dplyr, ggplot2, broom
 )
 
-setwd("C:/PhD/DissolutionProgramming/NRP---New-Rebellion-Paper/")
+PROJECT_ROOT <- normalizePath(file.path(dirname(rstudioapi::getActiveDocumentContext()$path), ".."))
+setwd(PROJECT_ROOT)
 pdf <- read_sf(dsn = "Data/Processed/northParishFlows.shp")
 
 # Standardize and center continuous variables
-pdf$llo_sk <- scale(pdf$llo_sk, center = TRUE, scale = TRUE)[, 1]
+pdf$llo_arak <- scale(pdf$llo_arak, center = TRUE, scale = TRUE)[, 1]
 pdf$lti_sk <- scale(pdf$lti_sk, center = TRUE, scale = TRUE)[, 1]
 pdf$lal_sk <- scale(pdf$lal_sk, center = TRUE, scale = TRUE)[, 1]
 pdf$lLStax_pc <- scale(pdf$lLStax_pc, center = TRUE, scale = TRUE)[, 1]
@@ -19,7 +20,7 @@ pdf$wet_1536 <- scale(pdf$wet_1536, center = TRUE, scale = TRUE)[, 1]
 
 # Variable groups for progressive model building
 var_list_list <- list(
-    c("llo_sk"),
+    c("llo_arak"),
     c("lti_sk", "lal_sk", "smHouse", "bigHouse", "friary"),
     c("lLStax_pc", "lpopC", "wet_1535", "wet_1536"),
     c("Y_COORD", "uplands", "lowlands", "area", "mean_slope")
@@ -27,7 +28,7 @@ var_list_list <- list(
 
 # Variable labels
 var_labels <- c(
-    "llo_sk" = "Land Owned / km\u00b2",
+    "llo_arak" = "Land Owned / km\u00b2",
     "lti_sk" = "Tithe / km\u00b2",
     "lal_sk" = "Alms / km\u00b2",
     "smHouse" = "Small House Dummy",
@@ -41,7 +42,7 @@ var_labels <- c(
 
 # Variables to plot (focus on main variables, not geographic controls)
 vars_to_plot <- c(
-    "llo_sk", "lti_sk", "lal_sk", "smHouse", "bigHouse", "friary",
+    "llo_arak", "lti_sk", "lal_sk", "smHouse", "bigHouse", "friary",
     "lLStax_pc", "lpopC", "wet_1535", "wet_1536"
 )
 

@@ -4,7 +4,8 @@ pacman::p_load(
     ggplot2
 )
 
-setwd("C:/PhD//DissolutionProgramming/NRP---New-Rebellion-Paper/")
+PROJECT_ROOT <- normalizePath(file.path(dirname(rstudioapi::getActiveDocumentContext()$path), ".."))
+setwd(PROJECT_ROOT)
 pdf <- read_sf(dsn = "Data/Processed/northParishFlows.shp")
 
 day <- 40
@@ -24,7 +25,7 @@ rdf$primary_survival <- ifelse(is.na(rdf$primary_survival), day, rdf$primary_sur
 
 # Standardize and center continuous variables
 # Removed LS_pc_ch (680 NAs) and X_COORD (VIF=24.6) to match parish_logits.R
-rdf$llo_sk <- scale(rdf$llo_sk, center = TRUE, scale = TRUE)[, 1]
+rdf$llo_arak <- scale(rdf$llo_arak, center = TRUE, scale = TRUE)[, 1]
 rdf$lti_sk <- scale(rdf$lti_sk, center = TRUE, scale = TRUE)[, 1]
 rdf$lal_sk <- scale(rdf$lal_sk, center = TRUE, scale = TRUE)[, 1]
 rdf$lLStax_pc <- scale(rdf$lLStax_pc, center = TRUE, scale = TRUE)[, 1]
@@ -38,7 +39,7 @@ rdf$dwx_1536 <- scale(rdf$dwx_1536, center = TRUE, scale = TRUE)[, 1]
 
 cox1 <- coxph(
     Surv(primary_survival, primary) ~
-        llo_sk +
+        llo_arak +
         lti_sk +
         lal_sk +
         smHouse +
@@ -49,7 +50,7 @@ cox1 <- coxph(
 )
 cox2 <- coxph(
     Surv(primary_survival, primary) ~
-        llo_sk +
+        llo_arak +
         lti_sk +
         lal_sk +
         smHouse +
@@ -61,7 +62,7 @@ cox2 <- coxph(
     data = rdf
 )
 cox3 <- coxph(Surv(primary_survival, primary) ~
-    llo_sk +
+    llo_arak +
     lti_sk +
     lal_sk +
     smHouse +
