@@ -46,13 +46,7 @@ The main execution script for parish-level statistical models. It utilizes the f
 Performs data quality checks on the main processed dataset — missing value counts, value ranges, and summary statistics for land variables (logged and raw). Outputs to console only; does not write files.
 
 ### `AIPW.R`
-Estimates inverse-probability-weighted (IPW) causal effects of monastic land ownership on rebellion outcomes. Uses Covariate Balancing Propensity Score (CBPS) weighting, weighted logit regression (`svyglm`), and a weighted Cox proportional hazards survival model. Outputs `Output/Tables/IPW.tex`.
-
-### `AIPW_plots.R`
-Creates coefficient plots visualizing IPW-weighted logit and Cox PH survival model results across three rebellion outcomes (primary, muster, seats) using CBPS-weighted regressions with 90% confidence intervals. Outputs to `Output/Images/Graphs/`: `ipw_logit_primary_coefficients.png`, `ipw_logit_muster_coefficients.png`, `ipw_logit_seats_coefficients.png`, `ipw_cox_coefficients.png`.
-
-### `AIPW_plots_ownOther.R`
-Variant of `AIPW_plots.R` that splits monastic land into site-owned (`lownLand`) vs. offsite (`lotherLand`) categories. Uses CBPS weighting on offsite land. Outputs four PNG plots with `_ownOther` suffix to `Output/Images/Graphs/`.
+Unified IPW/CBPS script (merged from former `AIPW.R`, `AIPW_plots.R`, `AIPW_plots_ownOther.R`). Two sections: (1) main specification using small/large monastery land per arable km² (`lsm_arak`, `lbg_arak`, `lti_arak`, `lal_arak`, `lni_arak`), and (2) ownOther specification using on-site vs. off-site land per arable km² (`lown_arak`, `loth_arak`). Each section produces a stargazer table and four coefficient plots. Geographic control standardised to `distScot` (was `Y_COORD`) for consistency with `parish_logits.R`. Outputs `Output/Tables/IPW.tex` and eight PNGs to `Output/Images/Graphs/` (`ipw_logit_*_coefficients[_ownOther].png`, `ipw_cox_coefficients[_ownOther].png`).
 
 ### `conley_regs.R`
 Runs Logit regressions with Conley standard errors. This approach accounts for spatial autocorrelation in the data by adjusting standard errors based on specified distance cutoffs (20km to 200km). Outputs `Output/Tables/conley.tex`.
@@ -61,34 +55,25 @@ Runs Logit regressions with Conley standard errors. This approach accounts for s
 Performs diagnostic checks on the main processed dataset: missing value summaries, correlation matrix, and variance inflation factors (VIF) from a logit model. Outputs to console only; does not write files.
 
 ### `grid_regs.R`
-The R implementation of grid-based regressions. It performs Poisson models on muster and seat counts across different grid sizes (2km, 5km, 10km, 20km), exploring the robustness of the results to different geographic aggregations. Outputs `Output/Tables/grid_muster.tex`, `grid_primary.tex`, `grid_seats.tex`.
+The R implementation of grid-based regressions. Poisson models on muster, primary, and seat counts across grid sizes (2km, 5km, 10km, 20km). Updated to use `lni_arak` (net income per arable km²) in place of `lnetInc`. Outputs `Output/Tables/grid_muster.tex`, `grid_primary.tex`, `grid_seats.tex`.
 
 ### `parish_logits.R`
-Executes parish-level Logit and Poisson regressions. It focuses on the relationship between specific monastic variables (land, tithes, alms, and house-size dummies) and rebellion outcomes, producing LaTeX tables for the paper. Updated: `lnetInc` replaced by `smHouse`/`bigHouse` dummies; `dg_percy` replaced by `disg_gnt` (all disgruntled gentry surnames); `distScot` added to controls; full robustness model (all monastic variables simultaneously) added, outputting to `Output/Tables/full_monastic.tex`.
-
-### `parish_logits_interactions.R`
-Runs the same parish-level regressions as `parish_logits.R` but uses distance-decay weighted versions of monastic land and tithe variables. Tests three specifications: raw distance-weighted values, per-capita distance-weighted values, and per-sq-km distance-weighted values. Outputs 9 LaTeX tables to `Output/Tables/` with prefix `muster_dw_*`, `primary_dw_*`, `seat_dw_*`.
-
-### `progressive_regression_plots.R`
-Generates coefficient evolution plots showing how key coefficients change across four nested model specifications (land only → land + monastic → + tax/population/weather → + geography). Runs logit (muster, primary) and Poisson (seats) regressions with 90% CIs, colour-coded by specification. Outputs `Output/Images/Graphs/muster_progressive_coefficients.png`, `primary_progressive_coefficients.png`, `seats_progressive_coefficients.png`.
-
-### `progressive_regression_plots_landOwned.R`
-Variant of `progressive_regression_plots.R` using a single monolithic land ownership variable (`llandOwned`). Same four-model nesting structure. Outputs three PNG plots with `_landOwned` suffix to `Output/Images/Graphs/`.
-
-### `progressive_regression_plots_ownOther.R`
-Variant of `progressive_regression_plots.R` splitting land into site-owned (`lownLand`) vs. offsite (`lotherLand`). Same nesting structure. Outputs three PNG plots with `_ownOther` suffix to `Output/Images/Graphs/`.
+Unified parish-level logit script (merged from former `parish_logits.R` and `parish_logits_interactions.R`). Section 1: individual and progressive Logit/Poisson regressions for muster, primary, and seats using monastic variables per arable km² (`lsm_arak`, `lbg_arak`, `lti_arak`, `lal_arak`, `lni_arak`, plus house-size dummies and friary). Includes full-model robustness check, DAG regressions, and VIF analysis. Section 2: distance-weighted interaction models (raw, per-capita, per-sq-km). Outputs 15+ LaTeX tables to `Output/Tables/`.
 
 ### `regression_plots.R`
-Generates coefficient plots from the full logit (muster, primary) and Poisson (seats) models. Extracts 90% confidence intervals and visualises them using `ggplot2`. Outputs `Output/Images/Graphs/muster_coefficients.png`, `primary_coefficients.png`, `seats_coefficients.png`.
-
-### `regression_plots_landOwned.R`
-Variant of `regression_plots.R` using the monolithic `llandOwned` variable. Outputs three PNG plots with `_landOwned` suffix to `Output/Images/Graphs/`.
+Unified coefficient-plot script (merged from former `regression_plots.R`, `regression_plots_landOwned.R`, `progressive_regression_plots.R`, `progressive_regression_plots_ownOther.R`, `progressive_regression_plots_landOwned.R`). Five sections producing coefficient plots for muster, primary, and seats: (1) full-model sm/bg/ti/al/ni per arable km², (2) full-model land owned per arable km², (3) progressive sm/bg per arable km², (4) progressive own/oth per arable km², (5) progressive land owned per arable km². All monastic variables now use `_arak` (per arable km²). Geographic control standardised to `distScot` (was `Y_COORD`) to match `parish_logits.R` table specifications. Outputs 15 PNGs to `Output/Images/Graphs/`.
 
 ### `survival_analysis.R`
-Conducts survival analysis using Cox Proportional Hazards models. It treats the timing of the rebellion as a "risk" process, estimating how monastic presence influenced the speed and likelihood of a parish joining the rebellion after the initial outbreak. Outputs `Output/Tables/survival.tex`.
+Unified survival analysis script (merged from former `survival_analysis.R` and `survival_plots.R`). Section 1: three nested Cox PH models (monastic → + taxation/population → + geography) with a stargazer table. Section 2: coefficient plots for each Cox model. All monastic variables use `_arak` (per arable km²); adds `lni_arak`. Geographic control standardised to `distScot` (was `Y_COORD`) for consistency with `parish_logits.R`. Outputs `Output/Tables/survival.tex` and three PNGs to `Output/Images/Graphs/`.
+
+### `old_vs_new_grievances.R`
+Tests whether pre-1536 structural variables ("old" grievances: taxation, population, weather, geography, drought) or Dissolution-specific variables ("new" grievances: monastic land, tithes, alms per arable km², house dummies, friary) better explain rebellion. Fits old-only, new-only, and combined models for muster, primary, and seats. Reports McFadden pseudo-R² for each; runs a likelihood-ratio test of H₀ = old-only vs. H₁ = old + new to test the joint significance of the new variables. Outputs `Output/Tables/old_vs_new_{muster,primary,seats}.tex` with R² and LR test rows.
+
+### `interaction_house_size.R`
+Formal test of the large-house vs. small-house differential effect. Three sections: (1) full models with both `lsm_arak` and `lbg_arak` simultaneously for muster, primary, and seats; (2) Wald tests (HC3 robust) of H₀: coef(lbg_arak) = coef(lsm_arak) for each outcome; (3) stratum regressions splitting on median `lbg_arak`. Outputs `Output/Tables/interaction_house_size.tex` with Wald p-value rows, and Wald test results + stratum regression summaries to console.
+
+### `sensitivity_thresholds.R`
+Tests coefficient stability for the two key threshold choices: (1) gentleman proximity buffer — recomputes `mg_loyal`/`mg_rebel` dummies from raw coordinates (`main_gentlemen.csv`) at 10, 15, 20, 25, and 30 km and refits the primary logit at each threshold; (2) distance-decay threshold (12.5 km) — notes that this is baked into the Python notebooks and cannot be varied in R. Outputs `Output/Tables/sensitivity_gent_buffer.tex` and a console coefficient-stability table.
 
 ### `elite_vs_commons.R`
-Compares two explanatory frameworks for rebellion participation: an "elite" model using proximity dummies for loyalist and rebel gentlemen seats (`mg_loyal`, `mg_rebel`), and a "commons" model using monastic land, tithe, and alms variables per sq km (`lsm_sk`, `lbg_sk`, `lti_sk`, `lal_sk`). Both models include the same tax, population, and geographic controls. Fits logit (muster, primary) and Poisson (seats) regressions for each framework plus a combined model, prints HC3-robust coefficient tables, and reports McFadden's pseudo-R² for all nine models to allow direct framework comparison. Outputs to console only.
-
-### `survival_plots.R`
-Creates coefficient plots for Cox Proportional Hazards models across three nested model specifications for the primary monastery outcome, visualising log hazard ratios with 90% confidence intervals. Outputs `Output/Images/Graphs/cox1_coefficients.png`, `cox2_coefficients.png`, `cox3_coefficients.png`.
+Compares "elite" (gentleman proximity dummies) vs. "commons" (monastic economic footprint) explanatory frameworks. Updated to use monastic variables per arable km² (`lsm_arak`, `lbg_arak`, `lti_arak`, `lal_arak`). Fits logit (muster, primary) and Poisson (seats) regressions for each framework plus a combined model. Prints HC3-robust coefficient tables and McFadden pseudo-R² comparison to console; also writes stargazer tables with R² rows to `Output/Tables/elite_vs_commons_{muster,primary,seats}.tex`.

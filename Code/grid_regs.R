@@ -16,7 +16,7 @@ muster_results_list <- list()
 for (df in df_list) {
   df$lLStax_pc <- log(df$LStax_pc + 1)
   formula <- muster ~ llandOwned +
-    lti_arak + lal_arak + lnetInc + friary +
+    lti_arak + lal_arak + lni_arak + friary +
     lLStax_pc + LS_pc_ch + lpopC +
     X_COORD + Y_COORD + mean_slope + mean_elev
   result <- glm(formula, data = df, family = poisson)
@@ -26,7 +26,7 @@ primary_results_list <- list()
 for (df in df_list) {
   df$lLStax_pc <- log(df$LStax_pc + 1)
   formula <- primary ~ llandOwned +
-    lti_arak + lal_arak + lnetInc + friary +
+    lti_arak + lal_arak + lni_arak + friary +
     lLStax_pc + LS_pc_ch + lpopC +
     X_COORD + Y_COORD + mean_slope + mean_elev
   result <- glm(formula, data = df, family = poisson)
@@ -36,7 +36,7 @@ seats_results_list <- list()
 for (df in df_list) {
   df$lLStax_pc <- log(df$LStax_pc + 1)
   formula <- seats ~ llandOwned +
-    lti_arak + lal_arak + lnetInc + friary +
+    lti_arak + lal_arak + lni_arak + friary +
     lLStax_pc + LS_pc_ch + lpopC +
     X_COORD + Y_COORD + mean_slope + mean_elev
   result <- glm(formula, data = df, family = poisson)
@@ -45,7 +45,9 @@ for (df in df_list) {
 
 hide_vars <- c("Constant", "X_COORD", "Y_COORD", "mean_slope")
 cov_labels <- c(
-  "ln(Land Owned)", "ln(Tithe)", "ln(Alms)", "ln(Net Income)", "Friary",
+  "ln(Land Owned)", "ln(Tithe / Arable km\\textsuperscript{2})",
+  "ln(Alms / Arable km\\textsuperscript{2})",
+  "ln(Net Income / Arable km\\textsuperscript{2})", "Friary",
   "ln(Lay Subsidy)", "Lay Subsidy Change", "ln(Population)"
 )
 

@@ -1,0 +1,70 @@
+
+% Table created by stargazer v.5.2.3 by Marek Hlavac, Social Policy Institute. E-mail: marek.hlavac at gmail.com
+% Date and time: Tue, Apr 14, 2026 - 10:08:38
+% Requires LaTeX packages: dcolumn 
+\begin{table}[H] \centering 
+  \caption{Old vs. New Grievances — MUSTER} 
+  \label{tab:old_new_muster} 
+\begin{tabular}{@{\extracolsep{.5pt}}lD{.}{.}{-3} D{.}{.}{-3} D{.}{.}{-3} } 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{3}{c}{\textit{Dependent variable:}} \\ 
+\cline{2-4} 
+\\[-1.8ex] & \multicolumn{1}{c}{paste(dep, "\textasciitilde", paste(old\_vars, collapse = " + "))} & \multicolumn{1}{c}{paste(dep, "\textasciitilde", paste(new\_vars, collapse = " + "))} & \multicolumn{1}{c}{paste(dep, "\textasciitilde", paste(c(old\_vars, new\_vars), collapse = " + "))} \\ 
+ & \multicolumn{1}{c}{Old} & \multicolumn{1}{c}{New} & \multicolumn{1}{c}{Combined} \\ 
+\\[-1.8ex] & \multicolumn{1}{c}{(1)} & \multicolumn{1}{c}{(2)} & \multicolumn{1}{c}{(3)}\\ 
+\hline \\[-1.8ex] 
+ ln(Lay Subsidy) & 0.075 &  & 0.107 \\ 
+  & (0.272) &  & (0.285) \\ 
+  & & & \\ 
+ Lay Subsidy Change & -0.018 &  & 0.015 \\ 
+  & (0.274) &  & (0.253) \\ 
+  & & & \\ 
+ ln(Population) & 0.462^{***} &  & 0.463^{***} \\ 
+  & (0.135) &  & (0.144) \\ 
+  & & & \\ 
+ Wet 1535 & 0.132 &  & -0.119 \\ 
+  & (0.227) &  & (0.254) \\ 
+  & & & \\ 
+ Wet 1536 & -0.416 &  & -0.240 \\ 
+  & (0.494) &  & (0.517) \\ 
+  & & & \\ 
+ 5-yr Drought Index & -0.260 &  & -0.279 \\ 
+  & (0.431) &  & (0.448) \\ 
+  & & & \\ 
+ ln(Small Monastery Land / Arable km\textsuperscript{2}) &  & 0.090 & 0.080 \\ 
+  &  & (0.119) & (0.174) \\ 
+  & & & \\ 
+ ln(Large Monastery Land / Arable km\textsuperscript{2}) &  & 0.278^{*} & 0.443^{**} \\ 
+  &  & (0.142) & (0.222) \\ 
+  & & & \\ 
+ ln(Tithe / Arable km\textsuperscript{2}) &  & -0.221 & -0.402^{*} \\ 
+  &  & (0.152) & (0.224) \\ 
+  & & & \\ 
+ ln(Alms / Arable km\textsuperscript{2}) &  & 0.093 & 0.011 \\ 
+  &  & (0.111) & (0.164) \\ 
+  & & & \\ 
+ ln(Net Income / Arable km\textsuperscript{2}) &  & -0.278 & 0.323 \\ 
+  &  & (0.245) & (0.391) \\ 
+  & & & \\ 
+ Small House Dummy &  & 1.198 & 0.013 \\ 
+  &  & (0.749) & (1.181) \\ 
+  & & & \\ 
+ Large House Dummy &  & 2.529^{***} & 1.188 \\ 
+  &  & (0.873) & (1.574) \\ 
+  & & & \\ 
+ Friary &  & 0.917^{**} & 0.331 \\ 
+  &  & (0.451) & (0.750) \\ 
+  & & & \\ 
+\hline \\[-1.8ex] 
+Geographic Controls & Y & N & Y \\ 
+McFadden R\textsuperscript{2} & 0.5224 & 0.0464 & 0.5578 \\ 
+LR $\chi^2$ (New $|$ Old) & --- & --- & 17.781 \\ 
+LR $p$-value & --- & --- & 0.0229 \\ 
+Observations & \multicolumn{1}{c}{974} & \multicolumn{1}{c}{1,755} & \multicolumn{1}{c}{974} \\ 
+Log Likelihood & \multicolumn{1}{c}{-120.065} & \multicolumn{1}{c}{-239.745} & \multicolumn{1}{c}{-111.175} \\ 
+\hline 
+\hline \\[-1.8ex] 
+\textit{Note:}  & \multicolumn{3}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
+\end{tabular} 
+\end{table} 
