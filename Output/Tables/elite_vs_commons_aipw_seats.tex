@@ -1,0 +1,34 @@
+\begin{table}[H]
+\centering
+\caption{Elite vs.\ Commons Frameworks (DoubleML PLR) --- SEATS}
+\label{tab:aipw_seats}
+\begin{tabular}{lcccc}
+\hline\hline
+ & Elite (IDW) & Elite (Binary) & Commons & Combined \\
+\hline
+Snubbed Family IDW Score & -0.0142 &  &  & -0.0226 \\
+ & (0.0167) &  &  & (0.0150) \\
+Court Officer IDW Score & 0.0402$^{**}$ &  &  & 0.0429$^{**}$ \\
+ & (0.0178) &  &  & (0.0179) \\
+Snubbed Family (10km Binary) &  & -0.0094 &  &  \\
+ &  & (0.0146) &  &  \\
+Court Officer (10km Binary) &  & 0.0169 &  &  \\
+ &  & (0.0146) &  &  \\
+ln(Small Monastery Land / Arable km²) &  &  & 0.0138 & 0.0126 \\
+ &  &  & (0.0085) & (0.0081) \\
+ln(Large Monastery Land / Arable km²) &  &  & 0.0144$^{**}$ & 0.0122$^{*}$ \\
+ &  &  & (0.0066) & (0.0064) \\
+ln(Tithe / Arable km²) &  &  & 0.0023 & -0.0002 \\
+ &  &  & (0.0086) & (0.0089) \\
+ln(Alms / Arable km²) &  &  & -0.0006 & -0.0017 \\
+ &  &  & (0.0061) & (0.0064) \\
+\hline
+Observations & 1391 & 1391 & 1391 & 1391 \\
+Clusters (hundred$^\dagger$) & 139 & 139 & 139 & 139 \\
+Geographic Controls & Y & Y & Y & Y \\
+Cross-fit folds & 5 & 5 & 5 & 5 \\
+\hline\hline
+\multicolumn{5}{l}{\footnotesize DoubleML partially linear regression; \texttt{cv\_glmnet} nuisance.} \\
+\multicolumn{5}{l}{\footnotesize $^\dagger$NA hundreds enter as singleton clusters. $^{*}p<0.1$; $^{**}p<0.05$; $^{***}p<0.01$.} \\
+\end{tabular}
+\end{table}

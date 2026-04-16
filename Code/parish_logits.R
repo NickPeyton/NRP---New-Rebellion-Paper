@@ -1,11 +1,15 @@
 pacman::p_load(
   sf, tidyverse, stargazer, dplyr,
   raster, spdep, sp, ggplot2, robust,
-  lmtest, sandwich, car
+  lmtest, sandwich, car, jsonlite
 )
 
 PROJECT_ROOT <- normalizePath(file.path(dirname(rstudioapi::getActiveDocumentContext()$path), ".."))
 setwd(PROJECT_ROOT)
+
+# Load pretty dictionary for labels
+pretty_dict <- fromJSON("Code/pretty_dict.json")
+
 pdf <- read_sf(dsn = "Data/Processed/northParishFlows.shp")
 
 # ============================================================================
@@ -51,15 +55,8 @@ for (var in monastic_vars) {
 }
 
 hide_vars <- c("Constant", "uplands", "lowlands", "area", "mean_slope")
-cov_labels <- c(
-  "ln(Small Monastery Land / Arable km\\textsuperscript{2})",
-  "ln(Large Monastery Land / Arable km\\textsuperscript{2})",
-  "ln(Tithe / Arable km\\textsuperscript{2})",
-  "ln(Alms / Arable km\\textsuperscript{2})",
-  "ln(Net Income / Arable km\\textsuperscript{2})",
-  "Small House Dummy", "Large House Dummy", "Friary",
-  "ln(Lay Subsidy)", "Wet 1535", "Wet 1536", "ln(Population)", "Distance to Scotland"
-)
+main_vars_labels <- c("lsm_arak", "lbg_arak", "lti_arak", "lal_arak", "lni_arak", "smHouse", "bigHouse", "friary", "lLStax_pc", "wet_1535", "wet_1536", "lpopC", "distScot")
+cov_labels <- unlist(pretty_dict[main_vars_labels])
 stargazer(muster_results_list,
   type = "latex",
   title = "Muster Results: Monastic Variables",
@@ -143,15 +140,7 @@ for (vars in var_list_list) {
   i <- i + 1
 }
 
-cov_labels_prog <- c(
-  "ln(Small Monastery Land / Arable km\\textsuperscript{2})",
-  "ln(Large Monastery Land / Arable km\\textsuperscript{2})",
-  "Small House Dummy", "Large House Dummy",
-  "ln(Tithe / Arable km\\textsuperscript{2})",
-  "ln(Alms / Arable km\\textsuperscript{2})",
-  "ln(Net Income / Arable km\\textsuperscript{2})", "Friary",
-  "ln(Lay Subsidy)", "ln(Population)", "Wet 1535", "Wet 1536"
-)
+cov_labels_prog <- unlist(pretty_dict[c("lsm_arak", "lbg_arak", "smHouse", "bigHouse", "lti_arak", "lal_arak", "lni_arak", "friary", "lLStax_pc", "lpopC", "wet_1535", "wet_1536")])
 
 stargazer(muster_results_list,
   type = "latex",
@@ -212,15 +201,7 @@ full_seat <- glm(
   data = pdf, family = "poisson"
 )
 
-full_cov_labels <- c(
-  "ln(Small Monastery Land / Arable km\\textsuperscript{2})",
-  "ln(Large Monastery Land / Arable km\\textsuperscript{2})",
-  "ln(Tithe / Arable km\\textsuperscript{2})",
-  "ln(Alms / Arable km\\textsuperscript{2})",
-  "ln(Net Income / Arable km\\textsuperscript{2})",
-  "Small House Dummy", "Large House Dummy", "Friary",
-  "ln(Lay Subsidy)", "Wet 1535", "Wet 1536", "ln(Population)", "Distance to Scotland"
-)
+full_cov_labels <- unlist(pretty_dict[c("lsm_arak", "lbg_arak", "lti_arak", "lal_arak", "lni_arak", "smHouse", "bigHouse", "friary", "lLStax_pc", "wet_1535", "wet_1536", "lpopC", "distScot")])
 
 stargazer(full_muster, full_primary, full_seat,
   type = "latex",
@@ -237,10 +218,8 @@ stargazer(full_muster, full_primary, full_seat,
 )
 
 # --- DAG Regressions ---
-dag_cov_labels <- c(
-  "ln(Land Owned / Arable km\\textsuperscript{2})",
-  "ln(Population)", "ln(Lay Subsidy Per Capita)"
-)
+dag_vars_labels <- c("llo_arak", "lpopC", "lLStax_pc")
+dag_cov_labels <- unlist(pretty_dict[dag_vars_labels])
 
 dag_muster  <- glm(muster  ~ llo_arak + lpopC + lLStax_pc, data = pdf,
                    family = binomial(link = "logit"))
@@ -363,12 +342,7 @@ run_models <- function(monastic_vars, pdf, controls) {
 dw_raw <- c("llo_dw", "lsl_dw", "lbl_dw", "lti_dw")
 res_raw <- run_models(dw_raw, pdf, controls_dw)
 
-raw_labels <- c(
-  "ln(Land x InvDist)", "ln(Small Land x InvDist)",
-  "ln(Large Land x InvDist)", "ln(Tithe x InvDist)",
-  "ln(Lay Subsidy)", "Wet 1535", "Wet 1536",
-  "ln(Population)", "Distance to Scotland"
-)
+raw_labels <- unlist(pretty_dict[c(dw_raw, "lLStax_pc", "wet_1535", "wet_1536", "lpopC", "distScot")])
 
 stargazer(res_raw$muster,
   type = "latex", title = "Muster: Raw Distance-Weighted Monastic Variables",
@@ -396,12 +370,7 @@ stargazer(res_raw$seat,
 dw_pc <- c("llo_dwpc", "lsl_dwpc", "lbl_dwpc", "lti_dwpc")
 res_pc <- run_models(dw_pc, pdf, controls_dw)
 
-pc_labels <- c(
-  "ln(Land x InvDist / Pop)", "ln(Small Land x InvDist / Pop)",
-  "ln(Large Land x InvDist / Pop)", "ln(Tithe x InvDist / Pop)",
-  "ln(Lay Subsidy)", "Wet 1535", "Wet 1536",
-  "ln(Population)", "Distance to Scotland"
-)
+pc_labels <- unlist(pretty_dict[c(dw_pc, "lLStax_pc", "wet_1535", "wet_1536", "lpopC", "distScot")])
 
 stargazer(res_pc$muster,
   type = "latex", title = "Muster: Per Capita Distance-Weighted Monastic Variables",
@@ -429,14 +398,7 @@ stargazer(res_pc$seat,
 dw_sk <- c("llo_dwsk", "lsl_dwsk", "lbl_dwsk", "lti_dwsk")
 res_sk <- run_models(dw_sk, pdf, controls_dw)
 
-sk_labels <- c(
-  "ln(Land x InvDist / km\\textsuperscript{2})",
-  "ln(Small Land x InvDist / km\\textsuperscript{2})",
-  "ln(Large Land x InvDist / km\\textsuperscript{2})",
-  "ln(Tithe x InvDist / km\\textsuperscript{2})",
-  "ln(Lay Subsidy)", "Wet 1535", "Wet 1536",
-  "ln(Population)", "Distance to Scotland"
-)
+sk_labels <- unlist(pretty_dict[c(dw_sk, "lLStax_pc", "wet_1535", "wet_1536", "lpopC", "distScot")])
 
 stargazer(res_sk$muster,
   type = "latex", title = "Muster: Per Sq Km Distance-Weighted Monastic Variables",

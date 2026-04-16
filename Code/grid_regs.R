@@ -1,10 +1,13 @@
 pacman::p_load(
   sf, tidyverse, stargazer, dplyr,
-  raster, spdep, sp, ggplot2
+  raster, spdep, sp, ggplot2, jsonlite
 )
 
 PROJECT_ROOT <- normalizePath(file.path(dirname(rstudioapi::getActiveDocumentContext()$path), ".."))
 setwd(PROJECT_ROOT)
+
+# Load pretty dictionary for labels
+pretty_dict <- fromJSON("Code/pretty_dict.json")
 
 g2df <- read_sf(dsn = "Data/Raw/grid2.shp")
 g5df <- read_sf(dsn = "Data/Raw/grid5.shp")
@@ -44,12 +47,8 @@ for (df in df_list) {
 }
 
 hide_vars <- c("Constant", "X_COORD", "Y_COORD", "mean_slope")
-cov_labels <- c(
-  "ln(Land Owned)", "ln(Tithe / Arable km\\textsuperscript{2})",
-  "ln(Alms / Arable km\\textsuperscript{2})",
-  "ln(Net Income / Arable km\\textsuperscript{2})", "Friary",
-  "ln(Lay Subsidy)", "Lay Subsidy Change", "ln(Population)"
-)
+grid_vars_labels <- c("llandOwned", "lti_arak", "lal_arak", "lni_arak", "friary", "lLStax_pc", "LS_pc_ch", "lpopC")
+cov_labels <- unlist(pretty_dict[grid_vars_labels])
 
 stargazer(muster_results_list,
   type = "latex",

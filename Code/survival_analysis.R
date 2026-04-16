@@ -1,11 +1,15 @@
 pacman::p_load(
   sf, tidyverse, stargazer, spatialreg, spatstat, sp,
   raster, spdep, conleyreg, dplyr, survival, survminer,
-  ggplot2, broom
+  ggplot2, broom, jsonlite
 )
 
 PROJECT_ROOT <- normalizePath(file.path(dirname(rstudioapi::getActiveDocumentContext()$path), ".."))
 setwd(PROJECT_ROOT)
+
+# Load pretty dictionary for labels
+pretty_dict <- fromJSON("Code/pretty_dict.json")
+
 pdf <- read_sf(dsn = "Data/Processed/northParishFlows.shp")
 
 day <- 40
@@ -82,15 +86,8 @@ dev.off()
 cat("\nSchoenfeld plot saved: Output/Images/Graphs/cox3_schoenfeld.png\n\n")
 
 hideVars <- c("Constant", "distScot", "area", "uplands", "lowlands", "mean_slope")
-cox_cov_labels <- c(
-  "ln(Small Monastery Land / Arable km\\textsuperscript{2})",
-  "ln(Large Monastery Land / Arable km\\textsuperscript{2})",
-  "ln(Tithe / Arable km\\textsuperscript{2})",
-  "ln(Alms / Arable km\\textsuperscript{2})",
-  "ln(Net Income / Arable km\\textsuperscript{2})",
-  "Friary", "Wet 1535", "Wet 1536",
-  "ln(1535 Lay Subsidy Amount)", "ln(Population)"
-)
+cox_vars_labels <- c("lsm_arak", "lbg_arak", "lti_arak", "lal_arak", "lni_arak", "friary", "wet_1535", "wet_1536", "lLStax_pc", "lpopC")
+cox_cov_labels <- unlist(pretty_dict[cox_vars_labels])
 
 stargazer(cox1, cox2, cox3,
   type = "latex",
@@ -119,19 +116,6 @@ vars_cox2 <- c("lsm_arak", "lbg_arak", "lti_arak", "lal_arak", "lni_arak",
                "friary", "wet_1535", "wet_1536", "lLStax_pc", "lpopC")
 vars_cox3 <- vars_cox2  # same variables plotted for model 3
 
-var_labels <- c(
-  "lsm_arak"  = "Small Monastery Land / Arable km\u00b2",
-  "lbg_arak"  = "Large Monastery Land / Arable km\u00b2",
-  "lti_arak"  = "Tithe / Arable km\u00b2",
-  "lal_arak"  = "Alms / Arable km\u00b2",
-  "lni_arak"  = "Net Income / Arable km\u00b2",
-  "friary"    = "Friary",
-  "wet_1535"  = "Wet 1535",
-  "wet_1536"  = "Wet 1536",
-  "lLStax_pc" = "Lay Subsidy per Capita",
-  "lpopC"     = "Population"
-)
-
 # Function to extract coefficients with 90% CI from coxph
 extract_coefs_coxph <- function(model, var_name) {
   coef_summary <- summary(model)$coefficients
@@ -146,7 +130,7 @@ extract_coefs_coxph <- function(model, var_name) {
 
 make_coef_df <- function(model, vars) {
   coefs <- bind_rows(lapply(vars, function(v) extract_coefs_coxph(model, v)))
-  coefs$variable_label <- var_labels[coefs$variable]
+  coefs$variable_label <- unlist(pretty_dict[coefs$variable])
   coefs$significant    <- coefs$p_value < 0.10
   coefs$order          <- match(coefs$variable, vars)
   coefs

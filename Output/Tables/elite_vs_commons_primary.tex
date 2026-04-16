@@ -1,56 +1,63 @@
 
 % Table created by stargazer v.5.2.3 by Marek Hlavac, Social Policy Institute. E-mail: marek.hlavac at gmail.com
-% Date and time: Tue, Apr 14, 2026 - 10:14:27
+% Date and time: Thu, Apr 16, 2026 - 14:57:39
 % Requires LaTeX packages: dcolumn 
 \begin{table}[H] \centering 
   \caption{Elite vs. Commons Frameworks — PRIMARY} 
   \label{tab:ec_primary} 
-\begin{tabular}{@{\extracolsep{.5pt}}lD{.}{.}{-3} D{.}{.}{-3} D{.}{.}{-3} } 
+\begin{tabular}{@{\extracolsep{.5pt}}lD{.}{.}{-3} D{.}{.}{-3} D{.}{.}{-3} D{.}{.}{-3} } 
 \\[-1.8ex]\hline 
 \hline \\[-1.8ex] 
- & \multicolumn{3}{c}{\textit{Dependent variable:}} \\ 
-\cline{2-4} 
-\\[-1.8ex] & \multicolumn{3}{c}{primary} \\ 
- & \multicolumn{1}{c}{Elite} & \multicolumn{1}{c}{Commons} & \multicolumn{1}{c}{Combined} \\ 
-\\[-1.8ex] & \multicolumn{1}{c}{(1)} & \multicolumn{1}{c}{(2)} & \multicolumn{1}{c}{(3)}\\ 
+ & \multicolumn{4}{c}{\textit{Dependent variable:}} \\ 
+\cline{2-5} 
+\\[-1.8ex] & \multicolumn{4}{c}{primary} \\ 
+ & \multicolumn{1}{c}{Elite (IDW)} & \multicolumn{1}{c}{Elite (Binary)} & \multicolumn{1}{c}{Commons} & \multicolumn{1}{c}{Combined} \\ 
+\\[-1.8ex] & \multicolumn{1}{c}{(1)} & \multicolumn{1}{c}{(2)} & \multicolumn{1}{c}{(3)} & \multicolumn{1}{c}{(4)}\\ 
 \hline \\[-1.8ex] 
- Loyalist Gentleman (20 km) & -0.168 &  & -0.180 \\ 
-  & (0.500) &  & (0.512) \\ 
-  & & & \\ 
- Rebel Gentleman (20 km) & 0.444 &  & 0.265 \\ 
-  & (0.569) &  & (0.583) \\ 
-  & & & \\ 
- ln(Small Monastery Land / Arable km\textsuperscript{2}) &  & -0.395 & -0.392 \\ 
-  &  & (0.335) & (0.336) \\ 
-  & & & \\ 
- ln(Large Monastery Land / Arable km\textsuperscript{2}) &  & 0.565^{**} & 0.558^{**} \\ 
-  &  & (0.282) & (0.282) \\ 
-  & & & \\ 
- ln(Tithe / Arable km\textsuperscript{2}) &  & -0.267 & -0.255 \\ 
-  &  & (0.265) & (0.264) \\ 
-  & & & \\ 
- ln(Alms / Arable km\textsuperscript{2}) &  & 0.267^{*} & 0.258 \\ 
-  &  & (0.160) & (0.160) \\ 
-  & & & \\ 
- ln(Lay Subsidy) & 0.206 & 0.239 & 0.235 \\ 
-  & (0.307) & (0.321) & (0.324) \\ 
-  & & & \\ 
- Wet 1535 & -0.059 & -0.098 & -0.130 \\ 
-  & (0.282) & (0.301) & (0.310) \\ 
-  & & & \\ 
- Wet 1536 & 0.427 & 0.491 & 0.501 \\ 
-  & (0.306) & (0.340) & (0.338) \\ 
-  & & & \\ 
- ln(Population) & 0.452^{***} & 0.452^{***} & 0.456^{***} \\ 
-  & (0.153) & (0.158) & (0.158) \\ 
-  & & & \\ 
+ Snubbed Family IDW Score & 0.029 &  &  & -0.029 \\ 
+  & (0.245) &  &  & (0.245) \\ 
+  & & & & \\ 
+ Court Officer IDW Score & -0.080 &  &  & -0.120 \\ 
+  & (0.169) &  &  & (0.168) \\ 
+  & & & & \\ 
+ Snubbed Family (10km Binary) &  & 0.211 &  &  \\ 
+  &  & (0.212) &  &  \\ 
+  & & & & \\ 
+ Court Officer (10km Binary) &  & -0.029 &  &  \\ 
+  &  & (0.200) &  &  \\ 
+  & & & & \\ 
+ ln(Small Monastery Land / Arable km²) &  &  & -0.395 & -0.382 \\ 
+  &  &  & (0.256) & (0.254) \\ 
+  & & & & \\ 
+ ln(Large Monastery Land / Arable km²) &  &  & 0.565^{*} & 0.585^{*} \\ 
+  &  &  & (0.338) & (0.340) \\ 
+  & & & & \\ 
+ ln(Tithe / Arable km²) &  &  & -0.267 & -0.272 \\ 
+  &  &  & (0.246) & (0.246) \\ 
+  & & & & \\ 
+ ln(Alms / Arable km²) &  &  & 0.267^{*} & 0.274^{*} \\ 
+  &  &  & (0.159) & (0.157) \\ 
+  & & & & \\ 
+ ln(Lay Subsidy per Capita) & 0.214 & 0.229 & 0.239 & 0.225 \\ 
+  & (0.294) & (0.297) & (0.318) & (0.314) \\ 
+  & & & & \\ 
+ Wet 1535 Weather Shock & -0.002 & 0.004 & -0.098 & -0.084 \\ 
+  & (0.301) & (0.310) & (0.375) & (0.366) \\ 
+  & & & & \\ 
+ Wet 1536 Weather Shock & 0.408^{*} & 0.421 & 0.491 & 0.486 \\ 
+  & (0.246) & (0.261) & (0.299) & (0.296) \\ 
+  & & & & \\ 
+ ln(Population) & 0.461^{***} & 0.448^{***} & 0.452^{***} & 0.466^{***} \\ 
+  & (0.151) & (0.153) & (0.156) & (0.158) \\ 
+  & & & & \\ 
 \hline \\[-1.8ex] 
-Geographic Controls & Y & Y & Y \\ 
-McFadden R\textsuperscript{2} & 0.3854 & 0.4140 & 0.4152 \\ 
-Observations & \multicolumn{1}{c}{1,391} & \multicolumn{1}{c}{1,391} & \multicolumn{1}{c}{1,391} \\ 
-Log Likelihood & \multicolumn{1}{c}{-88.280} & \multicolumn{1}{c}{-84.170} & \multicolumn{1}{c}{-84.006} \\ 
+Geographic Controls & Y & Y & Y & Y \\ 
+SE cluster & hundred & hundred & hundred & hundred \\ 
+McFadden R\textsuperscript{2} & 0.3834 & 0.3866 & 0.4140 & 0.4151 \\ 
+Observations & \multicolumn{1}{c}{1,391} & \multicolumn{1}{c}{1,391} & \multicolumn{1}{c}{1,391} & \multicolumn{1}{c}{1,391} \\ 
+Log Likelihood & \multicolumn{1}{c}{-88.575} & \multicolumn{1}{c}{-88.106} & \multicolumn{1}{c}{-84.170} & \multicolumn{1}{c}{-84.018} \\ 
 \hline 
 \hline \\[-1.8ex] 
-\textit{Note:}  & \multicolumn{3}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
+\textit{Note:}  & \multicolumn{4}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
 \end{tabular} 
 \end{table} 

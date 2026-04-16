@@ -27,11 +27,14 @@
 
 pacman::p_load(
   sf, tidyverse, dplyr, stargazer,
-  lmtest, sandwich
+  lmtest, sandwich, jsonlite
 )
 
 PROJECT_ROOT <- normalizePath(file.path(dirname(rstudioapi::getActiveDocumentContext()$path), ".."))
 setwd(PROJECT_ROOT)
+
+# Load pretty dictionary for labels
+pretty_dict <- fromJSON("Code/pretty_dict.json")
 
 pdf <- read_sf(dsn = "Data/Processed/northParishFlows.shp")
 
@@ -147,18 +150,11 @@ for (nm in names(all_lr_tests)) {
 
 hide_geo <- c("Constant", "uplands", "lowlands", "area", "mean_slope", "distScot")
 
-old_labels <- c(
-  "ln(Lay Subsidy)", "Lay Subsidy Change", "ln(Population)",
-  "Wet 1535", "Wet 1536", "5-yr Drought Index"
-)
-new_labels <- c(
-  "ln(Small Monastery Land / Arable km\\textsuperscript{2})",
-  "ln(Large Monastery Land / Arable km\\textsuperscript{2})",
-  "ln(Tithe / Arable km\\textsuperscript{2})",
-  "ln(Alms / Arable km\\textsuperscript{2})",
-  "ln(Net Income / Arable km\\textsuperscript{2})",
-  "Small House Dummy", "Large House Dummy", "Friary"
-)
+old_vars_labels <- c("lLStax_pc", "LS_pc_ch", "lpopC", "wet_1535", "wet_1536", "drought_5")
+new_vars_labels <- c("lsm_arak", "lbg_arak", "lti_arak", "lal_arak", "lni_arak", "smHouse", "bigHouse", "friary")
+
+old_labels <- unlist(pretty_dict[old_vars_labels])
+new_labels <- unlist(pretty_dict[new_vars_labels])
 both_labels <- c(old_labels, new_labels)
 
 for (outcome_name in names(all_results)) {

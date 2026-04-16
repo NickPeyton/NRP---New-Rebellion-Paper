@@ -7,11 +7,15 @@
 #   5. Progressive plots (land owned per arable km²)
 
 pacman::p_load(
-  sf, tidyverse, dplyr, ggplot2, broom
+  sf, tidyverse, dplyr, ggplot2, broom, jsonlite
 )
 
 PROJECT_ROOT <- normalizePath(file.path(dirname(rstudioapi::getActiveDocumentContext()$path), ".."))
 setwd(PROJECT_ROOT)
+
+# Load pretty dictionary for labels
+pretty_dict <- fromJSON("Code/pretty_dict.json")
+
 pdf <- read_sf(dsn = "Data/Processed/northParishFlows.shp")
 
 # Standardize and center continuous variables
@@ -161,25 +165,12 @@ monastic_vars_main <- c("lsm_arak", "lbg_arak", "lti_arak", "lal_arak",
 vars_to_plot_main  <- c("lsm_arak", "lbg_arak", "lti_arak", "lal_arak",
                         "lni_arak", "smHouse", "bigHouse", "friary",
                         "lLStax_pc", "wet_1535", "wet_1536")
-var_labels_main <- c(
-  "lsm_arak"  = "Small Monastery Land / Arable km\u00b2",
-  "lbg_arak"  = "Large Monastery Land / Arable km\u00b2",
-  "lti_arak"  = "Tithe / Arable km\u00b2",
-  "lal_arak"  = "Alms / Arable km\u00b2",
-  "lni_arak"  = "Net Income / Arable km\u00b2",
-  "smHouse"   = "Small House Dummy",
-  "bigHouse"  = "Large House Dummy",
-  "friary"    = "Friary",
-  "lLStax_pc" = "Lay Subsidy per Capita",
-  "wet_1535"  = "Wet 1535",
-  "wet_1536"  = "Wet 1536"
-)
 
 for (o in names(outcomes_list)) {
   coefs <- run_full_model(o, monastic_vars_main, controls,
                           outcomes_list[[o]]$family, vars_to_plot_main)
   ggsave(paste0("Output/Images/Graphs/", o, "_coefficients.png"),
-         plot = make_single_plot(coefs, var_labels_main, outcomes_list[[o]]$x_label),
+         plot = make_single_plot(coefs, pretty_dict, outcomes_list[[o]]$x_label),
          width = 10, height = 6, dpi = 300)
 }
 
@@ -192,24 +183,12 @@ monastic_vars_lo   <- c("llo_arak", "lti_arak", "lal_arak", "lni_arak",
 vars_to_plot_lo    <- c("llo_arak", "lti_arak", "lal_arak", "lni_arak",
                         "smHouse", "bigHouse", "friary", "lLStax_pc",
                         "wet_1535", "wet_1536")
-var_labels_lo <- c(
-  "llo_arak"  = "Land Owned / Arable km\u00b2",
-  "lti_arak"  = "Tithe / Arable km\u00b2",
-  "lal_arak"  = "Alms / Arable km\u00b2",
-  "lni_arak"  = "Net Income / Arable km\u00b2",
-  "smHouse"   = "Small House Dummy",
-  "bigHouse"  = "Large House Dummy",
-  "friary"    = "Friary",
-  "lLStax_pc" = "Lay Subsidy per Capita",
-  "wet_1535"  = "Wet 1535",
-  "wet_1536"  = "Wet 1536"
-)
 
 for (o in names(outcomes_list)) {
   coefs <- run_full_model(o, monastic_vars_lo, controls,
                           outcomes_list[[o]]$family, vars_to_plot_lo)
   ggsave(paste0("Output/Images/Graphs/", o, "_coefficients_landOwned.png"),
-         plot = make_single_plot(coefs, var_labels_lo, outcomes_list[[o]]$x_label),
+         plot = make_single_plot(coefs, pretty_dict, outcomes_list[[o]]$x_label),
          width = 10, height = 6, dpi = 300)
 }
 
@@ -227,26 +206,12 @@ vars_to_plot_prog <- c(
   "lsm_arak", "lbg_arak", "lti_arak", "lal_arak", "lni_arak",
   "smHouse", "bigHouse", "friary", "lLStax_pc", "lpopC", "wet_1535", "wet_1536"
 )
-var_labels_prog <- c(
-  "lsm_arak"  = "Small Monastery Land / Arable km\u00b2",
-  "lbg_arak"  = "Large Monastery Land / Arable km\u00b2",
-  "lti_arak"  = "Tithe / Arable km\u00b2",
-  "lal_arak"  = "Alms / Arable km\u00b2",
-  "lni_arak"  = "Net Income / Arable km\u00b2",
-  "smHouse"   = "Small House Dummy",
-  "bigHouse"  = "Large House Dummy",
-  "friary"    = "Friary",
-  "lLStax_pc" = "Lay Subsidy per Capita",
-  "lpopC"     = "Population",
-  "wet_1535"  = "Wet 1535",
-  "wet_1536"  = "Wet 1536"
-)
 
 for (o in names(outcomes_list)) {
   coefs <- run_progressive(o, var_list_list_main, outcomes_list[[o]]$family,
                            vars_to_plot_prog)
   ggsave(paste0("Output/Images/Graphs/", o, "_progressive_coefficients.png"),
-         plot = make_prog_plot(coefs, var_labels_prog, outcomes_list[[o]]$x_label),
+         plot = make_prog_plot(coefs, pretty_dict, outcomes_list[[o]]$x_label),
          width = 12, height = 8, dpi = 300)
 }
 
@@ -264,26 +229,12 @@ vars_to_plot_oo <- c(
   "lown_arak", "loth_arak", "lti_arak", "lal_arak", "lni_arak",
   "smHouse", "bigHouse", "friary", "lLStax_pc", "lpopC", "wet_1535", "wet_1536"
 )
-var_labels_oo <- c(
-  "lown_arak"  = "Monastic Site Land / Arable km\u00b2",
-  "loth_arak"  = "Offsite Land / Arable km\u00b2",
-  "lti_arak"   = "Tithe / Arable km\u00b2",
-  "lal_arak"   = "Alms / Arable km\u00b2",
-  "lni_arak"   = "Net Income / Arable km\u00b2",
-  "smHouse"    = "Small House Dummy",
-  "bigHouse"   = "Large House Dummy",
-  "friary"     = "Friary",
-  "lLStax_pc"  = "Lay Subsidy per Capita",
-  "lpopC"      = "Population",
-  "wet_1535"   = "Wet 1535",
-  "wet_1536"   = "Wet 1536"
-)
 
 for (o in names(outcomes_list)) {
   coefs <- run_progressive(o, var_list_list_oo, outcomes_list[[o]]$family,
                            vars_to_plot_oo)
   ggsave(paste0("Output/Images/Graphs/", o, "_progressive_coefficients_ownOther.png"),
-         plot = make_prog_plot(coefs, var_labels_oo, outcomes_list[[o]]$x_label),
+         plot = make_prog_plot(coefs, pretty_dict, outcomes_list[[o]]$x_label),
          width = 12, height = 8, dpi = 300)
 }
 
@@ -301,25 +252,12 @@ vars_to_plot_lo_prog <- c(
   "llo_arak", "lti_arak", "lal_arak", "lni_arak",
   "smHouse", "bigHouse", "friary", "lLStax_pc", "lpopC", "wet_1535", "wet_1536"
 )
-var_labels_lo_prog <- c(
-  "llo_arak"  = "Land Owned / Arable km\u00b2",
-  "lti_arak"  = "Tithe / Arable km\u00b2",
-  "lal_arak"  = "Alms / Arable km\u00b2",
-  "lni_arak"  = "Net Income / Arable km\u00b2",
-  "smHouse"   = "Small House Dummy",
-  "bigHouse"  = "Large House Dummy",
-  "friary"    = "Friary",
-  "lLStax_pc" = "Lay Subsidy per Capita",
-  "lpopC"     = "Population",
-  "wet_1535"  = "Wet 1535",
-  "wet_1536"  = "Wet 1536"
-)
 
 for (o in names(outcomes_list)) {
   coefs <- run_progressive(o, var_list_list_lo, outcomes_list[[o]]$family,
                            vars_to_plot_lo_prog)
   ggsave(paste0("Output/Images/Graphs/", o, "_progressive_coefficients_landOwned.png"),
-         plot = make_prog_plot(coefs, var_labels_lo_prog, outcomes_list[[o]]$x_label),
+         plot = make_prog_plot(coefs, pretty_dict, outcomes_list[[o]]$x_label),
          width = 12, height = 8, dpi = 300)
 }
 

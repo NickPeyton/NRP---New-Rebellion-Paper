@@ -1,40 +1,40 @@
-Name,Title/Relation,Rank,Family,Country Seat,County,Latitude,Longitude,Active_Loyalist,Reluctant_Loyalist,Neutral,Reluctant_Rebel,Rebel_Participant,Active_Rebel
-William Dacre,3rd Baron Dacre of Gilsland,Baron,Dacre,Naworth Castle,Cumberland,54.954,-2.671,1,0,0,0,0,0
-Sir Christopher Dacre,Uncle to 3rd Baron,Knight (Uncle),Dacre,Kirklinton Hall,Cumberland,54.997,-2.892,1,0,0,0,0,0
-Francis Talbot,Heir to Earl of Shrewsbury,Lord (Heir),Talbot,Wingfield Manor,Derbyshire,53.13,-1.415,1,0,0,0,0,0
-Sir William Eure,Knight (later 1st Baron Eure cr. 1544),Knight,Eure,Witton Castle,Durham,54.67,-1.8,1,0,0,0,0,0
-Sir Ralph Eure,Son of Sir William Eure,Knight (Son),Eure,Witton Castle,Durham,54.67,-1.8,1,0,0,0,0,0
-John Lumley,4th Baron Lumley,Baron,Lumley,Lumley Castle,Durham,54.856,-1.552,0,0,0,1,0,0
-Ralph Neville,4th Earl of Westmorland,Earl,Neville,Raby Castle,Durham,54.521,-1.803,0,1,0,0,0,0
-Henry Neville,Heir to Earl of Westmorland,Lord (Heir),Neville,Raby Castle,Durham,54.521,-1.803,0,0,0,1,0,0
-Edward Stanley,3rd Earl of Derby,Earl,Stanley,Lathom House,Lancashire,53.587,-2.833,1,0,0,0,0,0
-Sir James Stanley,Brother to 3rd Earl,Knight (Brother),Stanley,Knowsley Hall,Lancashire,53.447,-2.838,1,0,0,0,0,0
-Thomas Stanley,2nd Baron Monteagle,Baron,Stanley,Hornby Castle,Lancashire,54.116,-2.625,1,0,0,0,0,0
-George Hastings,1st Earl of Huntingdon,Earl,Hastings,Ashby de la Zouch Castle,Leicestershire,52.746,-1.464,1,0,0,0,0,0
-Thomas Manners,1st Earl of Rutland,Earl,Manners,Belvoir Castle,Leicestershire,52.896,-0.787,1,0,0,0,0,0
-Charles Brandon,1st Duke of Suffolk,Duke,Brandon,Grimsthorpe Castle,Lincolnshire,52.793,-0.449,1,0,0,0,0,0
-Thomas Burgh,1st Baron Burgh,Baron,Burgh,Gainsborough,Lincolnshire,53.399,-0.774,1,0,0,0,0,0
-Edward Clinton,9th Baron Clinton,Baron,Clinton,Scrivelsby,Lincolnshire,53.179,-0.148,1,0,0,0,0,0
-John Hussey,1st Baron Hussey of Sleaford,Baron,Hussey,Sleaford Manor,Lincolnshire,52.998,-0.409,0,0,0,1,0,0
-Sir William Hussey,Son of 1st Baron,Knight (Son),Hussey,Sleaford Manor,Lincolnshire,52.998,-0.409,1,0,0,0,0,0
-George Tailboys,2nd Baron Tailboys of Kyme,Baron,Tailboys,South Kyme,Lincolnshire,53.037,-0.244,0,0,1,0,0,0
-Katherine Willoughby,12th Baroness Willoughby de Eresby,Baroness,Willoughby,Grimsthorpe Castle,Lincolnshire,52.793,-0.449,0,0,1,0,0,0
-Robert Ogle,5th Baron Ogle,Baron,Ogle,Ogle Castle,Northumberland,55.105,-1.791,0,0,1,0,0,0
-Henry Percy,6th Earl of Northumberland,Earl,Percy,Alnwick Castle,Northumberland,55.4158,-1.7062,0,1,0,0,0,0
-Sir Thomas Percy,Brother to 6th Earl,Knight (Brother),Percy,Prudhoe Castle,Northumberland,54.963,-1.869,0,0,0,0,0,1
-Sir Ingram Percy,Brother to 6th Earl,Knight (Brother),Percy,Alnwick Castle,Northumberland,55.4158,-1.7062,0,0,0,0,0,1
-Walter Devereux,10th Baron Ferrers of Chartley,Baron,Devereux,Chartley Manor,Staffordshire,52.839,-1.931,0,0,1,0,0,0
-John Sutton,3rd Baron Dudley,Baron,Sutton,Dudley Castle,Staffordshire,52.528,-2.09,0,0,1,0,0,0
-John Touchet,8th Baron Audley,Baron,Touchet,Heleigh Castle,Staffordshire,52.996,-2.276,0,0,1,0,0,0
-Henry Clifford,Heir to Earl of Cumberland,Lord (Heir),Clifford,Brougham Castle,Westmorland,54.6539,-2.7192,1,0,0,0,0,0
-George Lumley,Son of 4th Baron Lumley,Knight (Son),Lumley,Thwing,Yorkshire (ER),54.088,-0.463,0,0,0,0,0,1
-Christopher Conyers,2nd Baron Conyers,Baron,Conyers,Hornby Castle,Yorkshire (NR),54.336,-1.655,0,0,0,1,0,0
-John Neville,3rd Baron Latimer,Baron,Neville,Snape Castle,Yorkshire (NR),54.265,-1.595,0,0,0,1,0,0
-Marmaduke Neville,Brother to 3rd Baron Latimer,Knight (Brother),Neville,Snape Castle,Yorkshire (NR),54.265,-1.595,0,0,0,0,1,0
-John Scrope,8th Baron Scrope of Bolton,Baron,Scrope,Bolton Castle,Yorkshire (NR),54.322,-1.949,0,0,0,1,0,0
-John Scrope,Brother to 7th Baron,Knight (Brother),Scrope,Spennithorne,Yorkshire (NR),54.295,-1.86,0,1,0,0,0,0
-Henry Clifford,1st Earl of Cumberland,Earl,Clifford,Skipton Castle,Yorkshire (WR),53.9639,-2.015,1,0,0,0,0,0
-Thomas Darcy,1st Baron Darcy de Darcy,Baron,Darcy,Temple Hirst,Yorkshire (WR),53.712,-1.107,0,0,0,0,0,1
-George Darcy,Heir to 1st Baron Darcy,Lord (Heir),Darcy,Aston,Yorkshire (WR),53.376,-1.289,0,0,0,0,1,0
-Sir Arthur Darcy,Son of 1st Baron Darcy,Knight (Son),Darcy,Brimham,Yorkshire (WR),54.087,-1.693,1,0,0,0,0,0
-George Talbot,4th Earl of Shrewsbury,Earl,Talbot,Sheffield Castle,Yorkshire (WR),53.383,-1.467,1,0,0,0,0,0
+Name,Title/Relation,Rank,Family,Country Seat,County,Latitude,Longitude,Active_Loyalist,Reluctant_Loyalist,Neutral,Reluctant_Rebel,Rebel_Participant,Active_Rebel,Court_Office,Office_Notes,Snub,Snub_Notes,Family_Snub
+William Dacre,3rd Baron Dacre of Gilsland,Baron,Dacre,Naworth Castle,Cumberland,54.954,-2.671,1,0,0,0,0,0,0,Lost Wardenship of West Marches 1534; no office held as of 1536,1,Treason trial 1534 (acquitted); stripped of Wardenship of West Marches; heavily fined; Wardenship given to rival Cumberland,1
+Sir Christopher Dacre,Uncle to 3rd Baron,Knight (Uncle),Dacre,Kirklinton Hall,Cumberland,54.997,-2.892,1,0,0,0,0,0,1,MP for Cumberland (probable 1536); former sheriff of Cumberland; former deputy warden,1,Arrested and tried for treason 1534 alongside nephew; lost deputy wardenship,1
+Francis Talbot,Heir to Earl of Shrewsbury,Lord (Heir),Talbot,Wingfield Manor,Derbyshire,53.13,-1.415,1,0,0,0,0,0,1,"JP for Derbyshire, Staffordshire, and N. Riding from 1532; Joint Chamberlain of the Exchequer",0,,0
+Sir William Eure,Knight (later 1st Baron Eure cr. 1544),Knight,Eure,Witton Castle,Durham,54.67,-1.8,1,0,0,0,0,0,1,Warden of East Marches; former sheriff; border military officer,0,,0
+Sir Ralph Eure,Son of Sir William Eure,Knight (Son),Eure,Witton Castle,Durham,54.67,-1.8,1,0,0,0,0,0,1,Deputy Constable of Scarborough Castle from 1531; JP for Yorkshire East Riding from 1536,0,,0
+John Lumley,4th Baron Lumley,Baron,Lumley,Lumley Castle,Durham,54.856,-1.552,0,0,0,1,0,0,1,JP for County Durham from 1516,1,Dissolution disrupted patronage networks; Jurisdiction of Liberties Act 1536 stripped Durham Palatinate privileges,1
+Ralph Neville,4th Earl of Westmorland,Earl,Neville,Raby Castle,Durham,54.521,-1.803,0,1,0,0,0,0,1,Privy Councillor from 1526; Knight of the Garter from 1525,0,,0
+Henry Neville,Heir to Earl of Westmorland,Lord (Heir),Neville,Raby Castle,Durham,54.521,-1.803,0,0,0,1,0,0,0,Aged ~11; no office possible,0,,0
+Edward Stanley,3rd Earl of Derby,Earl,Stanley,Lathom House,Lancashire,53.587,-2.833,1,0,0,0,0,0,1,Lord of Man (hereditary Crown-derived lordship); de facto Crown enforcer in Lancashire,0,,0
+Sir James Stanley,Brother to 3rd Earl,Knight (Brother),Stanley,Knowsley Hall,Lancashire,53.447,-2.838,1,0,0,0,0,0,0,No offices documented,0,,0
+Thomas Stanley,2nd Baron Monteagle,Baron,Stanley,Hornby Castle,Lancashire,54.116,-2.625,1,0,0,0,0,0,0,No specific Crown office documented; KB 1533 but honour not office,0,,0
+George Hastings,1st Earl of Huntingdon,Earl,Hastings,Ashby de la Zouch Castle,Leicestershire,52.746,-1.464,1,0,0,0,0,0,1,"Privy Councillor; Steward of the Honour of Leicester, Launde Convent, and Burton-on-Trent Abbey",0,,0
+Thomas Manners,1st Earl of Rutland,Earl,Manners,Belvoir Castle,Leicestershire,52.896,-0.787,1,0,0,0,0,0,1,Warden of Sherwood Forest from 1524; Keeper of Enfield Chase from 1526; Knight of the Garter,0,,0
+Charles Brandon,1st Duke of Suffolk,Duke,Brandon,Grimsthorpe Castle,Lincolnshire,52.793,-0.449,1,0,0,0,0,0,1,Lord President of the Council; Chief Justice in Eyre south of Trent; Privy Councillor,1,"c.1533-34 pressured to surrender Suffolk Place, Westhorpe Hall, and other properties",1
+Thomas Burgh,1st Baron Burgh,Baron,Burgh,Gainsborough,Lincolnshire,53.399,-0.774,1,0,0,0,0,0,1,Lord Chamberlain to Queen Anne Boleyn (ended May 1536); JP for Lindsey; former sheriff,0,,0
+Edward Clinton,9th Baron Clinton,Baron,Clinton,Scrivelsby,Lincolnshire,53.179,-0.148,1,0,0,0,0,0,0,Aged ~24; just came out of wardship Nov 1535; no office,0,,0
+John Hussey,1st Baron Hussey of Sleaford,Baron,Hussey,Sleaford Manor,Lincolnshire,52.998,-0.409,0,0,0,1,0,0,1,Chief Butler of England from 1521; Chamberlain to Princess Mary's household; JP for Lincolnshire,1,Wife imprisoned in Tower 1534 for calling Mary 'Princess'; dissolution disrupted patronage; demotion of Princess Mary undermined his role,1
+Sir William Hussey,Son of 1st Baron,Knight (Son),Hussey,Sleaford Manor,Lincolnshire,52.998,-0.409,1,0,0,0,0,0,1,JP for Lincolnshire (Holland and Kesteven) from 1514/1536; Steward for Duchy of Lancaster (Bolingbroke),0,,1
+George Tailboys,2nd Baron Tailboys of Kyme,Baron,Tailboys,South Kyme,Lincolnshire,53.037,-0.244,0,0,1,0,0,0,0,Aged ~13; minor under wardship,0,,0
+Katherine Willoughby,12th Baroness Willoughby de Eresby,Baroness,Willoughby,Grimsthorpe Castle,Lincolnshire,52.793,-0.449,0,0,1,0,0,0,0,Aged 17; no office in her own right,0,,0
+Robert Ogle,5th Baron Ogle,Baron,Ogle,Ogle Castle,Northumberland,55.105,-1.791,0,0,1,0,0,0,0,Never summoned to Parliament; no documented office,1,Imprisoned in Fleet prison May 1534 for disobeying the king's process; never summoned to Parliament despite holding peerage,1
+Henry Percy,6th Earl of Northumberland,Earl,Percy,Alnwick Castle,Northumberland,55.4158,-1.7062,0,1,0,0,0,0,1,Warden-General of East and Middle Marches; Council of the North; Steward of Holderness; KG,1,Pressured to bequeath entire Percy inheritance to the Crown; compelled to judge Anne Boleyn; systematically exploited by Cromwell through debts,1
+Sir Thomas Percy,Brother to 6th Earl,Knight (Brother),Percy,Prudhoe Castle,Northumberland,54.963,-1.869,0,0,0,0,0,1,0,No Crown office; managed brother's estates but held no formal appointment,1,Disinherited by Crown pressure on brother to leave Percy estates to the King,1
+Sir Ingram Percy,Brother to 6th Earl,Knight (Brother),Percy,Alnwick Castle,Northumberland,55.4158,-1.7062,0,0,0,0,0,1,0,No Crown office documented,1,Disinherited by Crown pressure on brother to leave Percy estates to the King,1
+Walter Devereux,10th Baron Ferrers of Chartley,Baron,Devereux,Chartley Manor,Staffordshire,52.839,-1.931,0,0,1,0,0,0,1,Chief Justice of South Wales; Chamberlain of South Wales; Constable of Warwick Castle; KG,0,,0
+John Sutton,3rd Baron Dudley,Baron,Sutton,Dudley Castle,Staffordshire,52.528,-2.09,0,0,1,0,0,0,0,Never summoned to Parliament; no offices,1,Cromwell colluded with cousin John Dudley to strip him of estates; lost ancestral Dudley Castle 1535,1
+John Touchet,8th Baron Audley,Baron,Touchet,Heleigh Castle,Staffordshire,52.996,-2.276,0,0,1,0,0,0,0,No Crown office documented,0,,0
+Henry Clifford,Heir to Earl of Cumberland,Lord (Heir),Clifford,Brougham Castle,Westmorland,54.6539,-2.7192,1,0,0,0,0,0,0,Aged ~19; KB 1533 (honour not office); no documented office,0,,0
+George Lumley,Son of 4th Baron Lumley,Knight (Son),Lumley,Thwing,Yorkshire (ER),54.088,-0.463,0,0,0,0,0,1,0,No offices; young man,0,,1
+Christopher Conyers,2nd Baron Conyers,Baron,Conyers,Hornby Castle,Yorkshire (NR),54.336,-1.655,0,0,0,1,0,0,0,No Crown office documented,0,,0
+John Neville,3rd Baron Latimer,Baron,Neville,Snape Castle,Yorkshire (NR),54.265,-1.595,0,0,0,1,0,0,1,JP for Yorkshire North Riding from 1528; Council of the North from 1530; Steward of Ripon 1536,0,,0
+Marmaduke Neville,Brother to 3rd Baron Latimer,Knight (Brother),Neville,Snape Castle,Yorkshire (NR),54.265,-1.595,0,0,0,0,1,0,0,No Crown office documented,0,,0
+John Scrope,8th Baron Scrope of Bolton,Baron,Scrope,Bolton Castle,Yorkshire (NR),54.322,-1.949,0,0,0,1,0,0,0,Young peer (~21-26); recently inherited Dec 1533; no offices documented,1,Inherited ongoing Crown pressure to surrender family's Pisho estate in Hertfordshire,1
+John Scrope,Brother to 7th Baron,Knight (Brother),Scrope,Spennithorne,Yorkshire (NR),54.295,-1.86,0,1,0,0,0,0,0,No offices documented,0,,1
+Henry Clifford,1st Earl of Cumberland,Earl,Clifford,Skipton Castle,Yorkshire (WR),53.9639,-2.015,1,0,0,0,0,0,1,Warden of the West Marches from 1534; Hereditary Sheriff of Westmorland; Constable of Knaresborough and Penrith,0,,0
+Thomas Darcy,1st Baron Darcy de Darcy,Baron,Darcy,Temple Hirst,Yorkshire (WR),53.712,-1.107,0,0,0,0,0,1,1,Privy Councillor; Knight of the Garter; command of Pontefract Castle,1,"Systematic marginalization: removed from Captain of Berwick, wardenship; detained in London ~5 years; excluded from Parliament 1534",1
+George Darcy,Heir to 1st Baron Darcy,Lord (Heir),Darcy,Aston,Yorkshire (WR),53.376,-1.289,0,0,0,0,1,0,1,Sheriff of Yorkshire 1535-36,0,,1
+Sir Arthur Darcy,Son of 1st Baron Darcy,Knight (Son),Darcy,Brimham,Yorkshire (WR),54.087,-1.693,1,0,0,0,0,0,1,Captain/Governor of Jersey from Sept 1534,0,,1
+George Talbot,4th Earl of Shrewsbury,Earl,Talbot,Sheffield Castle,Yorkshire (WR),53.383,-1.467,1,0,0,0,0,0,1,Lord Steward of the King's Household; Chamberlain of the Exchequer; Privy Councillor; Lord High Steward of Ireland,0,,0

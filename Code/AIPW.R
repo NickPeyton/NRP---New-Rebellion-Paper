@@ -8,13 +8,17 @@ pacman::p_load(
   sf, tidyverse, stargazer, sp, dplyr,
   cem, MatchIt, WeightIt, marginaleffects, ipw,
   survey, optmatch, conflicted, cobalt, twang,
-  survival, ggplot2, broom
+  survival, ggplot2, broom, jsonlite
 )
 conflict_prefer("filter", "dplyr")
 conflict_prefer("select", "dplyr")
 
 PROJECT_ROOT <- normalizePath(file.path(dirname(rstudioapi::getActiveDocumentContext()$path), ".."))
 setwd(PROJECT_ROOT)
+
+# Load pretty dictionary for labels
+pretty_dict <- fromJSON("Code/pretty_dict.json")
+
 pdf <- read_sf(dsn = "Data/Processed/northParishFlows.shp")
 
 # Replace NAs in terrainTyp with 'Other'
@@ -156,9 +160,7 @@ stargazer(wlm_primary_main, wsurv_main,
     c("Population", "Y", "Y"),
     c("Geographic Controls", "Y", "Y")
   ),
-  covariate.labels = c(
-    "ln(Small Monastery Land / Arable km\\textsuperscript{2})"
-  ),
+  covariate.labels = unlist(pretty_dict[main_treat]),
   column.sep.width = ".5pt",
   omit.stat = c("aic", "lr", "wald", "logrank"),
   omit = "Constant",
@@ -168,38 +170,26 @@ stargazer(wlm_primary_main, wsurv_main,
 # Coefficient plots — main specification
 vars_to_plot_main <- c("lsm_arak", "lbg_arak", "lti_arak", "lal_arak", "lni_arak",
                        "friary", "lLStax_pc", "wet_1535", "wet_1536", "lpopC")
-var_labels_main <- c(
-  "lsm_arak"  = "Small Monastery Land / Arable km\u00b2",
-  "lbg_arak"  = "Large Monastery Land / Arable km\u00b2",
-  "lti_arak"  = "Tithe / Arable km\u00b2",
-  "lal_arak"  = "Alms / Arable km\u00b2",
-  "lni_arak"  = "Net Income / Arable km\u00b2",
-  "friary"    = "Friary",
-  "lLStax_pc" = "Lay Subsidy per Capita",
-  "wet_1535"  = "Wet 1535",
-  "wet_1536"  = "Wet 1536",
-  "lpopC"     = "Population"
-)
 
 ggsave("Output/Images/Graphs/ipw_logit_primary_coefficients.png",
        plot = make_ipw_plot(
          make_coef_df_ipw(wlm_primary_main, vars_to_plot_main, extract_coefs_svyglm),
-         var_labels_main),
+         pretty_dict),
        width = 10, height = 6, dpi = 300)
 ggsave("Output/Images/Graphs/ipw_logit_muster_coefficients.png",
        plot = make_ipw_plot(
          make_coef_df_ipw(wlm_muster_main, vars_to_plot_main, extract_coefs_svyglm),
-         var_labels_main),
+         pretty_dict),
        width = 10, height = 6, dpi = 300)
 ggsave("Output/Images/Graphs/ipw_logit_seats_coefficients.png",
        plot = make_ipw_plot(
          make_coef_df_ipw(wlm_seats_main, vars_to_plot_main, extract_coefs_svyglm),
-         var_labels_main),
+         pretty_dict),
        width = 10, height = 6, dpi = 300)
 ggsave("Output/Images/Graphs/ipw_cox_coefficients.png",
        plot = make_ipw_plot(
          make_coef_df_ipw(wsurv_main, vars_to_plot_main, extract_coefs_coxph),
-         var_labels_main, x_label = "Coefficient (Log Hazard Ratio)"),
+         pretty_dict, x_label = "Coefficient (Log Hazard Ratio)"),
        width = 10, height = 6, dpi = 300)
 
 # ============================================================================
@@ -237,37 +227,26 @@ wsurv_oo <- coxph(as.formula(paste("Surv(primary_survival, primary) ~", oo_formu
 # Coefficient plots — ownOther specification
 vars_to_plot_oo <- c("loth_arak", "lti_arak", "lal_arak", "lni_arak",
                      "friary", "lLStax_pc", "wet_1535", "wet_1536", "lpopC")
-var_labels_oo <- c(
-  "loth_arak"  = "Offsite Land / Arable km\u00b2",
-  "lti_arak"   = "Tithe / Arable km\u00b2",
-  "lal_arak"   = "Alms / Arable km\u00b2",
-  "lni_arak"   = "Net Income / Arable km\u00b2",
-  "friary"     = "Friary",
-  "lLStax_pc"  = "Lay Subsidy per Capita",
-  "wet_1535"   = "Wet 1535",
-  "wet_1536"   = "Wet 1536",
-  "lpopC"      = "Population"
-)
 
 ggsave("Output/Images/Graphs/ipw_logit_primary_coefficients_ownOther.png",
        plot = make_ipw_plot(
          make_coef_df_ipw(wlm_primary_oo, vars_to_plot_oo, extract_coefs_svyglm),
-         var_labels_oo),
+         pretty_dict),
        width = 10, height = 6, dpi = 300)
 ggsave("Output/Images/Graphs/ipw_logit_muster_coefficients_ownOther.png",
        plot = make_ipw_plot(
          make_coef_df_ipw(wlm_muster_oo, vars_to_plot_oo, extract_coefs_svyglm),
-         var_labels_oo),
+         pretty_dict),
        width = 10, height = 6, dpi = 300)
 ggsave("Output/Images/Graphs/ipw_logit_seats_coefficients_ownOther.png",
        plot = make_ipw_plot(
          make_coef_df_ipw(wlm_seats_oo, vars_to_plot_oo, extract_coefs_svyglm),
-         var_labels_oo),
+         pretty_dict),
        width = 10, height = 6, dpi = 300)
 ggsave("Output/Images/Graphs/ipw_cox_coefficients_ownOther.png",
        plot = make_ipw_plot(
          make_coef_df_ipw(wsurv_oo, vars_to_plot_oo, extract_coefs_coxph),
-         var_labels_oo, x_label = "Coefficient (Log Hazard Ratio)"),
+         pretty_dict, x_label = "Coefficient (Log Hazard Ratio)"),
        width = 10, height = 6, dpi = 300)
 
 cat("\nAIPW outputs created successfully!\n")

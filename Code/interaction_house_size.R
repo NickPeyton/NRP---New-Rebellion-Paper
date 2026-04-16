@@ -22,11 +22,14 @@
 
 pacman::p_load(
   sf, tidyverse, dplyr, stargazer,
-  lmtest, sandwich, car
+  lmtest, sandwich, car, jsonlite
 )
 
 PROJECT_ROOT <- normalizePath(file.path(dirname(rstudioapi::getActiveDocumentContext()$path), ".."))
 setwd(PROJECT_ROOT)
+
+# Load pretty dictionary for labels
+pretty_dict <- fromJSON("Code/pretty_dict.json")
 
 pdf <- read_sf(dsn = "Data/Processed/northParishFlows.shp")
 
@@ -86,15 +89,8 @@ for (nm in c("muster", "primary", "seats")) {
 # ============================================================================
 
 hide_vars <- c("Constant", "uplands", "lowlands", "area", "mean_slope", "distScot")
-cov_labels <- c(
-  "ln(Small Monastery Land / Arable km\\textsuperscript{2})",
-  "ln(Large Monastery Land / Arable km\\textsuperscript{2})",
-  "ln(Tithe / Arable km\\textsuperscript{2})",
-  "ln(Alms / Arable km\\textsuperscript{2})",
-  "ln(Net Income / Arable km\\textsuperscript{2})",
-  "Small House Dummy", "Large House Dummy", "Friary",
-  "ln(Lay Subsidy)", "Wet 1535", "Wet 1536", "ln(Population)"
-)
+house_vars_labels <- c("lsm_arak", "lbg_arak", "lti_arak", "lal_arak", "lni_arak", "smHouse", "bigHouse", "friary", "lLStax_pc", "wet_1535", "wet_1536", "lpopC")
+cov_labels <- unlist(pretty_dict[house_vars_labels])
 
 # Extract Wald p-values for add.lines
 wald_p <- sapply(wald_results, function(wt) sprintf("%.3f", wt[2, "Pr(>F)"]))
