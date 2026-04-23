@@ -1,5 +1,5 @@
-# CLAUDE.md
-Research paper repository.
+# NRP - New Rebellion Paper
+This is the repository of a scholarly research paper on the causes of the 1536 Pilgrimage of Grace, a rebellion in Northern England. I am seeking to determine whether the impact of the Dissolution of the Monasteries on ordinary people, the disloyalty of local elites, or other factors drove the rebellion using quantitative analysis.
 
 ## Priorities (descending)
 1. Data integrity  2. Reproducibility  3. Transparency  4. Precision  5. Speed
@@ -9,7 +9,7 @@ Transparency > speed. Control > autonomy.
 ## Rules
 - Read files before editing. Do only what is asked.
 - Simple and explicit over clever.
-- Code should be pythonic and human-readable. Structure and comment your code appropriately.
+- Code should be pythonic and human-readable. Structure your code appropriately, divide Jupyter Notebooks into cells with clear functions, and comment the code extensively.
 - Don't refactor, rename, or comment unrelated code/variables/files.
 - Quote paths with spaces (e.g. `"My Drive"`).
 - Concise, professional, friendly — but critical when needed.

@@ -1,6 +1,6 @@
 
 % Table created by stargazer v.5.2.3 by Marek Hlavac, Social Policy Institute. E-mail: marek.hlavac at gmail.com
-% Date and time: Tue, Apr 14, 2026 - 10:08:40
+% Date and time: Thu, Apr 23, 2026 - 21:19:02
 % Requires LaTeX packages: dcolumn 
 \begin{table}[H] \centering 
   \caption{Old vs. New Grievances — SEATS} 
@@ -14,55 +14,64 @@
  & \multicolumn{1}{c}{Old} & \multicolumn{1}{c}{New} & \multicolumn{1}{c}{Combined} \\ 
 \\[-1.8ex] & \multicolumn{1}{c}{(1)} & \multicolumn{1}{c}{(2)} & \multicolumn{1}{c}{(3)}\\ 
 \hline \\[-1.8ex] 
- ln(Lay Subsidy) & 0.086 &  & 0.088 \\ 
+ ln(Lay Subsidy per Capita) & 0.086 &  & 0.217 \\ 
   & (0.202) &  & (0.207) \\ 
   & & & \\ 
- Lay Subsidy Change & -0.022 &  & 0.029 \\ 
-  & (0.211) &  & (0.207) \\ 
+ Lay Subsidy per Capita Change & -0.022 &  & -0.041 \\ 
+  & (0.211) &  & (0.212) \\ 
   & & & \\ 
- ln(Population) & -0.179 &  & -0.185 \\ 
-  & (0.150) &  & (0.156) \\ 
+ ln(Population) & -0.179 &  & -0.157 \\ 
+  & (0.150) &  & (0.153) \\ 
   & & & \\ 
- Wet 1535 & 0.177 &  & 0.141 \\ 
-  & (0.155) &  & (0.169) \\ 
+ Wet 1535 Weather Shock & 0.177 &  & -0.232 \\ 
+  & (0.155) &  & (0.287) \\ 
   & & & \\ 
- Wet 1536 & 1.103^{***} &  & 1.272^{***} \\ 
-  & (0.330) &  & (0.341) \\ 
+ Wet 1536 Weather Shock & 1.103^{***} &  & 0.660 \\ 
+  & (0.330) &  & (0.404) \\ 
   & & & \\ 
- 5-yr Drought Index & 0.307 &  & 0.436 \\ 
-  & (0.271) &  & (0.278) \\ 
+ 5-year Drought Index & 0.307 &  & -0.219 \\ 
+  & (0.271) &  & (0.387) \\ 
   & & & \\ 
- ln(Small Monastery Land / Arable km\textsuperscript{2}) &  & 0.160^{**} & -0.057 \\ 
-  &  & (0.077) & (0.130) \\ 
+ ln(Small Monastery Land / Arable km²) &  & 0.214^{***} & -0.060 \\ 
+  &  & (0.080) & (0.131) \\ 
   & & & \\ 
- ln(Large Monastery Land / Arable km\textsuperscript{2}) &  & 0.184^{*} & 0.186 \\ 
-  &  & (0.100) & (0.159) \\ 
+ ln(Large Monastery Land / Arable km²) &  & 0.266^{***} & -0.015 \\ 
+  &  & (0.102) & (0.164) \\ 
   & & & \\ 
- ln(Tithe / Arable km\textsuperscript{2}) &  & 0.080 & 0.047 \\ 
-  &  & (0.093) & (0.129) \\ 
+ ln(Tithe / Arable km²) &  & 0.056 & 0.045 \\ 
+  &  & (0.092) & (0.128) \\ 
   & & & \\ 
- ln(Alms / Arable km\textsuperscript{2}) &  & -0.076 & -0.004 \\ 
-  &  & (0.122) & (0.158) \\ 
+ ln(Alms / Arable km²) &  & -0.121 & -0.041 \\ 
+  &  & (0.114) & (0.139) \\ 
   & & & \\ 
- ln(Net Income / Arable km\textsuperscript{2}) &  & -0.536^{***} & -0.614^{*} \\ 
-  &  & (0.208) & (0.333) \\ 
+ ln(Net Income / Arable km²) &  & -0.042 & 0.043 \\ 
+  &  & (0.105) & (0.146) \\ 
   & & & \\ 
- Small House Dummy &  & 2.048^{***} & 2.114^{**} \\ 
-  &  & (0.571) & (0.831) \\ 
+ Small House IDW Score &  & -0.636^{**} & -0.571 \\ 
+  &  & (0.248) & (0.495) \\ 
   & & & \\ 
- Large House Dummy &  & 0.684 & 0.172 \\ 
-  &  & (1.110) & (1.359) \\ 
+ Large House IDW Score &  & 0.158 & 0.498 \\ 
+  &  & (0.215) & (0.520) \\ 
   & & & \\ 
- Friary &  & -0.768 & 0.234 \\ 
-  &  & (0.907) & (0.836) \\ 
+ Friary Presence &  & -0.724 & 0.494 \\ 
+  &  & (0.917) & (0.917) \\ 
+  & & & \\ 
+ Crown Interference (Strong) IDW Score &  & 0.216^{*} & -0.292 \\ 
+  &  & (0.116) & (0.279) \\ 
+  & & & \\ 
+ Crown Interference (Mild) IDW Score &  & 0.337^{***} & 0.434 \\ 
+  &  & (0.090) & (0.315) \\ 
+  & & & \\ 
+ Any Monastic Opposition IDW Score &  & 0.414^{***} & 0.368 \\ 
+  &  & (0.105) & (0.291) \\ 
   & & & \\ 
 \hline \\[-1.8ex] 
 Geographic Controls & Y & N & Y \\ 
-McFadden R\textsuperscript{2} & 0.5817 & 0.0269 & 0.5911 \\ 
-LR $\chi^2$ (New $|$ Old) & --- & --- & 8.184 \\ 
-LR $p$-value & --- & --- & 0.4157 \\ 
+McFadden R\textsuperscript{2} & 0.5817 & 0.1131 & 0.5979 \\ 
+LR $\chi^2$ (New $|$ Old) & --- & --- & 14.097 \\ 
+LR $p$-value & --- & --- & 0.2277 \\ 
 Observations & \multicolumn{1}{c}{974} & \multicolumn{1}{c}{1,755} & \multicolumn{1}{c}{974} \\ 
-Log Likelihood & \multicolumn{1}{c}{-181.600} & \multicolumn{1}{c}{-422.481} & \multicolumn{1}{c}{-177.508} \\ 
+Log Likelihood & \multicolumn{1}{c}{-181.600} & \multicolumn{1}{c}{-385.037} & \multicolumn{1}{c}{-174.552} \\ 
 \hline 
 \hline \\[-1.8ex] 
 \textit{Note:}  & \multicolumn{3}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 

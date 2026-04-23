@@ -26,6 +26,7 @@ rdf$primary_survival <- ifelse(is.na(rdf$primary_survival), day, rdf$primary_sur
 
 # Standardize and center continuous variables
 for (v in c("lsm_arak", "lbg_arak", "lti_arak", "lal_arak", "lni_arak",
+            "mo_ci1_w", "mo_ci05_w", "mo_anyop_w",
             "lLStax_pc", "lpopC", "distScot", "area", "mean_slope",
             "wet_1535", "wet_1536", "dwx_1536")) {
   rdf[[v]] <- scale(rdf[[v]], center = TRUE, scale = TRUE)[, 1]
@@ -38,19 +39,22 @@ for (v in c("lsm_arak", "lbg_arak", "lti_arak", "lal_arak", "lni_arak",
 cox1 <- coxph(
   Surv(primary_survival, primary) ~
     lsm_arak + lbg_arak + lti_arak + lal_arak + lni_arak +
-    friary + wet_1535 + wet_1536,
+    friary + mo_ci1_w + mo_ci05_w + mo_anyop_w +
+    wet_1535 + wet_1536,
   data = rdf
 )
 cox2 <- coxph(
   Surv(primary_survival, primary) ~
     lsm_arak + lbg_arak + lti_arak + lal_arak + lni_arak +
-    friary + wet_1535 + wet_1536 + lLStax_pc + lpopC,
+    friary + mo_ci1_w + mo_ci05_w + mo_anyop_w +
+    wet_1535 + wet_1536 + lLStax_pc + lpopC,
   data = rdf
 )
 cox3 <- coxph(
   Surv(primary_survival, primary) ~
     lsm_arak + lbg_arak + lti_arak + lal_arak + lni_arak +
-    friary + wet_1535 + wet_1536 + lLStax_pc + lpopC +
+    friary + mo_ci1_w + mo_ci05_w + mo_anyop_w +
+    wet_1535 + wet_1536 + lLStax_pc + lpopC +
     distScot + area + uplands + lowlands + mean_slope,
   data = rdf
 )
@@ -86,7 +90,7 @@ dev.off()
 cat("\nSchoenfeld plot saved: Output/Images/Graphs/cox3_schoenfeld.png\n\n")
 
 hideVars <- c("Constant", "distScot", "area", "uplands", "lowlands", "mean_slope")
-cox_vars_labels <- c("lsm_arak", "lbg_arak", "lti_arak", "lal_arak", "lni_arak", "friary", "wet_1535", "wet_1536", "lLStax_pc", "lpopC")
+cox_vars_labels <- c("lsm_arak", "lbg_arak", "lti_arak", "lal_arak", "lni_arak", "friary", "mo_ci1_w", "mo_ci05_w", "mo_anyop_w", "wet_1535", "wet_1536", "lLStax_pc", "lpopC")
 cox_cov_labels <- unlist(pretty_dict[cox_vars_labels])
 
 stargazer(cox1, cox2, cox3,
@@ -111,9 +115,11 @@ stargazer(cox1, cox2, cox3,
 
 # Variable sets per model
 vars_cox1 <- c("lsm_arak", "lbg_arak", "lti_arak", "lal_arak", "lni_arak",
-               "friary", "wet_1535", "wet_1536")
+               "friary", "mo_ci1_w", "mo_ci05_w", "mo_anyop_w",
+               "wet_1535", "wet_1536")
 vars_cox2 <- c("lsm_arak", "lbg_arak", "lti_arak", "lal_arak", "lni_arak",
-               "friary", "wet_1535", "wet_1536", "lLStax_pc", "lpopC")
+               "friary", "mo_ci1_w", "mo_ci05_w", "mo_anyop_w",
+               "wet_1535", "wet_1536", "lLStax_pc", "lpopC")
 vars_cox3 <- vars_cox2  # same variables plotted for model 3
 
 # Function to extract coefficients with 90% CI from coxph

@@ -43,6 +43,8 @@ pdf <- read_sf(dsn = "Data/Processed/northParishFlows.shp")
 # ---------------------------------------------------------------------------
 continuous_vars <- c(
   "lsm_arak", "lbg_arak", "lti_arak", "lal_arak", "lni_arak",
+  "smHouse_w", "bigHouse_w",
+  "mo_ci1_w", "mo_ci05_w", "mo_anyop_w",
   "lLStax_pc", "lpopC", "distScot", "area", "mean_slope",
   "wet_1535", "wet_1536", "drought_5", "LS_pc_ch"
 )
@@ -68,14 +70,19 @@ old_vars <- c(
   "distScot", "uplands", "lowlands", "area", "mean_slope"
 )
 
-# "New" grievances: Dissolution-specific economic threat.
+# "New" grievances: Dissolution-specific economic threat + opposition channels.
 #   - lsm_arak / lbg_arak: small/large monastery land per arable km²
 #   - lti_arak / lal_arak / lni_arak: tithe, alms, net income per arable km²
-#   - smHouse / bigHouse: house-size dummies (presence)
+#   - smHouse_w / bigHouse_w: IDW proximity to small / large monastic houses
 #   - friary: mendicant order presence
+#   - mo_ci1_w / mo_ci05_w: IDW proximity to monasteries with strong / mild
+#                           Crown interference pre-1536
+#   - mo_anyop_w:           IDW proximity to monasteries with any documented
+#                           pre-Oct 1536 opposition to the Henrician Reformation
 new_vars <- c(
   "lsm_arak", "lbg_arak", "lti_arak", "lal_arak", "lni_arak",
-  "smHouse", "bigHouse", "friary"
+  "smHouse_w", "bigHouse_w", "friary",
+  "mo_ci1_w", "mo_ci05_w", "mo_anyop_w"
 )
 
 outcomes <- list(
@@ -151,7 +158,7 @@ for (nm in names(all_lr_tests)) {
 hide_geo <- c("Constant", "uplands", "lowlands", "area", "mean_slope", "distScot")
 
 old_vars_labels <- c("lLStax_pc", "LS_pc_ch", "lpopC", "wet_1535", "wet_1536", "drought_5")
-new_vars_labels <- c("lsm_arak", "lbg_arak", "lti_arak", "lal_arak", "lni_arak", "smHouse", "bigHouse", "friary")
+new_vars_labels <- c("lsm_arak", "lbg_arak", "lti_arak", "lal_arak", "lni_arak", "smHouse_w", "bigHouse_w", "friary", "mo_ci1_w", "mo_ci05_w", "mo_anyop_w")
 
 old_labels <- unlist(pretty_dict[old_vars_labels])
 new_labels <- unlist(pretty_dict[new_vars_labels])

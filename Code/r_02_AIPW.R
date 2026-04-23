@@ -43,6 +43,7 @@ rdf$seats <- ifelse(rdf$seats > 1, 1, rdf$seats)
 # Standardize and center continuous variables
 for (v in c("lsm_arak", "lbg_arak", "lti_arak", "lal_arak", "lni_arak",
             "lown_arak", "loth_arak",
+            "mo_ci1_w", "mo_ci05_w", "mo_anyop_w",
             "lLStax_pc", "lpopC", "distScot", "area", "mean_slope",
             "wet_1535", "wet_1536", "dwx_1536")) {
   rdf[[v]] <- scale(rdf[[v]], center = TRUE, scale = TRUE)[, 1]
@@ -120,6 +121,7 @@ make_ipw_plot <- function(coef_df, var_labels, x_label = "Coefficient (Log Odds)
 
 main_treat  <- "lsm_arak"
 main_covars <- c("lbg_arak", "lti_arak", "lal_arak", "lni_arak", "friary",
+                 "mo_ci1_w", "mo_ci05_w", "mo_anyop_w",
                  covar_rhs)
 main_all    <- c(main_treat, main_covars)
 main_formula_rhs <- paste(main_all, collapse = " + ")
@@ -169,7 +171,8 @@ stargazer(wlm_primary_main, wsurv_main,
 
 # Coefficient plots — main specification
 vars_to_plot_main <- c("lsm_arak", "lbg_arak", "lti_arak", "lal_arak", "lni_arak",
-                       "friary", "lLStax_pc", "wet_1535", "wet_1536", "lpopC")
+                       "friary", "mo_ci1_w", "mo_ci05_w", "mo_anyop_w",
+                       "lLStax_pc", "wet_1535", "wet_1536", "lpopC")
 
 ggsave("Output/Images/Graphs/ipw_logit_primary_coefficients.png",
        plot = make_ipw_plot(
@@ -197,7 +200,9 @@ ggsave("Output/Images/Graphs/ipw_cox_coefficients.png",
 # ============================================================================
 
 oo_treat  <- "loth_arak"
-oo_covars <- c("lti_arak", "lal_arak", "lni_arak", "friary", covar_rhs)
+oo_covars <- c("lti_arak", "lal_arak", "lni_arak", "friary",
+               "mo_ci1_w", "mo_ci05_w", "mo_anyop_w",
+               covar_rhs)
 oo_all    <- c(oo_treat, oo_covars)
 oo_formula_rhs <- paste(oo_all, collapse = " + ")
 
@@ -226,7 +231,8 @@ wsurv_oo <- coxph(as.formula(paste("Surv(primary_survival, primary) ~", oo_formu
 
 # Coefficient plots — ownOther specification
 vars_to_plot_oo <- c("loth_arak", "lti_arak", "lal_arak", "lni_arak",
-                     "friary", "lLStax_pc", "wet_1535", "wet_1536", "lpopC")
+                     "friary", "mo_ci1_w", "mo_ci05_w", "mo_anyop_w",
+                     "lLStax_pc", "wet_1535", "wet_1536", "lpopC")
 
 ggsave("Output/Images/Graphs/ipw_logit_primary_coefficients_ownOther.png",
        plot = make_ipw_plot(

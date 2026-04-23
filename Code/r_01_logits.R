@@ -20,12 +20,15 @@ pdf <- read_sf(dsn = "Data/Processed/northParishFlows.shp")
 # Standardize and center continuous variables
 for (v in c("lsm_arak", "lbg_arak", "lti_arak", "lal_arak", "lni_arak",
             "llo_arak", "lLStax_pc", "distScot", "lpopC",
-            "area", "mean_slope", "wet_1535", "wet_1536")) {
+            "area", "mean_slope", "wet_1535", "wet_1536",
+            "smHouse_w", "bigHouse_w",
+            "mo_ci1_w", "mo_ci05_w", "mo_anyop_w")) {
   pdf[[v]] <- scale(pdf[[v]], center = TRUE, scale = TRUE)[, 1]
 }
 
 monastic_vars <- c("lsm_arak", "lbg_arak", "lti_arak", "lal_arak", "lni_arak",
-                   "smHouse", "bigHouse", "friary")
+                   "smHouse_w", "bigHouse_w", "friary",
+                   "mo_ci1_w", "mo_ci05_w", "mo_anyop_w")
 # Removed X_COORD (VIF=24.6), news_day (VIF=35.8), and LS_pc_ch (680 NAs)
 # Removed disg_gnt (causally downstream from rebellion)
 # Removed Y_COORD (multicollinearity with distScot)
@@ -55,7 +58,7 @@ for (var in monastic_vars) {
 }
 
 hide_vars <- c("Constant", "uplands", "lowlands", "area", "mean_slope")
-main_vars_labels <- c("lsm_arak", "lbg_arak", "lti_arak", "lal_arak", "lni_arak", "smHouse", "bigHouse", "friary", "lLStax_pc", "wet_1535", "wet_1536", "lpopC", "distScot")
+main_vars_labels <- c("lsm_arak", "lbg_arak", "lti_arak", "lal_arak", "lni_arak", "smHouse_w", "bigHouse_w", "friary", "mo_ci1_w", "mo_ci05_w", "mo_anyop_w", "lLStax_pc", "wet_1535", "wet_1536", "lpopC", "distScot")
 cov_labels <- unlist(pretty_dict[main_vars_labels])
 stargazer(muster_results_list,
   type = "latex",
@@ -63,7 +66,7 @@ stargazer(muster_results_list,
   label = "tab:muster_monastic",
   omit = hide_vars,
   covariate.labels = cov_labels,
-  add.lines = list(c("Geographic Controls", "Y", "Y", "Y", "Y", "Y", "Y", "Y", "Y")),
+  add.lines = list(c("Geographic Controls", rep("Y", length(monastic_vars)))),
   align = TRUE,
   column.sep.width = ".5pt",
   omit.stat = c("aic"),
@@ -77,7 +80,7 @@ stargazer(primary_results_list,
   label = "tab:primary_monastic",
   omit = hide_vars,
   covariate.labels = cov_labels,
-  add.lines = list(c("Geographic Controls", "Y", "Y", "Y", "Y", "Y", "Y", "Y", "Y")),
+  add.lines = list(c("Geographic Controls", rep("Y", length(monastic_vars)))),
   align = TRUE,
   column.sep.width = ".5pt",
   omit.stat = c("aic"),
@@ -91,7 +94,7 @@ stargazer(seat_results_list,
   label = "tab:seat_monastic",
   omit = hide_vars,
   covariate.labels = cov_labels,
-  add.lines = list(c("Geographic Controls", "Y", "Y", "Y", "Y", "Y", "Y", "Y", "Y")),
+  add.lines = list(c("Geographic Controls", rep("Y", length(monastic_vars)))),
   align = TRUE,
   column.sep.width = ".5pt",
   omit.stat = c("aic"),
@@ -101,8 +104,9 @@ stargazer(seat_results_list,
 
 # --- Progressive model building ---
 var_list_list <- list(
-  c("lsm_arak", "lbg_arak", "smHouse", "bigHouse"),
+  c("lsm_arak", "lbg_arak", "smHouse_w", "bigHouse_w"),
   c("lti_arak", "lal_arak", "lni_arak", "friary"),
+  c("mo_ci1_w", "mo_ci05_w", "mo_anyop_w"),
   c("lLStax_pc", "lpopC", "wet_1535", "wet_1536"),
   c("uplands", "lowlands", "area", "mean_slope")
 )
@@ -140,7 +144,7 @@ for (vars in var_list_list) {
   i <- i + 1
 }
 
-cov_labels_prog <- unlist(pretty_dict[c("lsm_arak", "lbg_arak", "smHouse", "bigHouse", "lti_arak", "lal_arak", "lni_arak", "friary", "lLStax_pc", "lpopC", "wet_1535", "wet_1536")])
+cov_labels_prog <- unlist(pretty_dict[c("lsm_arak", "lbg_arak", "smHouse_w", "bigHouse_w", "lti_arak", "lal_arak", "lni_arak", "friary", "mo_ci1_w", "mo_ci05_w", "mo_anyop_w", "lLStax_pc", "lpopC", "wet_1535", "wet_1536")])
 
 stargazer(muster_results_list,
   type = "latex",
@@ -148,7 +152,7 @@ stargazer(muster_results_list,
   label = "tab:muster_all",
   omit = hide_vars,
   covariate.labels = cov_labels_prog,
-  add.lines = list(c("Geographic Controls", "N", "N", "N", "Y")),
+  add.lines = list(c("Geographic Controls", "N", "N", "N", "N", "Y")),
   align = TRUE,
   column.sep.width = ".5pt",
   omit.stat = c("aic"),
@@ -162,7 +166,7 @@ stargazer(primary_results_list,
   label = "tab:primary_all",
   omit = hide_vars,
   covariate.labels = cov_labels_prog,
-  add.lines = list(c("Geographic Controls", "N", "N", "N", "Y")),
+  add.lines = list(c("Geographic Controls", "N", "N", "N", "N", "Y")),
   align = TRUE,
   column.sep.width = ".5pt",
   omit.stat = c("aic"),
@@ -176,7 +180,7 @@ stargazer(seat_results_list,
   label = "tab:seat_all",
   omit = hide_vars,
   covariate.labels = cov_labels_prog,
-  add.lines = list(c("Geographic Controls", "N", "N", "N", "Y")),
+  add.lines = list(c("Geographic Controls", "N", "N", "N", "N", "Y")),
   align = TRUE,
   column.sep.width = ".5pt",
   omit.stat = c("aic"),
@@ -201,7 +205,7 @@ full_seat <- glm(
   data = pdf, family = "poisson"
 )
 
-full_cov_labels <- unlist(pretty_dict[c("lsm_arak", "lbg_arak", "lti_arak", "lal_arak", "lni_arak", "smHouse", "bigHouse", "friary", "lLStax_pc", "wet_1535", "wet_1536", "lpopC", "distScot")])
+full_cov_labels <- unlist(pretty_dict[c("lsm_arak", "lbg_arak", "lti_arak", "lal_arak", "lni_arak", "smHouse_w", "bigHouse_w", "friary", "mo_ci1_w", "mo_ci05_w", "mo_anyop_w", "lLStax_pc", "wet_1535", "wet_1536", "lpopC", "distScot")])
 
 stargazer(full_muster, full_primary, full_seat,
   type = "latex",

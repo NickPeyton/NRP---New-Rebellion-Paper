@@ -131,6 +131,54 @@ cat(sprintf("  mg_fsnub_bin_10km: %d parishes within 10km\n", sum(pdf$mg_fsnub_b
 cat(sprintf("  mg_court_bin_10km: %d parishes within 10km\n", sum(pdf$mg_court_bin_10km)))
 
 # ---------------------------------------------------------------------------
+# MONASTIC OPPOSITION VARIABLES: recompute to match mg_fsnub/mg_court scale
+# (5km flat-zone IDW + 10km binary buffer)
+# ---------------------------------------------------------------------------
+cat("\nLoading monastic opposition data and recomputing specs...\n")
+
+opp_csv <- read.csv("Data/Raw/CSV/monastic_opposition.csv")
+opp_sf <- st_as_sf(opp_csv, coords = c("lon", "lat"), crs = 4326)
+opp_sf <- st_transform(opp_sf, crs = 27700)
+
+# Three opposition groupings:
+#   ci1   = crown_interference == 1   (strong: pre-1536 Crown installation / removal)
+#   ci05  = crown_interference == 0.5 (mild: documented but softer Crown pressure)
+#   anyop = any_opposition == 1      (leadership or rank-and-file opposition)
+opp_subsets <- list(
+  ci1   = opp_sf[opp_sf$crown_interference == 1.0, ],
+  ci05  = opp_sf[opp_sf$crown_interference == 0.5, ],
+  anyop = opp_sf[opp_sf$any_opposition == 1, ]
+)
+opp_coords <- lapply(opp_subsets, function(g) st_coordinates(g))
+
+cat(sprintf(
+  "Opposition monastery counts: ci1=%d, ci05=%d, anyop=%d\n",
+  nrow(opp_subsets$ci1), nrow(opp_subsets$ci05), nrow(opp_subsets$anyop)
+))
+
+# 5km flat-zone IDW (overwrites shapefile's 10km flat-zone values)
+pdf$mo_ci1_w <- compute_idw(parish_coords, opp_coords$ci1, 5000)
+pdf$mo_ci05_w <- compute_idw(parish_coords, opp_coords$ci05, 5000)
+pdf$mo_anyop_w <- compute_idw(parish_coords, opp_coords$anyop, 5000)
+
+# 10km binary buffer
+pdf$mo_ci1_bin_10km <- compute_proximity(parish_centroids, opp_subsets$ci1, 10000)
+pdf$mo_ci05_bin_10km <- compute_proximity(parish_centroids, opp_subsets$ci05, 10000)
+pdf$mo_anyop_bin_10km <- compute_proximity(parish_centroids, opp_subsets$anyop, 10000)
+
+cat("IDW (5km) summary stats:\n")
+for (v in c("mo_ci1_w", "mo_ci05_w", "mo_anyop_w")) {
+  cat(sprintf(
+    "  %s: min=%.3f, max=%.3f, mean=%.3f\n",
+    v, min(pdf[[v]]), max(pdf[[v]]), mean(pdf[[v]])
+  ))
+}
+cat("Binary (10km) counts:\n")
+for (v in c("mo_ci1_bin_10km", "mo_ci05_bin_10km", "mo_anyop_bin_10km")) {
+  cat(sprintf("  %s: %d parishes within 10km\n", v, sum(pdf[[v]])))
+}
+
+# ---------------------------------------------------------------------------
 # Standardize continuous variables (z-score, same as parish_logits.R)
 # ---------------------------------------------------------------------------
 continuous_vars <- c(
@@ -138,6 +186,8 @@ continuous_vars <- c(
   "llo_arak",
   "mg_fsnub_w", "mg_court_w", "mg_rnl_w",
   "mg_fsnub_bin_10km", "mg_court_bin_10km",
+  "mo_ci1_w", "mo_ci05_w", "mo_anyop_w",
+  "mo_ci1_bin_10km", "mo_ci05_bin_10km", "mo_anyop_bin_10km",
   "lLStax_pc", "wet_1535", "wet_1536", "lpopC",
   "area", "mean_slope", "distScot"
 )
@@ -149,13 +199,24 @@ for (v in continuous_vars) {
 # Variable sets
 # ---------------------------------------------------------------------------
 
-# "Elite": IDW intensity of proximity to gentlemen with Crown interactions:
-#   - mg_fsnub_w: families snubbed by the Crown (grievance indicator)
-#   - mg_court_w: held court office (favor indicator)
-# Summed weights across gentlemen with w(d)=1 for d≤10km, w(d)=10/d_km beyond.
-# Captures both grievance and favor channels of Crown-elite interaction.
-elite_vars <- c("mg_fsnub_w", "mg_court_w")
-elite_bin_vars <- c("mg_fsnub_bin_10km", "mg_court_bin_10km")
+# "Elite": IDW intensity of proximity to gentlemen / monasteries with Crown
+# interactions or Reformation opposition. Summed weights (w(d)=1 for d≤5km,
+# w(d)=5/d_km beyond for IDW; 10km binary alternative):
+#   - mg_fsnub_w:    gentlemen families snubbed by the Crown
+#   - mg_court_w:    gentlemen holding court office
+#   - mo_ci1_w:      monasteries with strong Crown interference (ci == 1)
+#   - mo_ci05_w:     monasteries with mild Crown interference (ci == 0.5)
+#   - mo_anyop_w:    monasteries with any documented opposition to the
+#                    Henrician Reformation (pre-Oct 1536)
+# Captures grievance/favor channels for both gentry and monastic communities.
+elite_vars <- c(
+  "mg_fsnub_w", "mg_court_w",
+  "mo_ci1_w", "mo_ci05_w", "mo_anyop_w"
+)
+elite_bin_vars <- c(
+  "mg_fsnub_bin_10km", "mg_court_bin_10km",
+  "mo_ci1_bin_10km", "mo_ci05_bin_10km", "mo_anyop_bin_10km"
+)
 
 # "Commons": monastic economic footprint at the parish level (per arable km²)
 #   lsm_arak = ln(small-house land / arable km²)
@@ -320,7 +381,7 @@ r2_table <- lapply(names(results), function(outcome_name) {
 names(r2_table) <- names(results)
 
 cat("\n")
-cat("Elite vars:    mg_fsnub_w, mg_court_w\n")
+cat("Elite vars:    mg_fsnub_w, mg_court_w, mo_ci1_w, mo_ci05_w, mo_anyop_w\n")
 cat("Commons vars:  lsm_arak, lbg_arak, lti_arak, lal_arak\n")
 cat("Controls:      lLStax_pc, wet_1535, wet_1536, lpopC, uplands, lowlands, area, mean_slope, distScot\n")
 cat("\nNote: McFadden's pseudo-R² = 1 - logL(model) / logL(null). Higher = better fit.\n")
@@ -671,12 +732,18 @@ owen_decomposition <- function(data, outcome, groups,
 #   Binary (10km buffer):  mg_fsnub_bin_10km, mg_court_bin_10km
 #   IDW (5km flat-zone):   mg_fsnub_w, mg_court_w
 so_groups_bin <- list(
-  elite    = c("mg_fsnub_bin_10km", "mg_court_bin_10km"),
+  elite    = c(
+    "mg_fsnub_bin_10km", "mg_court_bin_10km",
+    "mo_ci1_bin_10km", "mo_ci05_bin_10km", "mo_anyop_bin_10km"
+  ),
   commons  = c("lbg_arak", "lti_arak", "lal_arak"),
   controls = c("lpopC", "lLStax_pc", "mean_slope")
 )
 so_groups_idw <- list(
-  elite    = c("mg_fsnub_w", "mg_court_w"),
+  elite    = c(
+    "mg_fsnub_w", "mg_court_w",
+    "mo_ci1_w", "mo_ci05_w", "mo_anyop_w"
+  ),
   commons  = c("lbg_arak", "lti_arak", "lal_arak"),
   controls = c("lpopC", "lLStax_pc", "mean_slope")
 )
