@@ -25,6 +25,9 @@ Days from news exposure (Louth Park Abbey rising) to first primary muster in the
 
 - `lsm_arak`: ln(Small House Land / Arable Area).
 - `lbg_arak`: ln(Large House Land / Arable Area).
+- `lown_arak`: ln(On-site Land / Arable Area).
+- `loth_arak`: ln(Off-site Land / Arable Area).
+- `llo_arak`: ln(Total Owned Land / Arable Area).
 - `lti_arak`: ln(Tithe / Arable Area).
 - `lal_arak`: ln(Alms / Arable Area).
 - `lni_arak`: ln(Net Income / Arable Area).
@@ -52,6 +55,16 @@ Days from news exposure (Louth Park Abbey rising) to first primary muster in the
 - `mo_ci1_w`: IDW score for "Strong" Crown interference (executions, direct displacement).
 - `mo_ci05_w`: IDW score for "Mild" Crown interference (official harassment, forced elections).
 - `mo_anyop_w`: IDW score for any recorded monastic opposition.
+
+---
+
+## Monastic Dispersal Variables
+*(Measures of the demographic/economic shock of small house dissolution on large houses of the same order)*
+
+- `dis_L_w`: IDW exposure score to the transferred net income of dissolved small monasteries.
+- `dis_L_20`: Binary indicator for a receiving large monastery within 20km.
+- `dis_L_g_w`: IDW exposure score to the net income of dissolved monasteries assigned via gravity model.
+- `dis_L_g_20`: Binary indicator for a gravity-assigned large monastery within 20km.
 
 ---
 

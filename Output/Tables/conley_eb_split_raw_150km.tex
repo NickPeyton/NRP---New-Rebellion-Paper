@@ -1,0 +1,68 @@
+
+% Table created by stargazer v.5.2.3 by Marek Hlavac, Social Policy Institute. E-mail: marek.hlavac at gmail.com
+% Date and time: Wed, May 13, 2026 - 13:24:33
+% Requires LaTeX packages: dcolumn 
+\begin{table}[H] \centering 
+  \caption{EB Logits — Conley SEs [split_raw], cutoff = 150 km} 
+  \label{tab:conley_eb_split_raw_150km} 
+\begin{tabular}{@{\extracolsep{.5pt}}lD{.}{.}{-3} D{.}{.}{-3} D{.}{.}{-3} } 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{3}{c}{\textit{Dependent variable:}} \\ 
+\cline{2-4} 
+\\[-1.8ex] & \multicolumn{1}{c}{paste("muster \textasciitilde", rhs)} & \multicolumn{1}{c}{paste("primary \textasciitilde", rhs)} & \multicolumn{1}{c}{paste("seats \textasciitilde", rhs)} \\ 
+ & \multicolumn{1}{c}{Muster} & \multicolumn{1}{c}{Primary} & \multicolumn{1}{c}{Seats} \\ 
+\\[-1.8ex] & \multicolumn{1}{c}{(1)} & \multicolumn{1}{c}{(2)} & \multicolumn{1}{c}{(3)}\\ 
+\hline \\[-1.8ex] 
+ ln(Large House Land + 1) & 0.294^{**} & 0.638^{**} & 0.049 \\ 
+  & (0.122) & (0.295) & (0.100) \\ 
+  & & & \\ 
+ ln(Small House Land + 1) & 0.107 & -0.078 & -0.219 \\ 
+  & (0.182) & (0.227) & (0.243) \\ 
+  & & & \\ 
+ ln(Tithe) & -0.529 & -0.274 & -0.156 \\ 
+  & (0.338) & (0.320) & (0.110) \\ 
+  & & & \\ 
+ ln(Alms) & -0.329 & -0.124 & 0.616^{**} \\ 
+  & (0.918) & (0.519) & (0.261) \\ 
+  & & & \\ 
+ Small House Proximity (20km) & -0.590 & -1.888^{***} & 1.189 \\ 
+  & (0.600) & (0.436) & (0.809) \\ 
+  & & & \\ 
+ Large House Proximity (20km) & 0.412^{*} & 0.792 & -0.139 \\ 
+  & (0.246) & (0.540) & (0.349) \\ 
+  & & & \\ 
+ Friary Presence & 0.001 & 0.103 & -1.197 \\ 
+  & (0.711) & (0.981) & (1.353) \\ 
+  & & & \\ 
+ Snubbed Family Proximity (20 km) & -0.452 & -0.911 & 0.169 \\ 
+  & (0.394) & (0.741) & (0.502) \\ 
+  & & & \\ 
+ Court Officer Proximity (20 km) & -0.068 & -0.245 & 0.063 \\ 
+  & (0.410) & (0.285) & (0.271) \\ 
+  & & & \\ 
+ ln(Lay Subsidy per Capita) & 0.137 & 0.145 & 0.743^{***} \\ 
+  & (0.158) & (0.214) & (0.285) \\ 
+  & & & \\ 
+ Wet 1535 Weather Shock & -0.245 & -0.090 & 0.268 \\ 
+  & (0.207) & (0.222) & (0.308) \\ 
+  & & & \\ 
+ Wet 1536 Weather Shock & 0.339 & 0.651 & 0.520^{**} \\ 
+  & (0.214) & (0.429) & (0.250) \\ 
+  & & & \\ 
+ ln(Population) & 0.359^{**} & 0.285 & 0.255 \\ 
+  & (0.162) & (0.193) & (0.157) \\ 
+  & & & \\ 
+ Distance to Scotland & -0.535^{**} & -0.818^{**} & -1.194^{**} \\ 
+  & (0.235) & (0.401) & (0.479) \\ 
+  & & & \\ 
+\hline \\[-1.8ex] 
+Conley cutoff (km) & 150 & 150 & 150 \\ 
+Kernel & Bartlett & Bartlett & Bartlett \\ 
+EB weights & Y & Y & Y \\ 
+Observations & \multicolumn{1}{c}{1,391} & \multicolumn{1}{c}{1,391} & \multicolumn{1}{c}{1,391} \\ 
+\hline 
+\hline \\[-1.8ex] 
+\textit{Note:}  & \multicolumn{3}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
+\end{tabular} 
+\end{table} 

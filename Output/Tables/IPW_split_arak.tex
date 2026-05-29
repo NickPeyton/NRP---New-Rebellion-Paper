@@ -1,0 +1,77 @@
+
+% Table created by stargazer v.5.2.3 by Marek Hlavac, Social Policy Institute. E-mail: marek.hlavac at gmail.com
+% Date and time: Wed, May 13, 2026 - 14:11:19
+% Requires LaTeX packages: dcolumn 
+\begin{table}[H] \centering 
+  \caption{IPW Logit and Cox PH Models — Muster, Primary, Seats [split_arak]} 
+  \label{tab:ipw_split_arak} 
+\begin{tabular}{@{\extracolsep{.5pt}}lD{.}{.}{-3} D{.}{.}{-3} D{.}{.}{-3} D{.}{.}{-3} } 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{4}{c}{\textit{Dependent variable:}} \\ 
+\cline{2-5} 
+\\[-1.8ex] & \multicolumn{1}{c}{paste("muster \textasciitilde", rhs)} & \multicolumn{1}{c}{paste("primary \textasciitilde", rhs)} & \multicolumn{1}{c}{paste("seats \textasciitilde", rhs)} & \multicolumn{1}{c}{"Surv(primary\_survival, primary) \textasciitilde"} \\ 
+\\[-1.8ex] & \multicolumn{1}{c}{\textit{survey-weighted}} & \multicolumn{1}{c}{\textit{survey-weighted}} & \multicolumn{1}{c}{\textit{survey-weighted}} & \multicolumn{1}{c}{\textit{Cox}} \\ 
+ & \multicolumn{1}{c}{\textit{logistic}} & \multicolumn{1}{c}{\textit{logistic}} & \multicolumn{1}{c}{\textit{logistic}} & \multicolumn{1}{c}{\textit{prop. hazards}} \\ 
+ & \multicolumn{1}{c}{Muster} & \multicolumn{1}{c}{Primary} & \multicolumn{1}{c}{Seats} & \multicolumn{1}{c}{Cox PH} \\ 
+\\[-1.8ex] & \multicolumn{1}{c}{(1)} & \multicolumn{1}{c}{(2)} & \multicolumn{1}{c}{(3)} & \multicolumn{1}{c}{(4)}\\ 
+\hline \\[-1.8ex] 
+ ln(Large Monastery Land / Arable km²) & 0.313^{**} & 0.494^{*} & 0.111 & 0.506^{**} \\ 
+  & (0.157) & (0.276) & (0.123) & (0.248) \\ 
+  & & & & \\ 
+ ln(Small Monastery Land / Arable km²) & -0.065 & -0.283 & 0.069 & -0.295 \\ 
+  & (0.192) & (0.205) & (0.099) & (0.315) \\ 
+  & & & & \\ 
+ ln(Tithe / Arable km²) & -0.456^{**} & -0.305 & -0.269 & -0.239 \\ 
+  & (0.220) & (0.292) & (0.269) & (0.312) \\ 
+  & & & & \\ 
+ ln(Alms / Arable km²) & -0.166 & 0.158 & -0.142 & 0.099 \\ 
+  & (0.154) & (0.117) & (0.282) & (0.251) \\ 
+  & & & & \\ 
+ ln(Net Income / Arable km²) & 0.628^{***} & 0.216 & -0.014 & 0.286 \\ 
+  & (0.152) & (0.232) & (0.231) & (0.240) \\ 
+  & & & & \\ 
+ Small House Proximity (20km) & -0.387 & -0.987 & -0.117 & -1.465^{***} \\ 
+  & (0.872) & (0.806) & (0.507) & (0.763) \\ 
+  & & & & \\ 
+ Large House Proximity (20km) & 1.354^{**} & 1.306 & 0.135 & 0.527 \\ 
+  & (0.604) & (1.089) & (0.433) & (0.667) \\ 
+  & & & & \\ 
+ Friary Presence & 0.415 & -0.472 & -2.007 & -0.036 \\ 
+  & (0.737) & (1.763) & (2.274) & (1.311) \\ 
+  & & & & \\ 
+ Snubbed Family Proximity (20 km) & -0.361 & 0.477 & 0.001 & -0.403 \\ 
+  & (0.552) & (0.814) & (0.553) & (0.729) \\ 
+  & & & & \\ 
+ Court Officer Proximity (20 km) & -0.217 & -0.338 & 0.658 & -0.050 \\ 
+  & (0.521) & (0.439) & (0.401) & (0.684) \\ 
+  & & & & \\ 
+ ln(Lay Subsidy per Capita) & 0.370^{*} & 0.154 & 0.477^{***} & 0.185 \\ 
+  & (0.203) & (0.342) & (0.136) & (0.325) \\ 
+  & & & & \\ 
+ Wet 1535 Weather Shock & -0.384 & -0.567 & 0.297 & -0.106 \\ 
+  & (0.328) & (0.414) & (0.399) & (0.335) \\ 
+  & & & & \\ 
+ Wet 1536 Weather Shock & 0.591^{**} & 0.920^{*} & 0.292 & 0.451 \\ 
+  & (0.270) & (0.530) & (0.341) & (0.351) \\ 
+  & & & & \\ 
+ ln(Population) & 0.474^{***} & 0.417^{**} & 0.132 & 0.403^{***} \\ 
+  & (0.176) & (0.185) & (0.130) & (0.175) \\ 
+  & & & & \\ 
+ Distance to Scotland & -0.420 & -0.389 & -1.111^{***} & -0.700^{**} \\ 
+  & (0.280) & (0.397) & (0.342) & (0.361) \\ 
+  & & & & \\ 
+\hline \\[-1.8ex] 
+Geographic Controls & Y & Y & Y & Y \\ 
+CBPS weights & Y & Y & Y & Y \\ 
+Conley SEs (100 km) & Y & Y & Y & — \\ 
+Robust SEs (Lin-Wei) & — & — & — & Y \\ 
+Observations & \multicolumn{1}{c}{1,391} & \multicolumn{1}{c}{1,391} & \multicolumn{1}{c}{1,391} & \multicolumn{1}{c}{1,391} \\ 
+R$^{2}$ &  &  &  & \multicolumn{1}{c}{0.054} \\ 
+Max. Possible R$^{2}$ &  &  &  & \multicolumn{1}{c}{0.221} \\ 
+Log Likelihood &  &  &  & \multicolumn{1}{c}{-135.481} \\ 
+\hline 
+\hline \\[-1.8ex] 
+\textit{Note:}  & \multicolumn{4}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
+\end{tabular} 
+\end{table} 

@@ -20,21 +20,29 @@ Run these notebooks in order — each depends on outputs from the previous:
 | 4 | `Code/jn_03_drought_processing.ipynb` | `Data/Processed/drought_intensity_bng.csv` |
 | 5 | `Code/jn_04_drought_parish_join.ipynb` | Adds drought vars to `northParishFlows.shp` |
 | 6 | `Code/jn_05_gentlemen_parish_join.ipynb` | Adds gentleman proximity dummies to `northParishFlows.shp` |
+| 7 | `Code/jn_06_monastic_opposition_vars.ipynb` | Adds monastic opposition variables to `northParishFlows.shp` |
+| 8 | `Code/jn_07_dissolved_monks_transfer.ipynb` | Adds dissolved monks transfer exposure variables to `northParishFlows.shp` |
 
-> **Important:** All Stage 2 R scripts read `northParishFlows.shp`. If any Stage 1 notebook is re-run, all Stage 2 scripts must be re-run to regenerate outputs.
+*Note: `Code/jn_03_rebellion_animation.ipynb` (generated from `Code/create_animation_notebook.py`) can be run after Stage 1 is complete to visualize the spread of the rebellion.*
 
-### Stage 2: Analysis (R)
+> **Important:** All Stage 2 R notebooks read `northParishFlows.shp`. If any Stage 1 notebook is re-run, the Stage 2 notebooks must be re-run to regenerate the final tables and plots.
 
-All scripts in `Code/` read `Data/Processed/northParishFlows.shp` and are independent of each other (any run order):
+### Stage 2: Analysis (R Notebooks)
 
-| Script | Outputs |
-|--------|---------|
-| `parish_logits.R` | `Output/Tables/muster_monastic.tex`, `primary_monastic.tex`, `seat_monastic.tex`, `muster_all.tex`, `primary_all.tex`, `seat_all.tex`, `full_monastic.tex`, `dag.tex`, and distance-weighted tables |
-| `regression_plots.R` | 15 coefficient PNGs in `Output/Images/Graphs/` |
-| `survival_analysis.R` | `Output/Tables/survival.tex` + 3 Cox coefficient PNGs |
-| `AIPW.R` | `Output/Tables/IPW.tex` + 8 IPW coefficient PNGs |
-| `grid_regs.R` | `Output/Tables/grid_muster.tex`, `grid_primary.tex`, `grid_seats.tex` |
-| `elite_vs_commons.R` | Console output only (McFadden R² comparison) |
+All notebooks in `Code/` read `Data/Processed/northParishFlows.shp` and use an R kernel. They are independent of each other and can be run in any order:
+
+| Notebook | Outputs / Key Analyses |
+|----------|------------------------|
+| `Code/jn_r_00_moran_diagnostics.ipynb` | Moran's I spatial autocorrelation diagnostics. Writes `Output/Tables/morans_nb01.tex`. |
+| `Code/jn_r_01_logits.ipynb` | Logit and Poisson models (economic variables vs. rebellion outcomes) + distance-weighted interactions + Conley spatial HAC standard errors. Writes `Output/Tables/muster_monastic*.tex`, `primary_monastic*.tex`, `seat_monastic*.tex`, `muster_all*.tex`, `primary_all*.tex`, `seat_all*.tex`, `full_monastic*.tex`, `dag.tex`, distance-weighted/Conley table variants, and coefficient plots in `Output/Images/Graphs/`. |
+| `Code/jn_r_02_IPW.ipynb` | Inverse-Probability-Weighted (IPW/CBPS) logit models, IPW Cox survival models, and Conley SEs. Writes `Output/Tables/IPW*.tex`, `conley_ipw_*.tex`, and coefficient plots to `Output/Images/Graphs/`. |
+| `Code/jn_r_03_survival_analysis.ipynb` | Cox Proportional Hazards models and Schoenfeld residual tests. Writes `Output/Tables/survival*.tex` and Schoenfeld plots in `Output/Images/Graphs/`. |
+| `Code/jn_r_04_shapley_owen.ipynb` | Shapley-Owen value variance decomposition partitioning McFadden R² into Elite, Commons, and Control groups. Writes LaTeX tables to `Output/Tables/`. |
+| `Code/jn_r_05_entropy_balancing.ipynb` | Robustness check replacing CBPS weighting with entropy balancing (EB). Writes tables to `Output/Tables/EB_*.tex` and coefficient plots to `Output/Images/Graphs/eb_*.png`. |
+| `Code/jn_r_06_interaction_weather.ipynb` | Tests interaction effects between intensity of monastic land and weather shocks (PDSI moisture shocks). |
+| `Code/jn_r_07_interaction_contagion.ipynb` | Tests whether monastic land presence amplifies spatial spillovers (rebel proximity/contagion). |
+| `Code/jn_r_08_dr_total_effect.ipynb` | DoubleML PLR estimating the **total causal effect** of monastic land. Writes `Output/Tables/dr_total_*.tex` and coefficient plots in `Output/Images/Graphs/`. |
+| `Code/jn_r_09_dr_controlled_effect.ipynb` | DoubleML PLR estimating the **direct causal effect** of monastic land, controlling for population, wealth, tithes, and alms. Writes `Output/Tables/dr_ctrl_*.tex` and coefficient plots in `Output/Images/Graphs/`. |
 
 ---
 

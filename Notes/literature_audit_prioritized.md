@@ -28,7 +28,7 @@
 
 6. **Aidt, Toke S., Gabriel Leon-Ablan, and Max Satchell.** "The Social Dynamics of Collective Action: Evidence from the Diffusion of the Swing Riots, 1830–1831." *Journal of Politics* 82 (2020). — The closest methodological parallel in existence: parish-level spatial econometrics of an English rebellion. Should be prominently engaged. *(Cross-listed from Section 2.)*
    - [x] downloaded
-   - [ ] read
+   - [x] read
 
 7. **Marshall, Peter.** *Heretics and Believers: A History of the English Reformation.* Yale UP, 2017. — The most important recent synthesis of the English Reformation, with substantial coverage of the Pilgrimage. A 2017 book by a leading scholar — reviewers will expect it.
    - [x] downloaded
@@ -289,11 +289,11 @@
 
 1. **Aidt, Toke S., Gabriel Leon-Ablan, and Max Satchell.** "The Social Dynamics of Collective Action: Evidence from the Diffusion of the Swing Riots." *Journal of Politics* 82 (2020). — Parish-level spatial econometrics of an English rebellion. Closest methodological parallel in the literature. Uses spatial lag models and fixed effects on ~3,000 incidents.
    - [x] downloaded
-   - [ ] read
+   - [x] read
 
 2. **Aidt, Toke S., Gabriel Leon-Ablan, and Max Satchell.** "The Interaction of Structural Factors and Diffusion in Social Unrest: Evidence from the Swing Riots." *BJPS* 54 (2024). — Uses negative binomial regression (same as you) to model riot counts; estimates a spatial diffusion multiplier. Directly applicable framework.
    - [x] downloaded
-   - [ ] read
+   - [x] read
 
 3. **Conley, Timothy G.** "GMM Estimation with Cross Sectional Dependence." *Journal of Econometrics* 92 (1999): 1–45. — Spatially robust standard errors. Your grid-cell observations are almost certainly spatially correlated. Without Conley SEs, standard errors may be severely understated. **Highest-priority methodological addition.**
    - [x] downloaded
@@ -313,7 +313,7 @@
 
 7. **Caprettini, Bruno, and Hans-Joachim Voth.** "Rage Against the Machines: Labor-Saving Technology and Unrest in Industrializing England." *AER: Insights* 2 (2020). — Parish-level analysis of English unrest with causal identification via IV. Demonstrates state-of-the-art for econometric analysis of rebellion at the parish level.
    - [x] downloaded
-   - [ ] read
+   - [x] read
 
 8. **Anselin, Luc.** *Spatial Econometrics: Methods and Models.* Kluwer, 1988. — Founding textbook for spatial lag/error models and LM tests. You should at minimum run Moran's I diagnostics on your residuals and report LM tests for spatial dependence.
    - [x] downloaded
@@ -321,7 +321,7 @@
 
 9. **Blattman, Christopher, and Edward Miguel.** "Civil War." *JEL* 48 (2010): 3–57. — The canonical review of causal inference in conflict studies. Positions your methodological choices within the broader conflict literature.
    - [x] downloaded
-   - [ ] read
+   - [x] read
 
 10. **Belloni, Alexandre, Victor Chernozhukov, and Christian Hansen.** "Inference on Treatment Effects after Selection among High-Dimensional Controls." *Review of Economic Studies* 81 (2014): 608–650. — Post-double-selection LASSO for principled variable selection. Addresses model uncertainty across your many specifications with different control sets.
     - [x] downloaded

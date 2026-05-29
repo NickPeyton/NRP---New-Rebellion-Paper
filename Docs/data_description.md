@@ -74,10 +74,13 @@ Individual records for secular gentlemen active in 1536, including seat coordina
 
 ### `northParishFlows.shp`
 **The primary analytical dataset.** Polygon shapefile of ancient northern parishes containing all constructed variables (monastic econ, rebellion outcomes, geographic controls, drought, and elite/opposition dummies).
-- **Source:** Output of the `jn_00` to `jn_06` processing pipeline.
+- **Source:** Output of the `jn_00` to `jn_07` processing pipeline.
 
 ### `northParishFlows_pre_jn06.shp`
 A versioned backup of the primary dataset taken before the monastic opposition variables from `jn_06` were added. Maintained for diagnostic comparison and regression stability tests.
+
+### `northParishFlows_pre_jn07.shp`
+A versioned backup of the primary dataset taken before the dissolved small monasteries transfer variables from `jn_07` were added. Maintained for diagnostic comparison and regression stability tests.
 
 ### `drought_intensity_bng.csv`
 Multi-year drought intensity averages reprojected to BNG.

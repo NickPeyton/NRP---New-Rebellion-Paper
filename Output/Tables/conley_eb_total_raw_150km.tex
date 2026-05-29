@@ -1,0 +1,65 @@
+
+% Table created by stargazer v.5.2.3 by Marek Hlavac, Social Policy Institute. E-mail: marek.hlavac at gmail.com
+% Date and time: Wed, May 13, 2026 - 13:24:19
+% Requires LaTeX packages: dcolumn 
+\begin{table}[H] \centering 
+  \caption{EB Logits — Conley SEs [total_raw], cutoff = 150 km} 
+  \label{tab:conley_eb_total_raw_150km} 
+\begin{tabular}{@{\extracolsep{.5pt}}lD{.}{.}{-3} D{.}{.}{-3} D{.}{.}{-3} } 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{3}{c}{\textit{Dependent variable:}} \\ 
+\cline{2-4} 
+\\[-1.8ex] & \multicolumn{1}{c}{paste("muster \textasciitilde", rhs)} & \multicolumn{1}{c}{paste("primary \textasciitilde", rhs)} & \multicolumn{1}{c}{paste("seats \textasciitilde", rhs)} \\ 
+ & \multicolumn{1}{c}{Muster} & \multicolumn{1}{c}{Primary} & \multicolumn{1}{c}{Seats} \\ 
+\\[-1.8ex] & \multicolumn{1}{c}{(1)} & \multicolumn{1}{c}{(2)} & \multicolumn{1}{c}{(3)}\\ 
+\hline \\[-1.8ex] 
+ ln(Total Monastic Land Owned + 1) & 0.193 & 0.585^{*} & 32,385,272,712,688.000 \\ 
+  & (0.118) & (0.311) & (46,535,610,259,742.000) \\ 
+  & & & \\ 
+ ln(Tithe) & -0.626 & -0.395 & 83,718,330,210,213.000 \\ 
+  & (0.418) & (0.375) & (53,884,023,900,429.000) \\ 
+  & & & \\ 
+ ln(Alms) & -0.894 & -0.637 & 104,549,103,180,434.000^{***} \\ 
+  & (5.772) & (3.691) & (37,690,152,549,865.000) \\ 
+  & & & \\ 
+ Small House Proximity (20km) & -0.485 & -2.167^{***} & -82,777,561,926,209.000 \\ 
+  & (0.639) & (0.417) & (132,055,307,664,133.000) \\ 
+  & & & \\ 
+ Large House Proximity (20km) & 0.311 & 0.839 & -153,448,116,989,173.000 \\ 
+  & (0.269) & (0.614) & (123,590,890,554,935.000) \\ 
+  & & & \\ 
+ Friary Presence & -0.213 & -0.128 & -93,377,651,756,693.000 \\ 
+  & (0.945) & (1.272) & (214,105,990,853,967.000) \\ 
+  & & & \\ 
+ Snubbed Family Proximity (20 km) & -0.532 & -0.942 & 238,509,521,888,476.000^{**} \\ 
+  & (0.413) & (0.709) & (102,637,700,353,852.000) \\ 
+  & & & \\ 
+ Court Officer Proximity (20 km) & 0.084 & -0.033 & 48,097,545,794,076.000 \\ 
+  & (0.456) & (0.391) & (91,014,259,139,630.000) \\ 
+  & & & \\ 
+ ln(Lay Subsidy per Capita) & 0.145 & 0.149 & 525,763,182,607,535.000^{***} \\ 
+  & (0.116) & (0.195) & (49,206,080,339,438.000) \\ 
+  & & & \\ 
+ Wet 1535 Weather Shock & -0.160 & -0.029 & 261,945,183,582,531.000^{***} \\ 
+  & (0.188) & (0.311) & (78,753,343,192,547.000) \\ 
+  & & & \\ 
+ Wet 1536 Weather Shock & 0.236 & 0.520 & -21,184,748,029,421.000 \\ 
+  & (0.227) & (0.471) & (101,801,165,183,765.000) \\ 
+  & & & \\ 
+ ln(Population) & 0.401^{**} & 0.306 & -24,913,335,657,492.000 \\ 
+  & (0.163) & (0.201) & (54,674,804,510,744.000) \\ 
+  & & & \\ 
+ Distance to Scotland & -0.470^{*} & -0.808^{**} & -461,521,660,483,244.000^{***} \\ 
+  & (0.246) & (0.401) & (88,693,649,372,806.000) \\ 
+  & & & \\ 
+\hline \\[-1.8ex] 
+Conley cutoff (km) & 150 & 150 & 150 \\ 
+Kernel & Bartlett & Bartlett & Bartlett \\ 
+EB weights & Y & Y & Y \\ 
+Observations & \multicolumn{1}{c}{1,391} & \multicolumn{1}{c}{1,391} & \multicolumn{1}{c}{1,391} \\ 
+\hline 
+\hline \\[-1.8ex] 
+\textit{Note:}  & \multicolumn{3}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
+\end{tabular} 
+\end{table} 

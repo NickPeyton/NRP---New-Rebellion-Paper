@@ -1,0 +1,19 @@
+- Three rebellion outcomes:
+	- Muster
+	- Primary (Muster)
+	- (Rebel Gentlemen) Seats
+- Three main explanatory variables (logged):
+	- Monastic land
+	- Land of large monasteries
+	- Off-site monastic land
+- Three versions of monastic variables: 
+	- log value, 
+	- log value per km^2, 
+	- log value per arable km^2.
+- Two main models:
+	- Total monastic land effect through all channels:
+		- Treatment regression vars: large religious house dummy (20km), small religious house dummy (20km), distance to Scotland, parish area, mean slope, terrain type
+		- Outcome regression vars: large religious house dummy (20km), small religious house dummy (20km), distance to Scotland, parish area, mean slope, terrain type, snubbed gentlemen, wet_1535, wet_1536
+	- Control for other monastic variables:
+		- Treatment regression vars: large religious house dummy (20km), small religious house dummy (20km), distance to Scotland, parish area, mean slope, terrain type, population, lay subsidy per capita
+		- Outcome regression vars: tithes, alms, large religious house dummy (20km), small religious house dummy (20km), distance to Scotland, parish area, mean slope, terrain type, snubbed gentlemen, wet_1535, wet_1536, population, lay subsidy per capita
