@@ -1,0 +1,36 @@
+% Setting document class to article and font to 12pt
+\documentclass[12pt]{article}
+
+% Loading all the packages (probably way more than we need)
+\usepackage{amssymb,amsmath,amsfonts,booktabs,eurosym,geometry,ulem,graphicx,color,setspace,sectsty,comment,caption,pdflscape,subfigure,array,hyperref, etoolbox, keyval, ifthen, url,float, csvsimple, nameref, xstring, tabularx, dcolumn, threeparttable}
+\usepackage[font=normalsize,labelfont={bf}]{caption}
+% Making sure the language package is in English
+\usepackage[english]{babel}
+\usepackage[autostyle, english = american]{csquotes}
+\MakeOuterQuote{"}
+% Loading reference and bibliography packages in correct configuration. This configuration does Chicago-style footnotes.
+\usepackage[notes, backend=biber, useibid=true, doi=false, url=false]{biblatex-chicago}
+
+% Setting bibliography to library.bib, the bibtex file with everything I've ever cited.
+\bibliography{library.bib}
+
+% Setting \emph{} to use italics
+\normalem
+
+% Setting normal spacing between lines
+\doublespacing
+% Setting margins
+\geometry{left=1.0in,right=1.0in,top=1.0in,bottom=1.0in}
+
+\begin{document}
+\begin{titlepage}
+\title{Tenants in Revolt:\linebreak The Dissolution of the Monasteries and the Pilgrimage of Grace}
+\author{Nick Peyton}
+\date{\today}
+\maketitle
+
+\setcounter{page}{0}
+\thispagestyle{empty}
+\end{titlepage}
+\pagebreak \newpage
+\end{document}
