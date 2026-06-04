@@ -258,7 +258,7 @@ In order to make explicit the potential causal connections between the variables
 
 \begin{figure}
 \centering
-\includegraphics[width=.8\linewidth]{Output/Images/Graphs/LittleRebellionDAG.png}
+\includegraphics[width=.8\linewidth]{Output/Images/LittleRebellionDAG.png}
 \caption{Causes of Rebellion DAG}
 \label{dag}
 \end{figure}
@@ -288,11 +288,11 @@ I begin with a simple logistic regression of the rebel muster dummy on the value
 
 Note that N drops slightly when weather variables are added; this is due to missing data in the Old World Drought Atlas dataset.
 
-\input{Output/Tables/muster_all}
+\input{Output/Tables/muster_all_total_raw}
 
-\input{Output/Tables/primary_all}
+\input{Output/Tables/primary_all_total_raw}
 
-\input{Output/Tables/seat_all}
+\input{Output/Tables/seat_all_total_raw}
 
 
 \subsection{Survival Analysis}
@@ -307,23 +307,15 @@ As the rebellion was a dynamic event that spread northwest over a matter of week
 
 Using the combination of the roads from the late-medieval Gough map, a shapefile of river shipping routes, and the network of maritime routes shown in Figure \ref{routes}, I estimated that news of the rising at Louth Park Abbey at an average of 20 kilometers per day over open country or smaller farm roads, 50 kilometers per day via road or river, and 100 kilometers per day via ship. Calculating "exposure" times for the centroid of each parish, I then constructed a "survival" variable by subtracting the "exposure" day from the day of the first primary muster. If the parish experiences no muster, I set the survival value to the difference (in days) between the end of the rebellion i.e. the confrontation at Doncaster and the dispersal of the rebel army. As with the logistic model, the value of monastic land in a parish is consistently positive but becomes statistically insignificant when more controls are added. 
 
-\input{Output/Tables/survival}
+\input{Output/Tables/survival_total_raw}
 
-\subsection{Propensity Score Matching}
+\subsection{Inverse Probability Weighting}
 
-Because the distribution of monastic land is non-random and is likely due to factors that have some correlation with the likelihood of rebellion, I conducted both a propensity score matching (PSM) and inverse probability weighting analysis. PSM works by calculating the likelihood of receiving treatment given the other covariates in the regression called the "propensity score," then matching each "treated" observation with one or more observations with the same propensity score. This allows us to obtain the Average Treatment Effect (ATE), or the expected change in the outcome value based solely on the treatment itself.
-
-In this case, I have set thresholds at \pounds1, \pounds2, \pounds5, \pounds10, \pounds20, with any value over the threshold as "treated." PSM will match observations based on how likely each parish would be to have more monastic land than the threshold, based on the parish's other features. Ideally, doing so will isolate the effect of certain amounts of monastic land independent of all other observable features of the parish.
-
-\input{Output/Tables/PSM}
-
-The results of the PSM analysis show different levels of significance at different thresholds of monastic landownership, but all coefficients on the "Land Treatment" variable are positive. 
-
-\input{Output/Tables/IPW}
+\input{Output/Tables/IPW_total_raw}
 
 An even more effective method of isolating the effect of monastic land involves inverse probability weighting (IPW). By conducting regressions of only the outcome variable on the variable of interest and weighting by the inverse of a continuous propensity score, we can achieve a similar effect to PSM specification while allowing for a continuous "treatment" variable. By weighting each observation by the inverse probability of the parish having its observed quantity of monastic land, we boost the influence of observations that "shouldn't" have that much monastic land given their other observable features, statistically imitating the conditions of randomized treatment assignment and further isolating the variable of interest. The results of this analysis are similar to those presented above, and are statistically and practically significant with all controls whether the model is a simple logistic regression or a Cox Proportional Hazard model like the one specified above.
 
-\input{Output/Tables/primary_sm.tex}
+\input{Output/Tables/survival_total_raw}
 
 In 1536, only the smaller monasteries---those with a net income below \pounds200 per year---were dissolved. If the rebels were purely short-sighted and self-interested (i.e. only rebelling if their own monastic landlords were threatened), the strongest predictor of rebellion at a parish level should be the amount of land owned by small monasteries. This is not the case. The land of \emph{large} religious houses predicts rebellion much more strongly and more consistently than the land of small monasteries. This fact introduces a deep wrinkle into the foregoing analysis that can only be ironed out by a close reading of the historical record: while they were still theoretically safe from dissolution in 1536, large monasteries felt the heat of the fire that consuming their smaller counterparts. The King and Cromwell had initiated a campaign of political pressure that started with Royal influence in the selection of abbots and ended in demands for surrenders of land that forced even the richest of monasteries into insolvency. This campaign, while it initially targeted small monasteries, was accompanied by vituperative denunciations of monasticism as such. The monks of Furness Abbey, one of the richest religious houses in England, saw the threat of full dissolution clearly despite the limits of the statute. They pressured their tenants to join the Pilgrimage and used their substantial treasury to arm and feed them as they faced Royal power. The strength of the association between the land of large monasteries and the presence of rebel musters may provide a strong indication of the level of threat perceived by the other large religious houses of the North as well.
 
