@@ -1,8 +1,11 @@
 
 % Table created by stargazer v.5.2.3 by Marek Hlavac, Social Policy Institute. E-mail: marek.hlavac at gmail.com
-% Date and time: Wed, May 13, 2026 - 14:12:26
+% Date and time: Fri, Jun 05, 2026 - 16:02:57
 % Requires LaTeX packages: dcolumn 
-\begin{table}[H] \centering 
+\begin{table}[H] 
+\centering 
+singlespacing 
+\begin{threeparttable} 
   \caption{Risk of Rebellion — Cox Proportional Hazards [ownOther_raw]} 
   \label{} 
 \begin{tabular}{@{\extracolsep{5pt}}lD{.}{.}{-3} D{.}{.}{-3} D{.}{.}{-3} } 
@@ -10,7 +13,7 @@
 \hline \\[-1.8ex] 
  & \multicolumn{3}{c}{\textit{Dependent variable:}} \\ 
 \cline{2-4} 
-\\[-1.8ex] & \multicolumn{1}{c}{"Surv(primary\_survival, primary) \textasciitilde"} & \multicolumn{1}{c}{"Surv(primary\_survival, primary) \textasciitilde"} & \multicolumn{1}{c}{"Surv(primary\_survival, primary) \textasciitilde"} \\ 
+\\[-1.8ex] & \multicolumn{1}{c}{Time to Rebellion} & \multicolumn{1}{c}{"Surv(primary\_survival, primary) \textasciitilde"} & \multicolumn{1}{c}{"Surv(primary\_survival, primary) \textasciitilde"} \\ 
  & \multicolumn{1}{c}{Land} & \multicolumn{1}{c}{Taxation and Population} & \multicolumn{1}{c}{Geographic Controls} \\ 
 \\[-1.8ex] & \multicolumn{1}{c}{(1)} & \multicolumn{1}{c}{(2)} & \multicolumn{1}{c}{(3)}\\ 
 \hline \\[-1.8ex] 
@@ -62,7 +65,11 @@ R$^{2}$ & \multicolumn{1}{c}{0.026} & \multicolumn{1}{c}{0.032} & \multicolumn{1
 Max. Possible R$^{2}$ & \multicolumn{1}{c}{0.193} & \multicolumn{1}{c}{0.188} & \multicolumn{1}{c}{0.188} \\ 
 Log Likelihood & \multicolumn{1}{c}{-148.308} & \multicolumn{1}{c}{-121.658} & \multicolumn{1}{c}{-118.293} \\ 
 \hline 
-\hline \\[-1.8ex] 
-\textit{Note:}  & \multicolumn{3}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
 \end{tabular} 
+\begin{tablenotes} 
+\item * p$<$.1, ** p$<$.05, ***p$<$.01 
+\footnotesize 
+\item FILL NOTE 
+\end{tablenotes} 
+\end{threeparttable} 
 \end{table} 

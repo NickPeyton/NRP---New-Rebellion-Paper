@@ -1,8 +1,11 @@
 
 % Table created by stargazer v.5.2.3 by Marek Hlavac, Social Policy Institute. E-mail: marek.hlavac at gmail.com
-% Date and time: Wed, May 13, 2026 - 14:09:23
+% Date and time: Fri, Jun 05, 2026 - 15:58:13
 % Requires LaTeX packages: dcolumn 
-\begin{table}[H] \centering 
+\begin{table}[H] 
+\centering 
+singlespacing 
+\begin{threeparttable} 
   \caption{Full Monastic Model [split_arak]} 
   \label{tab:full_monastic_split_arak} 
 \begin{tabular}{@{\extracolsep{.5pt}}lD{.}{.}{-3} D{.}{.}{-3} D{.}{.}{-3} } 
@@ -10,7 +13,7 @@
 \hline \\[-1.8ex] 
  & \multicolumn{3}{c}{\textit{Dependent variable:}} \\ 
 \cline{2-4} 
-\\[-1.8ex] & \multicolumn{1}{c}{muster \textasciitilde} & \multicolumn{1}{c}{primary \textasciitilde} & \multicolumn{1}{c}{seats \textasciitilde} \\ 
+\\[-1.8ex] & \multicolumn{1}{c}{Muster} & \multicolumn{1}{c}{Primary} & \multicolumn{1}{c}{Seats} \\ 
 \\[-1.8ex] & \multicolumn{1}{c}{\textit{logistic}} & \multicolumn{1}{c}{\textit{logistic}} & \multicolumn{1}{c}{\textit{Poisson}} \\ 
  & \multicolumn{1}{c}{Muster} & \multicolumn{1}{c}{Primary} & \multicolumn{1}{c}{Seats} \\ 
 \\[-1.8ex] & \multicolumn{1}{c}{(1)} & \multicolumn{1}{c}{(2)} & \multicolumn{1}{c}{(3)}\\ 
@@ -65,7 +68,11 @@ Conley SEs (100 km) & Y & Y & Y \\
 Observations & \multicolumn{1}{c}{1,391} & \multicolumn{1}{c}{1,391} & \multicolumn{1}{c}{1,391} \\ 
 Log Likelihood & \multicolumn{1}{c}{-157.742} & \multicolumn{1}{c}{-80.952} & \multicolumn{1}{c}{-282.482} \\ 
 \hline 
-\hline \\[-1.8ex] 
-\textit{Note:}  & \multicolumn{3}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
 \end{tabular} 
+\begin{tablenotes} 
+\item * p$<$.1, ** p$<$.05, ***p$<$.01 
+\footnotesize 
+\item FILL NOTE 
+\end{tablenotes} 
+\end{threeparttable} 
 \end{table} 

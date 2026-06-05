@@ -1,8 +1,11 @@
 
 % Table created by stargazer v.5.2.3 by Marek Hlavac, Social Policy Institute. E-mail: marek.hlavac at gmail.com
-% Date and time: Wed, May 13, 2026 - 14:11:53
+% Date and time: Fri, Jun 05, 2026 - 16:02:28
 % Requires LaTeX packages: dcolumn 
-\begin{table}[H] \centering 
+\begin{table}[H] 
+\centering 
+singlespacing 
+\begin{threeparttable} 
   \caption{IPW OwnOther — Conley SEs [ownOther_raw], cutoff = 100 km} 
   \label{tab:conley_ipw_ownOther_raw_100km} 
 \begin{tabular}{@{\extracolsep{.5pt}}lD{.}{.}{-3} D{.}{.}{-3} D{.}{.}{-3} } 
@@ -10,7 +13,7 @@
 \hline \\[-1.8ex] 
  & \multicolumn{3}{c}{\textit{Dependent variable:}} \\ 
 \cline{2-4} 
-\\[-1.8ex] & \multicolumn{1}{c}{paste("muster \textasciitilde", oo\_formula\_rhs)} & \multicolumn{1}{c}{paste("primary \textasciitilde", oo\_formula\_rhs)} & \multicolumn{1}{c}{paste("seats \textasciitilde", oo\_formula\_rhs)} \\ 
+\\[-1.8ex] & \multicolumn{1}{c}{Muster} & \multicolumn{1}{c}{Primary} & \multicolumn{1}{c}{Seats} \\ 
  & \multicolumn{1}{c}{Muster} & \multicolumn{1}{c}{Primary} & \multicolumn{1}{c}{Seats} \\ 
 \\[-1.8ex] & \multicolumn{1}{c}{(1)} & \multicolumn{1}{c}{(2)} & \multicolumn{1}{c}{(3)}\\ 
 \hline \\[-1.8ex] 
@@ -62,7 +65,11 @@ Kernel & Bartlett & Bartlett & Bartlett \\
 CBPS weights & Y & Y & Y \\ 
 Observations & \multicolumn{1}{c}{1,391} & \multicolumn{1}{c}{1,391} & \multicolumn{1}{c}{1,391} \\ 
 \hline 
-\hline \\[-1.8ex] 
-\textit{Note:}  & \multicolumn{3}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
 \end{tabular} 
+\begin{tablenotes} 
+\item * p$<$.1, ** p$<$.05, ***p$<$.01 
+\footnotesize 
+\item FILL NOTE 
+\end{tablenotes} 
+\end{threeparttable} 
 \end{table} 
